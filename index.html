@@ -17,9 +17,9 @@
                 <div class="menu">
                     <a href="#about">About</a>
                     <a href="#services">Services</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                    <a href="resume.html" class="cta-btn">Resume</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="#contact" class="cta-btn">Contact</a>
                 </div>
             </nav>
         </div>
@@ -33,7 +33,7 @@
             </p>
             <div class="hero-buttons">
                 <a href="https://wa.me/972538791843?text=Hi%20Victoria%2C%20I%20want%20to%20discuss%20my%20e-commerce%20operations" class="btn btn-primary">Book a Discovery Call</a>
-                <a href="#projects" class="btn btn-secondary">View My Projects</a>
+                <a href="portfolio.html" class="btn btn-secondary">View My Projects</a>
             </div>
         </div>
     </section>
@@ -92,28 +92,11 @@
     <section id="projects">
         <div class="container">
             <h2>Systems I've Built</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-meta">
-                        <div class="project-meta-item"><span class="project-meta-label">Role:</span> Fractional COO</div>
-                        <div class="project-meta-item"><span class="project-meta-label">Timeline:</span> 1 Year</div>
-                    </div>
-                    <h3>Unified Furniture Retail Platform</h3>
-                    <p>A furniture retail chain struggled with disconnected tools and manual processes across 10,000+ SKUs, with no visibility into real-time profitability.</p>
-                    <p>I designed and deployed a unified operations platform integrating Shopify, Airtable, finance, and logistics. Every supplier, order, and inventory movement was connected and automated.</p>
-                    <div class="project-result">✓ Real-time P&L visibility | ✓ Automated supplier coordination | ✓ Scalable growth</div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-meta">
-                        <div class="project-meta-item"><span class="project-meta-label">Role:</span> E-commerce Director</div>
-                        <div class="project-meta-item"><span class="project-meta-label">Timeline:</span> 6 Weeks</div>
-                    </div>
-                    <h3>European Market Launch</h3>
-                    <p>A resin brand needed to launch a multi-language, multi-currency store for the European market with a B2B wholesale portal — from zero to live in 1.5 months.</p>
-                    <p>I built a complex Shopify architecture with a B2B portal, created a centralized PIM catalog, and automated key processes via n8n, Bitrix24, and WhatsApp Business API.</p>
-                    <div class="project-result">✓ Launched in 6 weeks | ✓ Fully automated order processing | ✓ Revenue-driving flows</div>
-                </div>
+            <div id="portfolio-grid" class="portfolio-grid" data-limit="2">
+                <!-- Заполняется через script.js из data/projects.json (превью проектов) -->
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="portfolio.html" class="btn btn-secondary">View Full Portfolio →</a>
             </div>
         </div>
     </section>
@@ -189,5 +172,7 @@
     </footer>
 
     <a href="https://wa.me/972538791843?text=Hi%20Victoria%2C%20I%20want%20to%20discuss%20my%20e-commerce%20operations" class="whatsapp-btn" title="Chat on WhatsApp">💬</a>
+
+    <script src="script.js"></script>
 </body>
 </html>
