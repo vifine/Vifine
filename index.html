@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victoria Fine — Director of E-Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-light: #ffffff;
+            --bg-dark: #f8f8f8;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --border-color: #e8e8e8;
+            --accent: #000000;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Header / Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+            z-index: 100;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            margin-left: 32px;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px 0;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero .title {
+            font-size: 24px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-bottom: 24px;
+        }
+
+        .hero .subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #333333;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-dark);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .about h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            letter-spacing: -0.5px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-text {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 24px;
+        }
+
+        .highlight {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .stat {
+            padding: 24px;
+            background-color: var(--bg-dark);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Experience Section */
+        .experience {
+            padding: 80px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .experience h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            letter-spacing: -0.5px;
+        }
+
+        .job {
+            padding: 32px;
+            background-color: var(--bg-dark);
+            border-radius: 6px;
+            margin-bottom: 24px;
+            border-left: 3px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .job:hover {
+            background-color: #f0f0f0;
+            transform: translateX(4px);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 16px;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .job-period {
+            font-size: 14px;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        .job-company {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .job-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 80px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .skills h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            letter-spacing: -0.5px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .skill-category h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            letter-spacing: -0.5px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+        }
+
+        .contact-item a {
+            color: var(--text-primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.7;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-bottom: 48px;
+        }
+
+        .social-links a {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 18px;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero .title {
+                font-size: 20px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+
+            .job-period {
+                margin-top: 8px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">VF</div>
+                <div>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Victoria Fine</h1>
+            <div class="title">Director of E-Commerce</div>
+            <p class="subtitle">Strategic leader with 19+ years of experience building and scaling e-commerce operations, driving growth through data-driven decisions and digital transformation.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="document.querySelector('#contact').scrollIntoView()">Get in touch</button>
+                <a href="#about" class="btn btn-secondary">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am an accomplished e-commerce director and operations leader with a proven track record of building scalable digital businesses. My expertise spans launching multi-market stores, implementing advanced automation systems, and leading high-performing teams.</p>
+                    <p>Currently based in <span class="highlight">Moscow</span>, with work authorization in Israel and Russia. Open to remote opportunities and business travel.</p>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">19+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">People Led</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">3.5x</div>
+                        <div class="stat-label">Profitability Growth</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">€500K+</div>
+                        <div class="stat-label">Revenue Managed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Director of E-Commerce</div>
+                        <div class="job-company">ARTLINE GROUP EU S.R.L. — Slovakia</div>
+                    </div>
+                    <div class="job-period">Apr 2026 – Present</div>
+                </div>
+                <div class="job-description">
+                    Launched new Shopify store for European market (7 languages, multi-currency). Developed e-commerce strategy, implemented PIM catalog, B2B portal with automated pricing. Integrated CRM, email marketing (Klaviyo), and business automation across Shopify, Airtable, Bitrix24, and n8n.
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Operational Director (COO)</div>
+                        <div class="job-company">FullFlat LLC — UAE</div>
+                    </div>
+                    <div class="job-period">Apr 2025 – Apr 2026</div>
+                </div>
+                <div class="job-description">
+                    Built unified operational system for furniture retail network. Managed 10,000+ SKU inventory, integrated sales channels (Shopify), implemented real-time financial transparency (P&L, Cash Flow). Automated critical workflows across procurement, inventory, and order fulfillment.
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Director of Trade Business</div>
+                        <div class="job-company">EmEx Group — Moscow</div>
+                    </div>
+                    <div class="job-period">Sep 2023 – Dec 2024</div>
+                </div>
+                <div class="job-description">
+                    Launched auto parts marketplace from scratch. Developed business plan, built commerce team, established supply chain with 300+ suppliers across Europe and Asia. Built BI analytics for data-driven decision making. Acquired 1,500+ B2B leads in target regions.
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Commercial Director (B2B)</div>
+                        <div class="job-company">TOP SPORTS — Samara</div>
+                    </div>
+                    <div class="job-period">Feb 2017 – Sep 2023</div>
+                </div>
+                <div class="job-description">
+                    Led commercial operations with 50+ team members. Grew profitability 3.5x by launching online sales channel. Launched 2 private label brands (Sledex, Skipper) that reached 50% of revenue. Connected marketplaces (Wildberries, Ozon, Amazon) generating 24% of sales by 2022.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2>Core Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>E-Commerce</h3>
+                    <span class="skill-tag">Shopify</span>
+                    <span class="skill-tag">1C Bitrix</span>
+                    <span class="skill-tag">Marketplace Strategy</span>
+                    <span class="skill-tag">Product Management</span>
+                    <span class="skill-tag">Conversion Optimization</span>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Operations & Systems</h3>
+                    <span class="skill-tag">Business Automation</span>
+                    <span class="skill-tag">Airtable</span>
+                    <span class="skill-tag">n8n</span>
+                    <span class="skill-tag">Bitrix24</span>
+                    <span class="skill-tag">Process Design</span>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Analytics & Data</h3>
+                    <span class="skill-tag">Business Intelligence</span>
+                    <span class="skill-tag">KPI Systems</span>
+                    <span class="skill-tag">Financial Modeling</span>
+                    <span class="skill-tag">P&L Management</span>
+                    <span class="skill-tag">Performance Analysis</span>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Management & Strategy</h3>
+                    <span class="skill-tag">Team Leadership</span>
+                    <span class="skill-tag">Strategic Planning</span>
+                    <span class="skill-tag">Business Development</span>
+                    <span class="skill-tag">CRM Systems</span>
+                    <span class="skill-tag">Supply Chain</span>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Marketing & Sales</h3>
+                    <span class="skill-tag">Email Marketing</span>
+                    <span class="skill-tag">Customer Retention</span>
+                    <span class="skill-tag">Brand Strategy</span>
+                    <span class="skill-tag">B2B Sales</span>
+                    <span class="skill-tag">Loyalty Programs</span>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <span class="skill-tag">Russian (Native)</span>
+                    <span class="skill-tag">English (C1)</span>
+                    <span class="skill-tag">Hebrew (B1)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Let's work together</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📧 <a href="mailto:vifine767@gmail.com">vifine767@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    📱 <a href="tel:+79272081866">+7 (927) 208-1866</a>
+                </div>
+                <div class="contact-item">
+                    💬 <a href="https://t.me/vifine696" target="_blank">Telegram: @vifine696</a>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://t.me/vifine696" target="_blank" title="Telegram">💬</a>
+                <a href="mailto:vifine767@gmail.com" title="Email">📧</a>
+                <a href="tel:+79272081866" title="Phone">📱</a>
+            </div>
+
+            <p style="font-size: 14px; color: var(--text-secondary);">Available for remote work and willing to travel</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Victoria Fine. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
