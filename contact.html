@@ -20,8 +20,48 @@
         <li><a href="contact.html" class="active">Contact</a></li>
         <li class="navbar-cta"><a href="contact.html" class="btn btn-primary">Get in Touch</a></li>
       </ul>
+      <button class="navbar-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <img src="assets/img/icons/burger.svg" alt="Menu" width="24" height="24">
+      </button>
     </div>
   </nav>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="navbar-logo">Victoria Fine</a>
+      <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav">
+      <a href="index.html" class="mobile-menu-link">Home</a>
+      <a href="cv.html" class="mobile-menu-link">CV</a>
+      <a href="projects.html" class="mobile-menu-link ">Projects</a>
+      <a href="contact.html" class="mobile-menu-link active">Contact</a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get in Touch</a>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var burger = document.getElementById('navBurger');
+      var menu = document.getElementById('mobileMenu');
+      var overlay = document.getElementById('mobileMenuOverlay');
+      var closeBtn = document.getElementById('mobileMenuClose');
+      function openMenu() { menu.classList.add('is-open'); overlay.classList.add('is-visible'); burger.setAttribute('aria-expanded','true'); menu.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+      function closeMenu() { menu.classList.remove('is-open'); overlay.classList.remove('is-visible'); burger.setAttribute('aria-expanded','false'); menu.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+      if (burger) burger.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (overlay) overlay.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', function(e) { if (e.key==='Escape') closeMenu(); });
+    })();
+  </script>
 
   <!-- Contact Page -->
   <section class="contact-page">
