@@ -14,14 +14,73 @@
     <div class="container">
       <a href="index.html" class="navbar-logo">Victoria Fine</a>
       <ul class="navbar-menu">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="">Home</a></li>
         <li><a href="cv.html" class="active">CV</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="projects.html" class="">Projects</a></li>
+        <li><a href="contact.html" class="">Contact</a></li>
         <li><a href="contact.html" class="btn-nav">Get in Touch</a></li>
       </ul>
+      <!-- Burger button (mobile only) -->
+      <button class="navbar-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <img src="assets/img/icons/burger.svg" alt="Menu" width="24" height="24" id="burgerIcon">
+      </button>
     </div>
   </nav>
+
+  <!-- ===== MOBILE MENU OVERLAY ===== -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="navbar-logo">Victoria Fine</a>
+      <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav">
+      <a href="index.html" class="mobile-menu-link ">Home</a>
+      <a href="cv.html" class="mobile-menu-link active">CV</a>
+      <a href="projects.html" class="mobile-menu-link ">Projects</a>
+      <a href="contact.html" class="mobile-menu-link ">Contact</a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get in Touch</a>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var burger = document.getElementById('navBurger');
+      var menu = document.getElementById('mobileMenu');
+      var overlay = document.getElementById('mobileMenuOverlay');
+      var closeBtn = document.getElementById('mobileMenuClose');
+
+      function openMenu() {
+        menu.classList.add('is-open');
+        overlay.classList.add('is-visible');
+        burger.setAttribute('aria-expanded', 'true');
+        menu.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        menu.classList.remove('is-open');
+        overlay.classList.remove('is-visible');
+        burger.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      burger.addEventListener('click', openMenu);
+      closeBtn.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
 
   <!-- ===== CV HERO ===== -->
   <div class="cv-hero">
