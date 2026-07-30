@@ -53,8 +53,8 @@
       var menu = document.getElementById('mobileMenu');
       var overlay = document.getElementById('mobileMenuOverlay');
       var closeBtn = document.getElementById('mobileMenuClose');
-      function openMenu() { menu.classList.add('is-open'); overlay.classList.add('is-visible'); burger.setAttribute('aria-expanded','true'); menu.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
-      function closeMenu() { menu.classList.remove('is-open'); overlay.classList.remove('is-visible'); burger.setAttribute('aria-expanded','false'); menu.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+      function openMenu() { menu.classList.add('is-open'); overlay.classList.add('is-visible'); burger.setAttribute('aria-expanded','true'); menu.setAttribute('aria-hidden','false'); document.body.classList.add('menu-open'); }
+      function closeMenu() { menu.classList.remove('is-open'); overlay.classList.remove('is-visible'); burger.setAttribute('aria-expanded','false'); menu.setAttribute('aria-hidden','true'); document.body.classList.remove('menu-open'); }
       if (burger) burger.addEventListener('click', openMenu);
       if (closeBtn) closeBtn.addEventListener('click', closeMenu);
       if (overlay) overlay.addEventListener('click', closeMenu);
