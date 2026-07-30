@@ -1246,3 +1246,167 @@ img { max-width: 100%; display: block; }
   .hero-buttons { flex-direction: column; width: 100%; }
   .hero-buttons .btn { width: 100%; justify-content: center; }
 }
+
+/* ============================================
+   MOBILE BURGER MENU
+   Figma: Header/Mobile 375x61, pad: 16/24/16/24
+   Burger Icon: 24x24, 3 lines (20x2), gap: 5px
+   ============================================ */
+
+/* Burger button — hidden on desktop */
+.navbar-burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.navbar-burger img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile overlay (dark background) */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 199;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.mobile-menu-overlay.is-visible {
+  display: block;
+  opacity: 1;
+}
+
+/* Mobile menu panel (slides in from right) */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(320px, 85vw);
+  background: #FFFFFF;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.12);
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+/* Mobile menu header */
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-color);
+  height: 61px;
+  flex-shrink: 0;
+}
+
+.mobile-menu-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.mobile-menu-close:hover {
+  background: var(--bg-dark);
+}
+
+/* Mobile nav links */
+.mobile-menu-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  overflow-y: auto;
+}
+
+.mobile-menu-link {
+  display: block;
+  padding: 16px 24px;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-color);
+  transition: color 0.15s, background 0.15s;
+}
+
+.mobile-menu-link:first-child {
+  border-top: 1px solid var(--border-color);
+}
+
+.mobile-menu-link:hover {
+  color: var(--text-primary);
+  background: var(--bg-dark);
+  text-decoration: none;
+}
+
+.mobile-menu-link.active {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Mobile menu footer (CTA button) */
+.mobile-menu-footer {
+  padding: 24px;
+  border-top: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+/* Show burger on mobile, hide desktop menu */
+@media (max-width: 768px) {
+  .navbar-burger {
+    display: flex;
+  }
+
+  .navbar-menu {
+    display: none !important;
+  }
+
+  /* Mobile navbar height matches Figma: 61px */
+  .navbar {
+    height: 61px;
+  }
+
+  .navbar .container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .navbar-logo {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
