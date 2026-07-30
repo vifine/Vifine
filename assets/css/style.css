@@ -1249,7 +1249,7 @@ img { max-width: 100%; display: block; }
 
 /* ============================================
    MOBILE BURGER MENU
-   Style: drop-down overlay with blur + gradient
+   Style: solid dark top panel + gradient fade + page blur
    Figma: Header/Mobile 375x61, pad: 16/24/16/24
    ============================================ */
 
@@ -1277,18 +1277,18 @@ img { max-width: 100%; display: block; }
   transition: opacity 0.2s;
 }
 
-/* Full-screen overlay: blurs the page content behind menu */
+/* Full-screen overlay — blurs page content behind the menu */
 .mobile-menu-overlay {
   display: none;
   position: fixed;
   inset: 0;
   z-index: 198;
   opacity: 0;
-  transition: opacity 0.35s ease;
-  /* Frosted glass blur on page content */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  background: rgba(20, 20, 20, 0.45);
+  transition: opacity 0.3s ease;
+  /* Light blur + grey tint on page content */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  background: rgba(30, 30, 30, 0.25);
 }
 
 .mobile-menu-overlay.is-visible {
@@ -1296,7 +1296,7 @@ img { max-width: 100%; display: block; }
   opacity: 1;
 }
 
-/* Mobile menu panel — slides DOWN from top */
+/* Mobile menu panel — slides DOWN from top, solid dark + gradient fade at bottom */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -1305,109 +1305,79 @@ img { max-width: 100%; display: block; }
   z-index: 200;
   display: flex;
   flex-direction: column;
-  /* Dark gradient background matching Figma */
-  background: linear-gradient(
-    180deg,
-    rgba(26, 26, 26, 0.97) 0%,
-    rgba(26, 26, 26, 0.92) 60%,
-    rgba(26, 26, 26, 0.82) 100%
-  );
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  /* Start above viewport */
-  transform: translateY(-100%);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  /* Bottom gradient fade into page */
-  padding-bottom: 8px;
-}
-
-/* Fade-out gradient at bottom edge of menu */
-.mobile-menu::after {
-  content: '';
-  display: block;
-  height: 40px;
+  /* Solid dark top, fades to transparent at bottom */
   background: linear-gradient(
     to bottom,
-    transparent,
-    rgba(26, 26, 26, 0.0)
+    #1a1a1a 0%,
+    #1a1a1a 75%,
+    rgba(26, 26, 26, 0.0) 100%
   );
-  pointer-events: none;
+  /* Slides up above viewport when closed */
+  transform: translateY(-100%);
+  transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Extra padding at bottom for gradient fade area */
+  padding-bottom: 56px;
 }
 
 .mobile-menu.is-open {
   transform: translateY(0);
 }
 
-/* Mobile menu header row */
-.mobile-menu-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 24px;
-  height: 61px;
-  flex-shrink: 0;
+/* Navbar stays on top of menu when open — white logo + burger */
+body.menu-open .navbar {
+  background: transparent;
+  border-bottom-color: transparent;
+  position: relative;
+  z-index: 201;
 }
 
-/* Logo in open menu — white */
-.mobile-menu-header .navbar-logo {
+body.menu-open .navbar-logo {
   color: #FFFFFF;
 }
 
-/* Close button */
+body.menu-open .navbar-burger img {
+  filter: invert(1);
+}
+
+/* Mobile menu header — hidden (navbar acts as header) */
+.mobile-menu-header {
+  display: none;
+}
+
 .mobile-menu-close {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 6px;
-  transition: background 0.15s;
-}
-
-.mobile-menu-close svg path {
-  stroke: #FFFFFF;
-}
-
-.mobile-menu-close:hover {
-  background: rgba(255, 255, 255, 0.1);
+  display: none;
 }
 
 /* Nav links */
 .mobile-menu-nav {
   display: flex;
   flex-direction: column;
-  padding: 8px 0 16px;
+  padding: 16px 0 8px;
 }
 
 .mobile-menu-link {
   display: block;
-  padding: 18px 24px;
-  font-family: var(--font-serif);
-  font-size: 22px;
+  padding: 16px 24px;
+  font-family: var(--font-sans);
+  font-size: 20px;
   font-weight: 400;
-  line-height: 28px;
-  color: rgba(255, 255, 255, 0.75);
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  transition: color 0.15s, padding-left 0.2s;
-  letter-spacing: -0.01em;
+  transition: color 0.15s;
 }
 
 .mobile-menu-link:hover {
   color: #FFFFFF;
-  padding-left: 32px;
   text-decoration: none;
 }
 
 .mobile-menu-link.active {
   color: #FFFFFF;
-  font-weight: 700;
+  font-weight: 600;
 }
 
-/* No bottom footer in this design — CTA removed for cleaner look */
+/* Footer hidden */
 .mobile-menu-footer {
   display: none;
 }
