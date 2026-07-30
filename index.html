@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html" class="navbar-logo">Victoria Fine</a>
@@ -18,138 +18,164 @@
         <li><a href="cv.html">CV</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li class="navbar-cta"><a href="contact.html" class="btn btn-primary">Get in Touch</a></li>
+        <li><a href="contact.html" class="btn-nav">Get in Touch</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- ===== HERO SECTION ===== -->
   <section class="hero">
-    <div class="container">
+    <div class="hero-content">
       <h1>E-commerce Generalist,<br>Systems Architect & Builder</h1>
-      <p class="subtitle">System design, storefront deployment, and operational integration.<br>Bridging business logic with technical execution.</p>
-      <div class="hero-cta">
-        <a href="contact.html" class="btn btn-primary">Book a Discovery Call</a>
-        <a href="projects.html" class="btn btn-secondary">View My Projects</a>
+      <p class="hero-subtitle">System design, storefront deployment, and operational integration.<br>Bridging business logic with technical execution.</p>
+      <div class="hero-actions">
+        <div class="hero-buttons">
+          <a href="contact.html" class="btn btn-primary">Book a Discovery Call</a>
+          <a href="projects.html" class="btn btn-secondary">View My Projects</a>
+        </div>
+        <p class="hero-lang-note">Available in English and Russian</p>
       </div>
-      <p class="hero-lang-note">Available in English and Russian</p>
     </div>
   </section>
 
-  <!-- About / Hey Section -->
+  <!-- ===== ABOUT / HEY SECTION ===== -->
   <section class="about-section">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text">
-          <h2>Hey!</h2>
+    <div class="about-inner">
+      <div class="about-content">
+        <h2>Hey!</h2>
+        <div class="about-body">
           <p>I'm Victoria. I live in Israel and work fluently in both English and Russian.</p>
           <p>I bring over a decade of C-level e-commerce experience to technical system building. As a COO and CCO, I understand how marketing, sales, procurement, fulfillment, and finance work together. Over the years, designing the technical infrastructure to support these functions became my strongest expertise.</p>
           <p>I help teams and businesses bridge the gap between operational strategy and technical execution, building systems that run like clockwork.</p>
         </div>
-        <div class="about-illustration">
-          <img src="assets/img/illustration-chaos-to-order.svg" alt="From chaos to structured systems" onerror="this.style.display='none'">
-        </div>
+      </div>
+      <div class="about-illustration">
+        <img src="assets/img/illustration-chaos-to-order.png" alt="From chaos to structured systems">
       </div>
     </div>
   </section>
 
-  <!-- Core Expertise Section -->
+  <!-- ===== CORE EXPERTISE SECTION ===== -->
   <section class="expertise-section">
-    <div class="container">
-      <div class="section-header">
+    <div class="expertise-inner">
+      <div class="expertise-header">
         <h2>Core Expertise</h2>
         <p class="section-subtitle">Transforming fragmented workflows into intentional, scalable systems — from data foundations to storefront architecture and automation.</p>
       </div>
-      <div class="divider"></div>
+      <div class="expertise-divider"></div>
       <div class="expertise-cards">
 
         <div class="expertise-card">
-          <div class="expertise-card-header">
-            <div class="expertise-card-icon">🗄️</div>
-            <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <img src="assets/img/icons/card-card-01.svg" alt="Operational Systems icon">
+            </div>
+            <div class="card-title-block">
               <h3>Operational Systems</h3>
+              <p class="card-subtitle-text">From spreadsheets to a single source of truth.</p>
             </div>
           </div>
-          <p class="card-subtitle">From spreadsheets to a single source of truth.</p>
           <p class="card-description">Design and deployment of custom databases and ERP/PIM solutions. Moving businesses from fragmented spreadsheets into a single source of truth for inventory, order management, and unit economics.</p>
-          <div class="tools-label">Tools</div>
-          <div class="tools-list">Airtable • Baserow • Supabase</div>
+          <div class="card-tools">
+            <p class="card-tools-label">Tools</p>
+            <p class="card-tools-list">Airtable • Baserow • Supabase</p>
+          </div>
         </div>
 
         <div class="expertise-card">
-          <div class="expertise-card-header">
-            <div class="expertise-card-icon">⚡</div>
-            <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <img src="assets/img/icons/card-card-03.svg" alt="Workflow Automation icon">
+            </div>
+            <div class="card-title-block">
               <h3>Workflow Automation</h3>
+              <p class="card-subtitle-text">Make your software stack communicate.</p>
             </div>
           </div>
-          <p class="card-subtitle">Make your software stack communicate.</p>
           <p class="card-description">Eliminating manual data entry by connecting storefronts, warehouses, CRM, and payment gateways. I build seamless integrations that reduce errors and free up time for strategy.</p>
-          <div class="tools-label">Tools</div>
-          <div class="tools-list">n8n • Custom APIs • Make</div>
+          <div class="card-tools">
+            <p class="card-tools-label">Tools</p>
+            <p class="card-tools-list">n8n • Custom APIs • Make</p>
+          </div>
         </div>
 
         <div class="expertise-card">
-          <div class="expertise-card-header">
-            <div class="expertise-card-icon">🛒</div>
-            <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <img src="assets/img/icons/card-card-02.svg" alt="Storefront Architecture icon">
+            </div>
+            <div class="card-title-block">
               <h3>Storefront Architecture</h3>
+              <p class="card-subtitle-text">Scalable e-commerce foundations.</p>
             </div>
           </div>
-          <p class="card-subtitle">Scalable e-commerce foundations.</p>
           <p class="card-description">End-to-end development of scalable e-commerce platforms. From UI/UX prototyping to fully functional architectures, including B2B wholesale portals and multi-currency setups.</p>
-          <div class="tools-label">Tools</div>
-          <div class="tools-list">Shopify • Wix • Figma</div>
+          <div class="card-tools">
+            <p class="card-tools-label">Tools</p>
+            <p class="card-tools-list">Shopify • Wix • Figma</p>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- My Projects Section -->
+  <!-- ===== MY PROJECTS SECTION ===== -->
   <section class="projects-section">
-    <div class="container">
+    <div class="projects-inner">
       <div class="section-header">
         <h2>My Projects</h2>
         <p class="section-subtitle">A selection of recent projects I've worked on.</p>
       </div>
-      <div class="divider"></div>
+      <div class="section-divider"></div>
       <div class="projects-list">
 
         <a href="project-detail.html" class="project-row">
           <div class="project-row-left">
             <h3>E-commerce Electronics Store</h3>
             <p class="project-desc">Full development of an e-commerce platform with payment system and CRM integration.</p>
-            <div class="project-location">Germany</div>
+            <div class="project-location">
+              <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.25 4 8 4 8s4-4.75 4-8c0-2.21-1.79-4-4-4zm0 5.5A1.5 1.5 0 1 1 7 3a1.5 1.5 0 0 1 0 3z" fill="#666"/></svg>
+              Germany
+            </div>
           </div>
-          <div class="project-row-right">View project</div>
+          <div class="project-row-right">View project →</div>
         </a>
 
         <a href="project-detail.html" class="project-row">
           <div class="project-row-left">
             <h3>Logistics CRM System</h3>
             <p class="project-desc">Design and implementation of an order and warehouse management system.</p>
-            <div class="project-location">Russia</div>
+            <div class="project-location">
+              <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.25 4 8 4 8s4-4.75 4-8c0-2.21-1.79-4-4-4zm0 5.5A1.5 1.5 0 1 1 7 3a1.5 1.5 0 0 1 0 3z" fill="#666"/></svg>
+              Russia
+            </div>
           </div>
-          <div class="project-row-right">View project</div>
+          <div class="project-row-right">View project →</div>
         </a>
 
         <a href="project-detail.html" class="project-row">
           <div class="project-row-left">
             <h3>B2B Wholesale Buyer Portal</h3>
             <p class="project-desc">Interface development for managing orders and pricing categories.</p>
-            <div class="project-location">UAE</div>
+            <div class="project-location">
+              <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.25 4 8 4 8s4-4.75 4-8c0-2.21-1.79-4-4-4zm0 5.5A1.5 1.5 0 1 1 7 3a1.5 1.5 0 0 1 0 3z" fill="#666"/></svg>
+              UAE
+            </div>
           </div>
-          <div class="project-row-right">View project</div>
+          <div class="project-row-right">View project →</div>
         </a>
 
         <a href="project-detail.html" class="project-row">
           <div class="project-row-left">
             <h3>Marketing Campaign Automation</h3>
             <p class="project-desc">Setting up integrations between CRM and marketing tools.</p>
-            <div class="project-location">USA</div>
+            <div class="project-location">
+              <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.25 4 8 4 8s4-4.75 4-8c0-2.21-1.79-4-4-4zm0 5.5A1.5 1.5 0 1 1 7 3a1.5 1.5 0 0 1 0 3z" fill="#666"/></svg>
+              USA
+            </div>
           </div>
-          <div class="project-row-right">View project</div>
+          <div class="project-row-right">View project →</div>
         </a>
 
       </div>
@@ -159,26 +185,26 @@
     </div>
   </section>
 
-  <!-- Resume Banner -->
+  <!-- ===== RESUME BANNER ===== -->
   <section class="resume-banner">
-    <div class="container">
+    <div class="resume-banner-inner">
       <h2>Want to learn more about my experience?</h2>
       <p>Check out my resume page or download a copy for a full overview of my skills and past roles.</p>
       <div class="resume-banner-cta">
-        <a href="cv.html" class="btn btn-outline-white">View Resume</a>
-        <a href="assets/victoria-fine-cv.pdf" class="btn btn-primary" download>Download CV</a>
+        <a href="cv.html" class="btn btn-outline-dark" style="color:#fff;border-color:rgba(255,255,255,0.35);">View Resume</a>
+        <a href="assets/victoria-fine-cv.pdf" class="btn btn-white-filled" download>Download CV</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
       <ul class="footer-links">
-        <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-        <li><a href="https://t.me/vifine696" target="_blank">Telegram</a></li>
-        <li><a href="https://wa.me/972538791843" target="_blank">WhatsApp</a></li>
-        <li><a href="https://www.upwork.com/freelancers/victoriaf30" target="_blank">Upwork</a></li>
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://t.me/vifine696" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://wa.me/972538791843" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="https://www.upwork.com/freelancers/victoriaf30" target="_blank" rel="noopener">Upwork</a></li>
       </ul>
       <p class="footer-credit">© 2026 Victoria Fine. All rights reserved.</p>
     </div>
