@@ -61,7 +61,7 @@
         overlay.classList.add('is-visible');
         burger.setAttribute('aria-expanded', 'true');
         menu.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
+        document.body.classList.add('menu-open');
       }
 
       function closeMenu() {
@@ -69,7 +69,7 @@
         overlay.classList.remove('is-visible');
         burger.setAttribute('aria-expanded', 'false');
         menu.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
+        document.body.classList.remove('menu-open');
       }
 
       burger.addEventListener('click', openMenu);
