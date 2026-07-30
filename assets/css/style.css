@@ -892,6 +892,15 @@ img { max-width: 100%; display: block; }
 
 .ai-logo-box img { width: 100%; height: 100%; object-fit: cover; }
 
+/* New: direct icon images from Figma (96x96 with rounded corners built-in) */
+.ai-logo-img {
+  width: 96px;
+  height: 96px;
+  display: block;
+  border-radius: 22px;
+  object-fit: cover;
+}
+
 .ai-logo-name {
   font-family: var(--font-sans);
   font-size: 13px;
