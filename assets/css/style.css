@@ -638,6 +638,34 @@ img { max-width: 100%; display: block; }
   gap: 32px;
 }
 
+/* New icon-based footer */
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s, transform 0.15s;
+  text-decoration: none;
+}
+
+.footer-icons a:hover {
+  opacity: 0.75;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.footer-icons img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+/* Legacy text links (kept for fallback) */
 .footer-links {
   display: flex;
   align-items: center;
