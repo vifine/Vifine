@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html" class="navbar-logo">Victoria Fine</a>
@@ -18,66 +18,64 @@
         <li><a href="cv.html" class="active">CV</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li class="navbar-cta"><a href="contact.html" class="btn btn-primary">Get in Touch</a></li>
+        <li><a href="contact.html" class="btn-nav">Get in Touch</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- CV Hero -->
+  <!-- ===== CV HERO ===== -->
   <div class="cv-hero">
-    <div class="container">
-      <div class="cv-hero-row">
-        <div>
-          <h1>Victoria Fine</h1>
-          <p class="cv-subtitle">E-commerce Generalist, Systems Architect & Builder.<br>Based in Israel, Netivot.</p>
-        </div>
-        <img src="assets/img/photo.jpg" alt="Victoria Fine" class="cv-photo" onerror="this.style.display='none'">
+    <div class="cv-hero-row">
+      <div>
+        <h1>Victoria Fine</h1>
+        <p class="cv-subtitle">E-commerce Generalist, Systems Architect & Builder.<br>Based in Israel, Netivot.</p>
       </div>
+      <img src="assets/img/profile-photo.png" alt="Victoria Fine" class="cv-photo">
     </div>
   </div>
 
-  <!-- Professional Summary -->
+  <!-- ===== PROFESSIONAL SUMMARY ===== -->
   <div class="cv-section">
-    <div class="container">
+    <div class="cv-section-inner">
       <h2>Professional Summary</h2>
       <p class="summary-text">Over a decade of C-level e-commerce experience (COO, CCO) configured to designing resilient technical systems. I translate complex business strategies, pricing structures, and inventory flows into clear data architectures and workflow automations that keep modern storefronts running like clockwork.</p>
     </div>
   </div>
 
-  <!-- Work Experience -->
+  <!-- ===== WORK EXPERIENCE ===== -->
   <div class="cv-section">
-    <div class="container">
+    <div class="cv-section-inner">
       <h2>Work Experience</h2>
       <div class="experience-list">
 
         <div class="experience-row">
-          <div class="exp-meta">
+          <div>
             <p class="exp-dates">2021 — Present</p>
             <p class="exp-company">Levelset</p>
           </div>
-          <div class="exp-content">
+          <div>
             <p class="exp-role">Operational Systems Architect & Co-Founder</p>
             <p class="exp-desc">Design and implementation of bespoke internal ERP, warehouse, and operational databases for high-volume distributors. Bridge client business requirements with n8n workflow automations and customized PIM setups, reducing manual processing times by over 40%.</p>
           </div>
         </div>
 
         <div class="experience-row">
-          <div class="exp-meta">
+          <div>
             <p class="exp-dates">2018 — 2021</p>
             <p class="exp-company">Global Trade Logistics</p>
           </div>
-          <div class="exp-content">
+          <div>
             <p class="exp-role">Chief Operating Officer (COO)</p>
             <p class="exp-desc">Managed end-to-end e-commerce logistics, procurement pipelines, and finance syncs. Designed internal tooling to unify separate inventory channels across regional hubs. Supervised technical execution teams deploying wholesale multi-currency B2B storefronts.</p>
           </div>
         </div>
 
         <div class="experience-row">
-          <div class="exp-meta">
+          <div>
             <p class="exp-dates">2015 — 2018</p>
             <p class="exp-company">Nova Commerce Corp</p>
           </div>
-          <div class="exp-content">
+          <div>
             <p class="exp-role">Chief Commercial Officer (CCO)</p>
             <p class="exp-desc">Spearheaded storefront optimizations and regional payment gateway integrations. Structured product data foundations (PIM/attributes taxonomy) allowing efficient catalog expansion from 5k to over 80k SKUs with instant real-time sync.</p>
           </div>
@@ -87,11 +85,11 @@
     </div>
   </div>
 
-  <!-- Core Skills & Tools -->
+  <!-- ===== CORE SKILLS & TOOLS ===== -->
   <div class="cv-section">
-    <div class="container">
+    <div class="cv-section-inner">
       <h2>Core Skills & Tools</h2>
-      <p class="text-secondary" style="margin-bottom: 32px; font-size: 15px;">Practical execution platforms coupled with business intelligence models.</p>
+      <p style="font-size:15px;color:var(--text-secondary);margin-bottom:32px;">Practical execution platforms coupled with business intelligence models.</p>
       <div class="skills-grid">
 
         <div class="skill-card">
@@ -132,7 +130,7 @@
         <div class="skill-card">
           <p class="skill-card-title">Operations & Business</p>
           <ul class="skill-list">
-            <li>P&L, CF, Balance Setup</li>
+            <li>P&amp;L, CF, Balance Setup</li>
             <li>Unit Economics Setup</li>
             <li>PIM Management</li>
             <li>Fulfillment Architecture</li>
@@ -145,66 +143,74 @@
     </div>
   </div>
 
-  <!-- AI Platforms -->
-  <div class="ai-platforms">
-    <div class="container">
+  <!-- ===== AI PLATFORMS ===== -->
+  <div class="ai-section">
+    <div class="ai-section-inner">
       <h2>AI Platforms</h2>
       <p class="ai-subtitle">Tools I use daily to build automations and AI-powered agent workflows.</p>
       <div class="ai-logos">
         <div class="ai-logo-item">
-          <div class="ai-logo-box">✳️</div>
+          <div class="ai-logo-box">
+            <img src="assets/img/ai-icon-square.png" alt="Claude">
+          </div>
           <span class="ai-logo-name">Claude</span>
         </div>
         <div class="ai-logo-item">
-          <div class="ai-logo-box">🤖</div>
+          <div class="ai-logo-box" style="background:#7c3aed;">
+            <img src="assets/img/ai-icon-square.png" alt="Manus">
+          </div>
           <span class="ai-logo-name">Manus</span>
         </div>
         <div class="ai-logo-item">
-          <div class="ai-logo-box">🧠</div>
+          <div class="ai-logo-box" style="background:#10a37f;">
+            <img src="assets/img/ai-icon-square.png" alt="OpenAI">
+          </div>
           <span class="ai-logo-name">OpenAI</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Education & Languages -->
-  <div class="edu-lang-grid" style="padding-left: var(--padding-x, 120px); padding-right: var(--padding-x, 120px); max-width: calc(var(--max-width) + 240px); margin: 0 auto;">
-    <div>
-      <h2>Education</h2>
-      <div class="edu-item">
-        <p class="edu-dates">2010 — 2014</p>
-        <p class="edu-degree">B.Sc. in Industrial Engineering & Management</p>
-        <p class="edu-institution">Tel Aviv University</p>
-        <p class="edu-details">Focus on Enterprise Information Systems, Operations Research, and Database Design.</p>
+  <!-- ===== EDUCATION & LANGUAGES ===== -->
+  <div class="edu-lang-section">
+    <div class="edu-lang-inner">
+      <div>
+        <h2>Education</h2>
+        <div>
+          <p class="edu-dates">2010 — 2014</p>
+          <p class="edu-degree">B.Sc. in Industrial Engineering & Management</p>
+          <p class="edu-institution">Tel Aviv University</p>
+          <p class="edu-details">Focus on Enterprise Information Systems, Operations Research, and Database Design.</p>
+        </div>
       </div>
-    </div>
-    <div>
-      <h2>Languages</h2>
-      <div class="lang-list">
-        <div class="lang-row">
-          <span class="lang-name">English</span>
-          <span class="lang-level">Professional Working Proficiency</span>
-        </div>
-        <div class="lang-row">
-          <span class="lang-name">Russian</span>
-          <span class="lang-level">Native</span>
-        </div>
-        <div class="lang-row">
-          <span class="lang-name">Hebrew</span>
-          <span class="lang-level">Basic</span>
+      <div>
+        <h2>Languages</h2>
+        <div class="lang-list">
+          <div class="lang-row">
+            <span class="lang-name">English</span>
+            <span class="lang-level">Professional Working Proficiency</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-name">Russian</span>
+            <span class="lang-level">Native</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-name">Hebrew</span>
+            <span class="lang-level">Basic</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="footer" style="margin-top: 80px;">
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" style="margin-top:48px;">
     <div class="container">
       <ul class="footer-links">
-        <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-        <li><a href="https://t.me/vifine696" target="_blank">Telegram</a></li>
-        <li><a href="https://wa.me/972538791843" target="_blank">WhatsApp</a></li>
-        <li><a href="https://www.upwork.com/freelancers/victoriaf30" target="_blank">Upwork</a></li>
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://t.me/vifine696" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://wa.me/972538791843" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="https://www.upwork.com/freelancers/victoriaf30" target="_blank" rel="noopener">Upwork</a></li>
       </ul>
       <p class="footer-credit">© 2026 Victoria Fine. All rights reserved.</p>
     </div>
