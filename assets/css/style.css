@@ -820,15 +820,84 @@ img { max-width: 100%; display: block; }
   margin: 0;
 }
 
+/* Learn more — accordion button */
 .exp-learn-more {
-  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 15px;
   font-weight: 500;
+  color: var(--text-primary);
   text-decoration: none;
-  white-space: nowrap;
+  transition: opacity 0.15s;
+  align-self: flex-start;
 }
 
 .exp-learn-more:hover {
+  opacity: 0.65;
+}
+
+.exp-arrow {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  font-style: normal;
+}
+
+/* Accordion content */
+.exp-accordion {
+  overflow: hidden;
+  animation: accordionOpen 0.3s ease forwards;
+}
+
+@keyframes accordionOpen {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.exp-results {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exp-results li {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--text-secondary);
+  padding-left: 16px;
+  position: relative;
+}
+
+.exp-results li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--text-secondary);
+}
+
+.exp-case-link {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
   text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-top: 4px;
+  transition: opacity 0.15s;
+}
+
+.exp-case-link:hover {
+  opacity: 0.65;
 }
 
 .exp-related-label {
