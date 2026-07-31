@@ -1555,3 +1555,225 @@ body.menu-open .navbar-burger img {
     line-height: 23px;
   }
 }
+
+
+/* ============================================
+   PROJECT DETAIL PAGES (FullFlat series)
+   ============================================ */
+
+/* Meta labels for project pages */
+.project-meta-label {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.project-meta-value {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Cover image */
+.project-cover {
+  padding: 0 var(--page-padding) 64px;
+}
+
+.project-cover-img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--bg-dark);
+}
+
+/* Project sections */
+.project-section {
+  padding: 64px var(--page-padding);
+  border-top: 1px solid var(--border-color);
+}
+
+.project-section--alt {
+  background: var(--bg-dark);
+}
+
+.project-section-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.project-section-text {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  max-width: 760px;
+}
+
+/* Project image grids */
+.project-images-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.project-images-grid--single {
+  grid-template-columns: 1fr;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: #fff;
+}
+
+/* Outcomes section */
+.project-outcomes {
+  background: var(--section-dark);
+  color: #fff;
+  padding: 80px var(--page-padding);
+}
+
+.project-outcomes-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.project-outcomes-subtitle {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.project-outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.project-outcome-item {
+  text-align: center;
+}
+
+.project-outcome-metric {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.project-outcome-label {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(255,255,255,0.6);
+}
+
+.project-outcomes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-outcomes-list li {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 24px;
+  color: rgba(255,255,255,0.75);
+  padding-left: 20px;
+  position: relative;
+}
+
+.project-outcomes-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: rgba(255,255,255,0.4);
+}
+
+/* Next project section */
+.project-next {
+  padding: 80px var(--page-padding);
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+}
+
+.project-next-label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.project-next-title {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.project-next-desc {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: 0 auto 32px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-images-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-outcomes-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .project-section-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .project-outcome-metric {
+    font-size: 36px;
+  }
+  .project-outcomes-title {
+    font-size: 28px;
+  }
+  .project-next-title {
+    font-size: 28px;
+  }
+}
