@@ -759,44 +759,112 @@ img { max-width: 100%; display: block; }
 }
 
 /* Experience */
-.experience-list { display: flex; flex-direction: column; gap: 40px; }
+.experience-list {
+  display: flex;
+  flex-direction: column;
+}
 
 .experience-row {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 40px;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.experience-row:first-child {
+  border-top: 1px solid var(--border-color);
+}
+
+.exp-meta {
+  padding-top: 4px;
 }
 
 .exp-dates {
   font-family: var(--font-sans);
-  font-size: 14px;
-  line-height: 20px;
-  color: var(--text-secondary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--text-primary);
   margin-bottom: 4px;
 }
 
 .exp-company {
   font-family: var(--font-sans);
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 500;
-  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--text-secondary);
+}
+
+.exp-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .exp-role {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 24px;
+  line-height: 32px;
   color: var(--text-primary);
-  margin-bottom: 8px;
+  margin: 0;
 }
 
 .exp-desc {
   font-family: var(--font-sans);
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 26px;
   color: var(--text-secondary);
+  margin: 0;
+}
+
+.exp-learn-more {
+  color: var(--text-primary);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.exp-learn-more:hover {
+  text-decoration: underline;
+}
+
+.exp-related-label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.exp-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exp-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  background: #1f1f1f;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background 0.15s, opacity 0.15s;
+  white-space: nowrap;
+}
+
+.exp-pill:hover {
+  background: #333333;
+  text-decoration: none;
 }
 
 /* Skills Grid */
