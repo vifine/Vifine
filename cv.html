@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV — Victoria Fine</title>
-  <meta name="description" content="Victoria Fine — Curriculum Vitae. E-commerce Generalist, Systems Architect & Builder.">
+  <meta name="description" content="Victoria Fine — Curriculum Vitae. Systems Architect & Builder. E-commerce Operations Expert.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -20,14 +20,13 @@
         <li><a href="contact.html" class="">Contact</a></li>
         <li><a href="contact.html" class="btn-nav">Get in Touch</a></li>
       </ul>
-      <!-- Burger button (mobile only) -->
       <button class="navbar-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
-        <img src="assets/img/icons/burger.svg" alt="Menu" width="24" height="24" id="burgerIcon">
+        <img src="assets/img/icons/burger.svg" alt="Menu" width="24" height="24">
       </button>
     </div>
   </nav>
 
-  <!-- ===== MOBILE MENU OVERLAY ===== -->
+  <!-- ===== MOBILE MENU ===== -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu-header">
@@ -39,10 +38,10 @@
       </button>
     </div>
     <nav class="mobile-menu-nav">
-      <a href="index.html" class="mobile-menu-link ">Home</a>
+      <a href="index.html" class="mobile-menu-link">Home</a>
       <a href="cv.html" class="mobile-menu-link active">CV</a>
-      <a href="projects.html" class="mobile-menu-link ">Projects</a>
-      <a href="contact.html" class="mobile-menu-link ">Contact</a>
+      <a href="projects.html" class="mobile-menu-link">Projects</a>
+      <a href="contact.html" class="mobile-menu-link">Contact</a>
     </nav>
     <div class="mobile-menu-footer">
       <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get in Touch</a>
@@ -55,30 +54,12 @@
       var menu = document.getElementById('mobileMenu');
       var overlay = document.getElementById('mobileMenuOverlay');
       var closeBtn = document.getElementById('mobileMenuClose');
-
-      function openMenu() {
-        menu.classList.add('is-open');
-        overlay.classList.add('is-visible');
-        burger.setAttribute('aria-expanded', 'true');
-        menu.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('menu-open');
-      }
-
-      function closeMenu() {
-        menu.classList.remove('is-open');
-        overlay.classList.remove('is-visible');
-        burger.setAttribute('aria-expanded', 'false');
-        menu.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('menu-open');
-      }
-
-      burger.addEventListener('click', openMenu);
-      closeBtn.addEventListener('click', closeMenu);
-      overlay.addEventListener('click', closeMenu);
-
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeMenu();
-      });
+      function openMenu() { menu.classList.add('is-open'); overlay.classList.add('is-visible'); burger.setAttribute('aria-expanded','true'); menu.setAttribute('aria-hidden','false'); document.body.classList.add('menu-open'); }
+      function closeMenu() { menu.classList.remove('is-open'); overlay.classList.remove('is-visible'); burger.setAttribute('aria-expanded','false'); menu.setAttribute('aria-hidden','true'); document.body.classList.remove('menu-open'); }
+      if (burger) burger.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (overlay) overlay.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', function(e) { if (e.key==='Escape') closeMenu(); });
     })();
   </script>
 
@@ -87,7 +68,7 @@
     <div class="cv-hero-row">
       <div>
         <h1>Victoria Fine</h1>
-        <p class="cv-subtitle">E-commerce Generalist, Systems Architect & Builder.<br>Based in Israel, Netivot.</p>
+        <p class="cv-subtitle">Systems Architect &amp; Builder. E-commerce Operations Expert.<br>Based in Israel. Available remotely.</p>
       </div>
       <img src="assets/img/profile-photo.png" alt="Victoria Fine" class="cv-photo">
     </div>
@@ -97,7 +78,7 @@
   <div class="cv-section">
     <div class="cv-section-inner">
       <h2>Professional Summary</h2>
-      <p class="summary-text">Over a decade of C-level e-commerce experience (COO, CCO) configured to designing resilient technical systems. I translate complex business strategies, pricing structures, and inventory flows into clear data architectures and workflow automations that keep modern storefronts running like clockwork.</p>
+      <p class="summary-text">I bring over 10 years of C-level e-commerce experience (COO, CCO) to technical system architecture and hands-on execution. Having managed marketing, sales, procurement, fulfillment, and finance across large-scale operations, I understand exactly where businesses lose efficiency when their tools don't communicate. I design and build unified, automated systems that connect all these functions into one reliable infrastructure.</p>
     </div>
   </div>
 
@@ -107,53 +88,72 @@
       <h2>Work Experience</h2>
       <div class="experience-list">
 
+        <!-- ARTLINE GROUP -->
         <div class="experience-row">
           <div class="exp-meta">
-            <p class="exp-dates">2021 — Present</p>
-            <p class="exp-company">Levelset</p>
+            <p class="exp-dates">Apr 2026 — Present</p>
+            <p class="exp-company">ARTLINE GROUP EU</p>
           </div>
           <div class="exp-content">
-            <p class="exp-role">Operational Systems Architect &amp; Co-Founder</p>
-            <p class="exp-desc">Design and implementation of bespoke internal ERP, warehouse, and operational databases for high-volume distributors. Bridge client business requirements with n8n workflow automations and customized PIM setups, reducing manual processing times by over 40%. <a href="project-detail.html" class="exp-learn-more">Learn more &rarr;</a></p>
+            <p class="exp-role">E-commerce Director</p>
+            <p class="exp-desc">Launched a new Shopify storefront for the European market from scratch — 7 languages, multi-currency — in 1.5 months. Built a B2B wholesale portal with customer accounts and automated pricing on Shopify. Created a unified PIM catalog and digital asset library. Automated key e-commerce processes by integrating Shopify, Airtable, Bitrix24, Klaviyo, n8n, and WhatsApp Business API. <a href="project-detail.html" class="exp-learn-more">Learn more &rarr;</a></p>
             <p class="exp-related-label">Related Projects</p>
             <div class="exp-pills">
-              <a href="project-detail.html" class="exp-pill">E-commerce Electronics Store</a>
-              <a href="project-detail.html" class="exp-pill">Logistics CRM System</a>
-              <a href="project-detail.html" class="exp-pill">B2B Wholesale Buyer Portal</a>
+              <a href="project-detail.html" class="exp-pill">Shopify EU Launch</a>
+              <a href="project-detail.html" class="exp-pill">B2B Wholesale Portal</a>
+              <a href="project-detail.html" class="exp-pill">PIM Catalog &amp; Automation</a>
             </div>
           </div>
         </div>
 
+        <!-- FULLFLAT -->
         <div class="experience-row">
           <div class="exp-meta">
-            <p class="exp-dates">2018 — 2021</p>
-            <p class="exp-company">Global Trade Logistics</p>
+            <p class="exp-dates">Apr 2025 — Apr 2026</p>
+            <p class="exp-company">FullFlat LLC</p>
           </div>
           <div class="exp-content">
             <p class="exp-role">Chief Operating Officer (COO)</p>
-            <p class="exp-desc">Managed end-to-end e-commerce logistics, procurement pipelines, and finance syncs. Designed internal tooling to unify separate inventory channels across regional hubs. Supervised technical execution teams deploying wholesale multi-currency B2B storefronts. <a href="project-detail.html" class="exp-learn-more">Learn more &rarr;</a></p>
+            <p class="exp-desc">Designed and deployed a unified operations platform for a furniture retail chain, replacing disconnected tools with a single system. Integrated Shopify (commerce), Airtable (data management), finance, logistics, and supplier workflows. Achieved full control over 10,000+ SKUs with automated channel sync, real-time P&amp;L and cash flow visibility, and automated order processing and supplier coordination. <a href="project-detail.html" class="exp-learn-more">Learn more &rarr;</a></p>
             <p class="exp-related-label">Related Projects</p>
             <div class="exp-pills">
-              <a href="project-detail.html" class="exp-pill">Marketing Campaign Automation</a>
-              <a href="project-detail.html" class="exp-pill">SaaS Analytics Dashboard</a>
-              <a href="project-detail.html" class="exp-pill">Restaurant Chain POS System</a>
+              <a href="project-detail.html" class="exp-pill">Unified Operations Platform</a>
+              <a href="project-detail.html" class="exp-pill">Inventory &amp; Finance System</a>
             </div>
           </div>
         </div>
 
+        <!-- EMEX GROUP -->
         <div class="experience-row">
           <div class="exp-meta">
-            <p class="exp-dates">2015 — 2018</p>
-            <p class="exp-company">Nova Commerce Corp</p>
+            <p class="exp-dates">Sep 2023 — Dec 2024</p>
+            <p class="exp-company">EmEx Group</p>
           </div>
           <div class="exp-content">
-            <p class="exp-role">Chief Commercial Officer (CCO)</p>
-            <p class="exp-desc">Spearheaded storefront optimizations and regional payment gateway integrations. Structured product data foundations (PIM/attributes taxonomy) allowing efficient catalog expansion from 5k to over 80k SKUs with instant real-time sync. <a href="project-detail.html" class="exp-learn-more">Learn more &rarr;</a></p>
+            <p class="exp-role">Director of Commercial Business</p>
+            <p class="exp-desc">Led a new marketplace business unit for automotive parts from the ground up — team formation, supply chain, and first sales. Managed international supply chains across Southeast Asia, Europe, and the USA. Built a database of 300+ suppliers and established relationships with 1,500 B2B leads across Europe, the Middle East, and Africa. Implemented BI analytics and automated CRM workflows with WhatsApp Business API integration. <a href="project-detail.html" class="exp-learn-more">Learn more &rarr;</a></p>
             <p class="exp-related-label">Related Projects</p>
             <div class="exp-pills">
-              <a href="project-detail.html" class="exp-pill">Fashion E-commerce Marketplace</a>
-              <a href="project-detail.html" class="exp-pill">Fintech Payment Gateway</a>
-              <a href="project-detail.html" class="exp-pill">Real Estate Listing Portal</a>
+              <a href="project-detail.html" class="exp-pill">B2B CRM &amp; SRM Automation</a>
+              <a href="project-detail.html" class="exp-pill">BI Analytics System</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOP SPORTS -->
+        <div class="experience-row">
+          <div class="exp-meta">
+            <p class="exp-dates">Feb 2017 — Sep 2023</p>
+            <p class="exp-company">TOP SPORTS</p>
+          </div>
+          <div class="exp-content">
+            <p class="exp-role">Commercial Director (CCO)</p>
+            <p class="exp-desc">Led the commercial block (sales, procurement, logistics, marketing) and product team across 3 departments, 50+ people. Launched 2 private label brands (Sledex, Skipper) with 24,000+ SKUs manufactured in China and Taiwan — by 2023 they accounted for ~50% of revenue at 45%+ margin. Grew marketplace channel (Wildberries, Ozon, Amazon) from 0 to 24% of total revenue. Implemented CRM, BI analytics (Qlik Sense), and WMS. Increased company profitability 3.5x in two years. <a href="project-detail.html" class="exp-learn-more">Learn more &rarr;</a></p>
+            <p class="exp-related-label">Related Projects</p>
+            <div class="exp-pills">
+              <a href="project-detail.html" class="exp-pill">Private Label Launch</a>
+              <a href="project-detail.html" class="exp-pill">Marketplace Expansion</a>
+              <a href="project-detail.html" class="exp-pill">WMS &amp; CRM Implementation</a>
             </div>
           </div>
         </div>
@@ -165,54 +165,55 @@
   <!-- ===== CORE SKILLS & TOOLS ===== -->
   <div class="cv-section">
     <div class="cv-section-inner">
-      <h2>Core Skills & Tools</h2>
+      <h2>Core Skills &amp; Tools</h2>
       <p style="font-size:15px;color:var(--text-secondary);margin-bottom:32px;">Practical execution platforms coupled with business intelligence models.</p>
       <div class="skills-grid">
 
         <div class="skill-card">
-          <p class="skill-card-title">Operational & Databases</p>
+          <p class="skill-card-title">Operational &amp; Databases</p>
           <ul class="skill-list">
             <li>Airtable</li>
             <li>Baserow</li>
             <li>Supabase</li>
-            <li>PostgreSQL</li>
-            <li>ERP/PIM Design</li>
+            <li>PostgreSQL / SQL</li>
+            <li>ERP / PIM Design</li>
             <li>Taxonomy Modeling</li>
           </ul>
         </div>
 
         <div class="skill-card">
-          <p class="skill-card-title">Workflow & Integration</p>
+          <p class="skill-card-title">Workflow &amp; Integration</p>
           <ul class="skill-list">
             <li>n8n</li>
-            <li>Make</li>
-            <li>Custom APIs</li>
-            <li>Data Mapping</li>
-            <li>JSON Transformation</li>
-            <li>SQL</li>
+            <li>Make (Integromat)</li>
+            <li>REST API / Webhooks</li>
+            <li>WhatsApp Business API</li>
+            <li>Klaviyo</li>
+            <li>Bitrix24 / CRM</li>
           </ul>
         </div>
 
         <div class="skill-card">
-          <p class="skill-card-title">E-Commerce & Frontend</p>
+          <p class="skill-card-title">E-Commerce &amp; Frontend</p>
           <ul class="skill-list">
-            <li>Shopify Liquid</li>
-            <li>Wix Developer</li>
-            <li>Figma Prototyping</li>
-            <li>HTML/CSS/JS</li>
-            <li>B2B Wholesales Portal</li>
+            <li>Shopify / Shopify Liquid</li>
+            <li>Wix</li>
+            <li>Figma</li>
+            <li>HTML / CSS / JS</li>
+            <li>B2B Wholesale Portals</li>
+            <li>Multi-currency &amp; Multi-lang</li>
           </ul>
         </div>
 
         <div class="skill-card">
-          <p class="skill-card-title">Operations & Business</p>
+          <p class="skill-card-title">Operations &amp; Business</p>
           <ul class="skill-list">
-            <li>P&amp;L, CF, Balance Setup</li>
-            <li>Unit Economics Setup</li>
+            <li>P&amp;L, Cash Flow, Balance</li>
+            <li>Unit Economics</li>
             <li>PIM Management</li>
             <li>Fulfillment Architecture</li>
-            <li>SLA Modeling</li>
-            <li>Supply Chain Systems</li>
+            <li>Supply Chain Management</li>
+            <li>BI Analytics (Qlik Sense)</li>
           </ul>
         </div>
 
@@ -248,26 +249,37 @@
       <div>
         <h2>Education</h2>
         <div>
-          <p class="edu-dates">2010 — 2014</p>
-          <p class="edu-degree">B.Sc. in Industrial Engineering & Management</p>
-          <p class="edu-institution">Tel Aviv University</p>
-          <p class="edu-details">Focus on Enterprise Information Systems, Operations Research, and Database Design.</p>
+          <p class="edu-dates">2002 — 2006</p>
+          <p class="edu-degree">Master's Degree — Sociology</p>
+          <p class="edu-institution">Samara State University</p>
+          <p class="edu-details">Focus on social systems, organisational behaviour, and research methodology.</p>
+        </div>
+        <div style="margin-top:32px;">
+          <p class="edu-dates">2026</p>
+          <p class="edu-degree">Airtable Builder Certificate</p>
+          <p class="edu-institution">Airtable</p>
+          <p class="edu-details">Advanced data modeling, workflow automation, and custom interface design.</p>
+        </div>
+        <div style="margin-top:24px;">
+          <p class="edu-dates">2026</p>
+          <p class="edu-degree">English C1 Certificate</p>
+          <p class="edu-institution">Professional Working Proficiency</p>
         </div>
       </div>
       <div>
         <h2>Languages</h2>
         <div class="lang-list">
           <div class="lang-row">
-            <span class="lang-name">English</span>
-            <span class="lang-level">Professional Working Proficiency</span>
-          </div>
-          <div class="lang-row">
             <span class="lang-name">Russian</span>
             <span class="lang-level">Native</span>
           </div>
           <div class="lang-row">
+            <span class="lang-name">English</span>
+            <span class="lang-level">C1 — Advanced</span>
+          </div>
+          <div class="lang-row">
             <span class="lang-name">Hebrew</span>
-            <span class="lang-level">Basic</span>
+            <span class="lang-level">B1 — Intermediate</span>
           </div>
         </div>
       </div>
