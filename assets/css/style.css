@@ -220,7 +220,7 @@ img { max-width: 100%; display: block; }
   line-height: 32px;
   color: var(--text-secondary);
   text-align: center;
-  max-width: 600px;
+  max-width: 760px;
 }
 
 .hero-actions {
