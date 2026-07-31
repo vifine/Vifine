@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FullFlat Operations — Victoria Fine</title>
+  <meta name="description" content="End-to-end order management system for a furniture e-commerce company. Sales pipeline, fulfillment, delivery, and reviews automation.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">Victoria Fine</a>
+      <ul class="navbar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="btn-nav">Get in Touch</a></li>
+      </ul>
+      <button class="navbar-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <img src="assets/img/icons/burger.svg" alt="Menu" width="24" height="24">
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="navbar-logo">Victoria Fine</a>
+      <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6L18 18" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav">
+      <a href="index.html" class="mobile-menu-link">Home</a>
+      <a href="cv.html" class="mobile-menu-link">CV</a>
+      <a href="projects.html" class="mobile-menu-link active">Projects</a>
+      <a href="contact.html" class="mobile-menu-link">Contact</a>
+    </nav>
+  </div>
+  <script>
+    (function() {
+      var burger = document.getElementById('navBurger');
+      var menu = document.getElementById('mobileMenu');
+      var overlay = document.getElementById('mobileMenuOverlay');
+      var closeBtn = document.getElementById('mobileMenuClose');
+      function openMenu() { menu.classList.add('is-open'); overlay.classList.add('is-visible'); burger.setAttribute('aria-expanded','true'); menu.setAttribute('aria-hidden','false'); document.body.classList.add('menu-open'); }
+      function closeMenu() { menu.classList.remove('is-open'); overlay.classList.remove('is-visible'); burger.setAttribute('aria-expanded','false'); menu.setAttribute('aria-hidden','true'); document.body.classList.remove('menu-open'); }
+      if (burger) burger.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (overlay) overlay.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', function(e) { if (e.key==='Escape') closeMenu(); });
+    })();
+  </script>
+
+  <!-- ===== PROJECT HERO ===== -->
+  <div class="project-detail-hero">
+    <div class="project-detail-inner">
+      <div class="breadcrumb">
+        <a href="projects.html">Projects</a>
+        <span>/</span>
+        <span>FullFlat Operations</span>
+      </div>
+      <h1>FullFlat Operations</h1>
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <p class="project-meta-label">Role</p>
+          <p class="project-meta-value">Systems Architect &amp; COO</p>
+        </div>
+        <div class="project-meta-item">
+          <p class="project-meta-label">Client / Location</p>
+          <p class="project-meta-value">FullFlat LLC / UAE</p>
+        </div>
+        <div class="project-meta-item">
+          <p class="project-meta-label">Core Tech</p>
+          <p class="project-meta-value">Airtable · n8n · Shopify · Airpower</p>
+        </div>
+        <div class="project-meta-item">
+          <p class="project-meta-label">Year</p>
+          <p class="project-meta-value">2025 — 2026</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PROJECT COVER IMAGE ===== -->
+  <div class="project-cover">
+    <div class="project-detail-inner">
+      <img src="assets/img/projects/fullflat/03_image_3.png" alt="FullFlat Operations — Revenue & Profit Dashboard" class="project-cover-img">
+    </div>
+  </div>
+
+  <!-- ===== OVERVIEW ===== -->
+  <div class="project-section">
+    <div class="project-detail-inner">
+      <h2 class="project-section-title">Overview</h2>
+      <p class="project-section-text">The central hub of the FullFlat platform. Manages the full order lifecycle — from customer inquiry to delivery confirmation and post-delivery claims. All teams work within a single Airtable interface with role-specific views: sales managers handle orders and quoting, the fulfillment team manages procurement and supplier coordination, delivery supervisors confirm shipments from mobile, and management monitors performance through built-in reports.</p>
+      <p class="project-section-text">The system covers five core processes: Order Intake &amp; Sales Pipeline, Fulfillment &amp; Procurement, Delivery &amp; On-site Supervision, Claims Management, and Reporting &amp; Plan vs. Fact.</p>
+    </div>
+  </div>
+
+  <!-- ===== ORDER INTAKE ===== -->
+  <div class="project-section project-section--alt">
+    <div class="project-detail-inner">
+      <h2 class="project-section-title">Order Intake &amp; Sales Pipeline</h2>
+      <p class="project-section-text">Orders enter the system from two channels: the Shopify storefront and WhatsApp consultations. Shopify orders sync automatically to FullFlat Operations via Airpower. WhatsApp inquiries — typical for high-ticket and customized furniture orders — are handled by sales managers directly in the system. The manager selects products, auto-calculates margin and cost, generates a proforma invoice with a payment link, and creates a visual moodboard from PIM product images to send to the client for approval.</p>
+      <div class="project-images-grid">
+        <img src="assets/img/projects/fullflat/04_image_4.png" alt="Order list view" class="project-img">
+        <img src="assets/img/projects/fullflat/05_image_5.png" alt="Order detail with margin calculation" class="project-img">
+      </div>
+      <div class="project-images-grid">
+        <img src="assets/img/projects/fullflat/06_image_6.png" alt="Moodboard editor" class="project-img">
+        <img src="assets/img/projects/fullflat/07_image_7.png" alt="Proforma invoice generation" class="project-img">
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FULFILLMENT ===== -->
+  <div class="project-section">
+    <div class="project-detail-inner">
+      <h2 class="project-section-title">Fulfillment &amp; Delivery</h2>
+      <p class="project-section-text">Once payment is confirmed, the order moves to fulfillment. The system splits the order into Fulfillment Orders — one per supplier. A single customer order can generate multiple fulfillment orders when items come from different suppliers, each with its own cost, status and timeline. The fulfillment team tracks all orders through the Fulfillment Calendar, which provides a visual overview of upcoming and in-progress fulfillment tasks across the team.</p>
+      <p class="project-section-text">When goods are ready, the system consolidates items from multiple suppliers into a delivery. An on-site supervisor receives a Delivery Task with a full list of items. During delivery and furniture assembly, the supervisor marks each item as delivered or not delivered with a reason — directly from the Airtable mobile app. A photo report is uploaded on-site. After delivery is complete, the system collects a customer satisfaction rating (CSAT).</p>
+      <div class="project-images-grid">
+        <img src="assets/img/projects/fullflat/08_image_8.png" alt="Fulfillment calendar" class="project-img">
+        <img src="assets/img/projects/fullflat/09_image_9.png" alt="Delivery task mobile view" class="project-img">
+      </div>
+      <div class="project-images-grid">
+        <img src="assets/img/projects/fullflat/10_image_10.png" alt="Delivery confirmation" class="project-img">
+        <img src="assets/img/projects/fullflat/11_image_11.png" alt="CSAT and photo report" class="project-img">
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== REVIEWS ===== -->
+  <div class="project-section project-section--alt">
+    <div class="project-detail-inner">
+      <h2 class="project-section-title">Reviews Pipeline</h2>
+      <p class="project-section-text">Delivery photo reports feed directly into FullFlat Reviews — a separate system that automates customer review generation. After delivery, the CSAT manager collects customer feedback and permission to publish. The review is composed from the delivery photos (taken by the supervisor on-site) and the customer's feedback — solving the problem of customers being reluctant to photograph and review on their own.</p>
+      <p class="project-section-text">Reviews are synced to the Shopify storefront with customer avatar, rating, review text and real delivery photos.</p>
+      <div class="project-images-grid">
+        <img src="assets/img/projects/fullflat/12_image_12.png" alt="Reviews pipeline" class="project-img">
+        <img src="assets/img/projects/fullflat/13_image_13.png" alt="Published reviews on Shopify" class="project-img">
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== IMPACT ===== -->
+  <div class="project-outcomes">
+    <div class="project-detail-inner">
+      <h2 class="project-outcomes-title">Measurable System Outcomes</h2>
+      <p class="project-outcomes-subtitle">How operational design transformed the metrics that matter.</p>
+      <div class="project-outcomes-grid">
+        <div class="project-outcome-item">
+          <p class="project-outcome-metric">End-to-end</p>
+          <p class="project-outcome-label">Order lifecycle in one system — from inquiry to delivery confirmation</p>
+        </div>
+        <div class="project-outcome-item">
+          <p class="project-outcome-metric">Real-time</p>
+          <p class="project-outcome-label">Margin visibility at order level for data-driven pricing decisions</p>
+        </div>
+        <div class="project-outcome-item">
+          <p class="project-outcome-metric">100%</p>
+          <p class="project-outcome-label">Automated review generation from delivery photo reports</p>
+        </div>
+      </div>
+      <ul class="project-outcomes-list">
+        <li>End-to-end order lifecycle managed in a single system — eliminating spreadsheets and disconnected tools</li>
+        <li>Real-time margin visibility at order level enables data-driven decisions on discounts, upsells and package composition</li>
+        <li>Moodboard and proforma invoice generation within the system shortens the sales cycle for high-ticket WhatsApp orders</li>
+        <li>Multi-supplier fulfillment with automatic order splitting gives the team flexibility to optimize cost and delivery time per item</li>
+        <li>On-site delivery confirmation from mobile with photo reports ensures accountability and feeds directly into CSAT tracking</li>
+        <li>Delivery photo reports converted into published customer reviews — solving the UGC challenge without relying on customers to photograph and post themselves</li>
+        <li>Full operational transparency across sales, fulfillment and delivery — management sees pipeline, margins, supplier performance and customer satisfaction in one place</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== NEXT PROJECT ===== -->
+  <div class="project-next">
+    <div class="project-detail-inner">
+      <p class="project-next-label">Next Project</p>
+      <h3 class="project-next-title">FullFlat PIM</h3>
+      <p class="project-next-desc">Single source of truth for 10,000+ SKUs. Supplier feed automation, AI content pipeline, and multi-channel Shopify publishing.</p>
+      <a href="fullflat-pim.html" class="btn btn-primary">View Project</a>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-icons">
+        <a href="https://www.linkedin.com/in/vifine/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="assets/img/icons/linkedin.svg" alt="LinkedIn" width="40" height="40">
+        </a>
+        <a href="https://t.me/vifine696" target="_blank" rel="noopener" aria-label="Telegram">
+          <img src="assets/img/icons/telegram.svg" alt="Telegram" width="40" height="40">
+        </a>
+        <a href="https://wa.me/972538791843" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <img src="assets/img/icons/whatsapp.svg" alt="WhatsApp" width="40" height="40">
+        </a>
+        <a href="https://www.upwork.com/freelancers/victoriaf30" target="_blank" rel="noopener" aria-label="Upwork">
+          <img src="assets/img/icons/upwork.svg" alt="Upwork" width="40" height="40">
+        </a>
+      </div>
+      <p class="footer-credit">© 2026 Victoria Fine. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
