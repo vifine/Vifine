@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FullFlat Finance — Victoria Fine</title>
+  <meta name="description" content="Fully automated P&L, Cash Flow, and Plan vs. Fact reporting. Every transaction classified against a 30+ line budget hierarchy.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">Victoria Fine</a>
+      <ul class="navbar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="btn-nav">Get in Touch</a></li>
+      </ul>
+      <button class="navbar-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <img src="assets/img/icons/burger.svg" alt="Menu" width="24" height="24">
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="navbar-logo">Victoria Fine</a>
+      <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6L18 18" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav">
+      <a href="index.html" class="mobile-menu-link">Home</a>
+      <a href="cv.html" class="mobile-menu-link">CV</a>
+      <a href="projects.html" class="mobile-menu-link active">Projects</a>
+      <a href="contact.html" class="mobile-menu-link">Contact</a>
+    </nav>
+  </div>
+  <script>
+    (function() {
+      var burger = document.getElementById('navBurger');
+      var menu = document.getElementById('mobileMenu');
+      var overlay = document.getElementById('mobileMenuOverlay');
+      var closeBtn = document.getElementById('mobileMenuClose');
+      function openMenu() { menu.classList.add('is-open'); overlay.classList.add('is-visible'); burger.setAttribute('aria-expanded','true'); menu.setAttribute('aria-hidden','false'); document.body.classList.add('menu-open'); }
+      function closeMenu() { menu.classList.remove('is-open'); overlay.classList.remove('is-visible'); burger.setAttribute('aria-expanded','false'); menu.setAttribute('aria-hidden','true'); document.body.classList.remove('menu-open'); }
+      if (burger) burger.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (overlay) overlay.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', function(e) { if (e.key==='Escape') closeMenu(); });
+    })();
+  </script>
+
+  <!-- ===== PROJECT HERO ===== -->
+  <div class="project-detail-hero">
+    <div class="project-detail-inner">
+      <div class="breadcrumb">
+        <a href="projects.html">Projects</a>
+        <span>/</span>
+        <span>FullFlat Finance</span>
+      </div>
+      <h1>FullFlat Finance</h1>
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <p class="project-meta-label">Role</p>
+          <p class="project-meta-value">Systems Architect &amp; COO</p>
+        </div>
+        <div class="project-meta-item">
+          <p class="project-meta-label">Client / Location</p>
+          <p class="project-meta-value">FullFlat LLC / UAE</p>
+        </div>
+        <div class="project-meta-item">
+          <p class="project-meta-label">Core Tech</p>
+          <p class="project-meta-value">Airtable · Stripe Webhooks · Paymob · n8n</p>
+        </div>
+        <div class="project-meta-item">
+          <p class="project-meta-label">Year</p>
+          <p class="project-meta-value">2025 — 2026</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PROJECT COVER IMAGE ===== -->
+  <div class="project-cover">
+    <div class="project-detail-inner">
+      <img src="assets/img/projects/fullflat/21_image_21.png" alt="FullFlat Finance — Budget Classification" class="project-cover-img">
+    </div>
+  </div>
+
+  <!-- ===== OVERVIEW ===== -->
+  <div class="project-section">
+    <div class="project-detail-inner">
+      <h2 class="project-section-title">Overview</h2>
+      <p class="project-section-text">Manages all financial operations across the company. Revenue is captured automatically; expenses flow through a structured payment request and approval process. Every transaction is classified against a budget hierarchy, enabling fully automated P&amp;L, Cash Flow, and Plan vs. Fact reporting.</p>
+      <p class="project-section-text">The system is built on a structured budget classification with 6 parent categories and 30+ line items: Revenue, COGS, Direct Selling Expenses, Indirect Selling Expenses, OPEX, and Financial Expenses. Every transaction is tagged with a budget category and a finance period. The P&amp;L is fully automated — plan and fact amounts are calculated per category per period, with no manual aggregation.</p>
+    </div>
+  </div>
+
+  <!-- ===== REVENUE ===== -->
+  <div class="project-section project-section--alt">
+    <div class="project-detail-inner">
+      <h2 class="project-section-title">Revenue Capture</h2>
+      <p class="project-section-text">Customer payments from Stripe and Paymob are captured automatically via webhooks and classified as Revenue. Claims and refunds are tracked separately under Sales Refunds. This eliminates any manual entry for incoming transactions — the moment a payment is processed, it appears in the financial system with full classification.</p>
+      <div class="project-images-grid project-images-grid--single">
+        <img src="assets/img/projects/fullflat/20_image_20.png" alt="Revenue capture via webhooks" class="project-img">
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== EXPENSES ===== -->
+  <div class="project-section">
+    <div class="project-detail-inner">
+      <h2 class="project-section-title">Expenses &amp; Approval Workflow</h2>
+      <p class="project-section-text">All expenses enter the system through Payment Requests — created in Operations (purchase costs, fulfillment, delivery, agent commissions), Marketing (ad spend, content production), or HRS (payroll and staff costs). Each request goes through an approval workflow before payment is executed.</p>
+      <p class="project-section-text">Once paid, the transaction is allocated to the appropriate budget category based on its relation to a customer order: linked to order → COGS or Direct Selling Expenses; not linked → Indirect Selling Expenses, OPEX, or Financial Expenses.</p>
+      <div class="project-images-grid">
+        <img src="assets/img/projects/fullflat/22_image_22.png" alt="Payment requests and approval" class="project-img">
+        <img src="assets/img/projects/fullflat/23_image_23.png" alt="Budget allocation per order" class="project-img">
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PAYMENT ALLOCATION ===== -->
+  <div class="project-section project-section--alt">
+    <div class="project-detail-inner">
+      <h2 class="project-section-title">Per-Order Profitability</h2>
+      <p class="project-section-text">When a payment request is linked to a customer order, the expense is allocated directly to that order — enabling per-order profitability tracking. The system shows supplier cost, final cost, and final margin for each order. This gives management real-time visibility into which orders are profitable and which are not, enabling data-driven decisions on pricing, discounts, and package composition.</p>
+    </div>
+  </div>
+
+  <!-- ===== IMPACT ===== -->
+  <div class="project-outcomes">
+    <div class="project-detail-inner">
+      <h2 class="project-outcomes-title">Measurable System Outcomes</h2>
+      <p class="project-outcomes-subtitle">How automated financial architecture replaced manual reporting.</p>
+      <div class="project-outcomes-grid">
+        <div class="project-outcome-item">
+          <p class="project-outcome-metric">30+</p>
+          <p class="project-outcome-label">Budget line items in fully automated P&amp;L</p>
+        </div>
+        <div class="project-outcome-item">
+          <p class="project-outcome-metric">Real-time</p>
+          <p class="project-outcome-label">Financial visibility — revenue, expenses, margins tracked end-to-end</p>
+        </div>
+        <div class="project-outcome-item">
+          <p class="project-outcome-metric">100%</p>
+          <p class="project-outcome-label">Expenses through approval workflow before payment</p>
+        </div>
+      </div>
+      <ul class="project-outcomes-list">
+        <li>Fully automated P&amp;L with 30+ budget line items — no manual spreadsheets or aggregation</li>
+        <li>Real-time financial visibility: revenue, expenses, margins tracked end-to-end</li>
+        <li>Every expense goes through approval workflow before payment — full cost control</li>
+        <li>Per-order cost allocation enables profitability analysis at order level</li>
+        <li>Payroll from HRS flows directly into OPEX reporting</li>
+        <li>Plan vs. Fact analysis supports financial planning and performance monitoring</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== NEXT PROJECT ===== -->
+  <div class="project-next">
+    <div class="project-detail-inner">
+      <p class="project-next-label">Back to</p>
+      <h3 class="project-next-title">All Projects</h3>
+      <p class="project-next-desc">View the full list of systems and integrations built for e-commerce businesses.</p>
+      <a href="projects.html" class="btn btn-primary">View All Projects</a>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-icons">
+        <a href="https://www.linkedin.com/in/vifine/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="assets/img/icons/linkedin.svg" alt="LinkedIn" width="40" height="40">
+        </a>
+        <a href="https://t.me/vifine696" target="_blank" rel="noopener" aria-label="Telegram">
+          <img src="assets/img/icons/telegram.svg" alt="Telegram" width="40" height="40">
+        </a>
+        <a href="https://wa.me/972538791843" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <img src="assets/img/icons/whatsapp.svg" alt="WhatsApp" width="40" height="40">
+        </a>
+        <a href="https://www.upwork.com/freelancers/victoriaf30" target="_blank" rel="noopener" aria-label="Upwork">
+          <img src="assets/img/icons/upwork.svg" alt="Upwork" width="40" height="40">
+        </a>
+      </div>
+      <p class="footer-credit">© 2026 Victoria Fine. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
