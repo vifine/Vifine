@@ -1822,12 +1822,13 @@ img { max-width: 100%; display: block; }
   z-index: 200;
   display: flex;
   flex-direction: column;
-  background: rgba(26, 26, 26, 0.80);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(0, 0, 0, 0.80);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transform: translateY(-100%);
   transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
   padding-bottom: 64px;
+  min-height: 100vh;
 }
 
 .mobile-menu.is-open {
@@ -1839,15 +1840,17 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
-  height: 61px;
+  padding: 0 24px;
+  height: 60px;
+  background: #FFFFFF;
+  flex-shrink: 0;
 }
 
 .mobile-menu-logo {
   font-family: var(--font-serif);
   font-weight: 700;
   font-size: 18px;
-  color: #FFFFFF;
+  color: #1A1A1A;
   text-decoration: none;
 }
 
@@ -1862,7 +1865,7 @@ img { max-width: 100%; display: block; }
 }
 
 .mobile-menu-close img {
-  filter: brightness(0) invert(1);
+  filter: none;
   display: block;
 }
 
