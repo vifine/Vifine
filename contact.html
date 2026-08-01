@@ -96,47 +96,67 @@
       var menu = document.getElementById('mobileMenu');
       var overlay = document.getElementById('mobileMenuOverlay');
       var closeBtn = document.getElementById('mobileMenuClose');
-      function openMenu() { menu.classList.add('is-open'); overlay.classList.add('is-visible'); burger.setAttribute('aria-expanded','true'); menu.setAttribute('aria-hidden','false'); document.body.classList.add('menu-open'); }
-      function closeMenu() { menu.classList.remove('is-open'); overlay.classList.remove('is-visible'); burger.setAttribute('aria-expanded','false'); menu.setAttribute('aria-hidden','true'); document.body.classList.remove('menu-open'); }
-      if (burger) burger.addEventListener('click', openMenu);
-
-      // Desktop dropdown
       var desktopDropdown = document.getElementById('desktopDropdown');
-      var isDesktop = function() { return window.innerWidth > 768; };
+
+      function isDesktop() { return window.innerWidth > 768; }
+
+      function openMobileMenu() {
+        menu.classList.add('is-open');
+        overlay.classList.add('is-visible');
+        burger.setAttribute('aria-expanded', 'true');
+        menu.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('menu-open');
+        burger.classList.add('is-active');
+      }
+
+      function closeMobileMenu() {
+        menu.classList.remove('is-open');
+        overlay.classList.remove('is-visible');
+        burger.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('menu-open');
+        burger.classList.remove('is-active');
+      }
+
+      function openDesktopMenu() {
+        desktopDropdown.classList.add('is-open');
+        desktopDropdown.setAttribute('aria-hidden', 'false');
+        burger.classList.add('is-active');
+      }
+
+      function closeDesktopMenu() {
+        desktopDropdown.classList.remove('is-open');
+        desktopDropdown.setAttribute('aria-hidden', 'true');
+        burger.classList.remove('is-active');
+      }
 
       burger.addEventListener('click', function(e) {
+        e.stopPropagation();
         if (isDesktop()) {
-          e.stopPropagation();
-          var isOpen = desktopDropdown.classList.contains('is-open');
-          if (isOpen) {
-            desktopDropdown.classList.remove('is-open');
-            desktopDropdown.setAttribute('aria-hidden', 'true');
-            burger.classList.remove('is-active');
-            burger.classList.remove('is-active');
-          } else {
-            desktopDropdown.classList.add('is-open');
-            burger.classList.add('is-active');
-            desktopDropdown.setAttribute('aria-hidden', 'false');
-          }
-          return;
+          desktopDropdown.classList.contains('is-open') ? closeDesktopMenu() : openDesktopMenu();
+        } else {
+          menu.classList.contains('is-open') ? closeMobileMenu() : openMobileMenu();
         }
-        openMenu();
       });
 
       // Close desktop dropdown on outside click
       document.addEventListener('click', function(e) {
         if (desktopDropdown && desktopDropdown.classList.contains('is-open')) {
-          if (!desktopDropdown.contains(e.target) && e.target !== burger) {
-            desktopDropdown.classList.remove('is-open');
-            desktopDropdown.setAttribute('aria-hidden', 'true');
-            burger.classList.remove('is-active');
-            burger.classList.remove('is-active');
+          if (!desktopDropdown.contains(e.target) && !burger.contains(e.target)) {
+            closeDesktopMenu();
           }
         }
       });
-      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
-      if (overlay) overlay.addEventListener('click', closeMenu);
-      document.addEventListener('keydown', function(e) { if (e.key==='Escape') closeMenu(); });
+
+      if (closeBtn) closeBtn.addEventListener('click', closeMobileMenu);
+      if (overlay) overlay.addEventListener('click', closeMobileMenu);
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeDesktopMenu();
+          closeMobileMenu();
+        }
+      });
     })();
   </script>
 
