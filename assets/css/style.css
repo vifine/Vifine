@@ -1777,3 +1777,10 @@ body.menu-open .navbar-burger img {
     font-size: 28px;
   }
 }
+
+/* Doodle burger icon */
+.burger-icon-img {
+  width: 37px;
+  height: 26px;
+  display: block;
+}
