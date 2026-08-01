@@ -1837,7 +1837,7 @@ body.menu-open .wa-widget {
   transition: opacity 0.3s ease;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.50);
 }
 
 .mobile-menu-overlay.is-visible {
@@ -1853,7 +1853,7 @@ body.menu-open .wa-widget {
   z-index: 200;
   display: flex;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.80);
+  background: rgba(0, 0, 0, 0.50);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transform: translateY(-100%);
