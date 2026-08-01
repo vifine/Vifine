@@ -358,23 +358,28 @@
   </a>
 
   <script>
-    // WhatsApp widget: periodic bounce reminder every 10s
+    // WhatsApp widget: periodic bounce every 10s
     (function() {
       var wa = document.querySelector('.wa-widget');
       if (!wa) return;
-      // After initial CSS animation (3s delay + 3 bounces = ~5.4s), run periodic bounce
       function triggerBounce() {
+        // Remove inline animation to allow class-based one to take over
+        wa.style.animation = 'none';
         wa.classList.remove('wa-bounce-trigger');
-        // Force reflow to restart animation
+        // Force reflow
         void wa.offsetWidth;
+        wa.style.animation = '';
         wa.classList.add('wa-bounce-trigger');
+        // Remove class after animation ends so it can be re-added next time
+        setTimeout(function() {
+          wa.classList.remove('wa-bounce-trigger');
+        }, 900);
       }
-      // First periodic bounce after initial animation finishes
+      // Start periodic bounce after initial CSS animation finishes (3s delay + 0.8s = ~4s)
       setTimeout(function() {
         triggerBounce();
-        // Then repeat every 10 seconds
         setInterval(triggerBounce, 10000);
-      }, 6000);
+      }, 5000);
     })();
   </script>
 
