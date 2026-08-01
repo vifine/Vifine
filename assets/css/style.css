@@ -1477,12 +1477,16 @@ body.menu-open .navbar {
   z-index: 201;
 }
 
-body.menu-open .navbar-logo {
-  color: #FFFFFF;
+@media (max-width: 768px) {
+  body.menu-open .navbar-logo {
+    color: #FFFFFF;
+  }
 }
 
-body.menu-open .navbar-burger img {
-  filter: invert(1);
+@media (max-width: 768px) {
+  body.menu-open .navbar-burger img {
+    filter: invert(1);
+  }
 }
 
 /* Mobile menu header — hidden (navbar acts as header) */
