@@ -1822,12 +1822,9 @@ img { max-width: 100%; display: block; }
   z-index: 200;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(
-    to bottom,
-    #1a1a1a 0%,
-    #1a1a1a 80%,
-    rgba(26, 26, 26, 0.0) 100%
-  );
+  background: rgba(26, 26, 26, 0.80);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   transform: translateY(-100%);
   transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
   padding-bottom: 64px;
@@ -1911,9 +1908,9 @@ img { max-width: 100%; display: block; }
 }
 
 .mobile-menu-social-link {
-  font-family: var(--font-sans);
-  font-size: 16px;
-  font-weight: 400;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 700;
   color: rgba(255,255,255,0.45);
   text-decoration: none;
   padding: 8px 0;
