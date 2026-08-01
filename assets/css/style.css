@@ -1784,3 +1784,73 @@ body.menu-open .navbar-burger img {
   height: 26px;
   display: block;
 }
+
+/* ============================================
+   WHATSAPP FLOATING WIDGET
+   ============================================ */
+.wa-widget {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 60px;
+  height: 60px;
+  background: #1A1A1A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  z-index: 9999;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  animation: wa-bounce 1s ease 4s 2;
+}
+
+.wa-widget:hover {
+  background: #25D366;
+  transform: scale(1.08);
+  box-shadow: 0 6px 24px rgba(37,211,102,0.35);
+}
+
+.wa-icon {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  display: block;
+}
+
+/* Bounce animation — fires after 4s delay, repeats 2 times, then stops */
+@keyframes wa-bounce {
+  0%   { transform: translateY(0); }
+  20%  { transform: translateY(-10px); }
+  40%  { transform: translateY(0); }
+  60%  { transform: translateY(-6px); }
+  80%  { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
+/* Periodic reminder — fires every 8s, subtle pulse */
+@keyframes wa-pulse {
+  0%   { box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+  50%  { box-shadow: 0 4px 24px rgba(0,0,0,0.32), 0 0 0 8px rgba(26,26,26,0.08); }
+  100% { box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+}
+
+/* After initial bounce, run periodic pulse every 8s */
+.wa-widget.wa-active {
+  animation: wa-pulse 2s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+@media (max-width: 768px) {
+  .wa-widget {
+    bottom: 24px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+  }
+  .wa-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
