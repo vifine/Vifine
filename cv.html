@@ -424,5 +424,27 @@
     </div>
   </footer>
 
+
+  <!-- WhatsApp Widget -->
+  <a href="https://wa.me/972538791843?text=Hi%20Victoria!%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+     class="wa-widget"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contact via WhatsApp">
+    <img src="assets/img/icons/whatsapp-icon.svg" alt="WhatsApp" class="wa-icon">
+  </a>
+
+  <script>
+    // WhatsApp widget: after initial bounce animation ends, switch to periodic pulse
+    (function() {
+      var wa = document.querySelector('.wa-widget');
+      if (!wa) return;
+      // After 2 bounces (each ~1s) + 4s delay = ~6s total, add periodic pulse class
+      setTimeout(function() {
+        wa.classList.add('wa-active');
+      }, 7000);
+    })();
+  </script>
+
 </body>
 </html>
