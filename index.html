@@ -193,15 +193,8 @@
         }
       });
 
-      // Close desktop dropdown on outside click
-      document.addEventListener('click', function(e) {
-        if (desktopDropdown && desktopDropdown.classList.contains('is-open')) {
-          if (!desktopDropdown.contains(e.target) && !burger.contains(e.target)) {
-            closeDesktopMenu();
-          }
-        }
-      });
-
+      // Desktop dropdown: close ONLY by clicking burger (cross) — no outside click close
+      // Mobile: close on overlay click or close button
       if (closeBtn) closeBtn.addEventListener('click', closeMobileMenu);
       if (overlay) overlay.addEventListener('click', closeMobileMenu);
 
