@@ -1945,3 +1945,11 @@ body.menu-open .wa-widget {
 .mobile-menu-social-link:hover {
   color: #FFFFFF;
 }
+
+/* Instant show desktop dropdown on page load if was open */
+.desktop-menu-was-open .desktop-dropdown {
+  display: flex !important;
+  opacity: 1 !important;
+  transform: translateY(-50%) translateX(0) !important;
+  pointer-events: auto !important;
+}
