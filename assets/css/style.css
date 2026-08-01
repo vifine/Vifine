@@ -1918,6 +1918,24 @@ body.menu-open .navbar-burger img {
   position: relative;
 }
 
+/* Desktop burger icon switch: burger → cross when menu open */
+.navbar-burger .burger-icon-img {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-burger .cross-icon-img {
+  display: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-burger.is-active .burger-icon-img {
+  display: none;
+}
+
+.navbar-burger.is-active .cross-icon-img {
+  display: block;
+}
+
 /* Hide mobile menu on desktop */
 @media (min-width: 769px) {
   .mobile-menu,
