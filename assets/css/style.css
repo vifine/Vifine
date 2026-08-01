@@ -1861,42 +1861,47 @@ body.menu-open .navbar-burger img {
 .desktop-dropdown {
   display: none;
   position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
+  top: 50%;
+  right: 56px;
+  transform: translateY(-50%) translateX(8px);
   background: #FFFFFF;
   border: 1px solid #E5E5E5;
   border-radius: 8px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
-  padding: 8px 0;
-  min-width: 160px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+  padding: 6px 8px;
   z-index: 200;
   opacity: 0;
-  transform: translateY(-8px);
   transition: opacity 0.2s ease, transform 0.2s ease;
   pointer-events: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
 }
 
 .desktop-dropdown.is-open {
-  display: block;
+  display: flex;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(-50%) translateX(0);
   pointer-events: auto;
 }
 
 .desktop-dropdown-link {
-  display: block;
-  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--text-secondary);
   text-decoration: none;
+  border-radius: 6px;
   transition: color 0.15s, background 0.15s;
 }
 
 .desktop-dropdown-link:hover {
   color: var(--text-primary);
-  background: #F7F7F7;
+  background: #F5F5F5;
 }
 
 .desktop-dropdown-link.active {
