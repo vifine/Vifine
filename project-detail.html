@@ -88,6 +88,7 @@
       var overlay = document.getElementById('mobileMenuOverlay');
       var closeBtn = document.getElementById('mobileMenuClose');
       var desktopDropdown = document.getElementById('desktopDropdown');
+      var STORAGE_KEY = 'vf_desktop_menu_open';
 
       function isDesktop() { return window.innerWidth > 768; }
 
@@ -113,12 +114,24 @@
         desktopDropdown.classList.add('is-open');
         desktopDropdown.setAttribute('aria-hidden', 'false');
         burger.classList.add('is-active');
+        try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch(e) {}
       }
 
       function closeDesktopMenu() {
         desktopDropdown.classList.remove('is-open');
         desktopDropdown.setAttribute('aria-hidden', 'true');
         burger.classList.remove('is-active');
+        try { sessionStorage.removeItem(STORAGE_KEY); } catch(e) {}
+      }
+
+      // Restore desktop menu state on page load
+      if (isDesktop()) {
+        try {
+          if (sessionStorage.getItem(STORAGE_KEY) === '1') {
+            // Small delay to let page render first
+            setTimeout(function() { openDesktopMenu(); }, 50);
+          }
+        } catch(e) {}
       }
 
       burger.addEventListener('click', function(e) {
@@ -130,8 +143,6 @@
         }
       });
 
-      // Desktop dropdown: close ONLY by clicking burger (cross) — no outside click close
-      // Mobile: close on overlay click or close button
       if (closeBtn) closeBtn.addEventListener('click', closeMobileMenu);
       if (overlay) overlay.addEventListener('click', closeMobileMenu);
 
