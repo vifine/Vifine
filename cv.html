@@ -65,6 +65,14 @@
 }
 </script>
     <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // Restore desktop menu state immediately (before paint)
+    try {
+      if (window.innerWidth > 768 && sessionStorage.getItem('vf_desktop_menu_open') === '1') {
+        document.documentElement.classList.add('desktop-menu-was-open');
+      }
+    } catch(e) {}
+  </script>
 </head>
 <body>
 
@@ -179,11 +187,12 @@
       if (isDesktop()) {
         try {
           if (sessionStorage.getItem(STORAGE_KEY) === '1') {
-            // Small delay to let page render first
-            setTimeout(function() { openDesktopMenu(); }, 50);
+            openDesktopMenu();
           }
         } catch(e) {}
       }
+      // Clean up html class
+      document.documentElement.classList.remove('desktop-menu-was-open');
 
       burger.addEventListener('click', function(e) {
         e.stopPropagation();
