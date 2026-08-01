@@ -51,15 +51,20 @@
     <div class="container">
       <a href="index.html" class="navbar-logo">Victoria Fine</a>
       <ul class="navbar-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-        <li class="navbar-cta"><a href="contact.html" class="btn btn-primary">Get in Touch</a></li>
+        <li><a href="index.html" class="">Home</a></li>
+        <li><a href="cv.html" class="">CV</a></li>
+        <li><a href="projects.html" class="">Projects</a></li>
       </ul>
       <button class="navbar-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
         <img src="assets/img/icons/burger-doodle.svg" alt="Menu" width="53" height="53" class="burger-icon-img">
-      </button>
+      
+      <!-- Desktop Dropdown -->
+      <div class="desktop-dropdown" id="desktopDropdown" aria-hidden="true">
+        <a href="index.html" class="desktop-dropdown-link ">Home</a>
+        <a href="cv.html" class="desktop-dropdown-link ">CV</a>
+        <a href="projects.html" class="desktop-dropdown-link ">Projects</a>
+      </div>
+      <!-- /Desktop Dropdown -->
     </div>
   </nav>
 
@@ -75,10 +80,9 @@
       </button>
     </div>
     <nav class="mobile-menu-nav">
-      <a href="index.html" class="mobile-menu-link">Home</a>
-      <a href="cv.html" class="mobile-menu-link">CV</a>
+      <a href="index.html" class="mobile-menu-link ">Home</a>
+      <a href="cv.html" class="mobile-menu-link ">CV</a>
       <a href="projects.html" class="mobile-menu-link ">Projects</a>
-      <a href="contact.html" class="mobile-menu-link active">Contact</a>
     </nav>
     <div class="mobile-menu-footer">
       <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get in Touch</a>
@@ -94,6 +98,36 @@
       function openMenu() { menu.classList.add('is-open'); overlay.classList.add('is-visible'); burger.setAttribute('aria-expanded','true'); menu.setAttribute('aria-hidden','false'); document.body.classList.add('menu-open'); }
       function closeMenu() { menu.classList.remove('is-open'); overlay.classList.remove('is-visible'); burger.setAttribute('aria-expanded','false'); menu.setAttribute('aria-hidden','true'); document.body.classList.remove('menu-open'); }
       if (burger) burger.addEventListener('click', openMenu);
+
+      // Desktop dropdown
+      var desktopDropdown = document.getElementById('desktopDropdown');
+      var isDesktop = function() { return window.innerWidth > 768; };
+
+      burger.addEventListener('click', function(e) {
+        if (isDesktop()) {
+          e.stopPropagation();
+          var isOpen = desktopDropdown.classList.contains('is-open');
+          if (isOpen) {
+            desktopDropdown.classList.remove('is-open');
+            desktopDropdown.setAttribute('aria-hidden', 'true');
+          } else {
+            desktopDropdown.classList.add('is-open');
+            desktopDropdown.setAttribute('aria-hidden', 'false');
+          }
+          return;
+        }
+        openMenu();
+      });
+
+      // Close desktop dropdown on outside click
+      document.addEventListener('click', function(e) {
+        if (desktopDropdown && desktopDropdown.classList.contains('is-open')) {
+          if (!desktopDropdown.contains(e.target) && e.target !== burger) {
+            desktopDropdown.classList.remove('is-open');
+            desktopDropdown.setAttribute('aria-hidden', 'true');
+          }
+        }
+      });
       if (closeBtn) closeBtn.addEventListener('click', closeMenu);
       if (overlay) overlay.addEventListener('click', closeMenu);
       document.addEventListener('keydown', function(e) { if (e.key==='Escape') closeMenu(); });
