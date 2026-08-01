@@ -1795,14 +1795,14 @@ body.menu-open .navbar-burger img {
   text-decoration: none;
   box-shadow: 0 4px 16px rgba(0,0,0,0.18);
   z-index: 9999;
-  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-  animation: wa-bounce 1s ease 4s 2;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+  animation: wa-bounce 0.8s cubic-bezier(0.36,0.07,0.19,0.97) 3s 3 both;
 }
 
 .wa-widget:hover {
   background: #25D366;
-  transform: scale(1.08);
   box-shadow: 0 6px 24px rgba(37,211,102,0.35);
+  animation: none;
 }
 
 .wa-icon {
@@ -1812,14 +1812,14 @@ body.menu-open .navbar-burger img {
   display: block;
 }
 
-/* Bounce animation — fires after 4s delay, repeats 2 times, then stops */
+/* Bounce animation — fires after 3s delay, repeats 3 times */
 @keyframes wa-bounce {
-  0%   { transform: translateY(0); }
-  20%  { transform: translateY(-10px); }
-  40%  { transform: translateY(0); }
-  60%  { transform: translateY(-6px); }
-  80%  { transform: translateY(0); }
-  100% { transform: translateY(0); }
+  0%   { transform: translateY(0) scale(1); }
+  15%  { transform: translateY(-14px) scale(1.05); }
+  30%  { transform: translateY(0) scale(0.97); }
+  45%  { transform: translateY(-8px) scale(1.02); }
+  60%  { transform: translateY(0) scale(1); }
+  100% { transform: translateY(0) scale(1); }
 }
 
 /* Periodic reminder — fires every 8s, subtle pulse */
@@ -1829,10 +1829,16 @@ body.menu-open .navbar-burger img {
   100% { box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
 }
 
-/* After initial bounce, run periodic pulse every 8s */
+/* After initial bounce, run periodic bounce every 10s */
 .wa-widget.wa-active {
-  animation: wa-pulse 2s ease-in-out infinite;
+  animation: wa-bounce 0.8s cubic-bezier(0.36,0.07,0.19,0.97) infinite;
   animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+
+/* JS-triggered periodic bounce */
+.wa-widget.wa-bounce-trigger {
+  animation: wa-bounce 0.8s cubic-bezier(0.36,0.07,0.19,0.97) 1;
 }
 
 @media (max-width: 768px) {
