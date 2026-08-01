@@ -87,6 +87,7 @@
       </ul>
       <button class="navbar-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
         <img src="assets/img/icons/burger-doodle.svg" alt="Menu" width="53" height="53" class="burger-icon-img">
+        <img src="assets/img/icons/cross.svg" alt="Close" width="24" height="24" class="cross-icon-img">
       
       <!-- Desktop Dropdown -->
       <div class="desktop-dropdown" id="desktopDropdown" aria-hidden="true">
@@ -140,8 +141,11 @@
           if (isOpen) {
             desktopDropdown.classList.remove('is-open');
             desktopDropdown.setAttribute('aria-hidden', 'true');
+            burger.classList.remove('is-active');
+            burger.classList.remove('is-active');
           } else {
             desktopDropdown.classList.add('is-open');
+            burger.classList.add('is-active');
             desktopDropdown.setAttribute('aria-hidden', 'false');
           }
           return;
@@ -155,6 +159,8 @@
           if (!desktopDropdown.contains(e.target) && e.target !== burger) {
             desktopDropdown.classList.remove('is-open');
             desktopDropdown.setAttribute('aria-hidden', 'true');
+            burger.classList.remove('is-active');
+            burger.classList.remove('is-active');
           }
         }
       });
