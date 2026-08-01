@@ -194,14 +194,19 @@
   </a>
 
   <script>
-    // WhatsApp widget: after initial bounce animation ends, switch to periodic pulse
+    // WhatsApp widget: periodic bounce reminder every 10s
     (function() {
       var wa = document.querySelector('.wa-widget');
       if (!wa) return;
-      // After 2 bounces (each ~1s) + 4s delay = ~6s total, add periodic pulse class
+      function triggerBounce() {
+        wa.classList.remove('wa-bounce-trigger');
+        void wa.offsetWidth;
+        wa.classList.add('wa-bounce-trigger');
+      }
       setTimeout(function() {
-        wa.classList.add('wa-active');
-      }, 7000);
+        triggerBounce();
+        setInterval(triggerBounce, 10000);
+      }, 6000);
     })();
   </script>
 
