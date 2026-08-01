@@ -1914,6 +1914,17 @@ body.menu-open .navbar-burger img {
   position: relative;
 }
 
+/* Hide mobile menu on desktop */
+@media (min-width: 769px) {
+  .mobile-menu,
+  .mobile-menu-overlay {
+    display: none !important;
+    transform: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
 /* On mobile — hide desktop dropdown, use full-screen menu */
 @media (max-width: 768px) {
   .desktop-dropdown {
