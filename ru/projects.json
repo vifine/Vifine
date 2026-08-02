@@ -34,7 +34,7 @@
     "companyLocation": "United Arab Emirates",
     "role": "Systems Architect & COO",
     "period": "Apr 2025 – Apr 2026",
-    "title": "Order Management System",
+    "title": "Order Management System for Online Furniture Store",
     "tagline": "End-to-end order lifecycle — from inquiry to delivery confirmation and automated reviews",
     "summary": "The central hub of the FullFlat platform. Manages the full order lifecycle — from customer inquiry to delivery confirmation and post-delivery claims. All teams work within a single Airtable interface with role-specific views: sales managers handle orders and quoting, the fulfillment team manages procurement and supplier coordination, delivery supervisors confirm shipments from mobile, and management monitors performance through built-in reports.",
     "challenge": "FullFlat was managing orders across multiple channels with disconnected systems — Shopify storefront orders, WhatsApp consultations, manual fulfillment tracking, and no visibility into supplier performance or delivery status.",
