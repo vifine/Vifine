@@ -186,6 +186,33 @@ function renderResumeProjectLinks(projects) {
 }
 
 // ============================================
+// Поиск по списку проектов (live filter)
+// ============================================
+function initProjectsSearch() {
+    const input = document.getElementById('projectsSearch');
+    const grid = document.getElementById('portfolio-grid');
+    const noResults = document.getElementById('projectsNoResults');
+    if (!input || !grid) return;
+
+    input.addEventListener('input', () => {
+        const query = input.value.trim().toLowerCase();
+        const rows = grid.querySelectorAll('.project-row');
+        let visibleCount = 0;
+
+        rows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            const matches = query === '' || text.includes(query);
+            row.style.display = matches ? '' : 'none';
+            if (matches) visibleCount++;
+        });
+
+        if (noResults) {
+            noResults.classList.toggle('is-visible', visibleCount === 0);
+        }
+    });
+}
+
+// ============================================
 // Инициализация при загрузке страницы
 // ============================================
 
@@ -195,4 +222,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderPortfolioGrid(projects);
     renderProjectDetail(projects);
     renderResumeProjectLinks(projects);
+    initProjectsSearch();
 });
