@@ -17,7 +17,7 @@
     { "label": "Year", "value": "2026" }
   ],
   "techTags": ["Shopify", "Figma", "Airtable", "Airpower", "n8n"],
-  "overview": "An international European online store shipping worldwide. Designed a new storefront in Figma and implemented it with a development team, architected so the client's own team could maintain it going forward without depending on outside developers for routine changes. Built the entire content and pricing model on metafields and metaobjects, including market-specific pricing — VAT-inclusive for Europe, VAT-exclusive elsewhere.",
+  "overview": "ARTLINE is an international European arts-and-crafts brand shipping worldwide. I designed the new storefront — <a href=\"https://artline-resin.eu/\" target=\"_blank\" rel=\"noopener\">artline-resin.eu</a> — in Figma and implemented it with a development team, architecting it so the client's own team could maintain it going forward without depending on outside developers for routine changes. The entire content and pricing model runs on metafields and metaobjects, including market-specific pricing — VAT-inclusive for Europe, VAT-exclusive elsewhere.",
   "challenge": "The client's storefront had been running since 2022, incrementally patched by a rotating cast of agencies with no consistent architecture behind it. The result was a flat product catalog that couldn't represent variants properly, a browsing experience that wasn't built to convert, and no way for customers to filter products or calculate how much material they'd actually need — friction that pushed people to abandon before checkout on a site where confidence in quantity and fit matters most.",
   "solutionIntro": "",
   "solutionBlocks": [],
