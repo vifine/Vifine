@@ -2227,3 +2227,55 @@ body.menu-open .wa-widget {
   transform: translateY(-50%) translateX(0) !important;
   pointer-events: auto !important;
 }
+
+/* ============================================
+   404 PAGE
+   ============================================ */
+.page-404 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 80px var(--page-padding);
+  text-align: center;
+}
+
+.page-404-illustration {
+  max-width: 710px;
+  width: 100%;
+}
+
+.page-404-illustration img {
+  width: 100%;
+  height: auto;
+}
+
+.page-404-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 600px;
+}
+
+.page-404-text h1 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--text-primary);
+}
+
+.page-404-text p {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .page-404 { padding: 48px 24px; gap: 32px; }
+  .page-404-text h1 { font-size: 28px; }
+}
