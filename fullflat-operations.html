@@ -320,13 +320,13 @@
         </div>
       </div>
       <ul class="project-results-bullets">
-        <li>80+ reports, logs &amp; dashboards</li>
-        <li>6 external systems integrated: Shopify, WhatsApp Business API, Airpower, Stripe, Paymob, and supplier feeds</li>
-        <li>Multi-supplier order splitting with independent cost, status, and timeline tracking per fulfillment order</li>
-        <li>Automated claim calculation (refund/replacement) synced with inventory reconciliation</li>
-        <li>Daily cumulative Plan vs. Fact tracking across sales revenue and cash-in, fully automated</li>
         <li>Full order-level unit economics — revenue, COGS, returns, discounts, margin, payment processor fees, delivery costs, sales team commission, and agent fees calculated automatically per order</li>
         <li>Transparent KPIs enabled across performance marketing, sales, procurement, and delivery teams</li>
+        <li>Daily cumulative Plan vs. Fact tracking across sales revenue and cash-in, fully automated</li>
+        <li>6 external systems integrated: Shopify, WhatsApp Business API, Airpower, Stripe, Paymob, and supplier feeds</li>
+        <li>80+ reports, logs &amp; dashboards</li>
+        <li>Multi-supplier order splitting with independent cost, status, and timeline tracking per fulfillment order</li>
+        <li>Automated claim calculation (refund/replacement) synced with inventory reconciliation</li>
       </ul>
     </div>
   </div>
@@ -378,9 +378,12 @@
       var wa = document.querySelector('.wa-widget');
       if (!wa) return;
       function triggerBounce() {
-        wa.classList.remove('wa-bounce-trigger');
-        void wa.offsetWidth;
-        wa.classList.add('wa-bounce-trigger');
+        wa.style.animation = 'none';
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            wa.style.animation = 'wa-bounce 0.8s cubic-bezier(0.36,0.07,0.19,0.97) 1';
+          });
+        });
       }
       setTimeout(function() {
         triggerBounce();

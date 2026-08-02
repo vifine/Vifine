@@ -363,9 +363,12 @@
       var wa = document.querySelector('.wa-widget');
       if (!wa) return;
       function triggerBounce() {
-        wa.classList.remove('wa-bounce-trigger');
-        void wa.offsetWidth;
-        wa.classList.add('wa-bounce-trigger');
+        wa.style.animation = 'none';
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            wa.style.animation = 'wa-bounce 0.8s cubic-bezier(0.36,0.07,0.19,0.97) 1';
+          });
+        });
       }
       setTimeout(function() {
         triggerBounce();
