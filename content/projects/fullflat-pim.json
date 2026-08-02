@@ -28,6 +28,7 @@
     { "type": "image", "src": "assets/img/projects/fullflat/16_image_16.png", "alt": "Product enrichment view", "style": "margin-bottom:40px;" },
     { "type": "heading", "text": "Multi-Supplier Cost Structure" },
     { "type": "text", "text": "Since products are sourced from different contract manufacturers at different prices, cost couldn't live on the product record alone. A dedicated linked Product × Supplier pricing table ties cost to the specific product-supplier pair, giving accurate unit economics regardless of which manufacturer fulfills a given order — something Shopify's native single-cost-field model can't represent." },
+    { "type": "image", "src": "assets/img/projects/fullflat-pim/01-supplier-pricing-table.png", "alt": "Multi-supplier pricing table per variant with procurement cost and margin", "style": "margin-bottom:40px;" },
     { "type": "heading", "text": "Bilingual Content &amp; AI-Generated Imagery" },
     { "type": "text", "text": "Every product carries full English and Arabic content side by side, with Arabic translations managed directly by the content manager in Airtable. For lifestyle imagery, rendering each product into realistic interior scenes was costly with traditional 3D rendering — instead, product renders are run through a third-party AI interior-generation service against a fixed set of template scenes, producing lifestyle imagery at a fraction of the cost and time." },
     { "type": "heading", "text": "Enrichment, SEO &amp; Publishing" },
