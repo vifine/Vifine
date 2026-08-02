@@ -2530,3 +2530,14 @@ body.menu-open .wa-widget {
   padding: 14px 32px;
   font-size: 16px;
 }
+
+/* Bottom project nav doodle arrows */
+.project-nav-arrow {
+  width: 32px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.project-nav-arrow--prev {
+  transform: scaleX(-1);
+}
