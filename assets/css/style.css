@@ -2541,3 +2541,22 @@ body.menu-open .wa-widget {
 .project-nav-arrow--prev {
   transform: scaleX(-1);
 }
+
+/* In-content links (Overview, Challenge, Solution prose) — underlined, monochrome accent */
+.project-block p a,
+.project-section-text a,
+.project-results-bullets a,
+.cv-section-inner p a,
+.ai-section-inner p a {
+  color: #444;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.project-block p a:hover,
+.project-section-text a:hover,
+.project-results-bullets a:hover,
+.cv-section-inner p a:hover,
+.ai-section-inner p a:hover {
+  color: var(--text-primary);
+}
