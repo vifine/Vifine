@@ -23,7 +23,7 @@
   "solutionBlocks": [
     { "type": "image", "src": "assets/img/projects/fullflat-pim/00-full-flow-diagram.png", "alt": "FullFlat PIM full product lifecycle — from creation to publishing", "style": "margin: 24px 0 40px;" },
     { "type": "heading", "text": "Product Entry &amp; Supplier Feeds" },
-    { "type": "text", "text": "Products enter PIM through two paths. Own furniture is created directly in the system — product, variants, materials, and 3D-rendered visuals. Accessories are imported from supplier feeds with automated sync of catalog data, pricing, stock levels, and images. The feed interface tracks sync status and update logs for every product, ensuring data consistency between supplier systems and PIM." },
+    { "type": "text", "text": "Products enter PIM through two paths. Own furniture is created directly in the system — product, variants, materials, and 3D-rendered visuals. Each variant's SKU is generated automatically from a fixed template combining Material, Color, and Size, keeping SKU codes consistent and eliminating manual entry errors across thousands of variant combinations. Accessories are imported from supplier feeds with automated sync of catalog data, pricing, stock levels, and images. The feed interface tracks sync status and update logs for every product, ensuring data consistency between supplier systems and PIM." },
     { "type": "image", "src": "assets/img/projects/fullflat/15_image_15.png", "alt": "Supplier feed sync interface", "style": "margin-bottom:16px;" },
     { "type": "image", "src": "assets/img/projects/fullflat/16_image_16.png", "alt": "Product enrichment view", "style": "margin-bottom:40px;" },
     { "type": "heading", "text": "Multi-Supplier Cost Structure" },
@@ -49,6 +49,7 @@
       "Multi-supplier cost structure enables accurate unit economics despite variable manufacturer pricing",
       "Supplier feed automation eliminates manual data entry for the accessories catalog",
       "AI-generated interior scenes replace costly 3D rendering for lifestyle imagery",
+      "Automated SKU generation from Material/Color/Size templates eliminates manual entry errors across thousands of variant combinations",
       "SEO managed at scale across 1,000+ products with a structured workflow",
       "Multi-channel publishing (Shopify, Meta, Google, Pinterest) from one interface"
     ]
