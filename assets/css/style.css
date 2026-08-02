@@ -2447,7 +2447,7 @@ body.menu-open .wa-widget {
 }
 
 @media (max-width: 768px) {
-  .project-img-zoom-badge { width: 34px; height: 34px; bottom: 8px; right: 8px; }
+  .project-img-zoom-badge { display: none; }
   .project-img-zoom-badge img { width: 17px; height: 17px; }
   .project-img-lightbox { padding: 16px; }
   .project-img-lightbox-close { top: 12px; right: 12px; width: 38px; height: 38px; }
