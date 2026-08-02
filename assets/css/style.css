@@ -160,9 +160,10 @@ img { max-width: 100%; display: block; }
 .btn-secondary {
   background: transparent;
   color: var(--text-primary);
-  border: 1.5px solid var(--border-color);
+  border: 1.5px solid var(--text-primary);
+  transition: background 0.2s ease, color 0.2s ease;
 }
-.btn-secondary:hover { border-color: var(--text-primary); text-decoration: none; }
+.btn-secondary:hover { background: var(--text-primary); color: #fff; text-decoration: none; }
 
 .btn-outline-dark {
   background: transparent;
