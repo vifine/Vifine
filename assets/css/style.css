@@ -2306,6 +2306,7 @@ body.menu-open .wa-widget {
 
 /* Language toggle — persistent, outside dropdown menus */
 .lang-toggle {
+  position: relative;
   display: flex;
   align-items: center;
   background: #1A1A1A;
@@ -2314,30 +2315,41 @@ body.menu-open .wa-widget {
   width: 56px;
   height: 28px;
   flex-shrink: 0;
+  margin-left: auto;
   margin-right: 20px;
 }
 
-.lang-toggle .lang-segment {
+.lang-toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 12px;
+  transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lang-toggle--ru .lang-toggle-thumb {
+  left: 28px;
+}
+
+.lang-label {
+  position: relative;
+  z-index: 1;
   flex: 1;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
   font-family: var(--font-serif);
   font-size: 12px;
-  font-weight: 400;
-  color: #fff;
   text-decoration: none;
-}
-
-.lang-toggle .lang-segment.active {
-  background: #fff;
-  color: #1A1A1A;
-  font-weight: 700;
-}
-
-.lang-toggle a.lang-segment:hover {
   color: #fff;
-  opacity: 0.8;
+  font-weight: 400;
 }
+
+.lang-label-en { color: #1A1A1A; font-weight: 700; }
+
+.lang-toggle--ru .lang-label-en { color: #fff; font-weight: 400; }
+.lang-toggle--ru .lang-label-ru { color: #1A1A1A; font-weight: 700; }

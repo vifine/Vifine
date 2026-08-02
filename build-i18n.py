@@ -61,13 +61,20 @@ def fix_ru_paths(html: str) -> str:
     return html
 
 
-def insert_lang_toggle(html: str, current_label: str, other_label: str, other_href: str) -> str:
-    """Insert a persistent segmented 'En / Ru' pill toggle in the header, right before the
-    burger button — always visible, outside the dropdown/mobile menu, matching Figma."""
+def insert_lang_toggle(html: str, active: str, other_href: str) -> str:
+    """Insert a persistent sliding pill toggle in the header, right before the burger
+    button — always visible, outside the dropdown/mobile menu, matching Figma."""
+    modifier = " lang-toggle--ru" if active == "ru" else ""
+    if active == "en":
+        en_el = '<span class="lang-label lang-label-en">En</span>'
+        ru_el = f'<a href="{other_href}" class="lang-label lang-label-ru">Ru</a>'
+    else:
+        en_el = f'<a href="{other_href}" class="lang-label lang-label-en">En</a>'
+        ru_el = '<span class="lang-label lang-label-ru">Ru</span>'
     toggle = (
-        '\n      <div class="lang-toggle">'
-        f'<span class="lang-segment active">{current_label}</span>'
-        f'<a href="{other_href}" class="lang-segment">{other_label}</a>'
+        f'\n      <div class="lang-toggle{modifier}">'
+        '<span class="lang-toggle-thumb"></span>'
+        f'{en_el}{ru_el}'
         '</div>\n      '
     )
     return re.sub(
@@ -92,7 +99,7 @@ def build():
         # ---- Update the EN (root) file in place ----
         en_html = original
         en_html = add_hreflang(en_html, page, is_ru=False)
-        en_html = insert_lang_toggle(en_html, "En", "Ru", f"ru/{page}")
+        en_html = insert_lang_toggle(en_html, "en", f"ru/{page}")
         src_path.write_text(en_html, encoding="utf-8")
 
         # ---- Build the RU mirror ----
@@ -108,7 +115,7 @@ def build():
             ru_html,
             count=1,
         )
-        ru_html = insert_lang_toggle(ru_html, "Ru", "En", f"../{page}")
+        ru_html = insert_lang_toggle(ru_html, "ru", f"../{page}")
 
         (RU_DIR / page).write_text(ru_html, encoding="utf-8")
         print(f"  built: {page}  ->  ru/{page}")
