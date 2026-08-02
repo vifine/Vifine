@@ -45,17 +45,17 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "FullFlat PIM",
+  "name": "Product Information Management System",
   "url": "https://vifine.tech/fullflat-pim.html",
-  "description": "Single source of truth for 10,000+ SKUs. Supplier feed automation, AI content pipeline, and multi-channel Shopify publishing.",
+  "description": "Single source of truth for 10,000+ SKUs. Supplier feeds, AI content pipeline, and multi-channel Shopify publishing.",
   "author": {"@id": "https://vifine.tech/#person"},
-  "keywords": "PIM, Airtable, Shopify, supplier feeds, AI content, e-commerce catalog",
+  "keywords": "PIM system, Airtable PIM, Shopify product management, supplier feed automation, AI content generation, e-commerce catalog",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vifine.tech/"},
       {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://vifine.tech/projects.html"},
-      {"@type": "ListItem", "position": 3, "name": "FullFlat PIM", "item": "https://vifine.tech/fullflat-pim.html"}
+      {"@type": "ListItem", "position": 3, "name": "Product Information Management System", "item": "https://vifine.tech/fullflat-pim.html"}
     ]
   }
 }
@@ -218,111 +218,118 @@
       <div class="breadcrumb">
         <a href="projects.html">Projects</a>
         <span>/</span>
-        <span>FullFlat PIM</span>
+        <span>Product Information Management System</span>
       </div>
-      <h1>FullFlat PIM</h1>
+      <h1>Product Information Management System</h1>
+      <p class="project-pitch">Single source of truth for 10,000+ SKUs — automated supplier feeds, AI-powered content, and multi-channel Shopify publishing</p>
       <div class="project-meta">
         <div class="project-meta-item">
           <p class="project-meta-label">Role</p>
-          <p class="project-meta-value">Systems Architect &amp; COO</p>
+          <p class="project-meta-value">Architect</p>
         </div>
         <div class="project-meta-item">
-          <p class="project-meta-label">Client / Location</p>
-          <p class="project-meta-value">FullFlat LLC / UAE</p>
+          <p class="project-meta-label">Company</p>
+          <p class="project-meta-value">FullFlat LLC</p>
         </div>
         <div class="project-meta-item">
-          <p class="project-meta-label">Core Tech</p>
-          <p class="project-meta-value">Airtable · Shopify API · n8n · Photoroom · Decor8</p>
+          <p class="project-meta-label">Location</p>
+          <p class="project-meta-value">UAE</p>
         </div>
         <div class="project-meta-item">
           <p class="project-meta-label">Year</p>
-          <p class="project-meta-value">2025 — 2026</p>
+          <p class="project-meta-value">2025</p>
         </div>
+      </div>
+      <p class="project-tech-label">Core Tech</p>
+      <div class="project-tech-tags">
+        <span class="project-tech-tag">Airtable</span>
+        <span class="project-tech-tag">Shopify API</span>
+        <span class="project-tech-tag">n8n</span>
+        <span class="project-tech-tag">Photoroom</span>
+        <span class="project-tech-tag">Decor8</span>
       </div>
     </div>
   </div>
 
-  <!-- ===== PROJECT COVER IMAGE ===== -->
-  <div class="project-cover">
-    <div class="project-detail-inner">
-      <img src="assets/img/projects/fullflat/14_image_14.png" alt="FullFlat PIM — Product catalog overview" class="project-cover-img">
+  <!-- ===== CHALLENGE & OVERVIEW ===== -->
+  <div class="project-challenge-overview">
+    <div class="project-block">
+      <h2>Overview</h2>
+      <p>Single source of truth for all product data across the business. Manages the full product lifecycle — from initial creation to Shopify publication. The system serves three key roles: content manager (product data and visuals), procurement (supplier pricing), and SEO specialist. The PIM system is connected with AI content generation and image processing services including Photoroom and Decor8, which are used to generate and enhance product images and marketing content before publishing.</p>
+    </div>
+    <div class="project-block">
+      <h2>The Challenge</h2>
+      <p>Product data lived across disconnected sources — supplier pricing sheets, catalog spreadsheets, and inconsistent product descriptions. There was no single source of truth for SKUs, no structured SEO workflow, and publishing to Shopify required manual, error-prone data entry across 10,000+ products.</p>
     </div>
   </div>
 
-  <!-- ===== OVERVIEW ===== -->
+  <!-- ===== SOLUTION ===== -->
   <div class="project-section">
     <div class="project-detail-inner">
-      <h2 class="project-section-title">Overview</h2>
-      <p class="project-section-text">Single source of truth for all product data across the business. Manages the full product lifecycle — from initial creation to Shopify publication. The system serves three key roles: content manager (product data and visuals), procurement (supplier pricing), and SEO specialist.</p>
-      <p class="project-section-text">The PIM system is connected with AI content generation and image processing services including Photoroom and Decor8, which are used to generate and enhance product images and marketing content. This allows product data and visual assets to be prepared automatically before being published to the e-commerce platform and other channels.</p>
+      <h2 class="project-section-title">Solution</h2>
+      <p class="project-section-text" style="max-width:none;">The system manages the full product lifecycle across two entry paths, a structured enrichment workflow, and multi-channel publishing to Shopify and beyond.</p>
+      <img src="assets/img/projects/fullflat/14_image_14.png" alt="FullFlat PIM — Product catalog overview" class="project-img" style="margin: 24px 0 40px;">
+      <h3 class="project-section-title" style="font-size:28px;">Product Entry &amp; Supplier Feeds</h3>
+      <p class="project-section-text" style="max-width:none;">Products enter PIM through two paths. Own furniture is created directly in the system — product, variants, materials, and 3D-rendered visuals. Accessories are imported from supplier feeds with automated sync of catalog data, pricing, stock levels, and images. The feed interface tracks sync status and update logs for every product, ensuring data consistency between supplier systems and PIM.</p>
+      <img src="assets/img/projects/fullflat/15_image_15.png" alt="Supplier feed sync interface" class="project-img" style="margin-bottom:16px;">
+      <img src="assets/img/projects/fullflat/16_image_16.png" alt="Product enrichment view" class="project-img" style="margin-bottom:40px;">
+      <h3 class="project-section-title" style="font-size:28px;">Enrichment, SEO &amp; Publishing</h3>
+      <p class="project-section-text" style="max-width:none;">Each product goes through a structured enrichment process: taxonomy mapping, product attributes and metafields, SEO titles and descriptions. The SEO specialist works in a dedicated view across 1,000+ products, tracking readiness status for each item.</p>
+      <p class="project-section-text" style="max-width:none;">Ready products are published to Shopify with full control over publishing channels — Online Store, Meta, Google &amp; YouTube, Pinterest. Each product carries its taxonomy-driven collections, tags, metafields, and media. Sync status is tracked per product with two methods: Airpower for bulk updates and Shopify API for individual products with variants and bundles.</p>
+      <img src="assets/img/projects/fullflat/17_image_17.png" alt="SEO enrichment workflow" class="project-img" style="margin-bottom:16px;">
+      <img src="assets/img/projects/fullflat/18_image_18.png" alt="Shopify publishing control" class="project-img" style="margin-bottom:16px;">
+      <img src="assets/img/projects/fullflat/19_image_19.png" alt="Multi-channel publishing status" class="project-img" style="">
     </div>
   </div>
 
-  <!-- ===== PRODUCT ENTRY ===== -->
-  <div class="project-section project-section--alt">
-    <div class="project-detail-inner">
-      <h2 class="project-section-title">Product Entry &amp; Supplier Feeds</h2>
-      <p class="project-section-text">Products enter PIM through two paths. Own furniture is created directly in the system — product, variants, materials, and 3D-rendered visuals. Accessories are imported from supplier feeds with automated sync of catalog data, pricing, stock levels, and images. The feed interface tracks sync status and update logs for every product, ensuring data consistency between supplier systems and PIM.</p>
-      <div class="project-images-grid">
-        <img src="assets/img/projects/fullflat/15_image_15.png" alt="Supplier feed sync interface" class="project-img">
-        <img src="assets/img/projects/fullflat/16_image_16.png" alt="Product enrichment view" class="project-img">
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== ENRICHMENT & SEO ===== -->
-  <div class="project-section">
-    <div class="project-detail-inner">
-      <h2 class="project-section-title">Enrichment, SEO &amp; Publishing</h2>
-      <p class="project-section-text">Each product goes through a structured enrichment process: taxonomy mapping, product attributes and metafields, SEO titles and descriptions. The SEO specialist works in a dedicated view across 1,000+ products, tracking readiness status for each item.</p>
-      <p class="project-section-text">Ready products are published to Shopify with full control over publishing channels — Online Store, Meta, Google &amp; YouTube, Pinterest. Each product carries its taxonomy-driven collections, tags, metafields, and media. Sync status is tracked per product with two methods: Airpower for bulk updates and Shopify API for individual products with variants and bundles.</p>
-      <div class="project-images-grid">
-        <img src="assets/img/projects/fullflat/17_image_17.png" alt="SEO enrichment workflow" class="project-img">
-        <img src="assets/img/projects/fullflat/18_image_18.png" alt="Shopify publishing control" class="project-img">
-      </div>
-      <div class="project-images-grid project-images-grid--single">
-        <img src="assets/img/projects/fullflat/19_image_19.png" alt="Multi-channel publishing status" class="project-img">
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== IMPACT ===== -->
-  <div class="project-outcomes">
-    <div class="project-detail-inner">
-      <h2 class="project-outcomes-title">Measurable System Outcomes</h2>
-      <p class="project-outcomes-subtitle">How structured product data transformed catalog operations.</p>
-      <div class="project-outcomes-grid">
-        <div class="project-outcome-item">
-          <p class="project-outcome-metric">10,000+</p>
-          <p class="project-outcome-label">SKUs structured with consistent taxonomy, pricing, and media</p>
+  <!-- ===== RESULTS ===== -->
+  <div class="project-results">
+    <div class="project-results-inner">
+      <h2 class="project-results-title">Results</h2>
+      <div class="project-results-metrics">
+        <div class="project-results-metric">
+          <p class="project-results-metric-value">10,000+</p>
+          <p class="project-results-metric-label">SKUs structured</p>
         </div>
-        <div class="project-outcome-item">
-          <p class="project-outcome-metric">1,000+</p>
-          <p class="project-outcome-label">Products managed through structured SEO workflow</p>
+        <div class="project-results-metric">
+          <p class="project-results-metric-value">1,000+</p>
+          <p class="project-results-metric-label">Products in SEO workflow</p>
         </div>
-        <div class="project-outcome-item">
-          <p class="project-outcome-metric">6 channels</p>
-          <p class="project-outcome-label">Multi-channel publishing from one interface</p>
+        <div class="project-results-metric">
+          <p class="project-results-metric-value">6</p>
+          <p class="project-results-metric-label">Publishing channels</p>
         </div>
       </div>
-      <ul class="project-outcomes-list">
+      <ul class="project-results-bullets">
         <li>10,000+ SKUs structured in a single system with consistent taxonomy, pricing, and media</li>
-        <li>Supplier feed automation eliminates manual data entry for accessories catalog</li>
+        <li>Supplier feed automation eliminates manual data entry for the accessories catalog</li>
         <li>Multi-supplier pricing per variant enables procurement cost optimization</li>
         <li>AI-powered content pipeline accelerates time from 3D model to published product</li>
-        <li>SEO managed at scale across 1,000+ products with structured workflow</li>
+        <li>SEO managed at scale across 1,000+ products with a structured workflow</li>
         <li>Multi-channel publishing (Shopify, Meta, Google, Pinterest) from one interface</li>
       </ul>
     </div>
   </div>
 
-  <!-- ===== NEXT PROJECT ===== -->
-  <div class="project-next">
-    <div class="project-detail-inner">
-      <p class="project-next-label">Next Project</p>
-      <h3 class="project-next-title">FullFlat Finance</h3>
-      <p class="project-next-desc">Fully automated P&amp;L, Cash Flow, and Plan vs. Fact reporting. Every transaction classified against a 30+ line budget hierarchy.</p>
-      <a href="fullflat-finance.html" class="btn btn-primary">View Project</a>
+  <!-- ===== PROJECT NAV ===== -->
+  <div class="project-nav-section">
+    <div class="project-nav-row">
+      <a href="fullflat-operations.html" class="project-nav-link">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Previous Project
+      </a>
+      <div class="project-nav-cta">
+        <a href="fullflat-finance.html" style="text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:16px;">
+          <p class="project-nav-cta-label">Next Project</p>
+          <p class="project-nav-cta-title">FullFlat Finance</p>
+          <p class="project-nav-cta-desc">Fully automated P&amp;L, Cash Flow, and Plan vs. Fact reporting. Every transaction classified against a 30+ line budget hierarchy.</p>
+        </a>
+        <a href="projects.html" class="project-nav-cta-view">View All Projects</a>
+      </div>
+      <a href="fullflat-finance.html" class="project-nav-link">
+        Next Project
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
   </div>
 

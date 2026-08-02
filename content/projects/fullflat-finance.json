@@ -1,0 +1,62 @@
+{
+  "slug": "fullflat-finance",
+  "breadcrumb": "Financial Operations & P&L System",
+  "title": "Financial Operations &amp; P&amp;L System",
+  "pitch": "Fully automated financial operations — real-time P&amp;L, Cash Flow, and per-order profitability tracking",
+  "seo": {
+    "title": "FullFlat Finance — Financial Operations & P&L System | Victoria Fine",
+    "description": "Automated financial operations system built on Airtable, Stripe, and Paymob. Real-time P&L, Cash Flow, budget classification, and per-order profitability. Case study by Victoria Fine.",
+    "keywords": "financial automation, Airtable finance, automated P&L, Stripe webhook integration, Paymob, per-order profitability, budget classification",
+    "ogTitle": "FullFlat Finance — Financial Operations & P&L System",
+    "ogDescription": "Fully automated P&L, Cash Flow, and Plan vs. Fact reporting. Every transaction classified against a 30+ line budget hierarchy."
+  },
+  "meta": [
+    { "label": "Role", "value": "Architect" },
+    { "label": "Company", "value": "FullFlat LLC" },
+    { "label": "Location", "value": "UAE" },
+    { "label": "Year", "value": "2025" }
+  ],
+  "techTags": ["Airtable", "Stripe Webhooks", "Paymob", "n8n"],
+  "overview": "Manages all financial operations across the company. Revenue is captured automatically; expenses flow through a structured payment request and approval process. Every transaction is classified against a budget hierarchy, enabling fully automated P&amp;L, Cash Flow, and Plan vs. Fact reporting.",
+  "challenge": "Financial tracking was disconnected from operations — no real-time visibility into P&amp;L, cash flow, or transaction history. Expenses were tracked manually with no structured approval process, and profitability could not be calculated at the order level.",
+  "solutionIntro": "The system is built on a structured budget classification with 6 parent categories and 30+ line items: Revenue, COGS, Direct Selling Expenses, Indirect Selling Expenses, OPEX, and Financial Expenses. Every transaction is tagged with a budget category and a finance period. The P&amp;L is fully automated — plan and fact amounts are calculated per category per period, with no manual aggregation.",
+  "solutionBlocks": [
+    { "type": "image", "src": "assets/img/projects/fullflat/21_image_21.png", "alt": "FullFlat Finance — Budget Classification", "style": "margin: 24px 0 40px;" },
+    { "type": "heading", "text": "Revenue Capture" },
+    { "type": "text", "text": "Customer payments from Stripe and Paymob are captured automatically via webhooks and classified as Revenue. Claims and refunds are tracked separately under Sales Refunds. This eliminates any manual entry for incoming transactions — the moment a payment is processed, it appears in the financial system with full classification." },
+    { "type": "image", "src": "assets/img/projects/fullflat/20_image_20.png", "alt": "Revenue capture via webhooks", "style": "margin-bottom:40px;" },
+    { "type": "heading", "text": "Expenses &amp; Approval Workflow" },
+    { "type": "text", "text": "All expenses enter the system through Payment Requests — created in Operations (purchase costs, fulfillment, delivery, agent commissions), Marketing (ad spend, content production), or HRS (payroll and staff costs). Each request goes through an approval workflow before payment is executed." },
+    { "type": "text", "text": "Once paid, the transaction is allocated to the appropriate budget category based on its relation to a customer order: linked to order → COGS or Direct Selling Expenses; not linked → Indirect Selling Expenses, OPEX, or Financial Expenses." },
+    { "type": "image", "src": "assets/img/projects/fullflat/22_image_22.png", "alt": "Payment requests and approval", "style": "margin-bottom:16px;" },
+    { "type": "image", "src": "assets/img/projects/fullflat/23_image_23.png", "alt": "Budget allocation per order", "style": "margin-bottom:40px;" },
+    { "type": "heading", "text": "Per-Order Profitability" },
+    { "type": "text", "text": "When a payment request is linked to a customer order, the expense is allocated directly to that order — enabling per-order profitability tracking. The system shows supplier cost, final cost, and final margin for each order. This gives management real-time visibility into which orders are profitable and which are not, enabling data-driven decisions on pricing, discounts, and package composition." }
+  ],
+  "results": {
+    "metrics": [
+      { "value": "30+", "label": "Budget line items" },
+      { "value": "Real-time", "label": "Financial visibility" },
+      { "value": "100%", "label": "Expenses through approval" }
+    ],
+    "bullets": [
+      "Fully automated P&amp;L with 30+ budget line items — no manual spreadsheets or aggregation",
+      "Real-time financial visibility: revenue, expenses, margins tracked end-to-end",
+      "Every expense goes through approval workflow before payment — full cost control",
+      "Per-order cost allocation enables profitability analysis at order level",
+      "Payroll from HRS flows directly into OPEX reporting",
+      "Plan vs. Fact analysis supports financial planning and performance monitoring"
+    ]
+  },
+  "nav": {
+    "prevHref": "fullflat-pim.html",
+    "prevLabel": "Previous Project",
+    "nextHref": "projects.html",
+    "nextLabel": "View All Projects",
+    "ctaHref": "projects.html",
+    "ctaLabel": "Keep Exploring",
+    "ctaTitle": "All Projects",
+    "ctaDesc": "View the full list of systems and integrations built for e-commerce businesses.",
+    "viewAllHref": "projects.html"
+  }
+}

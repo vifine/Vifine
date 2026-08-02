@@ -1,0 +1,9 @@
+{
+  "name": "vifine-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static site build for Victoria Fine's portfolio project case-study pages.",
+  "scripts": {
+    "build": "node build.js"
+  }
+}

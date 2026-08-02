@@ -1,0 +1,73 @@
+{
+  "slug": "fullflat-operations",
+  "breadcrumb": "Order Management System",
+  "title": "Order Management System",
+  "pitch": "End-to-end order lifecycle platform — from customer inquiry to delivery confirmation, replacing spreadsheets with one integrated system",
+  "seo": {
+    "title": "FullFlat Operations — E-commerce Order Management System | Victoria Fine",
+    "description": "End-to-end order management system built on Airtable and n8n. Sales pipeline, fulfillment, delivery tracking, and automated reviews. Case study by Victoria Fine.",
+    "keywords": "Airtable order management, e-commerce operations system, fulfillment automation, delivery tracking, n8n integration, Shopify operations",
+    "ogTitle": "FullFlat Operations — E-commerce Order Management System",
+    "ogDescription": "End-to-end order lifecycle in one system. Sales pipeline, fulfillment, delivery, and automated review generation."
+  },
+  "meta": [
+    { "label": "Role", "value": "Architect" },
+    { "label": "Company", "value": "FullFlat LLC" },
+    { "label": "Location", "value": "UAE" },
+    { "label": "Year", "value": "2025" }
+  ],
+  "techTags": ["Airtable", "n8n", "Airpower", "Shopify", "WhatsApp Business API", "Stripe Webhook", "Paymob Webhook", "Bitrix24"],
+  "overview": "The central hub of the platform, managing the full order lifecycle — from customer inquiry to delivery confirmation and post-delivery claims. All teams work within a single Airtable interface with role-specific views: sales managers handle orders and quoting, the fulfillment team manages procurement and supplier coordination, delivery supervisors confirm shipments from mobile, and management monitors performance through built-in reports.",
+  "challenge": "Orders were managed manually across spreadsheets and disconnected tools, with no centralized visibility into pipeline, margins, or delivery status. Supplier coordination and fulfillment planning required manual effort at every step, and there was no structured way to confirm deliveries or collect customer feedback.",
+  "solutionIntro": "The system covers five core processes: Order Intake &amp; Sales Pipeline, Fulfillment &amp; Procurement, Delivery &amp; On-site Supervision, Claims Management, and Reporting &amp; Plan vs. Fact.",
+  "solutionBlocks": [
+    { "type": "image", "src": "assets/img/projects/fullflat-operations/01-intro.png", "alt": "FullFlat Operations five core processes", "style": "margin: 24px 0 40px;" },
+    { "type": "heading", "text": "Order Intake &amp; Sales Pipeline" },
+    { "type": "text", "text": "Orders enter the system from two channels: the Shopify storefront and WhatsApp consultations. Shopify orders sync automatically to FullFlat Operations via Airpower. WhatsApp inquiries — typical for high-ticket and customized furniture orders — are handled by sales managers directly in the system. The manager selects products, auto-calculates margin and cost, generates a proforma invoice with a payment link, and creates a visual moodboard from PIM product images to send to the client for approval." },
+    { "type": "image", "src": "assets/img/projects/fullflat-operations/02-order-intake-a.png", "alt": "Order detail with margin calculation", "style": "margin-bottom:16px;" },
+    { "type": "image", "src": "assets/img/projects/fullflat-operations/03-order-intake-b.png", "alt": "Moodboard editor", "style": "margin-bottom:16px;" },
+    { "type": "image", "src": "assets/img/projects/fullflat-operations/04-order-intake-c.png", "alt": "Proforma invoice generation", "style": "margin-bottom:40px;" },
+    { "type": "heading", "text": "Fulfillment &amp; Procurement" },
+    { "type": "text", "text": "Once payment is confirmed, orders split automatically into separate Fulfillment Orders — one per supplier — each with its own cost, status, and timeline. The Fulfillment Calendar gives the team a visual view of every order in progress, enabling cost and delivery-time optimization per item." },
+    { "type": "image", "src": "assets/img/projects/fullflat-operations/05-fulfillment-a.png", "alt": "Fulfillment order tracking", "style": "margin-bottom:16px;" },
+    { "type": "image", "src": "assets/img/projects/fullflat-operations/06-fulfillment-b.png", "alt": "Fulfillment calendar", "style": "margin-bottom:40px;" },
+    { "type": "heading", "text": "Delivery &amp; On-site Supervision" },
+    { "type": "text", "text": "When goods are ready, the system consolidates items from multiple suppliers into a delivery. An on-site supervisor receives a Delivery Task with a full list of items. During delivery and furniture assembly, the supervisor marks each item as delivered or not delivered with a reason — directly from the Airtable mobile app. A photo report is uploaded on-site. After delivery is complete, the system collects a customer satisfaction rating (CSAT). Delivery photo reports are used to generate customer reviews through FullFlat Reviews." },
+    { "type": "image", "src": "assets/img/projects/fullflat-operations/07-delivery-a.png", "alt": "Delivery task mobile view", "style": "margin-bottom:16px;" },
+    { "type": "image", "src": "assets/img/projects/fullflat-operations/08-delivery-b.png", "alt": "Delivery confirmation with photo report", "style": "margin-bottom:40px;" },
+    { "type": "heading", "text": " Claims Management" },
+    { "type": "text", "text": "Post-delivery claims are managed through a dedicated interface linked to the original order. For each claim, the system automatically calculates refund and replacement amounts per line item, tracks claimed vs. paid amounts, and generates a Claim Statement document for the customer. Returned items are logged and routed back into inventory, keeping stock records accurate after a return." },
+    { "type": "image", "src": "assets/img/projects/fullflat-operations/09-claims-a.png", "alt": "Claims management interface", "style": "margin-bottom:16px;" },
+    { "type": "image", "src": "assets/img/projects/fullflat-operations/10-claims-b.png", "alt": "Claim calculation detail", "style": "margin-bottom:40px;" },
+    { "type": "heading", "text": "Reporting &amp; Plan vs. Fact" },
+    { "type": "text", "text": "A dedicated dashboard breaks the monthly sales plan down into a daily cumulative target and tracks two live cumulative curves against it — sales revenue and cash-in amount — automatically calculated through backend automations. Management sees Sales Plan, Sales Fact, Cash-In Amount, and Sales Progress as live KPIs, with a cumulative Plan vs. Fact chart giving an at-a-glance read on whether the month is on pace." },
+    { "type": "image", "src": "assets/img/projects/fullflat-operations/11-reporting.png", "alt": "Plan vs Fact reporting dashboard", "style": "" }
+  ],
+  "results": {
+    "metrics": [
+      { "value": "22", "label": "Connected tables" },
+      { "value": "23", "label": "Active automations" },
+      { "value": "13", "label": "Role-specific interfaces" }
+    ],
+    "bullets": [
+      "Full order-level unit economics — revenue, COGS, returns, discounts, margin, payment processor fees, delivery costs, sales team commission, and agent fees calculated automatically per order",
+      "Transparent KPIs enabled across performance marketing, sales, procurement, and delivery teams",
+      "Daily cumulative Plan vs. Fact tracking across sales revenue and cash-in, fully automated",
+      "6 external systems integrated: Shopify, WhatsApp Business API, Airpower, Stripe, Paymob, and supplier feeds",
+      "80+ reports, logs &amp; dashboards",
+      "Multi-supplier order splitting with independent cost, status, and timeline tracking per fulfillment order",
+      "Automated claim calculation (refund/replacement) synced with inventory reconciliation"
+    ]
+  },
+  "nav": {
+    "prevHref": "projects.html",
+    "prevLabel": "Previous Project",
+    "nextHref": "fullflat-pim.html",
+    "nextLabel": "Next Project",
+    "ctaHref": "fullflat-pim.html",
+    "ctaLabel": "Next Project",
+    "ctaTitle": "FullFlat PIM",
+    "ctaDesc": "Single source of truth for 10,000+ SKUs. Supplier feed automation, AI content pipeline, and multi-channel Shopify publishing.",
+    "viewAllHref": "projects.html"
+  }
+}

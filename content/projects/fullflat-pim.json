@@ -1,0 +1,62 @@
+{
+  "slug": "fullflat-pim",
+  "breadcrumb": "Product Information Management System",
+  "title": "Product Information Management System",
+  "pitch": "Single source of truth for 10,000+ SKUs — automated supplier feeds, AI-powered content, and multi-channel Shopify publishing",
+  "seo": {
+    "title": "FullFlat PIM — Product Information Management System | Victoria Fine",
+    "description": "PIM system for 10,000+ SKUs built on Airtable. Supplier feed automation, AI content generation, SEO workflow, and multi-channel Shopify publishing. Case study by Victoria Fine.",
+    "keywords": "PIM system, Airtable PIM, Shopify product management, supplier feed automation, AI content generation, e-commerce catalog",
+    "ogTitle": "FullFlat PIM — Product Information Management System",
+    "ogDescription": "Single source of truth for 10,000+ SKUs. Supplier feeds, AI content pipeline, and multi-channel Shopify publishing."
+  },
+  "meta": [
+    { "label": "Role", "value": "Architect" },
+    { "label": "Company", "value": "FullFlat LLC" },
+    { "label": "Location", "value": "UAE" },
+    { "label": "Year", "value": "2025" }
+  ],
+  "techTags": ["Airtable", "Shopify API", "n8n", "Photoroom", "Decor8"],
+  "overview": "Single source of truth for all product data across the business. Manages the full product lifecycle — from initial creation to Shopify publication. The system serves three key roles: content manager (product data and visuals), procurement (supplier pricing), and SEO specialist. The PIM system is connected with AI content generation and image processing services including Photoroom and Decor8, which are used to generate and enhance product images and marketing content before publishing.",
+  "challenge": "Product data lived across disconnected sources — supplier pricing sheets, catalog spreadsheets, and inconsistent product descriptions. There was no single source of truth for SKUs, no structured SEO workflow, and publishing to Shopify required manual, error-prone data entry across 10,000+ products.",
+  "solutionIntro": "The system manages the full product lifecycle across two entry paths, a structured enrichment workflow, and multi-channel publishing to Shopify and beyond.",
+  "solutionBlocks": [
+    { "type": "image", "src": "assets/img/projects/fullflat/14_image_14.png", "alt": "FullFlat PIM — Product catalog overview", "style": "margin: 24px 0 40px;" },
+    { "type": "heading", "text": "Product Entry &amp; Supplier Feeds" },
+    { "type": "text", "text": "Products enter PIM through two paths. Own furniture is created directly in the system — product, variants, materials, and 3D-rendered visuals. Accessories are imported from supplier feeds with automated sync of catalog data, pricing, stock levels, and images. The feed interface tracks sync status and update logs for every product, ensuring data consistency between supplier systems and PIM." },
+    { "type": "image", "src": "assets/img/projects/fullflat/15_image_15.png", "alt": "Supplier feed sync interface", "style": "margin-bottom:16px;" },
+    { "type": "image", "src": "assets/img/projects/fullflat/16_image_16.png", "alt": "Product enrichment view", "style": "margin-bottom:40px;" },
+    { "type": "heading", "text": "Enrichment, SEO &amp; Publishing" },
+    { "type": "text", "text": "Each product goes through a structured enrichment process: taxonomy mapping, product attributes and metafields, SEO titles and descriptions. The SEO specialist works in a dedicated view across 1,000+ products, tracking readiness status for each item." },
+    { "type": "text", "text": "Ready products are published to Shopify with full control over publishing channels — Online Store, Meta, Google &amp; YouTube, Pinterest. Each product carries its taxonomy-driven collections, tags, metafields, and media. Sync status is tracked per product with two methods: Airpower for bulk updates and Shopify API for individual products with variants and bundles." },
+    { "type": "image", "src": "assets/img/projects/fullflat/17_image_17.png", "alt": "SEO enrichment workflow", "style": "margin-bottom:16px;" },
+    { "type": "image", "src": "assets/img/projects/fullflat/18_image_18.png", "alt": "Shopify publishing control", "style": "margin-bottom:16px;" },
+    { "type": "image", "src": "assets/img/projects/fullflat/19_image_19.png", "alt": "Multi-channel publishing status", "style": "" }
+  ],
+  "results": {
+    "metrics": [
+      { "value": "10,000+", "label": "SKUs structured" },
+      { "value": "1,000+", "label": "Products in SEO workflow" },
+      { "value": "6", "label": "Publishing channels" }
+    ],
+    "bullets": [
+      "10,000+ SKUs structured in a single system with consistent taxonomy, pricing, and media",
+      "Supplier feed automation eliminates manual data entry for the accessories catalog",
+      "Multi-supplier pricing per variant enables procurement cost optimization",
+      "AI-powered content pipeline accelerates time from 3D model to published product",
+      "SEO managed at scale across 1,000+ products with a structured workflow",
+      "Multi-channel publishing (Shopify, Meta, Google, Pinterest) from one interface"
+    ]
+  },
+  "nav": {
+    "prevHref": "fullflat-operations.html",
+    "prevLabel": "Previous Project",
+    "nextHref": "fullflat-finance.html",
+    "nextLabel": "Next Project",
+    "ctaHref": "fullflat-finance.html",
+    "ctaLabel": "Next Project",
+    "ctaTitle": "FullFlat Finance",
+    "ctaDesc": "Fully automated P&amp;L, Cash Flow, and Plan vs. Fact reporting. Every transaction classified against a 30+ line budget hierarchy.",
+    "viewAllHref": "projects.html"
+  }
+}
