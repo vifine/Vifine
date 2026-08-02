@@ -21,6 +21,9 @@
   <link rel="alternate" hreflang="en" href="https://vifine.tech/404.html">
   <link rel="alternate" hreflang="ru" href="https://vifine.tech/ru/404.html">
   <link rel="alternate" hreflang="x-default" href="https://vifine.tech/404.html">
+  <link rel="alternate" hreflang="en" href="https://vifine.tech/404.html">
+  <link rel="alternate" hreflang="ru" href="https://vifine.tech/ru/404.html">
+  <link rel="alternate" hreflang="x-default" href="https://vifine.tech/404.html">
 
   <!-- SEO: Open Graph -->
   <meta property="og:type" content="website">
@@ -65,6 +68,7 @@
         <li><a href="cv.html" class="">CV</a></li>
         <li><a href="projects.html" class="">Projects</a></li>
       </ul>
+      <div class="lang-toggle"><span class="lang-toggle-thumb"></span><span class="lang-label lang-label-en">En</span><a href="ru/404.html" class="lang-label lang-label-ru">Ru</a></div>
       <div class="lang-toggle lang-toggle--ru"><span class="lang-toggle-thumb"></span><a href="../404.html" class="lang-label lang-label-en">En</a><span class="lang-label lang-label-ru">Ru</span></div>
       <button class="navbar-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" style="background:none;border:none;outline:none;box-shadow:none;padding:0;-webkit-appearance:none;appearance:none;">
         <img src="../assets/img/icons/burger-doodle.svg" alt="Menu" width="53" height="53" class="burger-icon-img">
@@ -152,10 +156,22 @@
           burger.classList.remove('is-active');
         }
 
+        function shiftLangToggle(open) {
+          var langToggle = document.querySelector('.lang-toggle');
+          if (!langToggle) return;
+          if (open) {
+            var w = desktopDropdown.getBoundingClientRect().width;
+            langToggle.style.transform = 'translateX(-' + (w + 12) + 'px)';
+          } else {
+            langToggle.style.transform = '';
+          }
+        }
+
         function openDesktopMenu() {
           desktopDropdown.classList.add('is-open');
           desktopDropdown.setAttribute('aria-hidden', 'false');
           burger.classList.add('is-active');
+          shiftLangToggle(true);
           try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch(e) {}
         }
 
@@ -163,6 +179,7 @@
           desktopDropdown.classList.remove('is-open');
           desktopDropdown.setAttribute('aria-hidden', 'true');
           burger.classList.remove('is-active');
+          shiftLangToggle(false);
           try { sessionStorage.removeItem(STORAGE_KEY); } catch(e) {}
         }
 

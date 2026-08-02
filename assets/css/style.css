@@ -2317,6 +2317,7 @@ body.menu-open .wa-widget {
   flex-shrink: 0;
   margin-left: auto;
   margin-right: 20px;
+  transition: transform 0.25s ease;
 }
 
 .lang-toggle-thumb {
@@ -2327,11 +2328,12 @@ body.menu-open .wa-widget {
   height: 24px;
   background: #fff;
   border-radius: 12px;
-  transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1), right 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .lang-toggle--ru .lang-toggle-thumb {
-  left: 28px;
+  left: auto;
+  right: 2px;
 }
 
 .lang-label {
