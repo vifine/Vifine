@@ -2304,3 +2304,16 @@ body.menu-open .wa-widget {
   .page-404 { padding: 48px 24px; gap: 32px; }
   .page-404-text h1 { font-size: 28px; }
 }
+
+/* Language switcher */
+.navbar-menu li a.lang-switch {
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.mobile-menu-link.lang-switch,
+.desktop-dropdown-link.lang-switch {
+  font-weight: 700;
+}

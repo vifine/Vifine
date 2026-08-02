@@ -1,0 +1,165 @@
+[
+  {
+    "id": "artline-eu-launch",
+    "company": "ARTLINE GROUP EU S.R.L.",
+    "companyLocation": "Slovakia",
+    "role": "Director of E-Commerce",
+    "period": "Apr 2026 – Present",
+    "title": "European Market Launch",
+    "tagline": "Zero to live in 6 weeks with full B2B automation",
+    "summary": "A resin brand needed to launch a multi-language, multi-currency store for the European market with a B2B wholesale portal — from zero to live in 1.5 months.",
+    "challenge": "The company had no European e-commerce presence, no localized payment or currency handling, and no B2B ordering system. All wholesale orders were processed manually via email and spreadsheets, creating delays and errors.",
+    "solution": "I built a complex Shopify architecture supporting multiple languages and currencies, with a dedicated B2B wholesale portal for bulk ordering. I created a centralized PIM (Product Information Management) catalog so product data stayed consistent across channels, and automated key processes — order routing, customer notifications, and inventory sync — using n8n, Bitrix24 CRM, and WhatsApp Business API.",
+    "results": [
+      "Launched in 6 weeks, from architecture to go-live",
+      "Fully automated order processing — zero manual entry",
+      "B2B wholesale portal reduced order errors by eliminating manual spreadsheet work",
+      "Automated customer retention flows via WhatsApp and CRM"
+    ],
+    "tools": [
+      "Shopify",
+      "n8n",
+      "Bitrix24",
+      "WhatsApp Business API",
+      "Figma"
+    ],
+    "images": [
+      "images/projects/artline-01.jpg",
+      "images/projects/artline-02.jpg"
+    ]
+  },
+  {
+    "id": "fullflat-operations",
+    "company": "FullFlat LLC",
+    "companyLocation": "United Arab Emirates",
+    "role": "Systems Architect & COO",
+    "period": "Apr 2025 – Apr 2026",
+    "title": "Order Management System",
+    "tagline": "End-to-end order lifecycle — from inquiry to delivery confirmation and automated reviews",
+    "summary": "The central hub of the FullFlat platform. Manages the full order lifecycle — from customer inquiry to delivery confirmation and post-delivery claims. All teams work within a single Airtable interface with role-specific views: sales managers handle orders and quoting, the fulfillment team manages procurement and supplier coordination, delivery supervisors confirm shipments from mobile, and management monitors performance through built-in reports.",
+    "challenge": "FullFlat was managing orders across multiple channels with disconnected systems — Shopify storefront orders, WhatsApp consultations, manual fulfillment tracking, and no visibility into supplier performance or delivery status.",
+    "solution": "I built an end-to-end order management system on Airtable with automated Shopify sync via Airpower, WhatsApp integration for consultations, mobile delivery confirmation, and automated review generation from on-site photos. The system splits orders into fulfillment orders per supplier, tracks delivery status in real-time, and collects CSAT scores.",
+    "results": [
+      "End-to-end order lifecycle in one system — eliminating spreadsheets and manual processes",
+      "Real-time margin visibility at order level for data-driven pricing decisions",
+      "100% automated review generation from delivery photo reports",
+      "Mobile-first delivery supervision with photo documentation",
+      "Multi-supplier fulfillment with automatic order splitting"
+    ],
+    "tools": [
+      "Airtable",
+      "n8n",
+      "Airpower",
+      "Shopify",
+      "WhatsApp Business API"
+    ],
+    "images": [],
+    "directLink": "fullflat-operations.html"
+  },
+  {
+    "id": "fullflat-pim",
+    "company": "FullFlat LLC",
+    "companyLocation": "United Arab Emirates",
+    "role": "Systems Architect & COO",
+    "period": "Apr 2025 – Apr 2026",
+    "title": "Product Information Management System",
+    "tagline": "10,000+ SKUs with supplier feed automation, AI content pipeline, and multi-channel publishing",
+    "summary": "Single source of truth for all product data across the business. Manages the full product lifecycle — from initial creation to Shopify publication. The system serves three key roles: content manager (product data and visuals), procurement (supplier pricing), and SEO specialist. Connected with AI content generation and image processing (Photoroom, Decor8).",
+    "challenge": "FullFlat had 10,000+ SKUs across own furniture and accessories suppliers with inconsistent data, manual supplier feed updates, and no structured SEO workflow for multi-channel publishing.",
+    "solution": "I built a PIM system on Airtable with automated supplier feed sync, structured product enrichment workflow, AI-powered content pipeline, and controlled multi-channel publishing (Shopify Online Store, Meta, Google, Pinterest, YouTube).",
+    "results": [
+      "10,000+ SKUs structured with consistent taxonomy, pricing, and media",
+      "Automated supplier feed sync eliminates manual data entry for accessories catalog",
+      "1,000+ products managed through structured SEO workflow",
+      "AI-powered content pipeline accelerates time from 3D model to published product",
+      "6-channel publishing (Shopify, Meta, Google, Pinterest, YouTube) from one interface"
+    ],
+    "tools": [
+      "Airtable",
+      "Shopify",
+      "Photoroom",
+      "Decor8",
+      "Airpower API"
+    ],
+    "images": [],
+    "directLink": "fullflat-pim.html"
+  },
+  {
+    "id": "fullflat-finance",
+    "company": "FullFlat LLC",
+    "companyLocation": "United Arab Emirates",
+    "role": "Systems Architect & COO",
+    "period": "Apr 2025 – Apr 2026",
+    "title": "Financial Operations & P&L System",
+    "tagline": "30+ budget line items with fully automated P&L, Cash Flow, and Plan vs. Fact reporting",
+    "summary": "Manages all financial operations across the company. Revenue is captured automatically; expenses flow through a structured payment request and approval process. Every transaction is classified against a budget hierarchy, enabling fully automated P&L, Cash Flow, and Plan vs. Fact reporting across 6 parent categories and 30+ line items.",
+    "challenge": "FullFlat had no unified financial system — expenses were scattered across multiple spreadsheets, no approval workflow, manual P&L compilation, and no per-order profitability visibility.",
+    "solution": "I built a financial operations system on Airtable with automated revenue capture from Stripe/Paymob webhooks, expense approval workflow, structured budget classification, and fully automated P&L with per-order cost allocation.",
+    "results": [
+      "Fully automated P&L with 30+ budget line items — no manual spreadsheets",
+      "Real-time financial visibility: revenue, expenses, margins tracked end-to-end",
+      "Every expense goes through approval workflow before payment — full cost control",
+      "Per-order cost allocation enables profitability analysis at order level",
+      "Plan vs. Fact analysis supports financial planning and performance monitoring"
+    ],
+    "tools": [
+      "Airtable",
+      "Stripe",
+      "Paymob",
+      "n8n",
+      "Airpower API"
+    ],
+    "images": [],
+    "directLink": "fullflat-finance.html"
+  },
+  {
+    "id": "emex-scale",
+    "company": "EmEx Group",
+    "companyLocation": "Moscow, Russia",
+    "role": "Commercial Director",
+    "period": "Sep 2023 – Dec 2024",
+    "title": "Scaling Marketplace Revenue 3.5x",
+    "tagline": "From 8,000 SKUs to a 50-person operation",
+    "summary": "EmEx Group needed to scale commercial operations across multiple online marketplaces while managing a rapidly growing product catalog and team.",
+    "challenge": "The company was managing an 8,000+ SKU catalog across multiple marketplace channels with inconsistent processes, limited team structure, and untapped revenue potential on key platforms.",
+    "solution": "I restructured the commercial strategy, built out a 50-person team across sales, operations, and logistics, and implemented systematic processes for catalog management, pricing, and channel expansion.",
+    "results": [
+      "Scaled marketplace revenue by 3.5x in 12 months",
+      "Managed and organized a product matrix of 8,000+ SKUs",
+      "Built and led a team of 50+ across sales, operations, and logistics"
+    ],
+    "tools": [
+      "Marketplace Management",
+      "Team Leadership",
+      "Process Design"
+    ],
+    "images": [
+      "images/projects/emex-01.jpg"
+    ]
+  },
+  {
+    "id": "topsports-b2b",
+    "company": "TOP SPORTS",
+    "companyLocation": "Samara, Russia",
+    "role": "Commercial Director, B2B",
+    "period": "Feb 2017 – Sep 2023",
+    "title": "Building B2B Operations From Scratch",
+    "tagline": "From startup to €500K+ annual wholesale revenue",
+    "summary": "TOP SPORTS needed to build a B2B wholesale channel from the ground up, including supplier relationships across Asia and a centralized procurement system.",
+    "challenge": "No existing B2B channel, no centralized supplier management, and no systematic procurement process — everything was ad hoc and relationship-dependent.",
+    "solution": "I built the B2B wholesale channel from zero, established supply chain relationships with 8 factories across Asia, and implemented a centralized procurement and inventory system to support consistent growth.",
+    "results": [
+      "Grew wholesale channel from startup to €500K+ annual revenue",
+      "Managed supply chain across 8 factories in Asia",
+      "Implemented centralized procurement and inventory system"
+    ],
+    "tools": [
+      "Supply Chain Management",
+      "Procurement Systems",
+      "B2B Sales"
+    ],
+    "images": [
+      "images/projects/topsports-01.jpg"
+    ]
+  }
+]
