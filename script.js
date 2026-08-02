@@ -24,8 +24,10 @@ function renderPortfolioGrid(projects) {
     const limit = grid.getAttribute('data-limit');
     const displayProjects = limit ? projects.slice(0, parseInt(limit, 10)) : projects;
 
-    grid.innerHTML = displayProjects.map(project => `
-        <a href="project.html?id=${project.id}" class="portfolio-card">
+    grid.innerHTML = displayProjects.map(project => {
+        const href = project.directLink ? project.directLink : `project.html?id=${project.id}`;
+        return `
+        <a href="${href}" class="portfolio-card">
             <div class="portfolio-card-meta">
                 <span>${project.company}</span>
                 <span>${project.period}</span>
@@ -37,7 +39,7 @@ function renderPortfolioGrid(projects) {
             </div>
             <span class="portfolio-card-link">View Case Study →</span>
         </a>
-    `).join('');
+    `}).join('');
 }
 
 // ============================================

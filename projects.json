@@ -20,30 +20,74 @@
     "images": [
       "images/projects/artline-01.jpg",
       "images/projects/artline-02.jpg"
-    ]
+    ],
+    "directLink": "fullflat-operations.html"
   },
   {
-    "id": "fullflat-coo",
+    "id": "fullflat-operations",
     "company": "FullFlat LLC",
     "companyLocation": "United Arab Emirates",
-    "role": "COO (Chief Operations Officer)",
+    "role": "Systems Architect & COO",
     "period": "Apr 2025 – Apr 2026",
-    "title": "Operational Platform for Real Estate Business",
-    "tagline": "Cut manual work by 60% across all departments",
-    "summary": "A fast-growing real estate operations company was drowning in disconnected spreadsheets, manual approvals, and siloed departments with no shared visibility into deals, finance, or logistics.",
-    "challenge": "Every department — sales, finance, logistics — worked from separate files with no single source of truth. Deals fell through cracks, approvals took days, and leadership had no real-time view of company performance.",
-    "solution": "I designed and deployed a unified operational platform connecting all departments into one system, with automated approval workflows, real-time dashboards, and standardized processes across the company.",
+    "title": "Order Management System",
+    "tagline": "End-to-end order lifecycle — from inquiry to delivery confirmation and automated reviews",
+    "summary": "The central hub of the FullFlat platform. Manages the full order lifecycle — from customer inquiry to delivery confirmation and post-delivery claims. All teams work within a single Airtable interface with role-specific views: sales managers handle orders and quoting, the fulfillment team manages procurement and supplier coordination, delivery supervisors confirm shipments from mobile, and management monitors performance through built-in reports.",
+    "challenge": "FullFlat was managing orders across multiple channels with disconnected systems — Shopify storefront orders, WhatsApp consultations, manual fulfillment tracking, and no visibility into supplier performance or delivery status.",
+    "solution": "I built an end-to-end order management system on Airtable with automated Shopify sync via Airpower, WhatsApp integration for consultations, mobile delivery confirmation, and automated review generation from on-site photos. The system splits orders into fulfillment orders per supplier, tracks delivery status in real-time, and collects CSAT scores.",
     "results": [
-      "Reduced manual work by 60% through automation",
-      "Unified operational visibility across sales, finance, and logistics",
-      "Streamlined supply chain and inventory management",
-      "Faster decision-making with real-time dashboards"
+      "End-to-end order lifecycle in one system — eliminating spreadsheets and manual processes",
+      "Real-time margin visibility at order level for data-driven pricing decisions",
+      "100% automated review generation from delivery photo reports",
+      "Mobile-first delivery supervision with photo documentation",
+      "Multi-supplier fulfillment with automatic order splitting"
     ],
-    "tools": ["Airtable", "n8n", "API Integrations", "Supabase"],
-    "images": [
-      "images/projects/fullflat-01.jpg"
+    "tools": ["Airtable", "n8n", "Airpower", "Shopify", "WhatsApp Business API"],
+    "images": [],
+    "directLink": "fullflat-operations.html"
+  },
+  {
+    "id": "fullflat-pim",
+    "company": "FullFlat LLC",
+    "companyLocation": "United Arab Emirates",
+    "role": "Systems Architect & COO",
+    "period": "Apr 2025 – Apr 2026",
+    "title": "Product Information Management System",
+    "tagline": "10,000+ SKUs with supplier feed automation, AI content pipeline, and multi-channel publishing",
+    "summary": "Single source of truth for all product data across the business. Manages the full product lifecycle — from initial creation to Shopify publication. The system serves three key roles: content manager (product data and visuals), procurement (supplier pricing), and SEO specialist. Connected with AI content generation and image processing (Photoroom, Decor8).",
+    "challenge": "FullFlat had 10,000+ SKUs across own furniture and accessories suppliers with inconsistent data, manual supplier feed updates, and no structured SEO workflow for multi-channel publishing.",
+    "solution": "I built a PIM system on Airtable with automated supplier feed sync, structured product enrichment workflow, AI-powered content pipeline, and controlled multi-channel publishing (Shopify Online Store, Meta, Google, Pinterest, YouTube).",
+    "results": [
+      "10,000+ SKUs structured with consistent taxonomy, pricing, and media",
+      "Automated supplier feed sync eliminates manual data entry for accessories catalog",
+      "1,000+ products managed through structured SEO workflow",
+      "AI-powered content pipeline accelerates time from 3D model to published product",
+      "6-channel publishing (Shopify, Meta, Google, Pinterest, YouTube) from one interface"
     ],
-    "externalCase": "https://vifine-operations.notion.site/Case-Deploying-Operational-Platform-31ffd4f91f508097a53eda8cdc3d8420"
+    "tools": ["Airtable", "Shopify", "Photoroom", "Decor8", "Airpower API"],
+    "images": [],
+    "directLink": "fullflat-pim.html"
+  },
+  {
+    "id": "fullflat-finance",
+    "company": "FullFlat LLC",
+    "companyLocation": "United Arab Emirates",
+    "role": "Systems Architect & COO",
+    "period": "Apr 2025 – Apr 2026",
+    "title": "Financial Operations & P&L System",
+    "tagline": "30+ budget line items with fully automated P&L, Cash Flow, and Plan vs. Fact reporting",
+    "summary": "Manages all financial operations across the company. Revenue is captured automatically; expenses flow through a structured payment request and approval process. Every transaction is classified against a budget hierarchy, enabling fully automated P&L, Cash Flow, and Plan vs. Fact reporting across 6 parent categories and 30+ line items.",
+    "challenge": "FullFlat had no unified financial system — expenses were scattered across multiple spreadsheets, no approval workflow, manual P&L compilation, and no per-order profitability visibility.",
+    "solution": "I built a financial operations system on Airtable with automated revenue capture from Stripe/Paymob webhooks, expense approval workflow, structured budget classification, and fully automated P&L with per-order cost allocation.",
+    "results": [
+      "Fully automated P&L with 30+ budget line items — no manual spreadsheets",
+      "Real-time financial visibility: revenue, expenses, margins tracked end-to-end",
+      "Every expense goes through approval workflow before payment — full cost control",
+      "Per-order cost allocation enables profitability analysis at order level",
+      "Plan vs. Fact analysis supports financial planning and performance monitoring"
+    ],
+    "tools": ["Airtable", "Stripe", "Paymob", "n8n", "Airpower API"],
+    "images": [],
+    "directLink": "fullflat-finance.html"
   },
   {
     "id": "emex-scale",
