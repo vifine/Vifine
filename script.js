@@ -4,7 +4,7 @@
 
 async function loadProjects() {
     try {
-        const response = await fetch('data/projects.json');
+        const response = await fetch('projects.json');
         if (!response.ok) throw new Error('Failed to load projects');
         return await response.json();
     } catch (error) {
@@ -24,22 +24,42 @@ function renderPortfolioGrid(projects) {
     const limit = grid.getAttribute('data-limit');
     const displayProjects = limit ? projects.slice(0, parseInt(limit, 10)) : projects;
 
-    grid.innerHTML = displayProjects.map(project => {
-        const href = project.directLink ? project.directLink : `project.html?id=${project.id}`;
-        return `
-        <a href="${href}" class="portfolio-card">
-            <div class="portfolio-card-meta">
-                <span>${project.company}</span>
-                <span>${project.period}</span>
-            </div>
-            <h3>${project.title}</h3>
-            <p class="portfolio-card-tagline">${project.tagline}</p>
-            <div class="portfolio-card-tools">
-                ${project.tools.slice(0, 3).map(tool => `<span class="tech-tag">${tool}</span>`).join('')}
-            </div>
-            <span class="portfolio-card-link">View Case Study →</span>
-        </a>
-    `}).join('');
+    // Определяем формат: project-row (на projects.html) или portfolio-card (на index.html)
+    const isProjectsList = grid.classList.contains('projects-list');
+
+    if (isProjectsList) {
+        // Формат project-row для projects.html
+        grid.innerHTML = displayProjects.map(project => {
+            const href = project.directLink ? project.directLink : `project.html?id=${project.id}`;
+            return `
+            <a href="${href}" class="project-row">
+                <div class="project-row-left">
+                    <h3>${project.title}</h3>
+                    <p class="project-desc">${project.tagline}</p>
+                    <div class="project-location">${project.companyLocation}</div>
+                </div>
+                <div class="project-row-right">View project</div>
+            </a>
+        `}).join('');
+    } else {
+        // Формат portfolio-card для index.html
+        grid.innerHTML = displayProjects.map(project => {
+            const href = project.directLink ? project.directLink : `project.html?id=${project.id}`;
+            return `
+            <a href="${href}" class="portfolio-card">
+                <div class="portfolio-card-meta">
+                    <span>${project.company}</span>
+                    <span>${project.period}</span>
+                </div>
+                <h3>${project.title}</h3>
+                <p class="portfolio-card-tagline">${project.tagline}</p>
+                <div class="portfolio-card-tools">
+                    ${project.tools.slice(0, 3).map(tool => `<span class="tech-tag">${tool}</span>`).join('')}
+                </div>
+                <span class="portfolio-card-link">View Case Study →</span>
+            </a>
+        `}).join('');
+    }
 }
 
 // ============================================
