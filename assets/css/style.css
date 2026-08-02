@@ -2123,7 +2123,9 @@ body.menu-open .wa-widget {
 /* Hide mobile menu on desktop */
 @media (min-width: 769px) {
   .mobile-menu,
-  
+  .mobile-menu-overlay {
+    display: none;
+  }
 }
 
 /* On mobile — hide desktop dropdown, use full-screen menu */

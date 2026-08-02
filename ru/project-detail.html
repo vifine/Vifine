@@ -35,6 +35,7 @@
         <li><a href="projects.html" class="active">Projects</a></li>
       </ul>
       <div class="lang-toggle"><span class="lang-toggle-thumb"></span><span class="lang-label lang-label-en">En</span><a href="ru/project-detail.html" class="lang-label lang-label-ru">Ru</a></div>
+      <div class="lang-toggle"><span class="lang-toggle-thumb"></span><span class="lang-label lang-label-en">En</span><a href="ru/project-detail.html" class="lang-label lang-label-ru">Ru</a></div>
       <div class="lang-toggle lang-toggle--ru"><span class="lang-toggle-thumb"></span><a href="../project-detail.html" class="lang-label lang-label-en">En</a><span class="lang-label lang-label-ru">Ru</span></div>
       <button class="navbar-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" style="background:none;border:none;outline:none;box-shadow:none;padding:0;-webkit-appearance:none;appearance:none;">
         <img src="../assets/img/icons/burger-doodle.svg" alt="Menu" width="53" height="53" class="burger-icon-img">
@@ -126,8 +127,12 @@
           var langToggle = document.querySelector('.lang-toggle');
           if (!langToggle) return;
           if (open) {
-            var w = desktopDropdown.getBoundingClientRect().width;
-            langToggle.style.transform = 'translateX(-' + (w + 12) + 'px)';
+            var dropRect = desktopDropdown.getBoundingClientRect();
+            var toggleRect = langToggle.getBoundingClientRect();
+            var overlap = toggleRect.right - dropRect.left;
+            langToggle.style.transform = overlap > 0
+              ? 'translateX(-' + (overlap + 12) + 'px)'
+              : '';
           } else {
             langToggle.style.transform = '';
           }

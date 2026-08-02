@@ -25,6 +25,9 @@
   <link rel="alternate" hreflang="en" href="https://vifine.tech/">
   <link rel="alternate" hreflang="ru" href="https://vifine.tech/ru/index.html">
   <link rel="alternate" hreflang="x-default" href="https://vifine.tech/">
+  <link rel="alternate" hreflang="en" href="https://vifine.tech/">
+  <link rel="alternate" hreflang="ru" href="https://vifine.tech/ru/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://vifine.tech/">
 
   <!-- SEO: Open Graph -->
   <meta property="og:type" content="website">
@@ -102,6 +105,7 @@
         <li><a href="cv.html" class="">CV</a></li>
         <li><a href="projects.html" class="">Projects</a></li>
       </ul>
+      <div class="lang-toggle"><span class="lang-toggle-thumb"></span><span class="lang-label lang-label-en">En</span><a href="ru/index.html" class="lang-label lang-label-ru">Ru</a></div>
       <div class="lang-toggle"><span class="lang-toggle-thumb"></span><span class="lang-label lang-label-en">En</span><a href="ru/index.html" class="lang-label lang-label-ru">Ru</a></div>
       <div class="lang-toggle"><span class="lang-toggle-thumb"></span><span class="lang-label lang-label-en">En</span><a href="ru/index.html" class="lang-label lang-label-ru">Ru</a></div>
       <!-- Burger button (mobile only) -->
@@ -195,8 +199,12 @@
           var langToggle = document.querySelector('.lang-toggle');
           if (!langToggle) return;
           if (open) {
-            var w = desktopDropdown.getBoundingClientRect().width;
-            langToggle.style.transform = 'translateX(-' + (w + 12) + 'px)';
+            var dropRect = desktopDropdown.getBoundingClientRect();
+            var toggleRect = langToggle.getBoundingClientRect();
+            var overlap = toggleRect.right - dropRect.left;
+            langToggle.style.transform = overlap > 0
+              ? 'translateX(-' + (overlap + 12) + 'px)'
+              : '';
           } else {
             langToggle.style.transform = '';
           }
