@@ -1,11 +1,57 @@
 # Editing project case studies
 
-Each project page (e.g. `fullflat-operations.html`) is generated from a JSON
-file in `content/projects/`. To change any text, image, or section on a
-project page, edit its JSON file — never edit the generated `.html` file
-directly, it will be overwritten on the next build.
+**Source of truth: Notion.** The "Vifine Portfolio CMS" workspace holds
+4 linked databases — edit content there, not in this repo.
 
-## Structure of a project JSON file
+https://app.notion.com/p/3b0fd4f91f5081d2a258cecf44e1be0b
+
+- **Projects** — one row per case study (title, pitch, meta, overview,
+  challenge, SEO fields, tech tags)
+- **Solution Blocks** — ordered rows linked to a Project, each a
+  Heading / Text / Image. This is the vertical blog-style story —
+  add, delete, or reorder rows freely by changing the `Order` number.
+- **Results Metrics** — the 3 headline numbers per project
+- **Results Bullets** — the bullet list under the metrics
+
+## Workflow
+
+1. Edit/add rows in the Notion databases (change text, add a new
+   Solution Block, add a whole new Project row, etc.)
+2. For new images: attach the file to the `Image` property on the
+   Solution Block row.
+3. Tell Claude: **"pull from Notion and rebuild the site"**
+4. Claude fetches the latest data via the Notion API, regenerates the
+   JSON files below, runs the build, and pushes the updated pages.
+
+You never need to touch `content/projects/*.json`, `templates/`, or the
+generated `.html` files directly — they're regenerated from Notion.
+
+## Adding a brand new project
+
+1. Add a row to **Projects** with a unique `Slug` (lowercase-with-dashes)
+   and the next `Order` number.
+2. Add its Solution Blocks, Results Metrics, and Results Bullets rows,
+   linked to that Project.
+3. Set `Status` to "Ready to publish" once done.
+4. Ask Claude to sync + rebuild — it will also add the new page to
+   `projects.json` (the portfolio grid) and re-chain the prev/next
+   navigation between projects automatically, based on `Order`.
+
+---
+
+## Technical reference (for Claude / future maintenance)
+
+Each project page (e.g. `fullflat-operations.html`) is generated from
+`templates/project.template.html` using the JSON files in
+`content/projects/`, via `build.js` (plain Node, no dependencies):
+
+```bash
+node build.js
+# or
+npm run build
+```
+
+### Structure of a project JSON file
 
 ```jsonc
 {
@@ -37,32 +83,6 @@ directly, it will be overwritten on the next build.
 }
 ```
 
-`solutionBlocks` is the main content of a case study — add, remove, or
-reorder items freely to change the story. Each item is one of:
-- `heading` — a section subtitle (H3)
-- `text` — a paragraph
-- `image` — a full-width screenshot
+`nav` prev/next is derived from each Project row's `Order` field when
+syncing from Notion — no need to maintain it by hand in Notion.
 
-## Adding a new project
-
-1. Copy an existing file in `content/projects/` as a starting point.
-2. Fill in the fields above.
-3. Add project images to `assets/img/projects/<slug>/`.
-4. Run the build (see below) — this creates `<slug>.html` in the repo root.
-5. Add the new project to `projects.json` (used by the projects list page)
-   so it shows up in the portfolio grid.
-6. Update the `nav` fields of the surrounding projects (previous/next) so
-   the bottom navigation chains correctly.
-
-## Building
-
-```bash
-node build.js
-# or
-npm run build
-```
-
-This reads every file in `content/projects/*.json`, renders it through
-`templates/project.template.html`, and writes the resulting static HTML
-pages to the repo root — ready to commit and deploy as-is (no server or
-build step needed at runtime).
