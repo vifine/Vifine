@@ -16,12 +16,17 @@
       "B2B wholesale portal reduced order errors by eliminating manual spreadsheet work",
       "Automated customer retention flows via WhatsApp and CRM"
     ],
-    "tools": ["Shopify", "n8n", "Bitrix24", "WhatsApp Business API", "Figma"],
+    "tools": [
+      "Shopify",
+      "n8n",
+      "Bitrix24",
+      "WhatsApp Business API",
+      "Figma"
+    ],
     "images": [
       "images/projects/artline-01.jpg",
       "images/projects/artline-02.jpg"
-    ],
-    "directLink": "fullflat-operations.html"
+    ]
   },
   {
     "id": "fullflat-operations",
@@ -41,7 +46,13 @@
       "Mobile-first delivery supervision with photo documentation",
       "Multi-supplier fulfillment with automatic order splitting"
     ],
-    "tools": ["Airtable", "n8n", "Airpower", "Shopify", "WhatsApp Business API"],
+    "tools": [
+      "Airtable",
+      "n8n",
+      "Airpower",
+      "Shopify",
+      "WhatsApp Business API"
+    ],
     "images": [],
     "directLink": "fullflat-operations.html"
   },
@@ -63,7 +74,13 @@
       "AI-powered content pipeline accelerates time from 3D model to published product",
       "6-channel publishing (Shopify, Meta, Google, Pinterest, YouTube) from one interface"
     ],
-    "tools": ["Airtable", "Shopify", "Photoroom", "Decor8", "Airpower API"],
+    "tools": [
+      "Airtable",
+      "Shopify",
+      "Photoroom",
+      "Decor8",
+      "Airpower API"
+    ],
     "images": [],
     "directLink": "fullflat-pim.html"
   },
@@ -85,7 +102,13 @@
       "Per-order cost allocation enables profitability analysis at order level",
       "Plan vs. Fact analysis supports financial planning and performance monitoring"
     ],
-    "tools": ["Airtable", "Stripe", "Paymob", "n8n", "Airpower API"],
+    "tools": [
+      "Airtable",
+      "Stripe",
+      "Paymob",
+      "n8n",
+      "Airpower API"
+    ],
     "images": [],
     "directLink": "fullflat-finance.html"
   },
@@ -105,7 +128,11 @@
       "Managed and organized a product matrix of 8,000+ SKUs",
       "Built and led a team of 50+ across sales, operations, and logistics"
     ],
-    "tools": ["Marketplace Management", "Team Leadership", "Process Design"],
+    "tools": [
+      "Marketplace Management",
+      "Team Leadership",
+      "Process Design"
+    ],
     "images": [
       "images/projects/emex-01.jpg"
     ]
@@ -126,7 +153,11 @@
       "Managed supply chain across 8 factories in Asia",
       "Implemented centralized procurement and inventory system"
     ],
-    "tools": ["Supply Chain Management", "Procurement Systems", "B2B Sales"],
+    "tools": [
+      "Supply Chain Management",
+      "Procurement Systems",
+      "B2B Sales"
+    ],
     "images": [
       "images/projects/topsports-01.jpg"
     ]
