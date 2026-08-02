@@ -601,8 +601,8 @@ img { max-width: 100%; display: block; }
 
 .row-arrow-wrap {
   position: relative;
-  width: 40px;
-  height: 24px;
+  width: 30px;
+  height: 18px;
   flex-shrink: 0;
 }
 
@@ -2246,12 +2246,15 @@ body.menu-open .wa-widget {
   color: #FFFFFF;
 }
 
-/* Instant show desktop dropdown on page load if was open */
-.desktop-menu-was-open .desktop-dropdown {
-  display: flex !important;
-  opacity: 1 !important;
-  transform: translateY(-50%) translateX(0) !important;
-  pointer-events: auto !important;
+/* Instant show desktop dropdown on page load if was open (desktop only —
+   guarded so it can never override the mobile-hide rule via specificity) */
+@media (min-width: 769px) {
+  .desktop-menu-was-open .desktop-dropdown {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: translateY(-50%) translateX(0) !important;
+    pointer-events: auto !important;
+  }
 }
 
 /* ============================================
