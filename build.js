@@ -109,6 +109,11 @@ function build() {
       return;
     }
 
+    // Auto-generate a WhatsApp CTA link referencing this project's title
+    const plainTitle = (data.title || '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+    const waMessage = `Hi Victoria, I saw your ${plainTitle} project and want to discuss a similar challenge`;
+    data.whatsappCtaHref = `https://wa.me/972538791843?text=${encodeURIComponent(waMessage)}`;
+
     const html = render(template, data);
     const outPath = path.join(ROOT, `${data.slug}.html`);
     fs.writeFileSync(outPath, html, 'utf8');

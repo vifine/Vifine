@@ -2518,3 +2518,15 @@ body.menu-open .wa-widget {
 }
 
 .projects-no-results.is-visible { display: block; }
+
+/* Discuss a similar project CTA */
+.project-discuss-cta {
+  display: flex;
+  justify-content: center;
+  padding: 56px var(--page-padding) 0;
+}
+
+.project-discuss-cta .btn {
+  padding: 14px 32px;
+  font-size: 16px;
+}
