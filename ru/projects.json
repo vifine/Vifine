@@ -63,23 +63,24 @@
     "role": "Systems Architect & COO",
     "period": "Apr 2025 – Apr 2026",
     "title": "Product Information Management System",
-    "tagline": "10,000+ SKUs with supplier feed automation, AI content pipeline, and multi-channel publishing",
-    "summary": "Single source of truth for all product data across the business. Manages the full product lifecycle — from initial creation to Shopify publication. The system serves three key roles: content manager (product data and visuals), procurement (supplier pricing), and SEO specialist. Connected with AI content generation and image processing (Photoroom, Decor8).",
-    "challenge": "FullFlat had 10,000+ SKUs across own furniture and accessories suppliers with inconsistent data, manual supplier feed updates, and no structured SEO workflow for multi-channel publishing.",
-    "solution": "I built a PIM system on Airtable with automated supplier feed sync, structured product enrichment workflow, AI-powered content pipeline, and controlled multi-channel publishing (Shopify Online Store, Meta, Google, Pinterest, YouTube).",
+    "tagline": "Bilingual furniture catalog with multi-supplier pricing and AI-generated interior imagery",
+    "summary": "Single source of truth for all product data across the business, for a furniture brand sourcing from multiple contract manufacturers and selling through a bilingual (English/Arabic) storefront. Manages the full product lifecycle from creation to publication.",
+    "challenge": "Product data lived disconnected from a Google Drive of unlinked images. The storefront ran in Arabic and English with no translation workflow, and Shopify's single-cost-per-product model couldn't represent unit economics across multiple contract manufacturers pricing the same product differently.",
+    "solution": "I built a PIM on Airtable with a dedicated Product × Supplier pricing table for accurate multi-manufacturer cost, bilingual EN/AR content management, AI-generated interior imagery replacing costly 3D rendering, and controlled multi-channel publishing (Shopify, Meta, Google, Pinterest, YouTube).",
     "results": [
       "10,000+ SKUs structured with consistent taxonomy, pricing, and media",
-      "Automated supplier feed sync eliminates manual data entry for accessories catalog",
+      "Bilingual catalog (English/Arabic) managed from a single source of truth",
+      "Multi-supplier cost structure enables accurate unit economics across manufacturers",
+      "AI-generated interior scenes replace costly 3D rendering for lifestyle imagery",
       "1,000+ products managed through structured SEO workflow",
-      "AI-powered content pipeline accelerates time from 3D model to published product",
       "6-channel publishing (Shopify, Meta, Google, Pinterest, YouTube) from one interface"
     ],
     "tools": [
       "Airtable",
       "Shopify",
-      "Photoroom",
-      "Decor8",
-      "Airpower API"
+      "Airpower API",
+      "AI Image Generation",
+      "n8n"
     ],
     "images": [],
     "directLink": "fullflat-pim.html"
