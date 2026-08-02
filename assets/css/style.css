@@ -545,6 +545,24 @@ img { max-width: 100%; display: block; }
   color: var(--text-secondary);
 }
 
+.project-row-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 2px 0;
+}
+
+.tech-tag {
+  background: #f3f4f6;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
 .project-location {
   display: flex;
   align-items: center;

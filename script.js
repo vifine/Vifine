@@ -31,11 +31,15 @@ function renderPortfolioGrid(projects) {
         // Формат project-row для projects.html
         grid.innerHTML = displayProjects.map(project => {
             const href = project.directLink ? project.directLink : `project.html?id=${project.id}`;
+            const toolsHtml = project.tools && project.tools.length
+                ? `<div class="project-row-tools">${project.tools.map(tool => `<span class="tech-tag">${tool}</span>`).join('')}</div>`
+                : '';
             return `
             <a href="${href}" class="project-row">
                 <div class="project-row-left">
                     <h3>${project.title}</h3>
                     <p class="project-desc">${project.tagline}</p>
+                    ${toolsHtml}
                     <div class="project-location">${project.companyLocation}</div>
                 </div>
                 <div class="project-row-right">View project</div>
