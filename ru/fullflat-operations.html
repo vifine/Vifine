@@ -154,6 +154,10 @@
           menu.setAttribute('aria-hidden', 'false');
           document.body.classList.add('menu-open');
           burger.classList.add('is-active');
+          // Mobile uses a full-screen overlay, not the desktop dropdown —
+          // make sure the lang-toggle never carries a leftover desktop shift.
+          var langToggle = document.querySelector('.lang-toggle');
+          if (langToggle) langToggle.style.transform = '';
         }
 
         function closeMobileMenu() {
