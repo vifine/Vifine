@@ -521,7 +521,8 @@ img { max-width: 100%; display: block; }
   transition: opacity 0.15s;
   min-height: 120px;
 }
-.project-row:first-child { border-top: 1px solid #1A1A1A; }
+.project-row:first-child { border-top: none; }
+.project-row:last-child { border-bottom: none; }
 .project-row:hover { opacity: 0.65; text-decoration: none; }
 
 .project-row-left {
