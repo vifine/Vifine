@@ -37,13 +37,13 @@ function renderPortfolioGrid(projects) {
             return `
             <a href="${href}" class="project-row">
                 <div class="project-row-left">
-                    <h3>${project.title}</h3>
-                    <p class="project-desc">${project.tagline}</p>
-                    ${toolsHtml}
                     <div class="project-location">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12.833S11.083 9.148 11.083 5.833A4.083 4.083 0 0 0 7 1.75a4.083 4.083 0 0 0-4.083 4.083c0 3.315 4.083 7 4.083 7Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="5.833" r="1.417" stroke="currentColor" stroke-width="1.2"/></svg>
                         <span>${project.companyLocation}</span>
                     </div>
+                    <h3>${project.title}</h3>
+                    <p class="project-desc">${project.tagline}</p>
+                    ${toolsHtml}
                 </div>
                 <div class="project-row-right">
                     View project
