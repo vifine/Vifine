@@ -1571,6 +1571,8 @@ img { max-width: 100%; display: block; }
 /* Project sections */
 .project-section {
   padding: 64px var(--page-padding);
+  max-width: calc(var(--content-width) + var(--page-padding) * 2);
+  margin: 0 auto;
   border-top: 1px solid var(--border-color);
 }
 
