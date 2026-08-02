@@ -48,7 +48,10 @@ function renderPortfolioGrid(projects) {
                 <div class="project-row-right">
                     <span class="project-row-right-inner">
                         View project
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.333 8h9.334M8.667 3.667 13 8l-4.333 4.333" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span class="arrow-elongate">
+                            <span class="arrow-line"></span>
+                            <svg width="8" height="10" viewBox="0 0 8 10" fill="none"><path d="M1 1.5 5 5l-4 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
                     </span>
                 </div>
             </a>
