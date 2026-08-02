@@ -160,10 +160,9 @@ img { max-width: 100%; display: block; }
 .btn-secondary {
   background: transparent;
   color: var(--text-primary);
-  border: 1.5px solid var(--text-primary);
-  transition: background 0.2s ease, color 0.2s ease;
+  border: 1.5px solid var(--border-color);
 }
-.btn-secondary:hover { background: var(--text-primary); color: #fff; text-decoration: none; }
+.btn-secondary:hover { border-color: var(--text-primary); text-decoration: none; }
 
 .btn-outline-dark {
   background: transparent;
@@ -2305,15 +2304,30 @@ body.menu-open .wa-widget {
   .page-404-text h1 { font-size: 28px; }
 }
 
-/* Language switcher */
-.navbar-menu li a.lang-switch {
-  border: 1px solid var(--border-color);
-  border-radius: 100px;
-  padding: 4px 12px;
-  font-size: 13px;
-  font-weight: 600;
+/* Language toggle — persistent, outside dropdown menus */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-serif);
+  font-size: 14px;
+  white-space: nowrap;
+  margin-right: 20px;
 }
-.mobile-menu-link.lang-switch,
-.desktop-dropdown-link.lang-switch {
+
+.lang-toggle .lang-current {
   font-weight: 700;
+  color: var(--text-primary);
+}
+
+.lang-toggle .lang-sep {
+  color: #666;
+}
+
+.lang-toggle .lang-other {
+  color: #666;
+  text-decoration: none;
+}
+
+.lang-toggle .lang-other:hover {
+  color: var(--text-primary);
 }

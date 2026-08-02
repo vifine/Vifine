@@ -61,33 +61,22 @@ def fix_ru_paths(html: str) -> str:
     return html
 
 
-def insert_switcher(html: str, target_href: str, label: str) -> str:
-    """Insert a language-switch link into navbar-menu, desktop-dropdown, and mobile-menu-nav."""
-    # 1. Desktop navbar-menu (<ul class="navbar-menu"> ... </ul>)
-    html = re.sub(
-        r'(<ul class="navbar-menu">.*?)(\s*</ul>)',
-        rf'\1\n        <li><a href="{target_href}" class="lang-switch">{label}</a></li>\2',
+def insert_lang_toggle(html: str, current_label: str, other_label: str, other_href: str) -> str:
+    """Insert a persistent 'En | Ru' toggle in the header, right before the burger button —
+    always visible, outside the dropdown/mobile menu, matching the Figma design."""
+    toggle = (
+        '\n      <span class="lang-toggle">'
+        f'<span class="lang-current">{current_label}</span>'
+        '<span class="lang-sep"> | </span>'
+        f'<a href="{other_href}" class="lang-other">{other_label}</a>'
+        '</span>\n      '
+    )
+    return re.sub(
+        r'(\s*)(<!-- Burger button[^>]*-->\s*)?(<button class="navbar-burger")',
+        lambda m: toggle + (m.group(2) or "") + m.group(3),
         html,
         count=1,
-        flags=re.DOTALL,
     )
-    # 2. Desktop dropdown (<div class="desktop-dropdown" ...> ... <!-- /Desktop Dropdown --> or </div>)
-    html = re.sub(
-        r'(<div class="desktop-dropdown"[^>]*>.*?)(\s*(?:<!-- /Desktop Dropdown -->|</div>))',
-        rf'\1\n        <a href="{target_href}" class="desktop-dropdown-link lang-switch">{label}</a>\2',
-        html,
-        count=1,
-        flags=re.DOTALL,
-    )
-    # 3. Mobile menu nav (<nav class="mobile-menu-nav"> ... </nav>) — first occurrence only
-    html = re.sub(
-        r'(<nav class="mobile-menu-nav">.*?)(\s*</nav>)',
-        rf'\1\n      <a href="{target_href}" class="mobile-menu-link lang-switch">{label}</a>\2',
-        html,
-        count=1,
-        flags=re.DOTALL,
-    )
-    return html
 
 
 def build():
@@ -104,7 +93,7 @@ def build():
         # ---- Update the EN (root) file in place ----
         en_html = original
         en_html = add_hreflang(en_html, page, is_ru=False)
-        en_html = insert_switcher(en_html, f"ru/{page}", "RU")
+        en_html = insert_lang_toggle(en_html, "En", "Ru", f"ru/{page}")
         src_path.write_text(en_html, encoding="utf-8")
 
         # ---- Build the RU mirror ----
@@ -120,7 +109,7 @@ def build():
             ru_html,
             count=1,
         )
-        ru_html = insert_switcher(ru_html, f"../{page}", "EN")
+        ru_html = insert_lang_toggle(ru_html, "Ru", "En", f"../{page}")
 
         (RU_DIR / page).write_text(ru_html, encoding="utf-8")
         print(f"  built: {page}  ->  ru/{page}")
