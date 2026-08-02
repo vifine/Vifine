@@ -1527,6 +1527,10 @@ img { max-width: 100%; display: block; }
     justify-content: flex-end;
     width: 100%;
   }
+
+  /* No hover on touch — show the elongated arrow state by default */
+  .row-arrow-default { opacity: 0; }
+  .row-arrow-hover { opacity: 1; }
 }
 
 /* ============================================
