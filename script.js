@@ -49,8 +49,8 @@ function renderPortfolioGrid(projects) {
                     <span class="project-row-right-inner">
                         View project
                         <span class="row-arrow-wrap">
-                            <img src="assets/img/icons/row-arrow-default.svg" alt="" class="row-arrow row-arrow-default">
-                            <img src="assets/img/icons/row-arrow-hover.svg" alt="" class="row-arrow row-arrow-hover">
+                            <img src="assets/img/icons/row-arrow-default.svg?v=2" alt="" class="row-arrow row-arrow-default">
+                            <img src="assets/img/icons/row-arrow-hover.svg?v=2" alt="" class="row-arrow row-arrow-hover">
                         </span>
                     </span>
                 </div>
