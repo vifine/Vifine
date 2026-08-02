@@ -79,7 +79,7 @@ function renderProjectDetail(projects) {
             <div class="project-not-found">
                 <h2>Project not found</h2>
                 <p>Sorry, we couldn't find that project.</p>
-                <a href="portfolio.html" class="btn btn-primary">Back to Portfolio</a>
+                <a href="projects.html" class="btn btn-primary">Back to Projects</a>
             </div>
         `;
         return;
@@ -98,7 +98,7 @@ function renderProjectDetail(projects) {
         : '';
 
     container.innerHTML = `
-        <a href="portfolio.html" class="back-link">← Back to Portfolio</a>
+        <a href="projects.html" class="back-link">← Back to Projects</a>
 
         <div class="project-detail-header">
             <div class="project-meta">
