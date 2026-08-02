@@ -62,14 +62,13 @@ def fix_ru_paths(html: str) -> str:
 
 
 def insert_lang_toggle(html: str, current_label: str, other_label: str, other_href: str) -> str:
-    """Insert a persistent 'En | Ru' toggle in the header, right before the burger button —
-    always visible, outside the dropdown/mobile menu, matching the Figma design."""
+    """Insert a persistent segmented 'En / Ru' pill toggle in the header, right before the
+    burger button — always visible, outside the dropdown/mobile menu, matching Figma."""
     toggle = (
-        '\n      <span class="lang-toggle">'
-        f'<span class="lang-current">{current_label}</span>'
-        '<span class="lang-sep"> | </span>'
-        f'<a href="{other_href}" class="lang-other">{other_label}</a>'
-        '</span>\n      '
+        '\n      <div class="lang-toggle">'
+        f'<span class="lang-segment active">{current_label}</span>'
+        f'<a href="{other_href}" class="lang-segment">{other_label}</a>'
+        '</div>\n      '
     )
     return re.sub(
         r'(\s*)(<!-- Burger button[^>]*-->\s*)?(<button class="navbar-burger")',

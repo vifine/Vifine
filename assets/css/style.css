@@ -2308,26 +2308,36 @@ body.menu-open .wa-widget {
 .lang-toggle {
   display: flex;
   align-items: center;
-  font-family: var(--font-serif);
-  font-size: 14px;
-  white-space: nowrap;
+  background: #1A1A1A;
+  border-radius: 14px;
+  padding: 2px;
+  width: 56px;
+  height: 28px;
+  flex-shrink: 0;
   margin-right: 20px;
 }
 
-.lang-toggle .lang-current {
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.lang-toggle .lang-sep {
-  color: #666;
-}
-
-.lang-toggle .lang-other {
-  color: #666;
+.lang-toggle .lang-segment {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-family: var(--font-serif);
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
   text-decoration: none;
 }
 
-.lang-toggle .lang-other:hover {
-  color: var(--text-primary);
+.lang-toggle .lang-segment.active {
+  background: #fff;
+  color: #1A1A1A;
+  font-weight: 700;
+}
+
+.lang-toggle a.lang-segment:hover {
+  color: #fff;
+  opacity: 0.8;
 }
