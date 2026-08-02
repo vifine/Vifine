@@ -832,6 +832,14 @@ img { max-width: 100%; display: block; }
   border-top: 1px solid var(--border-color);
 }
 
+.experience-row:last-child {
+  border-bottom: none;
+}
+
+.experience-row:last-child {
+  border-bottom: none;
+}
+
 .exp-meta {
   padding-top: 4px;
 }
