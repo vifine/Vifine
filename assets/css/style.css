@@ -589,16 +589,40 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: flex-end;
   align-self: stretch;
-  gap: 8px;
   flex-shrink: 0;
 }
 
+.project-row-right-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 4px;
+  position: relative;
+}
+
+.project-row-right-inner::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  bottom: 0;
+  height: 1.5px;
+  background: var(--text-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.project-row:hover .project-row-right-inner::after {
+  transform: scaleX(1);
+}
+
 .project-row-right svg {
-  transition: transform 0.25s ease;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .project-row:hover .project-row-right svg {
-  transform: translateX(4px);
+  transform: translateX(6px);
 }
 
 .projects-cta {

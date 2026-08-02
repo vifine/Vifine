@@ -46,8 +46,10 @@ function renderPortfolioGrid(projects) {
                     ${toolsHtml}
                 </div>
                 <div class="project-row-right">
-                    View project
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.333 8h9.334M8.667 3.667 13 8l-4.333 4.333" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span class="project-row-right-inner">
+                        View project
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.333 8h9.334M8.667 3.667 13 8l-4.333 4.333" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
                 </div>
             </a>
         `}).join('');
