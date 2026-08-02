@@ -2548,7 +2548,8 @@ body.menu-open .wa-widget {
 .project-results-bullets a,
 .cv-section-inner p a,
 .ai-section-inner p a {
-  color: #444;
+  color: var(--text-primary);
+  font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -2558,5 +2559,5 @@ body.menu-open .wa-widget {
 .project-results-bullets a:hover,
 .cv-section-inner p a:hover,
 .ai-section-inner p a:hover {
-  color: var(--text-primary);
+  color: #444;
 }
