@@ -599,14 +599,27 @@ img { max-width: 100%; display: block; }
   padding: 6px 4px;
 }
 
-.row-arrow {
+.row-arrow-wrap {
+  position: relative;
+  width: 22px;
+  height: 14px;
   flex-shrink: 0;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.project-row:hover .row-arrow {
-  transform: translateX(8px);
+.row-arrow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.25s ease;
 }
+
+.row-arrow-default { opacity: 1; }
+.row-arrow-hover { opacity: 0; }
+
+.project-row:hover .row-arrow-default { opacity: 0; }
+.project-row:hover .row-arrow-hover { opacity: 1; }
 
 .projects-cta {
   display: flex;
