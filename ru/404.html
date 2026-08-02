@@ -180,6 +180,7 @@
           desktopDropdown.setAttribute('aria-hidden', 'true');
           burger.classList.remove('is-active');
           shiftLangToggle(false);
+          document.documentElement.classList.remove('desktop-menu-was-open');
           try { sessionStorage.removeItem(STORAGE_KEY); } catch(e) {}
         }
 

@@ -31,7 +31,6 @@ PAGES = [
     "project-detail.html",
     "project.html",
     "projects.html",
-    "resume.html",
 ]
 
 
