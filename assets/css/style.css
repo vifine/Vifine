@@ -593,6 +593,14 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 
+.project-row-right svg {
+  transition: transform 0.25s ease;
+}
+
+.project-row:hover .project-row-right svg {
+  transform: translateX(4px);
+}
+
 .projects-cta {
   display: flex;
   justify-content: flex-end;
