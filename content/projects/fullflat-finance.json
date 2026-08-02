@@ -51,12 +51,12 @@
   "nav": {
     "prevHref": "fullflat-pim.html",
     "prevLabel": "Previous Project",
-    "nextHref": "projects.html",
-    "nextLabel": "View All Projects",
-    "ctaHref": "projects.html",
-    "ctaLabel": "Keep Exploring",
-    "ctaTitle": "All Projects",
-    "ctaDesc": "View the full list of systems and integrations built for e-commerce businesses.",
+    "nextHref": "fullflat-operations.html",
+    "nextLabel": "Next Project",
+    "ctaHref": "fullflat-operations.html",
+    "ctaLabel": "Next Project",
+    "ctaTitle": "Order Management System for Online Furniture Store",
+    "ctaDesc": "End-to-end order lifecycle platform — from customer inquiry to delivery confirmation, replacing spreadsheets with one integrated system.",
     "viewAllHref": "projects.html"
   }
 }
