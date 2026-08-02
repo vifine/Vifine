@@ -1507,6 +1507,26 @@ img { max-width: 100%; display: block; }
   .navbar-menu { display: none; }
   .hero-buttons { flex-direction: column; width: 100%; }
   .hero-buttons .btn { width: 100%; justify-content: center; }
+
+  /* Project list rows: stack right block below left on mobile */
+  .project-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    min-height: 0;
+    padding: 20px 0;
+  }
+  .project-row-left { gap: 8px; }
+  .project-row-left h3 { font-size: 22px; line-height: 28px; }
+  .project-desc { font-size: 14px; line-height: 21px; }
+  .project-row-tools { gap: 8px; }
+  .tech-tag { font-size: 13px; padding: 6px 12px; }
+  .project-row-right {
+    align-self: auto;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
 }
 
 /* ============================================
