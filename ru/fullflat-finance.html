@@ -154,10 +154,6 @@
           menu.setAttribute('aria-hidden', 'false');
           document.body.classList.add('menu-open');
           burger.classList.add('is-active');
-          // Mobile uses a full-screen overlay, not the desktop dropdown —
-          // make sure the lang-toggle never carries a leftover desktop shift.
-          var langToggle = document.querySelector('.lang-toggle');
-          if (langToggle) langToggle.style.transform = '';
         }
 
         function closeMobileMenu() {
@@ -169,26 +165,10 @@
           burger.classList.remove('is-active');
         }
 
-        function shiftLangToggle(open) {
-          var langToggle = document.querySelector('.lang-toggle');
-          if (!langToggle) return;
-          if (open) {
-            var dropRect = desktopDropdown.getBoundingClientRect();
-            var toggleRect = langToggle.getBoundingClientRect();
-            var overlap = toggleRect.right - dropRect.left;
-            langToggle.style.transform = overlap > 0
-              ? 'translateX(-' + (overlap + 12) + 'px)'
-              : '';
-          } else {
-            langToggle.style.transform = '';
-          }
-        }
-
         function openDesktopMenu() {
           desktopDropdown.classList.add('is-open');
           desktopDropdown.setAttribute('aria-hidden', 'false');
           burger.classList.add('is-active');
-          shiftLangToggle(true);
           try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch(e) {}
         }
 
@@ -196,8 +176,6 @@
           desktopDropdown.classList.remove('is-open');
           desktopDropdown.setAttribute('aria-hidden', 'true');
           burger.classList.remove('is-active');
-          shiftLangToggle(false);
-          document.documentElement.classList.remove('desktop-menu-was-open');
           try { sessionStorage.removeItem(STORAGE_KEY); } catch(e) {}
         }
 
@@ -408,6 +386,8 @@
       }, 6000);
     })();
   </script>
+
+  <script src="../assets/js/image-zoom.js"></script>
 
 </body>
 </html>
