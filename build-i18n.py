@@ -37,6 +37,9 @@ PAGES = [
 
 def add_hreflang(html: str, page: str, is_ru: bool) -> str:
     """Insert hreflang alternate tags + x-default right after <link rel="canonical">."""
+    # Idempotency: remove any hreflang tags from a previous run first.
+    html = re.sub(r'\n\s*<link rel="alternate" hreflang="[^"]*"[^>]*>', "", html)
+
     en_url = f"{SITE_URL}/{page}" if page != "index.html" else f"{SITE_URL}/"
     ru_url = f"{SITE_URL}/ru/{page}"
     tags = (
@@ -64,6 +67,9 @@ def fix_ru_paths(html: str) -> str:
 def insert_lang_toggle(html: str, active: str, other_href: str) -> str:
     """Insert a persistent sliding pill toggle in the header, right before the burger
     button — always visible, outside the dropdown/mobile menu, matching Figma."""
+    # Idempotency: strip any toggle already inserted by a previous run first.
+    html = re.sub(r'\s*<div class="lang-toggle[^"]*">.*?</div>\s*', "\n      ", html, flags=re.DOTALL)
+
     modifier = " lang-toggle--ru" if active == "ru" else ""
     if active == "en":
         en_el = '<span class="lang-label lang-label-en">En</span>'
