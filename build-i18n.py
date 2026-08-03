@@ -22,6 +22,7 @@ SITE_URL = "https://vifine.tech"
 
 PAGES = [
     "404.html",
+    "artline-b2b-portal.html",
     "artline-craft-storefront.html",
     "contact.html",
     "cv.html",

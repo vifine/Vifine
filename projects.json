@@ -18,6 +18,24 @@
     "summary": "Rebuilt a patchwork multi-agency Shopify store into a self-maintainable storefront with proper catalog architecture"
   },
   {
+    "id": "artline-b2b-portal",
+    "title": "B2B Wholesale Portal",
+    "tagline": "Self-serve B2B portal for European business buyers: VAT-exempt tiered pricing, VIES-verified registration, and automated multi-language invoicing",
+    "companyLocation": "Romania",
+    "period": "2026",
+    "role": "Architect, UI/UX Designer & Shopify Developer",
+    "company": "ARTLINE GROUP EU S.R.L.",
+    "summary": "Self-serve B2B portal for European business buyers: VAT-exempt tiered pricing, VIES-verified registration, and automated multi-language invoicing",
+    "tools": [
+      "Shopify B2B",
+      "Shopify Markets",
+      "Shopify Catalogs",
+      "Bitrix24",
+      "n8n"
+    ],
+    "directLink": "artline-b2b-portal.html"
+  },
+  {
     "id": "fullflat-operations",
     "company": "FullFlat LLC",
     "companyLocation": "United Arab Emirates",
