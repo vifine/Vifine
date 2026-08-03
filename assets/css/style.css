@@ -2566,3 +2566,31 @@ body.menu-open .wa-widget {
 .ai-section-inner p a:hover {
   color: #444;
 }
+
+/* Side-by-side text + small full image block */
+.project-side-block {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.project-side-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-side-img {
+  width: 260px;
+  max-width: 260px;
+  flex-shrink: 0;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+  .project-side-block { flex-direction: column; }
+  .project-side-img { width: 100%; max-width: 100%; }
+}
