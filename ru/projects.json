@@ -2,7 +2,7 @@
   {
     "id": "artline-craft-storefront",
     "title": "Arts & Crafts Storefront Rebuild",
-    "tagline": "Rebuilt a patchwork multi-agency Shopify store into a self-maintainable storefront with proper catalog architecture and market-specific pricing",
+    "tagline": "Rebuilt a patchwork multi-agency Shopify store into a self-maintainable storefront with proper catalog architecture",
     "companyLocation": "Romania",
     "period": "2026",
     "tools": [
@@ -15,7 +15,7 @@
     "directLink": "artline-craft-storefront.html",
     "company": "ARTLINE GROUP EU S.R.L.",
     "role": "Architect, UI/UX Designer & Shopify Developer",
-    "summary": "Rebuilt a patchwork multi-agency Shopify store into a self-maintainable storefront with proper catalog architecture and market-specific pricing"
+    "summary": "Rebuilt a patchwork multi-agency Shopify store into a self-maintainable storefront with proper catalog architecture"
   },
   {
     "id": "fullflat-operations",

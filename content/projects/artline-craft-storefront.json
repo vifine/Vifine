@@ -2,13 +2,13 @@
   "slug": "artline-craft-storefront",
   "breadcrumb": "Arts & Crafts Storefront Rebuild",
   "title": "Arts & Crafts Storefront Rebuild",
-  "pitch": "Rebuilt a patchwork multi-agency Shopify store into a self-maintainable arts & crafts storefront with proper catalog architecture and market-specific pricing",
+  "pitch": "Rebuilt a patchwork multi-agency Shopify store into a self-maintainable arts & crafts storefront with proper catalog architecture",
   "seo": {
     "title": "Arts & Crafts Storefront Rebuild — Shopify Case Study | Victoria Fine",
-    "description": "Rebuilt a multi-agency Shopify store for an arts & crafts brand — catalog restructuring, metafield-driven content, market-specific pricing, and Amazon-style rich content. Case study by Victoria Fine.",
-    "keywords": "Shopify storefront rebuild, catalog restructuring, Shopify metafields, metaobjects, market pricing, arts and crafts e-commerce, Amazon A+ content",
+    "description": "Rebuilt a multi-agency Shopify store for an arts & crafts brand — catalog restructuring, metafield-driven content, and Amazon-style rich content. Case study by Victoria Fine.",
+    "keywords": "Shopify storefront rebuild, catalog restructuring, Shopify metafields, metaobjects, arts and crafts e-commerce, Amazon A+ content",
     "ogTitle": "Arts & Crafts Storefront Rebuild — Shopify Case Study",
-    "ogDescription": "Rebuilt a patchwork multi-agency Shopify store into a self-maintainable storefront with proper catalog architecture and market-specific pricing."
+    "ogDescription": "Rebuilt a patchwork multi-agency Shopify store into a self-maintainable storefront with proper catalog architecture."
   },
   "meta": [
     {
@@ -35,7 +35,7 @@
     "Airpower",
     "n8n"
   ],
-  "overview": "ARTLINE is an international European arts-and-crafts brand shipping worldwide. The new storefront (<a href=\"https://artline-resin.eu/\" target=\"_blank\" rel=\"noopener\">artline-resin.eu</a>) was designed in Figma and implemented with a development team, architected so the client's own team could maintain it going forward without depending on outside developers for routine changes. The entire content and pricing model runs on metafields and metaobjects, including market-specific pricing: VAT-inclusive for Europe, VAT-exclusive elsewhere.",
+  "overview": "ARTLINE is an international European arts-and-crafts brand shipping worldwide. The new storefront (<a href=\"https://artline-resin.eu/\" target=\"_blank\" rel=\"noopener\">artline-resin.eu</a>) was designed in Figma and implemented with a development team, architected so the client's own team could maintain it going forward without depending on outside developers for routine changes. The entire content model runs on metafields and metaobjects.",
   "challenge": "The client's storefront had been running since 2022, incrementally patched by a rotating cast of agencies with no consistent architecture behind it. The result was a flat product catalog that couldn't represent variants properly, a browsing experience that wasn't built to convert, and no way for customers to filter products or calculate how much material they'd actually need. That friction pushed people to abandon before checkout on a site where confidence in quantity and fit matters most.",
   "solutionIntro": "The rebuild started with the foundation the old site never had, then moved through catalog restructuring, product cards, pricing architecture, content, and editability.",
   "solutionBlocks": [
