@@ -38,8 +38,23 @@
   ],
   "overview": "A self-serve portal restricted to verified European businesses, layered on top of the existing storefront rather than built as a separate system. Registration, pricing, and invoicing are all handled through customer tagging, tiered discounts, and automation, without duplicating the product catalog for B2B buyers.",
   "challenge": "Shopify's native B2B functionality launched in April 2026, brand new territory with no established patterns to follow. Serving European business buyers meant working through Shopify Markets and Catalogs from scratch to support VAT-exempt pricing with manually assigned discount tiers, while keeping the same coupon and SKU logic working correctly for both B2C and B2B customers. There was no way to verify that a signup was a legitimate EU business, no protection against duplicate or fraudulent accounts, and no automated way to generate compliant invoices across the brand's languages.",
-  "solutionIntro": "",
-  "solutionBlocks": [],
+  "solutionIntro": "Access to B2B pricing is built through four pieces: verified registration, CRM-integrated onboarding, a dedicated B2B product experience, and automated invoicing.",
+  "solutionBlocks": [
+    {
+      "type": "heading",
+      "text": "VIES-Verified Registration"
+    },
+    {
+      "type": "text",
+      "text": "Wholesale registration runs as a three-step flow: VAT number verification, business contact details, and B2B account activation. The VAT number is validated in real time against VIES, the EU's official VAT registry, rejecting invalid or non-existent numbers before a business can proceed. Duplicate checks run against phone number, email, and VAT number together, so the same business can't create multiple accounts and a fraudulent signup can't slip through under a slightly different email."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-b2b-portal/01-registration-step1.png",
+      "alt": "Wholesale registration step one: VAT number verification",
+      "style": ""
+    }
+  ],
   "results": {
     "metrics": [],
     "bullets": []
