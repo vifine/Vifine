@@ -35,7 +35,7 @@
     "Airpower",
     "n8n"
   ],
-  "overview": "ARTLINE is an international European arts-and-crafts brand shipping worldwide. I designed the new storefront (<a href=\"https://artline-resin.eu/\" target=\"_blank\" rel=\"noopener\">artline-resin.eu</a>) in Figma and implemented it with a development team, architecting it so the client's own team could maintain it going forward without depending on outside developers for routine changes. The entire content and pricing model runs on metafields and metaobjects, including market-specific pricing: VAT-inclusive for Europe, VAT-exclusive elsewhere.",
+  "overview": "ARTLINE is an international European arts-and-crafts brand shipping worldwide. The new storefront (<a href=\"https://artline-resin.eu/\" target=\"_blank\" rel=\"noopener\">artline-resin.eu</a>) was designed in Figma and implemented with a development team, architected so the client's own team could maintain it going forward without depending on outside developers for routine changes. The entire content and pricing model runs on metafields and metaobjects, including market-specific pricing: VAT-inclusive for Europe, VAT-exclusive elsewhere.",
   "challenge": "The client's storefront had been running since 2022, incrementally patched by a rotating cast of agencies with no consistent architecture behind it. The result was a flat product catalog that couldn't represent variants properly, a browsing experience that wasn't built to convert, and no way for customers to filter products or calculate how much material they'd actually need. That friction pushed people to abandon before checkout on a site where confidence in quantity and fit matters most.",
   "solutionIntro": "The rebuild started with the foundation the old site never had, then moved through catalog restructuring, product cards, pricing architecture, content, and editability.",
   "solutionBlocks": [
@@ -45,7 +45,7 @@
     },
     {
       "type": "text",
-      "text": "The old storefront had no design system: every button used different styling, fonts varied inconsistently across pages, and there was no shared set of components to build from. I built a design system in Figma and implemented it as CSS custom properties for color, typography, and spacing, so every component inherits from the same tokens instead of being styled one-off. That foundation is what made it possible for the client's own team to later extend the site without breaking consistency."
+      "text": "The old storefront had no design system: every button used different styling, fonts varied inconsistently across pages, and there was no shared set of components to build from. A design system was built in Figma and implemented as CSS custom properties for color, typography, and spacing, so every component inherits from the same tokens instead of being styled one-off. That foundation is what made it possible for the client's own team to later extend the site without breaking consistency."
     },
     {
       "type": "image",
@@ -59,13 +59,19 @@
     },
     {
       "type": "text",
-      "text": "The old catalog listed every color and size as a separate standalone product: 276 SKUs with no shared variant structure, no way to filter by color or size, and inventory tracked separately for what should have been one product. Editing that by hand in Shopify wasn't realistic at that scale, so I exported the full catalog into Airtable via Airpower, consolidated the flat listings into proper product-variant groups, filled in the missing attributes, and synced the restructured catalog back to Shopify."
+      "text": "The old catalog listed every color and size as a separate standalone product: 276 SKUs with no shared variant structure, no way to filter by color or size, and inventory tracked separately for what should have been one product. Editing that by hand in Shopify wasn't realistic at that scale, so the full catalog was exported into Airtable via Airpower, flat listings were consolidated into proper product-variant groups with missing attributes filled in, and the restructured catalog was synced back to Shopify with a filterable catalog by category, type, price, viscosity, volume, and color."
     },
     {
       "type": "image",
       "src": "assets/img/projects/artline-craft-storefront/02-airtable-variants.png",
       "alt": "Airtable PIM with restructured products and variants",
       "style": ""
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-craft-storefront/09-catalog-filters.png",
+      "alt": "Filterable product catalog by category, type, price, viscosity, volume, and color",
+      "style": "margin-bottom:40px;"
     },
     {
       "type": "heading",
