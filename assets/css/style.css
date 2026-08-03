@@ -2621,6 +2621,7 @@ body.menu-open .wa-widget {
   gap: 32px;
   align-items: stretch;
   margin-bottom: 40px;
+  min-height: 0;
 }
 
 .project-split-left {
@@ -2644,10 +2645,10 @@ body.menu-open .wa-widget {
 .project-split-right {
   width: 320px;
   flex-shrink: 0;
-  height: auto;
+  height: 100%;
+  align-self: stretch;
   object-fit: cover;
   object-position: top;
-  align-self: stretch;
 }
 
 @media (max-width: 768px) {
