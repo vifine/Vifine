@@ -11,27 +11,107 @@
     "ogDescription": "Rebuilt a patchwork multi-agency Shopify store into a self-maintainable storefront with proper catalog architecture and market-specific pricing."
   },
   "meta": [
-    { "label": "Role", "value": "Architect, UI/UX Designer & Shopify Developer" },
-    { "label": "Company", "value": "ARTLINE GROUP EU S.R.L." },
-    { "label": "Location", "value": "Romania" },
-    { "label": "Year", "value": "2026" }
+    {
+      "label": "Role",
+      "value": "Architect, UI/UX Designer & Shopify Developer"
+    },
+    {
+      "label": "Company",
+      "value": "ARTLINE GROUP EU S.R.L."
+    },
+    {
+      "label": "Location",
+      "value": "Romania"
+    },
+    {
+      "label": "Year",
+      "value": "2026"
+    }
   ],
-  "techTags": ["Shopify", "Figma", "Airtable", "Airpower", "n8n"],
+  "techTags": [
+    "Shopify",
+    "Figma",
+    "Airtable",
+    "Airpower",
+    "n8n"
+  ],
   "overview": "ARTLINE is an international European arts-and-crafts brand shipping worldwide. I designed the new storefront (<a href=\"https://artline-resin.eu/\" target=\"_blank\" rel=\"noopener\">artline-resin.eu</a>) in Figma and implemented it with a development team, architecting it so the client's own team could maintain it going forward without depending on outside developers for routine changes. The entire content and pricing model runs on metafields and metaobjects, including market-specific pricing: VAT-inclusive for Europe, VAT-exclusive elsewhere.",
   "challenge": "The client's storefront had been running since 2022, incrementally patched by a rotating cast of agencies with no consistent architecture behind it. The result was a flat product catalog that couldn't represent variants properly, a browsing experience that wasn't built to convert, and no way for customers to filter products or calculate how much material they'd actually need. That friction pushed people to abandon before checkout on a site where confidence in quantity and fit matters most.",
   "solutionIntro": "The rebuild started with the foundation the old site never had, then moved through catalog restructuring, product cards, pricing architecture, content, and editability.",
   "solutionBlocks": [
-    { "type": "heading", "text": "Design System &amp; CSS Foundation" },
-    { "type": "text", "text": "The old storefront had no design system: every button used different styling, fonts varied inconsistently across pages, and there was no shared set of components to build from. I built a design system in Figma and implemented it as CSS custom properties for color, typography, and spacing, so every component inherits from the same tokens instead of being styled one-off. That foundation is what made it possible for the client's own team to later extend the site without breaking consistency." },
-    { "type": "image", "src": "assets/img/projects/artline-craft-storefront/01-design-system.jpg", "alt": "Design system: colors, typography, spacing, radius, and shadows", "style": "margin-bottom:40px;" },
-    { "type": "heading", "text": "Catalog Restructuring" },
-    { "type": "text", "text": "The old catalog listed every color and size as a separate standalone product: 276 SKUs with no shared variant structure, no way to filter by color or size, and inventory tracked separately for what should have been one product. Editing that by hand in Shopify wasn't realistic at that scale, so I exported the full catalog into Airtable via Airpower, consolidated the flat listings into proper product-variant groups, filled in the missing attributes, and synced the restructured catalog back to Shopify." },
-    { "type": "image", "src": "assets/img/projects/artline-craft-storefront/02-airtable-variants.png", "alt": "Airtable PIM with restructured products and variants", "style": "" },
-    { "type": "heading", "text": "Product Card Types" },
-    { "type": "text", "text": "Product cards needed to represent different kinds of product choices: some vary by color, others by physical form, others carry no meaningful visual variant. Three card templates — pill selectors, color swatches, and image-based variants — let each product type use the selection UI that matches how a customer actually chooses it. Each template is fully responsive across desktop, tablet, and mobile. Customers can also add a product to cart directly from the catalog grid, selecting a variant and adding it without opening the product page. On product pages, a floating panel with the selected variant follows the customer as they scroll through the longer product content, so they can add to cart at any point without scrolling back up." },
-    { "type": "image", "src": "assets/img/projects/artline-craft-storefront/03-product-card-types.jpg", "alt": "Product card templates: pill selectors, color swatches, and image variants with add-to-cart from catalog", "style": "" },
-    { "type": "heading", "text": "Rich Content" },
-    { "type": "richsplit", "text": "Product pages are built from modular rich-content blocks: an applications gallery showing real use cases, step-by-step usage instructions, a specifications table, a themed banner section, and cross-sell pairings with a linked product. Each block is its own metaobject type, so content is entered once and can be assembled in any combination per product without a developer touching code. The structure mirrors Amazon A+ content on purpose: the same product story needed to run on both the Shopify storefront and the brand's Amazon listings, so building it in Amazon's block format meant content only had to be written once.", "img1": "assets/img/projects/artline-craft-storefront/05-metafields-list.png", "alt1": "Product metafields powering rich content", "img2": "assets/img/projects/artline-craft-storefront/06-metaobject-entry.png", "alt2": "A metaobject entry referenced by multiple products", "text2": "Each rich-content block, like a slideshow product card, is a single metaobject entry with its own title, heading, description, and desktop/mobile banner images. That entry is then referenced by every product that uses it, so updating one field updates it everywhere it's linked instead of requiring an edit per product. The References panel on each entry shows exactly which products are pulling from it, making it easy to see the reach of a single piece of content before changing it.", "img3": "assets/img/projects/artline-craft-storefront/07-theme-editor-settings.png", "alt3": "Theme editor settings for the product media section", "src": "assets/img/projects/artline-craft-storefront/04-rich-content-pdp.jpg", "alt": "Product page with modular rich content: applications, how to use, specifications, and cross-sell pairings" }
+    {
+      "type": "heading",
+      "text": "Design System &amp; CSS Foundation"
+    },
+    {
+      "type": "text",
+      "text": "The old storefront had no design system: every button used different styling, fonts varied inconsistently across pages, and there was no shared set of components to build from. I built a design system in Figma and implemented it as CSS custom properties for color, typography, and spacing, so every component inherits from the same tokens instead of being styled one-off. That foundation is what made it possible for the client's own team to later extend the site without breaking consistency."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-craft-storefront/01-design-system.jpg",
+      "alt": "Design system: colors, typography, spacing, radius, and shadows",
+      "style": "margin-bottom:40px;"
+    },
+    {
+      "type": "heading",
+      "text": "Catalog Restructuring"
+    },
+    {
+      "type": "text",
+      "text": "The old catalog listed every color and size as a separate standalone product: 276 SKUs with no shared variant structure, no way to filter by color or size, and inventory tracked separately for what should have been one product. Editing that by hand in Shopify wasn't realistic at that scale, so I exported the full catalog into Airtable via Airpower, consolidated the flat listings into proper product-variant groups, filled in the missing attributes, and synced the restructured catalog back to Shopify."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-craft-storefront/02-airtable-variants.png",
+      "alt": "Airtable PIM with restructured products and variants",
+      "style": ""
+    },
+    {
+      "type": "heading",
+      "text": "Product Card Types"
+    },
+    {
+      "type": "text",
+      "text": "Product cards needed to represent different kinds of product choices: some vary by color, others by physical form, others carry no meaningful visual variant. Three card templates — pill selectors, color swatches, and image-based variants — let each product type use the selection UI that matches how a customer actually chooses it. Each template is fully responsive across desktop, tablet, and mobile. Customers can also add a product to cart directly from the catalog grid, selecting a variant and adding it without opening the product page. On product pages, a floating panel with the selected variant follows the customer as they scroll through the longer product content, so they can add to cart at any point without scrolling back up."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-craft-storefront/03-product-card-types.jpg",
+      "alt": "Product card templates: pill selectors, color swatches, and image variants with add-to-cart from catalog",
+      "style": ""
+    },
+    {
+      "type": "heading",
+      "text": "Rich Content"
+    },
+    {
+      "type": "richsplit",
+      "text": "Product pages are built from modular rich-content blocks: an applications gallery showing real use cases, step-by-step usage instructions, a specifications table, a themed banner section, and cross-sell pairings with a linked product. Each block is its own metaobject type, so content is entered once and can be assembled in any combination per product without a developer touching code. The structure mirrors Amazon A+ content on purpose: the same product story needed to run on both the Shopify storefront and the brand's Amazon listings, so building it in Amazon's block format meant content only had to be written once.",
+      "img1": "assets/img/projects/artline-craft-storefront/05-metafields-list.png",
+      "alt1": "Product metafields powering rich content",
+      "img2": "assets/img/projects/artline-craft-storefront/06-metaobject-entry.png",
+      "alt2": "A metaobject entry referenced by multiple products",
+      "text2": "Each rich-content block, like a slideshow product card, is a single metaobject entry with its own title, heading, description, and desktop/mobile banner images. That entry is then referenced by every product that uses it, so updating one field updates it everywhere it's linked instead of requiring an edit per product. The References panel on each entry shows exactly which products are pulling from it, making it easy to see the reach of a single piece of content before changing it.",
+      "img3": "assets/img/projects/artline-craft-storefront/07-theme-editor-settings.png",
+      "alt3": "Theme editor settings for the product media section",
+      "src": "assets/img/projects/artline-craft-storefront/04-rich-content-pdp.jpg",
+      "alt": "Product page with modular rich content: applications, how to use, specifications, and cross-sell pairings"
+    },
+    {
+      "type": "heading",
+      "text": "Resin Volume Calculator"
+    },
+    {
+      "type": "text",
+      "text": "Choosing the right amount of resin is a common source of hesitation on a product where getting the quantity wrong means wasted material or an unfinished project, especially for beginners who don't yet have an intuition for how much they need. The calculator takes the project shape (rectangular or cylindrical), dimensions in millimeters, and project type, then calculates the required resin weight with a rounding-up formula so customers always order enough. The result links directly to a recommended product, helping bring newer, less experienced customers into the category with confidence."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-craft-storefront/08-resin-calculator.png",
+      "alt": "Resin volume calculator with shape, dimensions, project type, and recommended product",
+      "style": ""
+    }
   ],
   "results": {
     "metrics": [],
