@@ -2400,6 +2400,10 @@ body.menu-open .wa-widget {
   cursor: zoom-in;
 }
 
+.project-img-zoom-wrap img {
+  display: block;
+}
+
 .project-img-zoom-badge {
   position: absolute;
   bottom: 10px;

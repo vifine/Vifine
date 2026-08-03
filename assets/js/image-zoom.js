@@ -48,6 +48,18 @@
     images.forEach(function (img) {
       var wrap = document.createElement('div');
       wrap.className = 'project-img-zoom-wrap';
+
+      // Move any inline sizing styles (max-width, margin, display, etc.)
+      // from the img onto the wrap, so the wrap's box always matches the
+      // image's actual rendered size/position instead of stretching full width.
+      if (img.getAttribute('style')) {
+        wrap.setAttribute('style', img.getAttribute('style'));
+        img.removeAttribute('style');
+      }
+      img.style.width = '100%';
+      img.style.height = '100%';
+      img.style.display = 'block';
+
       img.parentNode.insertBefore(wrap, img);
       wrap.appendChild(img);
 
