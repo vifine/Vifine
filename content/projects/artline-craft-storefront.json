@@ -22,7 +22,8 @@
   "solutionIntro": "The rebuild started with the foundation the old site never had, then moved through catalog restructuring, product cards, pricing architecture, content, and editability.",
   "solutionBlocks": [
     { "type": "heading", "text": "Design System &amp; CSS Foundation" },
-    { "type": "text", "text": "The old storefront had no design system: every button used different styling, fonts varied inconsistently across pages, and there was no shared set of components to build from. I built a design system in Figma and implemented it as CSS custom properties for color, typography, and spacing, so every component inherits from the same tokens instead of being styled one-off. That foundation is what made it possible for the client's own team to later extend the site without breaking consistency." }
+    { "type": "text", "text": "The old storefront had no design system: every button used different styling, fonts varied inconsistently across pages, and there was no shared set of components to build from. I built a design system in Figma and implemented it as CSS custom properties for color, typography, and spacing, so every component inherits from the same tokens instead of being styled one-off. That foundation is what made it possible for the client's own team to later extend the site without breaking consistency." },
+    { "type": "image", "src": "assets/img/projects/artline-craft-storefront/01-design-system.jpg", "alt": "Design system: colors, typography, spacing, radius, and shadows", "style": "margin-bottom:40px;" }
   ],
   "results": {
     "metrics": [],
