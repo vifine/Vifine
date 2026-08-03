@@ -295,13 +295,16 @@
 {{/if_image}}
 {{#if_side}}
       <div class="project-side-block">
-        <div class="project-side-text">
-          <p class="project-section-text" style="max-width:none;">{{text}}</p>
-          <img src="{{src2}}" alt="{{alt2}}" class="project-img" style="max-width:480px;margin-top:24px;">
-        </div>
+        <p class="project-section-text project-side-text" style="max-width:none;">{{text}}</p>
         <img src="{{src}}" alt="{{alt}}" class="project-img project-side-img">
       </div>
 {{/if_side}}
+{{#if_row2}}
+      <div class="project-row2-block">
+        <img src="{{src}}" alt="{{alt}}" class="project-img">
+        <img src="{{src2}}" alt="{{alt2}}" class="project-img">
+      </div>
+{{/if_row2}}
 {{/each}}
     </div>
   </div>

@@ -2594,3 +2594,19 @@ body.menu-open .wa-widget {
   .project-side-block { flex-direction: column; }
   .project-side-img { width: 100%; max-width: 100%; }
 }
+
+/* Two images side by side */
+.project-row2-block {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.project-row2-block .project-img {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .project-row2-block { flex-direction: column; }
+}
