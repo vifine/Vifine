@@ -46,22 +46,36 @@
 
     // Wrap each project image with a zoom badge
     images.forEach(function (img) {
-      var wrap = document.createElement('div');
-      wrap.className = 'project-img-zoom-wrap';
+      // Capture object-fit/object-position before any DOM changes, since
+      // those only work on the <img> itself, not on the wrapping div.
+      var computed = window.getComputedStyle(img);
+      var objectFit = computed.objectFit;
+      var objectPosition = computed.objectPosition;
 
-      // Move any inline sizing styles (max-width, margin, display, etc.)
-      // from the img onto the wrap, so the wrap's box always matches the
-      // image's actual rendered size/position instead of stretching full width.
-      if (img.getAttribute('style')) {
-        wrap.setAttribute('style', img.getAttribute('style'));
-        img.removeAttribute('style');
+      var wrap = document.createElement('div');
+      // Copy the image's classes onto the wrap so any layout CSS that
+      // targets .project-img (flex sizing, row/split layouts, etc.)
+      // still applies correctly now that the wrap is the real layout box.
+      wrap.className = 'project-img-zoom-wrap ' + img.className;
+
+      // Move inline sizing styles (max-width, margin, display, etc.) from
+      // the img onto the wrap too, for images with their own custom sizing.
+      var hadInlineStyle = img.getAttribute('style');
+      if (hadInlineStyle) {
+        wrap.setAttribute('style', wrap.getAttribute('style') ? wrap.getAttribute('style') + ';' + hadInlineStyle : hadInlineStyle);
       }
+
+      // The inner img always just fills whatever box the wrap establishes.
+      img.removeAttribute('style');
       img.style.width = '100%';
       img.style.height = '100%';
       img.style.display = 'block';
+      img.style.objectFit = objectFit;
+      img.style.objectPosition = objectPosition;
 
       img.parentNode.insertBefore(wrap, img);
       wrap.appendChild(img);
+      img.className = '';
 
       var badge = document.createElement('span');
       badge.className = 'project-img-zoom-badge';
