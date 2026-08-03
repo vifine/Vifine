@@ -117,6 +117,36 @@
       "alt3": "Theme editor settings for the product media section",
       "src": "assets/img/projects/artline-craft-storefront/04-rich-content-pdp.jpg",
       "alt": "Product page with modular rich content: applications, how to use, specifications, and cross-sell pairings"
+    },
+    {
+      "type": "heading",
+      "text": "Newsletter Signup &amp; Discount Automation"
+    },
+    {
+      "type": "text",
+      "text": "A custom two-step popup captures the customer's email first, then reveals a matching discount code on confirmation, all built as a native theme section rather than a third-party app."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-craft-storefront/10-popup-signup.png",
+      "alt": "Newsletter signup popup step one",
+      "style": "margin-bottom:16px;"
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-craft-storefront/11-popup-thanks.png",
+      "alt": "Newsletter signup popup step two with discount code",
+      "style": "margin-bottom:40px;"
+    },
+    {
+      "type": "text",
+      "text": "Display timing, page exclusions, and the discount code itself are fully configurable through the theme editor, with the code validated against a real Shopify discount so it always works at checkout."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-craft-storefront/12-popup-editor-settings.jpg",
+      "alt": "Theme editor settings for the newsletter popup and discount code",
+      "style": ""
     }
   ],
   "results": {
