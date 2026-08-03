@@ -75,6 +75,20 @@
     },
     {
       "type": "heading",
+      "text": "Resin Volume Calculator"
+    },
+    {
+      "type": "text",
+      "text": "Choosing the right amount of resin is a common source of hesitation on a product where getting the quantity wrong means wasted material or an unfinished project, especially for beginners who don't yet have an intuition for how much they need. The calculator takes the project shape (rectangular or cylindrical), dimensions in millimeters, and project type, then calculates the required resin weight with a rounding-up formula so customers always order enough. The result links directly to a recommended product, helping bring newer, less experienced customers into the category with confidence."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-craft-storefront/08-resin-calculator.png",
+      "alt": "Resin volume calculator with shape, dimensions, project type, and recommended product",
+      "style": ""
+    },
+    {
+      "type": "heading",
       "text": "Product Card Types"
     },
     {
@@ -103,20 +117,6 @@
       "alt3": "Theme editor settings for the product media section",
       "src": "assets/img/projects/artline-craft-storefront/04-rich-content-pdp.jpg",
       "alt": "Product page with modular rich content: applications, how to use, specifications, and cross-sell pairings"
-    },
-    {
-      "type": "heading",
-      "text": "Resin Volume Calculator"
-    },
-    {
-      "type": "text",
-      "text": "Choosing the right amount of resin is a common source of hesitation on a product where getting the quantity wrong means wasted material or an unfinished project, especially for beginners who don't yet have an intuition for how much they need. The calculator takes the project shape (rectangular or cylindrical), dimensions in millimeters, and project type, then calculates the required resin weight with a rounding-up formula so customers always order enough. The result links directly to a recommended product, helping bring newer, less experienced customers into the category with confidence."
-    },
-    {
-      "type": "image",
-      "src": "assets/img/projects/artline-craft-storefront/08-resin-calculator.png",
-      "alt": "Resin volume calculator with shape, dimensions, project type, and recommended product",
-      "style": ""
     }
   ],
   "results": {
