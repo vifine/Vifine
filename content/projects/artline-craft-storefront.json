@@ -32,7 +32,7 @@
     { "type": "image", "src": "assets/img/projects/artline-craft-storefront/03-product-card-types.jpg", "alt": "Product card templates: pill selectors, color swatches, and image variants with add-to-cart from catalog", "style": "" },
     { "type": "heading", "text": "Rich Content" },
     { "type": "text", "text": "Product pages include modular rich-content blocks: applications, step-by-step usage instructions, specifications, and cross-sell pairings, built the way Amazon A+ content is structured, since the same content needed to serve both the Shopify storefront and Amazon listings. Every block is built from metaobjects, so content is entered once and renders consistently across sections instead of being hand-coded per product." },
-    { "type": "image", "src": "assets/img/projects/artline-craft-storefront/04-rich-content-pdp.jpg", "alt": "Product page with modular rich content: applications, how to use, specifications, and cross-sell pairings", "style": "" }
+    { "type": "image", "src": "assets/img/projects/artline-craft-storefront/04-rich-content-pdp.jpg", "alt": "Product page with modular rich content: applications, how to use, specifications, and cross-sell pairings", "style": "max-height:640px;object-fit:cover;object-position:top;" }
   ],
   "results": {
     "metrics": [],
