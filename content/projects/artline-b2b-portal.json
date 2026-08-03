@@ -53,6 +53,20 @@
       "src": "assets/img/projects/artline-b2b-portal/01-registration-step1.png",
       "alt": "Wholesale registration step one: VAT number verification",
       "style": ""
+    },
+    {
+      "type": "heading",
+      "text": "B2B Sales Funnel Integration"
+    },
+    {
+      "type": "text",
+      "text": "Each step of the registration flow triggers an n8n workflow that creates and updates a deal in the B2B sales funnel, with a login logged at every step: VAT verification, contact details, and final activation. That gives the sales team full visibility into where a business is in the signup process, rather than only seeing completed registrations."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-b2b-portal/02-b2b-funnel-flow.png",
+      "alt": "n8n workflow creating and updating B2B funnel deals with step-by-step logging",
+      "style": ""
     }
   ],
   "results": {
