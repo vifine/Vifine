@@ -2,7 +2,7 @@
   "slug": "artline-b2b-portal",
   "breadcrumb": "B2B Wholesale Portal",
   "title": "B2B Wholesale Portal",
-  "pitch": "Built a self-serve B2B portal for European business buyers: VAT-exempt tiered pricing, VIES-verified registration, and automated multi-language invoicing",
+  "pitch": "Built a self-serve B2B portal on Shopify's brand-new native B2B platform for European business buyers: VAT-exempt tiered pricing, VIES-verified registration, and automated multi-language invoicing",
   "seo": {
     "title": "B2B Wholesale Portal — Shopify B2B Case Study | Victoria Fine",
     "description": "Self-serve Shopify B2B portal for European business buyers: VIES-verified registration, VAT-exempt tiered pricing, and automated multi-language invoicing. Case study by Victoria Fine.",
@@ -11,12 +11,31 @@
     "ogDescription": "Self-serve B2B portal for European business buyers: VAT-exempt tiered pricing, VIES-verified registration, and automated multi-language invoicing."
   },
   "meta": [
-    { "label": "Role", "value": "Architect, UI/UX Designer &amp; Shopify Developer" },
-    { "label": "Company", "value": "ARTLINE GROUP EU S.R.L." },
-    { "label": "Location", "value": "Romania" },
-    { "label": "Year", "value": "2026" }
+    {
+      "label": "Role",
+      "value": "Architect, UI/UX Designer &amp; Shopify Developer"
+    },
+    {
+      "label": "Company",
+      "value": "ARTLINE GROUP EU S.R.L."
+    },
+    {
+      "label": "Location",
+      "value": "Romania"
+    },
+    {
+      "label": "Year",
+      "value": "2026"
+    }
   ],
-  "techTags": ["Shopify B2B", "Shopify Markets", "Shopify Catalogs", "Bitrix24", "n8n", "VIES API"],
+  "techTags": [
+    "Shopify B2B",
+    "Shopify Markets",
+    "Shopify Catalogs",
+    "Bitrix24",
+    "n8n",
+    "VIES API"
+  ],
   "overview": "A self-serve portal restricted to verified European businesses, layered on top of the existing storefront rather than built as a separate system. Registration, pricing, and invoicing are all handled through customer tagging, tiered discounts, and automation, without duplicating the product catalog for B2B buyers.",
   "challenge": "Shopify's native B2B functionality launched in April 2026, brand new territory with no established patterns to follow. Serving European business buyers meant working through Shopify Markets and Catalogs from scratch to support VAT-exempt pricing with manually assigned discount tiers, while keeping the same coupon and SKU logic working correctly for both B2C and B2B customers. There was no way to verify that a signup was a legitimate EU business, no protection against duplicate or fraudulent accounts, and no automated way to generate compliant invoices across the brand's languages.",
   "solutionIntro": "",
