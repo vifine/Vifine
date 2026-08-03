@@ -2600,13 +2600,17 @@ body.menu-open .wa-widget {
   display: flex;
   gap: 24px;
   margin-bottom: 24px;
+  align-items: stretch;
 }
 
 .project-row2-block .project-img {
   flex: 1;
   min-width: 0;
+  height: 340px;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
   .project-row2-block { flex-direction: column; }
+  .project-row2-block .project-img { height: auto; object-fit: contain; }
 }
