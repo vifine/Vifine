@@ -295,7 +295,10 @@
 {{/if_image}}
 {{#if_side}}
       <div class="project-side-block">
-        <p class="project-section-text project-side-text" style="max-width:none;">{{text}}</p>
+        <div class="project-side-text">
+          <p class="project-section-text" style="max-width:none;">{{text}}</p>
+          <img src="{{src2}}" alt="{{alt2}}" class="project-img" style="max-width:480px;margin-top:24px;">
+        </div>
         <img src="{{src}}" alt="{{alt}}" class="project-img project-side-img">
       </div>
 {{/if_side}}
