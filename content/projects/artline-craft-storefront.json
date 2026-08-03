@@ -169,8 +169,29 @@
     }
   ],
   "results": {
-    "metrics": [],
-    "bullets": []
+    "metrics": [
+      {
+        "value": "33.86%",
+        "label": "Add-to-cart conversion (July 2026)"
+      },
+      {
+        "value": "276",
+        "label": "SKUs restructured"
+      },
+      {
+        "value": "9",
+        "label": "Languages"
+      }
+    ],
+    "bullets": [
+      "Add-to-cart conversion rose from an 18.2% average before launch (Jan-May 2026) to 33.86% by July, the second full month after relaunch",
+      "276 SKUs migrated from flat listings into a proper variant structure",
+      "Filterable catalog by category, type, price, viscosity, volume, and color",
+      "Resin volume calculator helps customers order the right amount with confidence",
+      "Modular rich-content system (metaobjects) reused across Shopify and Amazon listings",
+      "Custom WhatsApp widget syncs every lead to Bitrix24 CRM automatically via n8n",
+      "Design system and theme-editor-configurable sections let the client's team maintain the site without a developer"
+    ]
   },
   "nav": {
     "prevHref": "projects.html",
