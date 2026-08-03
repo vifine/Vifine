@@ -2631,6 +2631,16 @@ body.menu-open .wa-widget {
   gap: 20px;
 }
 
+.project-split-images-row {
+  display: flex;
+  gap: 16px;
+}
+
+.project-split-images-row .project-img {
+  flex: 1;
+  min-width: 0;
+}
+
 .project-split-right {
   width: 320px;
   flex-shrink: 0;
@@ -2642,5 +2652,6 @@ body.menu-open .wa-widget {
 
 @media (max-width: 768px) {
   .project-split-block { flex-direction: column; }
+  .project-split-images-row { flex-direction: column; }
   .project-split-right { width: 100%; height: auto; object-fit: contain; }
 }
