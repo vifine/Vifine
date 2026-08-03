@@ -142,6 +142,30 @@
       "src": "assets/img/projects/artline-craft-storefront/12-popup-editor-settings.jpg",
       "alt": "Theme editor settings for the newsletter popup and discount code",
       "style": ""
+    },
+    {
+      "type": "heading",
+      "text": "Custom WhatsApp Chat Widget &amp; CRM Sync"
+    },
+    {
+      "type": "text",
+      "text": "A custom WhatsApp widget replaces the default chat entry point with a two-step flow: visitors start with a message, then provide name, email, and phone before the conversation opens in WhatsApp."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-craft-storefront/13-whatsapp-widget.jpg",
+      "alt": "Custom two-step WhatsApp chat widget",
+      "style": "max-width:480px;margin:0 auto 40px;display:block;"
+    },
+    {
+      "type": "text",
+      "text": "That submission triggers an n8n workflow that keeps the customer synced in both directions: it searches for an existing customer by email and phone in Shopify, creating one if none exists, then does the same lookup in Bitrix24, creating or updating the CRM contact and merging both records to a single resolved contact ID. A deal is created in Bitrix24 and linked back to that contact, with a timeline comment logging where the lead came from, so every WhatsApp inquiry lands in the CRM as a trackable lead instead of a message that only lives in someone's phone."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-craft-storefront/14-n8n-crm-flow.png",
+      "alt": "n8n workflow syncing WhatsApp leads between Shopify and Bitrix24 CRM",
+      "style": ""
     }
   ],
   "results": {
