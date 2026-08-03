@@ -19,8 +19,11 @@
   "techTags": ["Shopify", "Figma", "Airtable", "Airpower", "n8n"],
   "overview": "ARTLINE is an international European arts-and-crafts brand shipping worldwide. I designed the new storefront (<a href=\"https://artline-resin.eu/\" target=\"_blank\" rel=\"noopener\">artline-resin.eu</a>) in Figma and implemented it with a development team, architecting it so the client's own team could maintain it going forward without depending on outside developers for routine changes. The entire content and pricing model runs on metafields and metaobjects, including market-specific pricing: VAT-inclusive for Europe, VAT-exclusive elsewhere.",
   "challenge": "The client's storefront had been running since 2022, incrementally patched by a rotating cast of agencies with no consistent architecture behind it. The result was a flat product catalog that couldn't represent variants properly, a browsing experience that wasn't built to convert, and no way for customers to filter products or calculate how much material they'd actually need. That friction pushed people to abandon before checkout on a site where confidence in quantity and fit matters most.",
-  "solutionIntro": "",
-  "solutionBlocks": [],
+  "solutionIntro": "The rebuild started with the foundation the old site never had, then moved through catalog restructuring, product cards, pricing architecture, content, and editability.",
+  "solutionBlocks": [
+    { "type": "heading", "text": "Design System &amp; CSS Foundation" },
+    { "type": "text", "text": "The old storefront had no design system: every button used different styling, fonts varied inconsistently across pages, and there was no shared set of components to build from. I built a design system in Figma and implemented it as CSS custom properties for color, typography, and spacing, so every component inherits from the same tokens instead of being styled one-off. That foundation is what made it possible for the client's own team to later extend the site without breaking consistency." }
+  ],
   "results": {
     "metrics": [],
     "bullets": []
