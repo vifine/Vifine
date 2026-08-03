@@ -124,23 +124,18 @@
     },
     {
       "type": "text",
-      "text": "A custom two-step popup captures the customer's email first, then reveals a matching discount code on confirmation, all built as a native theme section rather than a third-party app."
+      "text": "The popup replaces a third-party subscription app with a custom two-step section built directly into the theme. Step one asks for the customer's email in exchange for a discount, framed around a specific offer rather than a generic \"join our newsletter\" ask, which keeps the value exchange clear. Once submitted, step two confirms the subscription and reveals a real, working discount code that copies to the clipboard on click, so the customer can move straight to checkout without hunting for the code in their inbox."
     },
     {
-      "type": "image",
+      "type": "row2",
       "src": "assets/img/projects/artline-craft-storefront/10-popup-signup.png",
       "alt": "Newsletter signup popup step one",
-      "style": "margin-bottom:16px;"
-    },
-    {
-      "type": "image",
-      "src": "assets/img/projects/artline-craft-storefront/11-popup-thanks.png",
-      "alt": "Newsletter signup popup step two with discount code",
-      "style": "margin-bottom:40px;"
+      "src2": "assets/img/projects/artline-craft-storefront/11-popup-thanks.png",
+      "alt2": "Newsletter signup popup step two with discount code"
     },
     {
       "type": "text",
-      "text": "Display timing, page exclusions, and the discount code itself are fully configurable through the theme editor, with the code validated against a real Shopify discount so it always works at checkout."
+      "text": "Every part of the popup is configurable through the theme editor without touching code: who sees it (guests only, so subscribers aren't shown it again), how long to wait before it appears, how many days to stay hidden after a visitor closes it without subscribing, and which page types it's suppressed on (product, collection, and cart pages, where an interruption would compete with the purchase decision). The discount code itself is tied to a real Shopify discount, so what the popup promises is always what checkout actually applies."
     },
     {
       "type": "image",
