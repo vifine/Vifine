@@ -44,6 +44,15 @@
       "style": "margin-bottom:40px;"
     },
     {
+      "type": "text",
+      "text": "Seven flows now run live in Klaviyo, each triggered by a specific customer action rather than a broadcast schedule."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-email-automation/04-flows-list.png",
+      "alt": "Seven live Klaviyo flows: welcome, abandoned cart, abandoned checkout, browse abandonment, post-purchase, and review"
+    },
+    {
       "type": "heading",
       "text": "Welcome &amp; Lifecycle Flow"
     },
@@ -55,6 +64,24 @@
       "type": "image",
       "src": "assets/img/projects/artline-email-automation/01-welcome-flash-review.png",
       "alt": "Welcome series, flash deal, and review request emails"
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-email-automation/05-welcome-flow-metrics.png",
+      "alt": "Welcome flow logic and performance: 50.9% open rate, 3.8% conversion, EUR 572 attributed revenue"
+    },
+    {
+      "type": "heading",
+      "text": "Review Request Flow"
+    },
+    {
+      "type": "text",
+      "text": "Three days after a shipment is marked delivered, a review request goes out asking about the customer's experience. It runs as a native Klaviyo flow tied to shipment status rather than a manual send, and is already converting: a 37.5% open rate and 2.3% of recipients placing another order off the back of it, EUR 447 in attributed revenue from a single automated touchpoint."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-email-automation/06-review-flow-metrics.png",
+      "alt": "Review request flow triggered by delivery status: 37.5% open rate, 2.3% conversion, EUR 447 attributed revenue"
     },
     {
       "type": "heading",
@@ -84,8 +111,28 @@
     }
   ],
   "results": {
-    "metrics": [],
-    "bullets": []
+    "metrics": [
+      {
+        "value": "7",
+        "label": "Live automation flows"
+      },
+      {
+        "value": "3.8%",
+        "label": "Welcome flow conversion"
+      },
+      {
+        "value": "€572",
+        "label": "Revenue attributed to Welcome flow"
+      }
+    ],
+    "bullets": [
+      "Welcome flow: 50.9% open rate, 3.8% conversion, €572 in attributed revenue",
+      "Review request flow: 37.5% open rate, 2.3% conversion, €447 in attributed revenue from a single automated touchpoint",
+      "Seven flows running live, each triggered by customer behavior rather than a broadcast schedule",
+      "Cart and checkout recovery run as branching, conditional-split sequences rather than a single fixed reminder",
+      "Tiered win-back offers (10/15/20%) target returning customers based on purchase history",
+      "Flows feed into each other rather than running as isolated, conflicting messages"
+    ]
   },
   "nav": {
     "prevHref": "artline-b2b-portal.html",
