@@ -35,8 +35,35 @@
   ],
   "overview": "Migrated Artline Creator Club's email marketing from Shopify to Klaviyo and rebuilt the automation flows around it, integrated with n8n for delivery-triggered review requests and Shopify for order and customer data.",
   "challenge": "Email marketing ran on Shopify's native email tool, with flows built independently of each other. They weren't tied to a coherent customer journey: messages could overlap or conflict, and a subscriber could land in an unrelated flow instead of the one that actually matched where they were in their relationship with the brand.",
-  "solutionIntro": "",
-  "solutionBlocks": [],
+  "solutionIntro": "Each flow is timed and coded to a specific stage in the customer relationship, so a subscriber only ever lands in the message that actually matches where they are.",
+  "solutionBlocks": [
+    {
+      "type": "heading",
+      "text": "Welcome &amp; Lifecycle Flow"
+    },
+    {
+      "type": "text",
+      "text": "New subscribers get a welcome email with a 10% code, followed by a reminder a few days later if the code hasn't been used. On day 14, a separate flash deal offers a fresh, time-limited discount rather than repeating the same welcome offer. After a purchase, a review request closes the loop, asking for feedback and linking to WhatsApp support for anyone who needs help instead of leaving a review."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-email-automation/01-welcome-flash-review.png",
+      "alt": "Welcome series, flash deal, and review request emails"
+    },
+    {
+      "type": "heading",
+      "text": "Abandoned Cart Recovery"
+    },
+    {
+      "type": "text",
+      "text": "Cart recovery runs as a four-step sequence with an escalating tone: an initial reminder showing the items left behind, a discount code offer, a follow-up as that code nears expiry, and a final message that shifts from discounting to support, offering a checkout FAQ and a direct WhatsApp line for anyone stuck on payment, shipping, or a coupon that isn't working."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-email-automation/02-abandoned-cart-flow.png",
+      "alt": "Four-step abandoned cart recovery email sequence"
+    }
+  ],
   "results": {
     "metrics": [],
     "bullets": []
