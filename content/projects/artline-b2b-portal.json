@@ -13,7 +13,7 @@
   "meta": [
     {
       "label": "Role",
-      "value": "Architect, UI/UX Designer &amp; Shopify Developer"
+      "value": "Team Lead &amp; Shopify Developer"
     },
     {
       "label": "Company",
@@ -29,9 +29,7 @@
     }
   ],
   "techTags": [
-    "Shopify B2B",
-    "Shopify Markets",
-    "Shopify Catalogs",
+    "Shopify",
     "Bitrix24",
     "n8n",
     "VIES API"
@@ -118,7 +116,14 @@
   ],
   "results": {
     "metrics": [],
-    "bullets": []
+    "bullets": [
+      "Three-step VIES-verified registration with real-time VAT validation against the EU's official registry",
+      "Duplicate protection across phone, email, and VAT number, with a direct login path for existing accounts",
+      "Every registration step logged to a dedicated B2B deal in Bitrix24, with UTM parameters preserved from acquisition to signup",
+      "Customer and Company records cross-linked between Shopify and Bitrix24 for either team to jump between systems",
+      "Market-based discount tiers with VAT-exclusive pricing, scoped by company location and currency",
+      "Dedicated B2B product experience with transparent tiered pricing and extended bulk volume options"
+    ]
   },
   "nav": {
     "prevHref": "projects.html",
