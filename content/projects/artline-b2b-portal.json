@@ -75,6 +75,20 @@
       "src": "assets/img/projects/artline-b2b-portal/02-b2b-funnel-flow.png",
       "alt": "n8n workflow creating and updating B2B funnel deals with step-by-step logging",
       "style": ""
+    },
+    {
+      "type": "heading",
+      "text": "Market-Based Pricing Tiers"
+    },
+    {
+      "type": "text",
+      "text": "Discount tiers are built as separate B2B markets in Shopify: a base wholesale market plus percentage-discount markets layered on top, each scoped to specific company locations rather than applied account-wide. Markets are also split by currency (EUR, PLN) so a tier's discount applies correctly regardless of which currency a business buys in. This sits alongside the storefront's regional markets (by country and currency), so B2B and B2C pricing coexist in the same Markets structure without conflicting."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-b2b-portal/03-markets-tiers.png",
+      "alt": "Shopify Markets structure with B2B wholesale discount tiers by currency and company location",
+      "style": ""
     }
   ],
   "results": {
