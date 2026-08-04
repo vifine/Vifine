@@ -2606,19 +2606,18 @@ body.menu-open .wa-widget {
   display: flex;
   gap: 24px;
   margin-bottom: 24px;
-  align-items: stretch;
+  align-items: flex-start;
 }
 
 .project-row2-block .project-img {
   flex: 1;
   min-width: 0;
-  height: 340px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {
   .project-row2-block { flex-direction: column; }
-  .project-row2-block .project-img { height: auto; object-fit: contain; }
 }
 
 /* Two-column rich content split: text+2 images left, tall image right (matched height) */
