@@ -99,6 +99,21 @@
       "src": "assets/img/projects/artline-b2b-portal/03-markets-tiers.png",
       "alt": "Shopify Markets structure with B2B wholesale discount tiers by currency and company location",
       "style": ""
+    },
+    {
+      "type": "heading",
+      "text": "B2B Product Experience"
+    },
+    {
+      "type": "text",
+      "text": "Logged-in B2B customers see a persistent banner confirming their verified company and VAT number, and every product page shows VAT-exclusive pricing broken down explicitly: retail price, base B2B price, and the customer's actual tier price with the discount percentage called out. Bulk volume options extend beyond the standard B2C range, up to 100 kg for this product, with a per-kg price shown at every tier so business buyers can compare cost efficiency at a glance. Side by side with the standard B2C product page, the difference in pricing structure and volume range is immediately clear."
+    },
+    {
+      "type": "row2",
+      "src": "assets/img/projects/artline-b2b-portal/04-b2b-product-page.png",
+      "alt": "B2B product page with VAT-exclusive tiered pricing and per-kg breakdown",
+      "src2": "assets/img/projects/artline-b2b-portal/04b-b2c-product-page.png",
+      "alt2": "Standard B2C product page for comparison"
     }
   ],
   "results": {
