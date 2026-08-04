@@ -2705,3 +2705,173 @@ body.menu-open .wa-widget {
 @media (max-width: 900px) {
   .project-row4-block .project-img { height: auto; width: 100%; max-width: 360px; }
 }
+
+/* ============================================
+   TOOL FILTER DROPDOWN
+   ============================================ */
+
+.projects-controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.projects-search {
+  flex: 1;
+  min-width: 200px;
+}
+
+.projects-filter-wrapper {
+  position: relative;
+}
+
+.projects-filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-light);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.projects-filter-toggle:hover {
+  border-color: var(--text-primary);
+}
+
+.projects-filter-toggle.is-open {
+  background: var(--bg-dark);
+}
+
+.filter-toggle-icon {
+  width: 13px;
+  height: 12px;
+  color: var(--text-primary);
+  transition: transform 0.2s ease;
+}
+
+.projects-filter-toggle.is-open .filter-toggle-icon {
+  transform: rotate(180deg);
+}
+
+.projects-filter-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.projects-filter-dropdown.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.projects-filter-dropdown::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.filter-option:first-child {
+  border-bottom: 1px solid var(--border-color);
+  padding: 8px 12px;
+}
+
+.filter-option:hover {
+  background: var(--bg-dark);
+}
+
+.filter-checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.filter-label {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.filter-option:first-child .filter-label {
+  font-weight: 600;
+}
+
+/* Highlight projects when tool is selected */
+.project-row.project-highlighted {
+  background: var(--bg-dark);
+  border-radius: 6px;
+  padding: 16px;
+  margin: 0 -16px;
+}
+
+@media (max-width: 768px) {
+  .projects-controls {
+    flex-direction: column;
+  }
+
+  .projects-search {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .projects-filter-wrapper {
+    width: 100%;
+  }
+
+  .projects-filter-toggle {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .projects-filter-dropdown {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+
+  .project-row.project-highlighted {
+    margin: 0;
+  }
+}

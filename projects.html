@@ -267,9 +267,26 @@
   <!-- Projects List -->
   <section class="projects-section" style="padding-top: 0;">
     <div class="container">
-      <div class="projects-search">
-        <img src="assets/img/icons/search.svg" alt="">
-        <input type="text" id="projectsSearch" placeholder="Search projects...">
+      <div class="projects-controls">
+        <div class="projects-search">
+          <img src="assets/img/icons/search.svg" alt="">
+          <input type="text" id="projectsSearch" placeholder="Search projects...">
+        </div>
+        <div class="projects-filter-wrapper">
+          <button class="projects-filter-toggle" id="filterToggle" aria-label="Toggle tool filter">
+            <span id="filterLabel">All tools</span>
+            <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="filter-toggle-icon">
+              <path d="M11.5 1.5L1.5 10.5M1.5 1.5L11.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div class="projects-filter-dropdown" id="filterDropdown" aria-hidden="true">
+            <div class="filter-option">
+              <input type="checkbox" id="filterAll" class="filter-checkbox" data-tool="all" checked>
+              <label for="filterAll" class="filter-label">All</label>
+            </div>
+            <div id="toolOptions"></div>
+          </div>
+        </div>
       </div>
       <div class="divider"></div>
       <div class="projects-list" id="portfolio-grid">

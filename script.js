@@ -195,21 +195,147 @@ function initProjectsSearch() {
     if (!input || !grid) return;
 
     input.addEventListener('input', () => {
-        const query = input.value.trim().toLowerCase();
-        const rows = grid.querySelectorAll('.project-row');
-        let visibleCount = 0;
+        filterProjects();
+    });
+}
 
-        rows.forEach(row => {
-            const text = row.textContent.toLowerCase();
-            const matches = query === '' || text.includes(query);
-            row.style.display = matches ? '' : 'none';
-            if (matches) visibleCount++;
-        });
+// ============================================
+// Инициализация фильтра по инструментам
+// ============================================
+function initToolsFilter(projects) {
+    const toggle = document.getElementById('filterToggle');
+    const dropdown = document.getElementById('filterDropdown');
+    const toolOptions = document.getElementById('toolOptions');
+    if (!toggle || !dropdown || !toolOptions) return;
 
-        if (noResults) {
-            noResults.classList.toggle('is-visible', visibleCount === 0);
+    // Собираем все уникальные инструменты
+    const allTools = new Set();
+    projects.forEach(p => {
+        if (p.tools && Array.isArray(p.tools)) {
+            p.tools.forEach(tool => allTools.add(tool));
         }
     });
+
+    const sortedTools = Array.from(allTools).sort();
+
+    // Создаём опции для каждого инструмента
+    sortedTools.forEach(tool => {
+        const div = document.createElement('div');
+        div.className = 'filter-option';
+        const id = `filter-${tool.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
+        div.innerHTML = `
+            <input type="checkbox" id="${id}" class="filter-checkbox" data-tool="${tool}">
+            <label for="${id}" class="filter-label">${tool}</label>
+        `;
+        toolOptions.appendChild(div);
+    });
+
+    // Обработка клика на toggle
+    toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = !dropdown.classList.contains('is-open');
+        dropdown.classList.toggle('is-open', isOpen);
+        dropdown.setAttribute('aria-hidden', !isOpen);
+    });
+
+    // Обработка чекбоксов
+    const filterAll = document.getElementById('filterAll');
+    const filterCheckboxes = dropdown.querySelectorAll('.filter-checkbox');
+
+    filterAll.addEventListener('change', () => {
+        if (filterAll.checked) {
+            filterCheckboxes.forEach(cb => {
+                if (cb.id !== 'filterAll') cb.checked = false;
+            });
+        }
+        filterProjects();
+    });
+
+    filterCheckboxes.forEach(checkbox => {
+        if (checkbox.id !== 'filterAll') {
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    filterAll.checked = false;
+                }
+                filterProjects();
+            });
+        }
+    });
+
+    // Закрытие dropdown при клике вне
+    document.addEventListener('click', (e) => {
+        if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.remove('is-open');
+            dropdown.setAttribute('aria-hidden', 'true');
+        }
+    });
+}
+
+// ============================================
+// Фильтрация проектов по поиску и инструментам
+// ============================================
+function filterProjects() {
+    const grid = document.getElementById('portfolio-grid');
+    const noResults = document.getElementById('projectsNoResults');
+    const searchInput = document.getElementById('projectsSearch');
+    const filterToggle = document.getElementById('filterToggle');
+    const filterLabel = document.getElementById('filterLabel');
+    if (!grid) return;
+
+    const searchQuery = (searchInput?.value || '').trim().toLowerCase();
+    
+    // Получаем выбранные инструменты
+    const selectedTools = new Set();
+    const checkboxes = document.querySelectorAll('#filterDropdown .filter-checkbox:not(#filterAll)');
+    checkboxes.forEach(cb => {
+        if (cb.checked) selectedTools.add(cb.getAttribute('data-tool'));
+    });
+
+    const filterAll = document.getElementById('filterAll');
+    const isFilterAll = filterAll && filterAll.checked;
+
+    // Обновляем label фильтра
+    if (filterLabel) {
+        if (isFilterAll) {
+            filterLabel.textContent = 'All tools';
+        } else if (selectedTools.size === 0) {
+            filterLabel.textContent = 'No tools selected';
+        } else if (selectedTools.size === 1) {
+            filterLabel.textContent = Array.from(selectedTools)[0];
+        } else {
+            filterLabel.textContent = `${selectedTools.size} tools`;
+        }
+    }
+
+    const rows = grid.querySelectorAll('.project-row');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+        // Проверяем поиск
+        const text = row.textContent.toLowerCase();
+        const matchesSearch = searchQuery === '' || text.includes(searchQuery);
+
+        // Проверяем фильтр инструментов
+        let matchesFilter = isFilterAll;
+        if (!isFilterAll && selectedTools.size > 0) {
+            const toolsText = row.querySelector('.project-row-tools')?.textContent.toLowerCase() || '';
+            matchesFilter = Array.from(selectedTools).some(tool => 
+                toolsText.includes(tool.toLowerCase())
+            );
+            // Если выбран инструмент, подсвечиваем проект
+            row.classList.toggle('project-highlighted', matchesFilter);
+        } else {
+            row.classList.remove('project-highlighted');
+        }
+
+        const shouldDisplay = matchesSearch && matchesFilter;
+        row.style.display = shouldDisplay ? '' : 'none';
+        if (shouldDisplay) visibleCount++;
+    });
+
+    if (noResults) {
+        noResults.classList.toggle('is-visible', visibleCount === 0);
+    }
 }
 
 // ============================================
@@ -222,5 +348,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderPortfolioGrid(projects);
     renderProjectDetail(projects);
     renderResumeProjectLinks(projects);
+    initToolsFilter(projects);
     initProjectsSearch();
 });
