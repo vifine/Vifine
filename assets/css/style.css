@@ -2788,16 +2788,6 @@ body.menu-open .wa-widget {
   pointer-events: auto;
 }
 
-.projects-filter-dropdown::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: var(--border-color);
-}
-
 .filter-option {
   display: flex;
   align-items: center;
@@ -2838,12 +2828,15 @@ body.menu-open .wa-widget {
   font-weight: 600;
 }
 
-/* Highlight projects when tool is selected */
-.project-row.project-highlighted {
-  background: var(--bg-dark);
-  border-radius: 6px;
-  padding: 16px;
-  margin: 0 -16px;
+/* Tech tag highlighting when tool is selected */
+.tech-tag.tag-highlighted {
+  background: var(--text-primary);
+  color: var(--bg-light);
+  font-weight: 600;
+}
+
+.tech-tag.tag-dimmed {
+  opacity: 0.4;
 }
 
 @media (max-width: 768px) {
@@ -2869,9 +2862,5 @@ body.menu-open .wa-widget {
     left: 0;
     right: auto;
     width: 100%;
-  }
-
-  .project-row.project-highlighted {
-    margin: 0;
   }
 }

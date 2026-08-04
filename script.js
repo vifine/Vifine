@@ -278,7 +278,6 @@ function filterProjects() {
     const grid = document.getElementById('portfolio-grid');
     const noResults = document.getElementById('projectsNoResults');
     const searchInput = document.getElementById('projectsSearch');
-    const filterToggle = document.getElementById('filterToggle');
     const filterLabel = document.getElementById('filterLabel');
     if (!grid) return;
 
@@ -296,10 +295,8 @@ function filterProjects() {
 
     // Обновляем label фильтра
     if (filterLabel) {
-        if (isFilterAll) {
+        if (isFilterAll || selectedTools.size === 0) {
             filterLabel.textContent = 'All tools';
-        } else if (selectedTools.size === 0) {
-            filterLabel.textContent = 'No tools selected';
         } else if (selectedTools.size === 1) {
             filterLabel.textContent = Array.from(selectedTools)[0];
         } else {
@@ -311,26 +308,29 @@ function filterProjects() {
     let visibleCount = 0;
 
     rows.forEach(row => {
-        // Проверяем поиск
+        // Проверяем поиск - только по поиску скрываем/показываем
         const text = row.textContent.toLowerCase();
         const matchesSearch = searchQuery === '' || text.includes(searchQuery);
+        
+        row.style.display = matchesSearch ? '' : 'none';
+        if (matchesSearch) visibleCount++;
 
-        // Проверяем фильтр инструментов
-        let matchesFilter = isFilterAll;
-        if (!isFilterAll && selectedTools.size > 0) {
-            const toolsText = row.querySelector('.project-row-tools')?.textContent.toLowerCase() || '';
-            matchesFilter = Array.from(selectedTools).some(tool => 
-                toolsText.includes(tool.toLowerCase())
-            );
-            // Если выбран инструмент, подсвечиваем проект
-            row.classList.toggle('project-highlighted', matchesFilter);
+        // Подсвечиваем/обесцвечиваем пилюли (tech tags)
+        const toolsTags = row.querySelectorAll('.tech-tag');
+        if (isFilterAll || selectedTools.size === 0) {
+            // Все пилюли нормальные
+            toolsTags.forEach(tag => {
+                tag.classList.remove('tag-highlighted', 'tag-dimmed');
+            });
         } else {
-            row.classList.remove('project-highlighted');
+            // Выбраны конкретные инструменты - подсвечиваем только их
+            toolsTags.forEach(tag => {
+                const tagText = tag.textContent.trim();
+                const isSelected = Array.from(selectedTools).some(tool => tool === tagText);
+                tag.classList.toggle('tag-highlighted', isSelected);
+                tag.classList.toggle('tag-dimmed', !isSelected);
+            });
         }
-
-        const shouldDisplay = matchesSearch && matchesFilter;
-        row.style.display = shouldDisplay ? '' : 'none';
-        if (shouldDisplay) visibleCount++;
     });
 
     if (noResults) {
