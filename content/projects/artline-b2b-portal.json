@@ -80,7 +80,7 @@
       "type": "image",
       "src": "assets/img/projects/artline-b2b-portal/02b-bitrix-deal-created.png",
       "alt": "Bitrix24 CRM deal auto-created with company, contact, and VAT details from registration",
-      "style": "margin-bottom:40px;"
+      "style": "margin-top:24px;margin-bottom:40px;"
     },
     {
       "type": "heading",

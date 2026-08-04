@@ -2398,6 +2398,7 @@ body.menu-open .wa-widget {
 .project-img-zoom-wrap {
   position: relative;
   cursor: zoom-in;
+  overflow: hidden;
 }
 
 .project-img-zoom-wrap img {
