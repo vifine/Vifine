@@ -77,6 +77,10 @@
       "style": ""
     },
     {
+      "type": "text",
+      "text": "On a successful registration, a matching Customer and Company record is created in both Shopify and Bitrix24, cross-linked with direct URLs between the CRM contact and the Shopify customer account so either team can jump straight to the other system. Every user action from the registration flow, including UTM parameters, is logged to the CRM timeline, keeping the full acquisition context attached to the deal instead of getting lost after signup."
+    },
+    {
       "type": "image",
       "src": "assets/img/projects/artline-b2b-portal/02b-bitrix-deal-created.png",
       "alt": "Bitrix24 CRM deal auto-created with company, contact, and VAT details from registration",
