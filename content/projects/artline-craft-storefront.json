@@ -194,14 +194,14 @@
     ]
   },
   "nav": {
-    "prevHref": "projects.html",
+    "prevHref": "fullflat-finance.html",
     "prevLabel": "Previous Project",
-    "nextHref": "projects.html",
+    "nextHref": "artline-b2b-portal.html",
     "nextLabel": "Next Project",
-    "ctaHref": "projects.html",
-    "ctaLabel": "Keep Exploring",
-    "ctaTitle": "All Projects",
-    "ctaDesc": "View the full list of systems and integrations built for e-commerce businesses.",
+    "ctaHref": "artline-b2b-portal.html",
+    "ctaLabel": "Next Project",
+    "ctaTitle": "B2B Wholesale Portal",
+    "ctaDesc": "Built a self-serve B2B portal on Shopify's brand-new native B2B platform for European business buyers: VAT-exempt tiered pricing, VIES-verified registration, and automated multi-language invoicing",
     "viewAllHref": "projects.html"
   }
 }
