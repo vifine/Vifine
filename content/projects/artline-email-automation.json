@@ -96,7 +96,7 @@
     },
     {
       "type": "text",
-      "text": "Behind each design is branching, conditional logic in Klaviyo: wait steps, yes/no splits based on whether a code was used or an order was placed, and per-flow performance tracked directly in Klaviyo's reporting. Over a 30-day window, the five active flows generated €2,848 in attributed revenue across 32 conversions, led by Abandoned Checkout (€804, 5.92% conversion) and Browse Abandonment (€636, 4.76%)."
+      "text": "Behind each design is branching, conditional logic in Klaviyo: wait steps, yes/no splits based on whether a code was used or an order was placed, and per-flow performance tracked directly in Klaviyo's reporting. In the first 30 days of the testing period after rebuild, the five active flows generated €2,848 in attributed revenue across 32 conversions, led by Abandoned Checkout (€804, 5.92% conversion) and Browse Abandonment (€636, 4.76%). Volume is still early since the flows are newly live, but the conversion rates and revenue-per-flow already show which sequences are working."
     },
     {
       "type": "image",
@@ -119,11 +119,11 @@
     "metrics": [
       {
         "value": "€2,848",
-        "label": "Attributed revenue (30 days)"
+        "label": "Attributed revenue (first 30 days)"
       },
       {
         "value": "32",
-        "label": "Conversions across flows"
+        "label": "Conversions in testing period"
       },
       {
         "value": "7",
@@ -131,6 +131,7 @@
       }
     ],
     "bullets": [
+      "First 30 days of the testing period since flows went live, volume is still ramping up as the audience moves through each sequence",
       "Abandoned Checkout Flow: €804 revenue, 5.92% conversion rate",
       "Browse Abandonment: €636 revenue, 4.76% conversion rate",
       "Welcome Flow: €572 revenue, 3.18% conversion rate",
