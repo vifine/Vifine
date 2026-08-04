@@ -46,13 +46,21 @@
     },
     {
       "type": "text",
-      "text": "Wholesale registration runs as a three-step flow: VAT number verification, business contact details, and B2B account activation. The VAT number is validated in real time against VIES, the EU's official VAT registry, rejecting invalid or non-existent numbers before a business can proceed. Duplicate checks run against phone number, email, and VAT number together, so the same business can't create multiple accounts and a fraudulent signup can't slip through under a slightly different email."
+      "text": "Wholesale registration runs as a three-step flow: VAT verification, contact details, and account activation. The VAT number is validated in real time against VIES, the EU's official VAT registry, pulling back the registered company name and country so the business can confirm it's their own before continuing. Duplicate checks run against phone number, email, and VAT number together: if any of them already belong to an existing account, registration stops and offers a direct login instead, with a WhatsApp fallback for anyone who gets stuck."
     },
     {
-      "type": "image",
-      "src": "assets/img/projects/artline-b2b-portal/01-registration-step1.png",
-      "alt": "Wholesale registration step one: VAT number verification",
-      "style": ""
+      "type": "row2",
+      "src": "assets/img/projects/artline-b2b-portal/01a-vat-verified.jpg",
+      "alt": "VAT verified with company name, VAT number, and country confirmed",
+      "src2": "assets/img/projects/artline-b2b-portal/01b-contact-details.jpg",
+      "alt2": "Contact details step with pre-filled verified company"
+    },
+    {
+      "type": "row2",
+      "src": "assets/img/projects/artline-b2b-portal/01c-thanks.jpg",
+      "alt": "Registration confirmation with login prompt",
+      "src2": "assets/img/projects/artline-b2b-portal/01d-duplicate-detected.jpg",
+      "alt2": "Duplicate account detected with login and WhatsApp support options"
     },
     {
       "type": "heading",

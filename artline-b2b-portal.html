@@ -301,8 +301,15 @@
       <h2 class="project-section-title">Solution</h2>
       <p class="project-section-text" style="max-width:none;">Access to B2B pricing is built through four pieces: verified registration, CRM-integrated onboarding, a dedicated B2B product experience, and automated invoicing.</p>
       <h3 class="project-section-title" style="font-size:28px;">VIES-Verified Registration</h3>
-      <p class="project-section-text" style="max-width:none;">Wholesale registration runs as a three-step flow: VAT number verification, business contact details, and B2B account activation. The VAT number is validated in real time against VIES, the EU's official VAT registry, rejecting invalid or non-existent numbers before a business can proceed. Duplicate checks run against phone number, email, and VAT number together, so the same business can't create multiple accounts and a fraudulent signup can't slip through under a slightly different email.</p>
-      <img src="assets/img/projects/artline-b2b-portal/01-registration-step1.png" alt="Wholesale registration step one: VAT number verification" class="project-img" style="">
+      <p class="project-section-text" style="max-width:none;">Wholesale registration runs as a three-step flow: VAT verification, contact details, and account activation. The VAT number is validated in real time against VIES, the EU's official VAT registry, pulling back the registered company name and country so the business can confirm it's their own before continuing. Duplicate checks run against phone number, email, and VAT number together: if any of them already belong to an existing account, registration stops and offers a direct login instead, with a WhatsApp fallback for anyone who gets stuck.</p>
+      <div class="project-row2-block">
+        <img src="assets/img/projects/artline-b2b-portal/01a-vat-verified.jpg" alt="VAT verified with company name, VAT number, and country confirmed" class="project-img">
+        <img src="assets/img/projects/artline-b2b-portal/01b-contact-details.jpg" alt="Contact details step with pre-filled verified company" class="project-img">
+      </div>
+      <div class="project-row2-block">
+        <img src="assets/img/projects/artline-b2b-portal/01c-thanks.jpg" alt="Registration confirmation with login prompt" class="project-img">
+        <img src="assets/img/projects/artline-b2b-portal/01d-duplicate-detected.jpg" alt="Duplicate account detected with login and WhatsApp support options" class="project-img">
+      </div>
       <h3 class="project-section-title" style="font-size:28px;">B2B Sales Funnel Integration</h3>
       <p class="project-section-text" style="max-width:none;">Each step of the registration flow triggers an n8n workflow that creates and updates a deal in the B2B sales funnel, with a login logged at every step: VAT verification, contact details, and final activation. That gives the sales team full visibility into where a business is in the signup process, rather than only seeing completed registrations.</p>
       <img src="assets/img/projects/artline-b2b-portal/02-b2b-funnel-flow.png" alt="n8n workflow creating and updating B2B funnel deals with step-by-step logging" class="project-img" style="">
