@@ -1,0 +1,55 @@
+{
+  "slug": "artline-email-automation",
+  "breadcrumb": "Email Marketing Migration &amp; Automation",
+  "title": "Email Marketing Migration &amp; Automation",
+  "pitch": "Migrated Artline's email marketing from Shopify's native email to Klaviyo, rebuilding automation flows for a more effective, purpose-built platform",
+  "seo": {
+    "title": "Email Marketing Migration & Automation — Klaviyo Case Study | Victoria Fine",
+    "description": "Migrated email marketing from Shopify to Klaviyo and rebuilt automation flows around a coherent customer journey. Case study by Victoria Fine.",
+    "keywords": "Klaviyo migration, email marketing automation, Shopify to Klaviyo, customer lifecycle flows, abandoned cart automation, review request automation",
+    "ogTitle": "Email Marketing Migration & Automation — Klaviyo Case Study",
+    "ogDescription": "Migrated email marketing from Shopify to Klaviyo and rebuilt automation flows around a coherent customer journey."
+  },
+  "meta": [
+    {
+      "label": "Role",
+      "value": "Architect &amp; Marketing Automation Lead"
+    },
+    {
+      "label": "Company",
+      "value": "ARTLINE GROUP EU S.R.L."
+    },
+    {
+      "label": "Location",
+      "value": "Romania"
+    },
+    {
+      "label": "Year",
+      "value": "2026"
+    }
+  ],
+  "techTags": [
+    "Klaviyo",
+    "Shopify",
+    "n8n"
+  ],
+  "overview": "Migrated Artline Creator Club's email marketing from Shopify to Klaviyo and rebuilt the automation flows around it, integrated with n8n for delivery-triggered review requests and Shopify for order and customer data.",
+  "challenge": "Email marketing ran on Shopify's native email tool, with flows built independently of each other. They weren't tied to a coherent customer journey: messages could overlap or conflict, and a subscriber could land in an unrelated flow instead of the one that actually matched where they were in their relationship with the brand.",
+  "solutionIntro": "",
+  "solutionBlocks": [],
+  "results": {
+    "metrics": [],
+    "bullets": []
+  },
+  "nav": {
+    "prevHref": "artline-b2b-portal.html",
+    "prevLabel": "Previous Project",
+    "nextHref": "fullflat-operations.html",
+    "nextLabel": "Next Project",
+    "ctaHref": "fullflat-operations.html",
+    "ctaLabel": "Next Project",
+    "ctaTitle": "Order Management System for Online Furniture Store",
+    "ctaDesc": "End-to-end order lifecycle platform — from customer inquiry to delivery confirmation, replacing spreadsheets with one integrated system",
+    "viewAllHref": "projects.html"
+  }
+}

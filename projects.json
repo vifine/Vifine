@@ -35,6 +35,22 @@
     "directLink": "artline-b2b-portal.html"
   },
   {
+    "id": "artline-email-automation",
+    "title": "Email Marketing Migration & Automation",
+    "tagline": "Migrated Artline's email marketing from Shopify's native email to Klaviyo, rebuilding automation flows for a more effective, purpose-built platform",
+    "companyLocation": "Romania",
+    "period": "2026",
+    "role": "Architect & Marketing Automation Lead",
+    "company": "ARTLINE GROUP EU S.R.L.",
+    "summary": "Migrated Artline's email marketing from Shopify's native email to Klaviyo, rebuilding automation flows for a more effective, purpose-built platform",
+    "tools": [
+      "Klaviyo",
+      "Shopify",
+      "n8n"
+    ],
+    "directLink": "artline-email-automation.html"
+  },
+  {
     "id": "fullflat-operations",
     "company": "FullFlat LLC",
     "companyLocation": "United Arab Emirates",

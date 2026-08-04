@@ -24,6 +24,7 @@ PAGES = [
     "404.html",
     "artline-b2b-portal.html",
     "artline-craft-storefront.html",
+    "artline-email-automation.html",
     "contact.html",
     "cv.html",
     "fullflat-finance.html",
