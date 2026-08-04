@@ -279,7 +279,7 @@
   <div class="project-challenge-overview">
     <div class="project-block">
       <h2>The Challenge</h2>
-      <p>Email marketing ran on Shopify's native email tool, with flows built independently of each other. They weren't tied to a coherent customer journey: messages could overlap or conflict, and a subscriber could land in an unrelated flow instead of the one that actually matched where they were in their relationship with the brand.</p>
+      <p>Email marketing ran on Shopify's native email tool, with flows built independently of each other. They weren't tied to a coherent customer journey: messages could overlap or conflict, and a subscriber could land in an unrelated flow instead of the one that actually matched where they were in their relationship with the brand. Language targeting compounded the problem: a subscriber's language was inferred from browser or IP-based geolocation rather than their actual country, so a meaningful share of the list was receiving emails in the wrong language. Conversion sat below 3% as a result.</p>
     </div>
     <div class="project-block">
       <h2>Overview</h2>
@@ -297,6 +297,8 @@
     <div class="project-detail-inner">
       <h2 class="project-section-title">Solution</h2>
       <p class="project-section-text" style="max-width:none;">The flows were rebuilt as one connected map in Klaviyo, so a subscriber moves between welcome, cart recovery, reorder, and review flows based on their actual behavior, instead of each flow running in isolation.</p>
+      <h3 class="project-section-title" style="font-size:28px;">List Cleanup &amp; Language Targeting Fix</h3>
+      <p class="project-section-text" style="max-width:none;">The subscriber list was cleaned, and language and country targeting was rebuilt to use the values stored on each customer's Shopify record, set at checkout, rather than inferred from IP or browser geolocation. Messages started matching what the customer actually selected instead of a guessed location, fixing the mismatch that had been sending emails in the wrong language to a meaningful share of the list.</p>
       <img src="assets/img/projects/artline-email-automation/00-full-klaviyo-flow-map.png" alt="Full connected Klaviyo automation map linking welcome, cart recovery, reorder, and review flows" class="project-img" style="">
       <p class="project-section-text" style="max-width:none;">Seven flows now run live in Klaviyo, each triggered by a specific customer action rather than a broadcast schedule.</p>
       <img src="assets/img/projects/artline-email-automation/04-flows-list.png" alt="Seven live Klaviyo flows: welcome, abandoned cart, abandoned checkout, browse abandonment, post-purchase, and review" class="project-img" style="">
@@ -340,6 +342,7 @@
         </div>
       </div>
       <ul class="project-results-bullets">
+        <li>Conversion improved from under 3% before the rebuild (geo-inferred language) to flow-level rates as high as 7.07% after switching to Shopify-stored country/language targeting</li>
         <li>First 30 days of the testing period since flows went live, volume is still ramping up as the audience moves through each sequence</li>
         <li>Abandoned Checkout Flow: €804 revenue, 5.92% conversion rate</li>
         <li>Browse Abandonment: €636 revenue, 4.76% conversion rate</li>

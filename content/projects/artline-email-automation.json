@@ -34,9 +34,17 @@
     "n8n"
   ],
   "overview": "Migrated Artline Creator Club's email marketing from Shopify to Klaviyo and rebuilt the automation flows around it, integrated with n8n for delivery-triggered review requests and Shopify for order and customer data.",
-  "challenge": "Email marketing ran on Shopify's native email tool, with flows built independently of each other. They weren't tied to a coherent customer journey: messages could overlap or conflict, and a subscriber could land in an unrelated flow instead of the one that actually matched where they were in their relationship with the brand.",
+  "challenge": "Email marketing ran on Shopify's native email tool, with flows built independently of each other. They weren't tied to a coherent customer journey: messages could overlap or conflict, and a subscriber could land in an unrelated flow instead of the one that actually matched where they were in their relationship with the brand. Language targeting compounded the problem: a subscriber's language was inferred from browser or IP-based geolocation rather than their actual country, so a meaningful share of the list was receiving emails in the wrong language. Conversion sat below 3% as a result.",
   "solutionIntro": "The flows were rebuilt as one connected map in Klaviyo, so a subscriber moves between welcome, cart recovery, reorder, and review flows based on their actual behavior, instead of each flow running in isolation.",
   "solutionBlocks": [
+    {
+      "type": "heading",
+      "text": "List Cleanup &amp; Language Targeting Fix"
+    },
+    {
+      "type": "text",
+      "text": "The subscriber list was cleaned, and language and country targeting was rebuilt to use the values stored on each customer's Shopify record, set at checkout, rather than inferred from IP or browser geolocation. Messages started matching what the customer actually selected instead of a guessed location, fixing the mismatch that had been sending emails in the wrong language to a meaningful share of the list."
+    },
     {
       "type": "image",
       "src": "assets/img/projects/artline-email-automation/00-full-klaviyo-flow-map.png",
@@ -131,6 +139,7 @@
       }
     ],
     "bullets": [
+      "Conversion improved from under 3% before the rebuild (geo-inferred language) to flow-level rates as high as 7.07% after switching to Shopify-stored country/language targeting",
       "First 30 days of the testing period since flows went live, volume is still ramping up as the audience moves through each sequence",
       "Abandoned Checkout Flow: €804 revenue, 5.92% conversion rate",
       "Browse Abandonment: €636 revenue, 4.76% conversion rate",
