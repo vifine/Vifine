@@ -206,6 +206,7 @@ function initToolsFilter(projects) {
     const toggle = document.getElementById('filterToggle');
     const dropdown = document.getElementById('filterDropdown');
     const toolOptions = document.getElementById('toolOptions');
+    const resetBtn = document.getElementById('filterReset');
     if (!toggle || !dropdown || !toolOptions) return;
 
     // Собираем все уникальные инструменты
@@ -262,6 +263,18 @@ function initToolsFilter(projects) {
         }
     });
 
+    // Обработка кнопки сброса
+    if (resetBtn) {
+        resetBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            filterAll.checked = true;
+            filterCheckboxes.forEach(cb => {
+                if (cb.id !== 'filterAll') cb.checked = false;
+            });
+            filterProjects();
+        });
+    }
+
     // Закрытие dropdown при клике вне
     document.addEventListener('click', (e) => {
         if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
@@ -279,6 +292,7 @@ function filterProjects() {
     const noResults = document.getElementById('projectsNoResults');
     const searchInput = document.getElementById('projectsSearch');
     const filterLabel = document.getElementById('filterLabel');
+    const resetBtn = document.getElementById('filterReset');
     if (!grid) return;
 
     const searchQuery = (searchInput?.value || '').trim().toLowerCase();
@@ -293,14 +307,17 @@ function filterProjects() {
     const filterAll = document.getElementById('filterAll');
     const isFilterAll = filterAll && filterAll.checked;
 
-    // Обновляем label фильтра
+    // Обновляем label фильтра и показываем/скрываем кнопку сброса
     if (filterLabel) {
         if (isFilterAll || selectedTools.size === 0) {
             filterLabel.textContent = 'All tools';
+            if (resetBtn) resetBtn.style.display = 'none';
         } else if (selectedTools.size === 1) {
             filterLabel.textContent = Array.from(selectedTools)[0];
+            if (resetBtn) resetBtn.style.display = 'block';
         } else {
             filterLabel.textContent = `${selectedTools.size} tools`;
+            if (resetBtn) resetBtn.style.display = 'block';
         }
     }
 
@@ -308,19 +325,30 @@ function filterProjects() {
     let visibleCount = 0;
 
     rows.forEach(row => {
-        // Проверяем поиск - только по поиску скрываем/показываем
+        // Проверяем поиск
         const text = row.textContent.toLowerCase();
         const matchesSearch = searchQuery === '' || text.includes(searchQuery);
-        
-        row.style.display = matchesSearch ? '' : 'none';
-        if (matchesSearch) visibleCount++;
+
+        // Проверяем фильтр инструментов
+        let matchesFilter = isFilterAll || selectedTools.size === 0;
+        if (!isFilterAll && selectedTools.size > 0) {
+            // Скрываем проекты которые не содержат выбранный инструмент
+            const toolsText = row.querySelector('.project-row-tools')?.textContent || '';
+            matchesFilter = Array.from(selectedTools).some(tool => 
+                toolsText.includes(tool)
+            );
+        }
+
+        const shouldDisplay = matchesSearch && matchesFilter;
+        row.style.display = shouldDisplay ? '' : 'none';
+        if (shouldDisplay) visibleCount++;
 
         // Подсвечиваем/обесцвечиваем пилюли (tech tags)
         const toolsTags = row.querySelectorAll('.tech-tag');
         if (isFilterAll || selectedTools.size === 0) {
-            // Все пилюли нормальные
+            // Все пилюли нормальные - убираем стили выделения
             toolsTags.forEach(tag => {
-                tag.classList.remove('tag-highlighted', 'tag-dimmed');
+                tag.classList.remove('tag-highlighted');
             });
         } else {
             // Выбраны конкретные инструменты - подсвечиваем только их
@@ -328,7 +356,6 @@ function filterProjects() {
                 const tagText = tag.textContent.trim();
                 const isSelected = Array.from(selectedTools).some(tool => tool === tagText);
                 tag.classList.toggle('tag-highlighted', isSelected);
-                tag.classList.toggle('tag-dimmed', !isSelected);
             });
         }
     });

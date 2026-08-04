@@ -2756,11 +2756,29 @@ body.menu-open .wa-widget {
   width: 13px;
   height: 12px;
   color: var(--text-primary);
-  transition: transform 0.2s ease;
 }
 
-.projects-filter-toggle.is-open .filter-toggle-icon {
-  transform: rotate(180deg);
+.filter-reset-btn {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.filter-reset-btn:hover {
+  color: var(--accent);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .projects-filter-dropdown {
@@ -2835,10 +2853,6 @@ body.menu-open .wa-widget {
   font-weight: 600;
 }
 
-.tech-tag.tag-dimmed {
-  opacity: 0.4;
-}
-
 @media (max-width: 768px) {
   .projects-controls {
     flex-direction: column;
@@ -2862,5 +2876,14 @@ body.menu-open .wa-widget {
     left: 0;
     right: auto;
     width: 100%;
+  }
+
+  .filter-reset-btn {
+    position: relative;
+    right: auto;
+    transform: none;
+    width: auto;
+    height: auto;
+    margin-left: 8px;
   }
 }
