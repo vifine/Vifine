@@ -2672,3 +2672,16 @@ body.menu-open .wa-widget {
   .project-split-images-row { flex-direction: column; }
   .project-split-right { width: 100%; height: auto; object-fit: contain; }
 }
+
+/* Narrow stacked column for tall flow-logic screenshots */
+.project-narrow-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.project-narrow-col .project-img {
+  margin: 0;
+}

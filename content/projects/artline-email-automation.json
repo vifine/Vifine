@@ -40,8 +40,7 @@
     {
       "type": "image",
       "src": "assets/img/projects/artline-email-automation/00-full-klaviyo-flow-map.png",
-      "alt": "Full connected Klaviyo automation map linking welcome, cart recovery, reorder, and review flows",
-      "style": "margin-bottom:40px;"
+      "alt": "Full connected Klaviyo automation map linking welcome, cart recovery, reorder, and review flows"
     },
     {
       "type": "text",
@@ -64,24 +63,6 @@
       "type": "image",
       "src": "assets/img/projects/artline-email-automation/01-welcome-flash-review.png",
       "alt": "Welcome series, flash deal, and review request emails"
-    },
-    {
-      "type": "image",
-      "src": "assets/img/projects/artline-email-automation/05-welcome-flow-metrics.png",
-      "alt": "Welcome flow logic and performance: 50.9% open rate, 3.8% conversion, EUR 572 attributed revenue"
-    },
-    {
-      "type": "heading",
-      "text": "Review Request Flow"
-    },
-    {
-      "type": "text",
-      "text": "Three days after a shipment is marked delivered, a review request goes out asking about the customer's experience. It runs as a native Klaviyo flow tied to shipment status rather than a manual send, and is already converting: a 37.5% open rate and 2.3% of recipients placing another order off the back of it, EUR 447 in attributed revenue from a single automated touchpoint."
-    },
-    {
-      "type": "image",
-      "src": "assets/img/projects/artline-email-automation/06-review-flow-metrics.png",
-      "alt": "Review request flow triggered by delivery status: 37.5% open rate, 2.3% conversion, EUR 447 attributed revenue"
     },
     {
       "type": "heading",
@@ -108,6 +89,38 @@
       "type": "image",
       "src": "assets/img/projects/artline-email-automation/03-repeat-purchase-flow.png",
       "alt": "Tiered repeat purchase flow with 10/15/20% offers and expiry reminder"
+    },
+    {
+      "type": "heading",
+      "text": "Flow Logic &amp; Performance"
+    },
+    {
+      "type": "text",
+      "text": "Behind each design is branching, conditional logic in Klaviyo: wait steps, yes/no splits based on whether a code was used or an order was placed, and per-email performance tracked directly in the flow. The welcome flow converts at 3.8% (€572 attributed revenue), and the post-delivery review request, triggered automatically by shipment status, converts at 2.3% (€447) from a single automated touchpoint."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-email-automation/05-welcome-flow-metrics.png",
+      "alt": "Welcome flow logic and performance: 50.9% open rate, 3.8% conversion, EUR 572 attributed revenue",
+      "style": "max-width:360px;margin:0 auto 24px;display:block;"
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-email-automation/06-review-flow-metrics.png",
+      "alt": "Review request flow triggered by delivery status: 37.5% open rate, 2.3% conversion, EUR 447 attributed revenue",
+      "style": "max-width:360px;margin:0 auto 24px;display:block;"
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-email-automation/07-cart-flow-logic.png",
+      "alt": "Abandoned cart flow branching logic with conditional splits",
+      "style": "max-width:360px;margin:0 auto 24px;display:block;"
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/artline-email-automation/08-checkout-flow-logic.png",
+      "alt": "Abandoned checkout flow branching logic with conditional splits",
+      "style": "max-width:360px;margin:0 auto 24px;display:block;"
     }
   ],
   "results": {
