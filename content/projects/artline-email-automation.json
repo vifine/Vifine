@@ -45,11 +45,11 @@
     },
     {
       "type": "heading",
-      "text": "New subscribers get a welcome email with a 10% code, followed by a reminder a few days later if the code hasn't been used. On day 14, a separate flash deal offers a fresh, time-limited discount rather than repeating the same welcome offer. After a purchase, a review request closes the loop, asking for feedback and linking to WhatsApp support for anyone who needs help instead of leaving a review. Each of these exits feed back into the reorder and win-back flows shown in the map above, rather than running as dead ends."
+      "text": "Welcome &amp; Lifecycle Flow"
     },
     {
       "type": "text",
-      "text": "New subscribers get a welcome email with a 10% code, followed by a reminder a few days later if the code hasn't been used. On day 14, a separate flash deal offers a fresh, time-limited discount rather than repeating the same welcome offer. After a purchase, a review request closes the loop, asking for feedback and linking to WhatsApp support for anyone who needs help instead of leaving a review."
+      "text": "New subscribers get a welcome email with a 10% code, followed by a reminder a few days later if the code hasn't been used. On day 14, a separate flash deal offers a fresh, time-limited discount rather than repeating the same welcome offer. After a purchase, a review request closes the loop, asking for feedback and linking to WhatsApp support for anyone who needs help instead of leaving a review. Each of these exits feed back into the reorder and win-back flows shown in the map above, rather than running as dead ends."
     },
     {
       "type": "image",
