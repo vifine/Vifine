@@ -104,28 +104,15 @@
       "alt": "30-day revenue and conversion performance across all live flows"
     },
     {
-      "type": "image",
+      "type": "row4",
       "src": "assets/img/projects/artline-email-automation/05-welcome-flow-metrics.png",
-      "alt": "Welcome flow logic and performance: 50.9% open rate, 3.8% conversion, EUR 572 attributed revenue",
-      "style": "max-width:360px;margin:0 auto 24px;display:block;"
-    },
-    {
-      "type": "image",
-      "src": "assets/img/projects/artline-email-automation/06-review-flow-metrics.png",
-      "alt": "Review request flow triggered by delivery status: 37.5% open rate, 2.3% conversion, EUR 447 attributed revenue",
-      "style": "max-width:360px;margin:0 auto 24px;display:block;"
-    },
-    {
-      "type": "image",
-      "src": "assets/img/projects/artline-email-automation/07-cart-flow-logic.png",
-      "alt": "Abandoned cart flow branching logic with conditional splits",
-      "style": "max-width:360px;margin:0 auto 24px;display:block;"
-    },
-    {
-      "type": "image",
-      "src": "assets/img/projects/artline-email-automation/08-checkout-flow-logic.png",
-      "alt": "Abandoned checkout flow branching logic with conditional splits",
-      "style": "max-width:360px;margin:0 auto 24px;display:block;"
+      "alt": "Welcome flow logic and performance",
+      "src2": "assets/img/projects/artline-email-automation/06-review-flow-metrics.png",
+      "alt2": "Review request flow logic and performance",
+      "src3": "assets/img/projects/artline-email-automation/07-cart-flow-logic.png",
+      "alt3": "Abandoned cart flow branching logic",
+      "src4": "assets/img/projects/artline-email-automation/08-checkout-flow-logic.png",
+      "alt4": "Abandoned checkout flow branching logic"
     }
   ],
   "results": {

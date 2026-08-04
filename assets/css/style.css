@@ -2685,3 +2685,23 @@ body.menu-open .wa-widget {
 .project-narrow-col .project-img {
   margin: 0;
 }
+
+/* Four images in a row, equal height on desktop, stacking on mobile */
+.project-row4-block {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.project-row4-block .project-img {
+  width: auto;
+  height: 420px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .project-row4-block .project-img { height: auto; width: 100%; max-width: 360px; }
+}
