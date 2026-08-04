@@ -1881,7 +1881,18 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 768px) {
-  .project-nav-row { flex-direction: column; gap: 32px; }
+  .project-nav-row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+  }
+  .project-nav-row .project-nav-link:first-child { order: 1; }
+  .project-nav-row .project-nav-link:last-child { order: 2; }
+  .project-nav-row .project-nav-cta-view {
+    order: 3;
+    flex-basis: 100%;
+    text-align: center;
+  }
   .project-nav-cta { padding: 0; }
   .project-nav-cta-title { font-size: 32px; }
 }
