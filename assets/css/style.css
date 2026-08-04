@@ -1641,6 +1641,7 @@ img { max-width: 100%; display: block; }
   border-radius: 8px;
   border: 1px solid var(--border-color);
   background: #fff;
+  margin: 24px 0;
 }
 
 /* Outcomes section */

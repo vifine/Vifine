@@ -51,7 +51,7 @@
       "type": "image",
       "src": "assets/img/projects/artline-craft-storefront/01-design-system.jpg",
       "alt": "Design system: colors, typography, spacing, radius, and shadows",
-      "style": "margin-bottom:40px;"
+      "style": ""
     },
     {
       "type": "heading",
@@ -71,7 +71,7 @@
       "type": "image",
       "src": "assets/img/projects/artline-craft-storefront/09-catalog-filters.png",
       "alt": "Filterable product catalog by category, type, price, viscosity, volume, and color",
-      "style": "margin-bottom:40px;"
+      "style": ""
     },
     {
       "type": "heading",
