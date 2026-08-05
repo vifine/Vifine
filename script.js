@@ -206,7 +206,7 @@ function initToolsFilter(projects) {
     const toggle = document.getElementById('filterToggle');
     const dropdown = document.getElementById('filterDropdown');
     const toolOptions = document.getElementById('toolOptions');
-    const resetBtn = document.getElementById('filterReset');
+    const filterIconClose = document.querySelector('.filter-icon-close');
     if (!toggle || !dropdown || !toolOptions) return;
 
     // Собираем все уникальные инструменты
@@ -234,6 +234,22 @@ function initToolsFilter(projects) {
     // Обработка клика на toggle
     toggle.addEventListener('click', (e) => {
         e.stopPropagation();
+        
+        // Если крестик видимый (фильтр активный), сброс фильтра
+        if (filterIconClose && filterIconClose.style.opacity === '1') {
+            const filterAll = document.getElementById('filterAll');
+            const filterCheckboxes = dropdown.querySelectorAll('.filter-checkbox');
+            filterAll.checked = true;
+            filterCheckboxes.forEach(cb => {
+                if (cb.id !== 'filterAll') cb.checked = false;
+            });
+            filterProjects();
+            dropdown.classList.remove('is-open');
+            dropdown.setAttribute('aria-hidden', 'true');
+            return;
+        }
+        
+        // Иначе открываем dropdown
         const isOpen = !dropdown.classList.contains('is-open');
         dropdown.classList.toggle('is-open', isOpen);
         dropdown.setAttribute('aria-hidden', !isOpen);
@@ -263,18 +279,6 @@ function initToolsFilter(projects) {
         }
     });
 
-    // Обработка кнопки сброса
-    if (resetBtn) {
-        resetBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            filterAll.checked = true;
-            filterCheckboxes.forEach(cb => {
-                if (cb.id !== 'filterAll') cb.checked = false;
-            });
-            filterProjects();
-        });
-    }
-
     // Закрытие dropdown при клике вне
     document.addEventListener('click', (e) => {
         if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
@@ -292,7 +296,8 @@ function filterProjects() {
     const noResults = document.getElementById('projectsNoResults');
     const searchInput = document.getElementById('projectsSearch');
     const filterLabel = document.getElementById('filterLabel');
-    const resetBtn = document.getElementById('filterReset');
+    const filterIconMain = document.querySelector('.filter-icon-main');
+    const filterIconClose = document.querySelector('.filter-icon-close');
     if (!grid) return;
 
     const searchQuery = (searchInput?.value || '').trim().toLowerCase();
@@ -307,17 +312,35 @@ function filterProjects() {
     const filterAll = document.getElementById('filterAll');
     const isFilterAll = filterAll && filterAll.checked;
 
-    // Обновляем label фильтра и показываем/скрываем кнопку сброса
+    // Обновляем label фильтра и иконки
     if (filterLabel) {
         if (isFilterAll || selectedTools.size === 0) {
             filterLabel.textContent = 'All tools';
-            if (resetBtn) resetBtn.style.display = 'none';
+            // Показываем иконку фильтра, скрываем крестик
+            if (filterIconMain && filterIconClose) {
+                filterIconMain.style.opacity = '1';
+                filterIconMain.style.transform = 'rotate(0deg)';
+                filterIconClose.style.opacity = '0';
+                filterIconClose.style.transform = 'rotate(-90deg)';
+            }
         } else if (selectedTools.size === 1) {
             filterLabel.textContent = Array.from(selectedTools)[0];
-            if (resetBtn) resetBtn.style.display = 'block';
+            // Показываем крестик, скрываем фильтр
+            if (filterIconMain && filterIconClose) {
+                filterIconMain.style.opacity = '0';
+                filterIconMain.style.transform = 'rotate(90deg)';
+                filterIconClose.style.opacity = '1';
+                filterIconClose.style.transform = 'rotate(0deg)';
+            }
         } else {
             filterLabel.textContent = `${selectedTools.size} tools`;
-            if (resetBtn) resetBtn.style.display = 'block';
+            // Показываем крестик, скрываем фильтр
+            if (filterIconMain && filterIconClose) {
+                filterIconMain.style.opacity = '0';
+                filterIconMain.style.transform = 'rotate(90deg)';
+                filterIconClose.style.opacity = '1';
+                filterIconClose.style.transform = 'rotate(0deg)';
+            }
         }
     }
 
