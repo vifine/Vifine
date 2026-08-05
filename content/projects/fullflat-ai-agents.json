@@ -87,6 +87,37 @@
     },
     {
       "type": "heading",
+      "text": "Inside the Moodboard Editor"
+    },
+    {
+      "type": "text",
+      "text": "In practice, the operator works from the Order Line Items view and marks which products should go into the visualization using a star toggle in the \"Add to Moodboard\" column—useful for orders where only some line items (say, the Basic package) should appear in the render, while Add-ons or Undefined items are left out."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/fullflat-ai-agents/05-moodboard-order-line-items.png",
+      "alt": "Order Line Items table with star toggles marking which products to include in the moodboard"
+    },
+    {
+      "type": "text",
+      "text": "Clicking into the order's Moodboard Editor shows the selected product images pulled automatically from each item's catalog record, alongside the generated Mood Board output and its matched material swatches once the agent has run."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/fullflat-ai-agents/06-moodboard-editor-interface.png",
+      "alt": "Moodboard Editor showing selected product images and the generated mood board with material swatches"
+    },
+    {
+      "type": "text",
+      "text": "Underneath, the \"Create Moodboards\" automation runs on a button click: it takes the selected product images as input, sends them to an image generation model (GPT Image, low fidelity, landscape 1536x1024) with a prompt instructing it to compose a designer moodboard collage using the input images as-is without modification, then writes the result back to the record's Mood Boards attachment field via a follow-up script step."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/fullflat-ai-agents/07-moodboard-automation-airtable.png",
+      "alt": "Airtable automation: button click triggers Generate Image action, then a script writes the output back to the Mood Boards field"
+    },
+    {
+      "type": "heading",
       "text": "Integration &amp; Workflow"
     },
     {
