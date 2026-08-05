@@ -147,12 +147,12 @@
   "nav": {
     "prevHref": "fullflat-operations.html",
     "prevLabel": "Previous Project",
-    "nextHref": "fullflat-finance.html",
+    "nextHref": "fullflat-taxonomy-reviews.html",
     "nextLabel": "Next Project",
-    "ctaHref": "fullflat-finance.html",
+    "ctaHref": "fullflat-taxonomy-reviews.html",
     "ctaLabel": "Next Project",
-    "ctaTitle": "Financial Operations &amp; P&amp;L System",
-    "ctaDesc": "Fully automated financial operations — real-time P&amp;L, Cash Flow, and per-order profitability tracking",
+    "ctaTitle": "AI Agents for Taxonomy &amp; Product Reviews",
+    "ctaDesc": "Automated the handling of new products and delivery photos to produce polished, PIM-standard content — taxonomy classification and customer reviews — without manual work at each step",
     "viewAllHref": "projects.html"
   }
 }

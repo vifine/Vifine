@@ -108,16 +108,16 @@
     "directLink": "fullflat-pim.html"
   },
   {
-    "id": "fullflat-ai-agents",
+    "id": "fullflat-taxonomy-reviews",
     "company": "FullFlat LLC",
     "companyLocation": "United Arab Emirates",
     "role": "Systems Architect & AI Integration Lead",
     "period": "2026",
-    "title": "AI Agents for Taxonomy & OMS Support",
-    "tagline": "Automated the handling of new products and orders to produce polished, PIM-standard content — from taxonomy classification to customer-facing visuals — without manual work at each step",
-    "summary": "Three AI agents running natively in Airtable. Agent 1 (Claude Sonnet) classifies new supplier products into FullFlat's 7-level taxonomy and generates SEO metadata at 92% accuracy with real-time Telegram QA alerts. Agent 2 (Claude Sonnet) transforms delivery photos into customer reviews—pulling real CSAT feedback when available, generating synthetic reviews when not, creating random avatars, and matching reviews to products. Agent 3 (GPT Image) generates furniture layout visualizations with material swatches pulled from a linked material library, for both individual catalog products and full customer orders, sending the result directly to the client.",
-    "challenge": "New products and orders each needed several manual steps before they were publication-ready. Products from 12-hourly supplier feeds required manual classification into the company's 7-level taxonomy before going live. Delivery photos from the logistics partner sat unused instead of becoming reviews, since moderating and matching them to products by hand was slow. Customers ordering multiple pieces also had no way to preview how their selections would look together before delivery.",
-    "solution": "Built three AI agents as Airtable automations. Agent 1 and Agent 2 run on Claude Sonnet; Agent 3 runs on GPT Image. Agent 1 triggers on new supplier products, classifies them against embedded taxonomy rules, and alerts QA via Telegram. Agent 2 triggers on delivery photo uploads, analyzes them via Claude's vision, pulls or generates a review, creates a random avatar, and matches the photo to a product. Agent 3 generates layout visualizations with material swatches from the linked material library—either for a single catalog product or for an entire client order—and sends the result to the customer via email or WhatsApp.",
+    "title": "AI Agents for Taxonomy & Product Reviews",
+    "tagline": "Automated the handling of new products and delivery photos to produce polished, PIM-standard content — taxonomy classification and customer reviews — without manual work at each step",
+    "summary": "Two AI agents (Claude Sonnet) running natively in Airtable. Agent 1 classifies new supplier products into FullFlat's 7-level taxonomy and generates SEO metadata at 92% accuracy with real-time Telegram QA alerts. Agent 2 transforms delivery photos into customer reviews—pulling real CSAT feedback when available, generating synthetic reviews when not, creating random avatars, and matching reviews to products.",
+    "challenge": "New products and delivery photos each needed several manual steps before they were publication-ready. Products from 12-hourly supplier feeds required manual classification into the company's 7-level taxonomy before going live. Delivery photos from the logistics partner sat unused instead of becoming reviews, since moderating and matching them to products by hand was slow.",
+    "solution": "Built two AI agents as Airtable automations, both running on Claude Sonnet. Agent 1 triggers on new supplier products, classifies them against embedded taxonomy rules, and alerts QA via Telegram. Agent 2 triggers on delivery photo uploads, analyzes them via Claude's vision, pulls or generates a review, creates a random avatar, and matches the photo to a product.",
     "results": [
       "92% accuracy on product taxonomy classification—eliminates manual review for most products and catches ambiguous edge cases for human check",
       "Real-time Telegram alerts enable QA team to approve or flag products within minutes instead of days",
@@ -125,8 +125,7 @@
       "Delivery photos converted to social proof within hours of shipment—no manual UGC moderation or photo sourcing",
       "Synthetic reviews ensure social proof availability even when CSAT data is missing—storefront always has fresh reviews",
       "Random avatar generation removes friction and licensing costs—each review appears as a distinct person",
-      "Automatic photo-to-product matching ensures context-relevant social proof on product pages—no manual mapping",
-      "Order visualizations sent directly to clients—reducing pre-delivery uncertainty around material and color combinations"
+      "Automatic photo-to-product matching ensures context-relevant social proof on product pages—no manual mapping"
     ],
     "impact": {
       "accuracy": "92%",
@@ -136,11 +135,36 @@
     "tools": [
       "Airtable",
       "Claude Sonnet",
-      "Telegram API",
+      "Telegram API"
+    ],
+    "images": [],
+    "directLink": "fullflat-taxonomy-reviews.html"
+  },
+  {
+    "id": "fullflat-oms-agent",
+    "company": "FullFlat LLC",
+    "companyLocation": "United Arab Emirates",
+    "role": "Systems Architect & AI Integration Lead",
+    "period": "2026",
+    "title": "AI Agent for Order Management System",
+    "tagline": "Automated the creation of client-facing order visualizations — pulling real material swatches from the catalog to show customers exactly what they bought before delivery",
+    "summary": "An AI agent (GPT Image) built into FullFlat's Order Management System on Airtable. Generates furniture layout visualizations with material swatches pulled from a linked material library, for both individual catalog products and full customer orders, sending the result directly to the client via email or WhatsApp.",
+    "challenge": "Customers ordering multiple pieces had no way to preview how their color and material selections would look together before delivery. Color and material combinations across a sofa, bed, side tables, and accent pieces were impossible to visualize ahead of time, creating uncertainty and occasional post-purchase dissatisfaction.",
+    "solution": "Built an AI agent as an Airtable automation running on GPT Image. The agent pulls each ordered item's variation record, retrieves linked materials from the shared material library, and composes a layout image showing the full order together—either for a single catalog product or an entire client order—and sends the result to the customer via email or WhatsApp.",
+    "results": [
+      "Order visualizations sent directly to clients—reducing pre-delivery uncertainty around material and color combinations",
+      "Works for single products and full orders using the same agent, without separate tooling",
+      "Real material swatches pulled from the same library linked to each product variation—not generic renders",
+      "Selective inclusion via star toggle lets operators control exactly which order line items appear in the render",
+      "Supports off-catalog custom items via operator-uploaded reference images for client-requested one-off sales"
+    ],
+    "tools": [
+      "Airtable",
+      "GPT Image",
       "AI Image Generation"
     ],
     "images": [],
-    "directLink": "fullflat-ai-agents.html"
+    "directLink": "fullflat-oms-agent.html"
   },
   {
     "id": "fullflat-finance",

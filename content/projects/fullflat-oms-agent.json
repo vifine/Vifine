@@ -1,0 +1,139 @@
+{
+  "slug": "fullflat-oms-agent",
+  "breadcrumb": "AI Agent for Order Management System",
+  "title": "AI Agent for Order Management System",
+  "pitch": "Automated the creation of client-facing order visualizations — pulling real material swatches from the catalog to show customers exactly what they bought before delivery",
+  "seo": {
+    "title": "AI Agent for Order Management System — Airtable + GPT Image Case Study | Victoria Fine",
+    "description": "An AI agent built natively in Airtable's Order Management System: generates furniture layout visualizations with material swatches pulled from a linked material library, for individual products and full customer orders, sent directly to clients.",
+    "keywords": "Airtable automation, Order Management System, GPT Image, AI agents, furniture visualization, material swatches, Airtable workflows",
+    "ogTitle": "AI Agent for Order Management System — Airtable Case Study",
+    "ogDescription": "An AI agent generates furniture layout visualizations with real material swatches for individual products and full customer orders, sent directly to clients via email or WhatsApp."
+  },
+  "meta": [
+    {
+      "label": "Role",
+      "value": "Systems Architect &amp; AI Integration Lead"
+    },
+    {
+      "label": "Company",
+      "value": "FullFlat LLC"
+    },
+    {
+      "label": "Location",
+      "value": "United Arab Emirates"
+    },
+    {
+      "label": "Year",
+      "value": "2026"
+    }
+  ],
+  "techTags": [
+    "Airtable",
+    "GPT Image",
+    "AI Image Generation"
+  ],
+  "overview": "An AI agent built into FullFlat's Order Management System on Airtable, automating the creation of client-facing visuals. Every order gets a visualization pulling real material swatches from the catalog, so customers see exactly what they're getting before it ships.",
+  "challenge": "Customers ordering multiple pieces had no way to preview how their color and material selections would look together before delivery. Color and material combinations across a sofa, bed, side tables, and accent pieces were impossible to visualize ahead of time, creating uncertainty and occasional post-purchase dissatisfaction.",
+  "solutionIntro": "Built an AI agent as an Airtable automation running on GPT Image, generating furniture visualizations on demand—either for a single catalog item or an entire client order.",
+  "solutionBlocks": [
+    {
+      "type": "heading",
+      "text": "Order &amp; Product Visualizer"
+    },
+    {
+      "type": "text",
+      "text": "This agent generates furniture layout visualizations pulling swatches from a material library linked to each product variation—shown above as an example: sofa, bed, side tables, lamp, and nightstands laid out together with their available finish options. It works two ways: on a single catalog product, to show a customer the material and color options for that item, or on a full customer order, combining every piece the customer bought into one coherent visualization with their exact selected finishes."
+    },
+    {
+      "type": "text",
+      "text": "When triggered on an order, the agent pulls each ordered item's variation record, retrieves the linked materials from the shared material library, and composes a layout image showing the full order together—rather than customers imagining how five separately-photographed pieces might look side by side in their chosen colors. The finished visualization is sent directly to the client via email or WhatsApp, giving them a clear preview of their order before it ships."
+    },
+    {
+      "type": "row2",
+      "src": "assets/img/projects/fullflat-ai-agents/03-order-visualization-example.png",
+      "alt": "Order visualization: sofa, armchair, coffee table, dining chair, dining table, and TV console with linked material swatches",
+      "src2": "assets/img/projects/fullflat-ai-agents/04-order-visualization-example-2.png",
+      "alt2": "Order visualization: sofa, bed, nightstand, rug, lighting, wall art, and console with material swatches"
+    },
+    {
+      "type": "text",
+      "text": "The operator also has the option to add custom products that fall outside the catalog, dropping in reference images directly. This covers the occasional off-catalog sale made at a client's request, so the visualization stays accurate even when an order includes something FullFlat doesn't normally carry."
+    },
+    {
+      "type": "subheading",
+      "text": "Inside the Moodboard Editor"
+    },
+    {
+      "type": "text",
+      "text": "In practice, the operator works from the Order Line Items view and marks which products should go into the visualization using a star toggle in the \"Add to Moodboard\" column—useful for orders where only some line items (say, the Basic package) should appear in the render, while Add-ons or Undefined items are left out."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/fullflat-ai-agents/05-moodboard-order-line-items.png",
+      "alt": "Order Line Items table with star toggles marking which products to include in the moodboard"
+    },
+    {
+      "type": "text",
+      "text": "Clicking into the order's Moodboard Editor shows the selected product images pulled automatically from each item's catalog record, alongside the generated Mood Board output and its matched material swatches once the agent has run."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/fullflat-ai-agents/06-moodboard-editor-interface.png",
+      "alt": "Moodboard Editor showing selected product images and the generated mood board with material swatches"
+    },
+    {
+      "type": "text",
+      "text": "Underneath, the \"Create Moodboards\" automation runs on a button click: it takes the selected product images as input, sends them to an image generation model (GPT Image, low fidelity, landscape 1536x1024) with a prompt instructing it to compose a designer moodboard collage using the input images as-is without modification, then writes the result back to the record's Mood Boards attachment field via a follow-up script step."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/fullflat-ai-agents/07-moodboard-automation-airtable.png",
+      "alt": "Airtable automation: button click triggers Generate Image action, then a script writes the output back to the Mood Boards field"
+    },
+    {
+      "type": "heading",
+      "text": "Integration &amp; Workflow"
+    },
+    {
+      "type": "text",
+      "text": "The agent runs as an Airtable automation inside the Order Management System, triggered on demand by a button click. No external infrastructure, no servers to manage—just Airtable's native automation coupled with GPT Image API calls. The visualizer sends its output straight to the client, closing the loop between order confirmation and delivery with a clear visual preview."
+    }
+  ],
+  "resultsIntro": "The visualizer agent turned an invisible gap in the order process into a clear customer-facing touchpoint:",
+  "resultsBullets": [
+    {
+      "bullet": "Order visualizations sent directly to clients",
+      "detail": "Customers see their full order laid out together in their selected materials and finishes before delivery—reducing pre-delivery uncertainty and post-purchase surprises."
+    },
+    {
+      "bullet": "Works for single products and full orders",
+      "detail": "The same agent handles a single catalog item preview or a complete multi-piece order, without separate tooling."
+    },
+    {
+      "bullet": "Real material swatches, not generic renders",
+      "detail": "Pulls from the same material library linked to each product variation, so what the customer sees matches what they'll receive."
+    },
+    {
+      "bullet": "Selective inclusion via star toggle",
+      "detail": "Operators control exactly which order line items appear in the visualization—useful when only part of an order (e.g. the Basic package) should be rendered."
+    },
+    {
+      "bullet": "Supports off-catalog custom items",
+      "detail": "Operators can drop in reference images for client-requested products outside the standard catalog, keeping visualizations accurate for one-off sales."
+    }
+  ],
+  "images": [],
+  "directLink": "fullflat-oms-agent.html",
+  "nav": {
+    "prevHref": "fullflat-taxonomy-reviews.html",
+    "prevLabel": "Previous Project",
+    "nextHref": "fullflat-finance.html",
+    "nextLabel": "Next Project",
+    "ctaHref": "fullflat-finance.html",
+    "ctaLabel": "Next Project",
+    "ctaTitle": "Financial Operations &amp; P&amp;L System",
+    "ctaDesc": "Fully automated financial operations — real-time P&amp;L, Cash Flow, and per-order profitability tracking",
+    "viewAllHref": "projects.html"
+  }
+}
