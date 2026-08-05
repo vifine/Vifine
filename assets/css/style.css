@@ -1140,6 +1140,15 @@ img { max-width: 100%; display: block; }
 .edu-institution { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
 .edu-details { font-size: 14px; color: var(--text-secondary); line-height: 22px; }
 
+.cert-list { display: flex; flex-direction: column; gap: 10px; }
+.cert-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.cert-name { font-family: var(--font-serif); font-weight: 700; font-size: 15px; line-height: 22px; }
+.cert-meta { font-size: 13px; color: var(--text-secondary); white-space: nowrap; }
+
+@media (max-width: 768px) {
+  .cert-row { flex-direction: column; align-items: flex-start; gap: 2px; }
+}
+
 .lang-list { display: flex; flex-direction: column; }
 .lang-row {
   display: flex;
