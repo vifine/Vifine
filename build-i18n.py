@@ -109,7 +109,8 @@ def build():
         # ---- Update the EN (root) file in place ----
         en_html = original
         en_html = add_hreflang(en_html, page, is_ru=False)
-        en_html = insert_lang_toggle(en_html, "en", f"ru/{page}")
+        ru_target = "ru/" if page == "index.html" else f"ru/{page}"
+        en_html = insert_lang_toggle(en_html, "en", ru_target)
         src_path.write_text(en_html, encoding="utf-8")
 
         # ---- Build the RU mirror ----
@@ -125,7 +126,8 @@ def build():
             ru_html,
             count=1,
         )
-        ru_html = insert_lang_toggle(ru_html, "ru", f"../{page}")
+        en_target = "../" if page == "index.html" else f"../{page}"
+        ru_html = insert_lang_toggle(ru_html, "ru", en_target)
 
         (RU_DIR / page).write_text(ru_html, encoding="utf-8")
         print(f"  built: {page}  ->  ru/{page}")
