@@ -100,7 +100,7 @@
     "tools": [
       "Airtable",
       "Shopify",
-      "Airpower API",
+      "Airpower",
       "AI Image Generation",
       "n8n"
     ],
@@ -130,7 +130,7 @@
       "Stripe",
       "Paymob",
       "n8n",
-      "Airpower API"
+      "Airpower"
     ],
     "images": [],
     "directLink": "fullflat-finance.html"
