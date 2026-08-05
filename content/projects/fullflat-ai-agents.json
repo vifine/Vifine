@@ -75,9 +75,11 @@
       "text": "When triggered on an order, the agent pulls each ordered item's variation record, retrieves the linked materials from the shared material library, and composes a layout image showing the full order together—rather than customers imagining how five separately-photographed pieces might look side by side in their chosen colors. The finished visualization is sent directly to the client via email or WhatsApp, giving them a clear preview of their order before it ships."
     },
     {
-      "type": "image",
+      "type": "row2",
       "src": "assets/img/projects/fullflat-ai-agents/03-order-visualization-example.png",
-      "alt": "Example order visualization showing sofa, bed, lamp, side tables, and nightstands with linked material swatches"
+      "alt": "Order visualization: sofa, bed, lamp, side tables, and nightstands with linked material swatches",
+      "src2": "assets/img/projects/fullflat-ai-agents/04-order-visualization-example-2.png",
+      "alt2": "Order visualization: sofa, bed, nightstand, rug, lighting, wall art, and console with material swatches"
     },
     {
       "type": "heading",
