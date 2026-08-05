@@ -134,6 +134,7 @@
     "company": "ARTLINE GROUP EU S.R.L.",
     "summary": "Migrated Artline's email marketing from Shopify's native email to Klaviyo, rebuilding automation flows for a more effective, purpose-built platform",
     "tools": [
+      "Figma",
       "Klaviyo",
       "Shopify",
       "n8n"

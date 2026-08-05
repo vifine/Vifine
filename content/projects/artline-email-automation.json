@@ -29,6 +29,7 @@
     }
   ],
   "techTags": [
+    "Figma",
     "Klaviyo",
     "Shopify",
     "n8n"
@@ -104,7 +105,7 @@
     },
     {
       "type": "text",
-      "text": "Behind each design is branching, conditional logic in Klaviyo: wait steps, yes/no splits based on whether a code was used or an order was placed, and per-flow performance tracked directly in Klaviyo's reporting. In the first 30 days of the testing period after rebuild, the five active flows generated €2,848 in attributed revenue across 32 conversions, led by Abandoned Checkout (€804, 5.92% conversion) and Browse Abandonment (€636, 4.76%). Volume is still early since the flows are newly live, but the conversion rates and revenue-per-flow already show which sequences are working."
+      "text": "Each email was designed in Figma before being built out in Klaviyo, with branching, conditional logic behind the visuals: wait steps, yes/no splits based on whether a code was used or an order was placed, and per-flow performance tracked directly in Klaviyo's reporting. In the first 30 days of the testing period after rebuild, the five active flows generated €2,848 in attributed revenue across 32 conversions, led by Abandoned Checkout (€804, 5.92% conversion) and Browse Abandonment (€636, 4.76%). Volume is still early since the flows are newly live, but the conversion rates and revenue-per-flow already show which sequences are working."
     },
     {
       "type": "image",
