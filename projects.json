@@ -113,7 +113,7 @@
     "companyLocation": "United Arab Emirates",
     "role": "Systems Architect & AI Integration Lead",
     "period": "2026",
-    "title": "AI Product Classification & UGC Review Generation",
+    "title": "AI Agents for E-commerce Operations",
     "tagline": "Three AI agents on Airtable: Claude Sonnet powers 92% accurate product taxonomy and AI-generated reviews, GPT Image powers order visualizations",
     "summary": "Three AI agents running natively in Airtable. Agent 1 (Claude Sonnet) classifies new supplier products into FullFlat's 7-level taxonomy and generates SEO metadata at 92% accuracy with real-time Telegram QA alerts. Agent 2 (Claude Sonnet) transforms delivery photos into customer reviews—pulling real CSAT feedback when available, generating synthetic reviews when not, creating random avatars, and matching reviews to products. Agent 3 (GPT Image) generates furniture layout visualizations with material swatches pulled from a linked material library, for both individual catalog products and full customer orders, sending the result directly to the client.",
     "challenge": "FullFlat sources furniture from multiple manufacturers and receives product feeds every 12 hours. Manual classification into a 7-level taxonomy (class, category, subcategory, model, series, options, metadata) was a critical bottleneck—every product needed human review before going live. Separately, the storefront lacked social proof: only purchases generated reviews, and hundreds of delivery photos from the logistics partner sat unused. Customers ordering multiple pieces also had no way to preview how their color and material selections would look together before delivery.",
