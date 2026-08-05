@@ -110,16 +110,7 @@
     }
   ],
   "results": {
-    "metrics": [
-      {
-        "value": "92%",
-        "label": "Taxonomy accuracy"
-      },
-      {
-        "value": "Minutes",
-        "label": "Feed to QA alert"
-      }
-    ],
+    "metrics": [],
     "bullets": [
       "92% accuracy on product taxonomy classification—eliminates manual review for most products and catches ambiguous edge cases for human check",
       "Real-time Telegram alerts enable QA team to approve or flag products within minutes instead of days",

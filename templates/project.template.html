@@ -339,6 +339,7 @@
   <div class="project-results">
     <div class="project-results-inner">
       <h2 class="project-results-title">Impact</h2>
+{{#if results.metrics}}
       <div class="project-results-metrics">
 {{#each results.metrics}}
         <div class="project-results-metric">
@@ -347,6 +348,7 @@
         </div>
 {{/each}}
       </div>
+{{/if}}
       <ul class="project-results-bullets">
 {{#each results.bullets}}
         <li>{{this}}</li>

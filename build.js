@@ -64,18 +64,28 @@ function renderEachBlocks(template, data) {
 
 // Render {{#if path}} ... {{/if}} blocks — hides the block entirely when
 // the referenced value is falsy, an empty array, or an empty string.
+// Handles nesting by always matching the innermost block first (the capture
+// group excludes any further "{{#if " so it can't swallow a nested block),
+// then re-running until no {{#if}} tags remain.
 function renderIfBlocks(template, data) {
-  const ifRe = /{{#if ([\w.]+)}}\n?([\s\S]*?){{\/if}}\n?/g;
+  const ifRe = /{{#if ([\w.]+)}}\n?((?:(?!{{#if )[\s\S])*?){{\/if}}\n?/g;
 
-  return template.replace(ifRe, (match, keyPath, inner) => {
-    const val = getByPath(data, keyPath);
-    const isEmpty =
-      val === undefined ||
-      val === null ||
-      val === '' ||
-      (Array.isArray(val) && val.length === 0);
-    return isEmpty ? '' : inner;
-  });
+  let out = template;
+  let prev;
+  do {
+    prev = out;
+    out = out.replace(ifRe, (match, keyPath, inner) => {
+      const val = getByPath(data, keyPath);
+      const isEmpty =
+        val === undefined ||
+        val === null ||
+        val === '' ||
+        (Array.isArray(val) && val.length === 0);
+      return isEmpty ? '' : inner;
+    });
+  } while (out !== prev && out.includes('{{#if '));
+
+  return out;
 }
 
 // Replace remaining {{dot.path}} placeholders from root data.
