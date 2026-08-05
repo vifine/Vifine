@@ -2853,6 +2853,15 @@ body.menu-open .wa-widget {
   font-weight: 600;
 }
 
+/* Temporary hide language switcher and projects search */
+.lang-toggle {
+  display: none !important;
+}
+
+#projectsSearch {
+  display: none !important;
+}
+
 @media (max-width: 768px) {
   .projects-controls {
     flex-direction: column;
