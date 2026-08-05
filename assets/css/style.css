@@ -2712,9 +2712,9 @@ body.menu-open .wa-widget {
 
 .projects-controls {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   flex-wrap: wrap;
 }
 
@@ -2730,73 +2730,84 @@ body.menu-open .wa-widget {
 .projects-filter-toggle {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  background: var(--bg-light);
+  gap: 12px;
+  padding: 14px 18px;
+  border: 2px solid var(--text-primary);
+  border-radius: 8px;
+  background: #fff;
   font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
   color: var(--text-primary);
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .projects-filter-toggle:hover {
-  border-color: var(--text-primary);
+  background: var(--bg-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .projects-filter-toggle.is-open {
   background: var(--bg-dark);
+  border-color: var(--text-primary);
 }
 
 .filter-toggle-icon {
-  width: 13px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
   color: var(--text-primary);
+  flex-shrink: 0;
 }
 
 .filter-reset-btn {
   position: absolute;
-  right: -40px;
+  right: -48px;
   top: 50%;
   transform: translateY(-50%);
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none;
-  background: none;
+  border: 2px solid var(--text-primary);
+  background: #fff;
   cursor: pointer;
   color: var(--text-primary);
   transition: all 0.2s ease;
   padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .filter-reset-btn:hover {
-  color: var(--accent);
-  transform: translateY(-50%) scale(1.1);
+  background: #ff4444;
+  color: #fff;
+  border-color: #ff4444;
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 68, 68, 0.2);
 }
 
 .projects-filter-dropdown {
   position: absolute;
   top: 100%;
   right: 0;
-  margin-top: 4px;
-  background: var(--bg-light);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  background: #fff;
+  border: 2px solid var(--text-primary);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   z-index: 100;
-  min-width: 180px;
+  min-width: 240px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-8px);
-  transition: all 0.2s ease;
+  transform: translateY(-12px);
+  transition: all 0.3s ease;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .projects-filter-dropdown.is-open {
@@ -2809,24 +2820,30 @@ body.menu-open .wa-widget {
 .filter-option {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
+  gap: 14px;
+  padding: 14px 16px;
   cursor: pointer;
   transition: background 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.filter-option:last-child {
+  border-bottom: none;
 }
 
 .filter-option:first-child {
-  border-bottom: 1px solid var(--border-color);
-  padding: 8px 12px;
+  border-bottom: 2px solid var(--text-primary);
+  padding: 14px 16px;
+  background: var(--bg-dark);
 }
 
-.filter-option:hover {
+.filter-option:hover:not(:first-child) {
   background: var(--bg-dark);
 }
 
 .filter-checkbox {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   accent-color: var(--text-primary);
   flex-shrink: 0;
@@ -2834,7 +2851,7 @@ body.menu-open .wa-widget {
 
 .filter-label {
   font-family: var(--font-sans);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   color: var(--text-primary);
   cursor: pointer;
@@ -2843,7 +2860,8 @@ body.menu-open .wa-widget {
 }
 
 .filter-option:first-child .filter-label {
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 15px;
 }
 
 /* Tech tag highlighting when tool is selected */
@@ -2874,25 +2892,33 @@ body.menu-open .wa-widget {
 
   .projects-filter-wrapper {
     width: 100%;
+    position: relative;
   }
 
   .projects-filter-toggle {
     width: 100%;
     justify-content: space-between;
+    padding: 14px 18px;
   }
 
   .projects-filter-dropdown {
     left: 0;
     right: auto;
     width: 100%;
+    min-width: unset;
   }
 
   .filter-reset-btn {
-    position: relative;
-    right: auto;
+    position: static;
     transform: none;
-    width: auto;
-    height: auto;
-    margin-left: 8px;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+
+  .projects-filter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 }
