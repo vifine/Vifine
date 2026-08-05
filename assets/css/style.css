@@ -2725,6 +2725,7 @@ body.menu-open .wa-widget {
 
 .projects-filter-wrapper {
   position: relative;
+  margin-top: 24px;
 }
 
 .projects-filter-toggle {
@@ -2796,8 +2797,8 @@ body.menu-open .wa-widget {
   top: 100%;
   right: 0;
   margin-top: 8px;
-  background: #fff;
-  border: 2px solid var(--text-primary);
+  background: var(--bg-dark);
+  border: 1px solid #d0d0d0;
   border-radius: 10px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   z-index: 100;
@@ -2824,7 +2825,7 @@ body.menu-open .wa-widget {
   padding: 14px 16px;
   cursor: pointer;
   transition: background 0.2s ease;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #d0d0d0;
 }
 
 .filter-option:last-child {
@@ -2832,13 +2833,13 @@ body.menu-open .wa-widget {
 }
 
 .filter-option:first-child {
-  border-bottom: 2px solid var(--text-primary);
+  border-bottom: 1px solid #d0d0d0;
   padding: 14px 16px;
-  background: var(--bg-dark);
+  background: #f9f9f9;
 }
 
 .filter-option:hover:not(:first-child) {
-  background: var(--bg-dark);
+  background: #f5f5f5;
 }
 
 .filter-checkbox {
