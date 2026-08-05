@@ -2718,6 +2718,12 @@ body.menu-open .wa-widget {
   flex-wrap: wrap;
 }
 
+@media (min-width: 769px) {
+  .projects-controls {
+    justify-content: flex-end;
+  }
+}
+
 .projects-search {
   flex: 1;
   min-width: 200px;
@@ -2744,6 +2750,13 @@ body.menu-open .wa-widget {
   white-space: nowrap;
   transition: all 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 769px) {
+  .projects-filter-toggle {
+    width: 240px;
+    justify-content: space-between;
+  }
 }
 
 .projects-filter-toggle:hover {
@@ -2784,6 +2797,7 @@ body.menu-open .wa-widget {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   z-index: 100;
   min-width: 240px;
+  width: 240px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-12px);
