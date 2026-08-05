@@ -18,39 +18,6 @@
     "summary": "Rebuilt a patchwork multi-agency Shopify store into a self-maintainable storefront with proper catalog architecture"
   },
   {
-    "id": "artline-b2b-portal",
-    "title": "B2B Wholesale Portal",
-    "tagline": "Self-serve B2B portal for European business buyers: VAT-exempt tiered pricing, VIES-verified registration, and automated multi-language invoicing",
-    "companyLocation": "Romania",
-    "period": "2026",
-    "role": "Team Lead & Shopify Developer",
-    "company": "ARTLINE GROUP EU S.R.L.",
-    "summary": "Self-serve B2B portal for European business buyers: VAT-exempt tiered pricing, VIES-verified registration, and automated multi-language invoicing",
-    "tools": [
-      "Shopify",
-      "Bitrix24",
-      "n8n",
-      "VIES API"
-    ],
-    "directLink": "artline-b2b-portal.html"
-  },
-  {
-    "id": "artline-email-automation",
-    "title": "Email Marketing Migration & Automation",
-    "tagline": "Migrated Artline's email marketing from Shopify's native email to Klaviyo, rebuilding automation flows for a more effective, purpose-built platform",
-    "companyLocation": "Romania",
-    "period": "2026",
-    "role": "Architect & Automation Lead",
-    "company": "ARTLINE GROUP EU S.R.L.",
-    "summary": "Migrated Artline's email marketing from Shopify's native email to Klaviyo, rebuilding automation flows for a more effective, purpose-built platform",
-    "tools": [
-      "Klaviyo",
-      "Shopify",
-      "n8n"
-    ],
-    "directLink": "artline-email-automation.html"
-  },
-  {
     "id": "fullflat-operations",
     "company": "FullFlat LLC",
     "companyLocation": "United Arab Emirates",
@@ -79,33 +46,32 @@
     "directLink": "fullflat-operations.html"
   },
   {
-    "id": "fullflat-pim",
+    "id": "fullflat-finance",
     "company": "FullFlat LLC",
     "companyLocation": "United Arab Emirates",
     "role": "Systems Architect & COO",
     "period": "Apr 2025 – Apr 2026",
-    "title": "Product Information Management System",
-    "tagline": "Bilingual furniture catalog with multi-supplier pricing and AI-generated interior imagery",
-    "summary": "Single source of truth for all product data across the business, for a furniture brand sourcing from multiple contract manufacturers and selling through a bilingual (English/Arabic) storefront. Manages the full product lifecycle from creation to publication.",
-    "challenge": "Product data lived disconnected from a Google Drive of unlinked images. The storefront ran in Arabic and English with no translation workflow, and Shopify's single-cost-per-product model couldn't represent unit economics across multiple contract manufacturers pricing the same product differently.",
-    "solution": "I built a PIM on Airtable with a dedicated Product × Supplier pricing table for accurate multi-manufacturer cost, bilingual EN/AR content management, AI-generated interior imagery replacing costly 3D rendering, and controlled multi-channel publishing (Shopify, Meta, Google, Pinterest, YouTube).",
+    "title": "Financial Operations & P&L System",
+    "tagline": "30+ budget line items with fully automated P&L, Cash Flow, and Plan vs. Fact reporting",
+    "summary": "Manages all financial operations across the company. Revenue is captured automatically; expenses flow through a structured payment request and approval process. Every transaction is classified against a budget hierarchy, enabling fully automated P&L, Cash Flow, and Plan vs. Fact reporting across 6 parent categories and 30+ line items.",
+    "challenge": "FullFlat had no unified financial system — expenses were scattered across multiple spreadsheets, no approval workflow, manual P&L compilation, and no per-order profitability visibility.",
+    "solution": "I built a financial operations system on Airtable with automated revenue capture from Stripe/Paymob webhooks, expense approval workflow, structured budget classification, and fully automated P&L with per-order cost allocation.",
     "results": [
-      "10,000+ SKUs structured with consistent taxonomy, pricing, and media",
-      "Bilingual catalog (English/Arabic) managed from a single source of truth",
-      "Multi-supplier cost structure enables accurate unit economics across manufacturers",
-      "AI-generated interior scenes replace costly 3D rendering for lifestyle imagery",
-      "1,000+ products managed through structured SEO workflow",
-      "6-channel publishing (Shopify, Meta, Google, Pinterest, YouTube) from one interface"
+      "Fully automated P&L with 30+ budget line items — no manual spreadsheets",
+      "Real-time financial visibility: revenue, expenses, margins tracked end-to-end",
+      "Every expense goes through approval workflow before payment — full cost control",
+      "Per-order cost allocation enables profitability analysis at order level",
+      "Plan vs. Fact analysis supports financial planning and performance monitoring"
     ],
     "tools": [
       "Airtable",
-      "Shopify",
-      "Airpower",
-      "AI Image Generation",
-      "n8n"
+      "Stripe",
+      "Paymob",
+      "n8n",
+      "Airpower"
     ],
     "images": [],
-    "directLink": "fullflat-pim.html"
+    "directLink": "fullflat-finance.html"
   },
   {
     "id": "fullflat-taxonomy-reviews",
@@ -141,6 +107,68 @@
     "directLink": "fullflat-taxonomy-reviews.html"
   },
   {
+    "id": "artline-b2b-portal",
+    "title": "B2B Wholesale Portal",
+    "tagline": "Self-serve B2B portal for European business buyers: VAT-exempt tiered pricing, VIES-verified registration, and automated multi-language invoicing",
+    "companyLocation": "Romania",
+    "period": "2026",
+    "role": "Team Lead & Shopify Developer",
+    "company": "ARTLINE GROUP EU S.R.L.",
+    "summary": "Self-serve B2B portal for European business buyers: VAT-exempt tiered pricing, VIES-verified registration, and automated multi-language invoicing",
+    "tools": [
+      "Shopify",
+      "Bitrix24",
+      "n8n",
+      "VIES API"
+    ],
+    "directLink": "artline-b2b-portal.html"
+  },
+  {
+    "id": "artline-email-automation",
+    "title": "Email Marketing Migration & Automation",
+    "tagline": "Migrated Artline's email marketing from Shopify's native email to Klaviyo, rebuilding automation flows for a more effective, purpose-built platform",
+    "companyLocation": "Romania",
+    "period": "2026",
+    "role": "Architect & Automation Lead",
+    "company": "ARTLINE GROUP EU S.R.L.",
+    "summary": "Migrated Artline's email marketing from Shopify's native email to Klaviyo, rebuilding automation flows for a more effective, purpose-built platform",
+    "tools": [
+      "Klaviyo",
+      "Shopify",
+      "n8n"
+    ],
+    "directLink": "artline-email-automation.html"
+  },
+  {
+    "id": "fullflat-pim",
+    "company": "FullFlat LLC",
+    "companyLocation": "United Arab Emirates",
+    "role": "Systems Architect & COO",
+    "period": "Apr 2025 – Apr 2026",
+    "title": "Product Information Management System",
+    "tagline": "Bilingual furniture catalog with multi-supplier pricing and AI-generated interior imagery",
+    "summary": "Single source of truth for all product data across the business, for a furniture brand sourcing from multiple contract manufacturers and selling through a bilingual (English/Arabic) storefront. Manages the full product lifecycle from creation to publication.",
+    "challenge": "Product data lived disconnected from a Google Drive of unlinked images. The storefront ran in Arabic and English with no translation workflow, and Shopify's single-cost-per-product model couldn't represent unit economics across multiple contract manufacturers pricing the same product differently.",
+    "solution": "I built a PIM on Airtable with a dedicated Product × Supplier pricing table for accurate multi-manufacturer cost, bilingual EN/AR content management, AI-generated interior imagery replacing costly 3D rendering, and controlled multi-channel publishing (Shopify, Meta, Google, Pinterest, YouTube).",
+    "results": [
+      "10,000+ SKUs structured with consistent taxonomy, pricing, and media",
+      "Bilingual catalog (English/Arabic) managed from a single source of truth",
+      "Multi-supplier cost structure enables accurate unit economics across manufacturers",
+      "AI-generated interior scenes replace costly 3D rendering for lifestyle imagery",
+      "1,000+ products managed through structured SEO workflow",
+      "6-channel publishing (Shopify, Meta, Google, Pinterest, YouTube) from one interface"
+    ],
+    "tools": [
+      "Airtable",
+      "Shopify",
+      "Airpower",
+      "AI Image Generation",
+      "n8n"
+    ],
+    "images": [],
+    "directLink": "fullflat-pim.html"
+  },
+  {
     "id": "fullflat-oms-agent",
     "company": "FullFlat LLC",
     "companyLocation": "United Arab Emirates",
@@ -165,33 +193,5 @@
     ],
     "images": [],
     "directLink": "fullflat-oms-agent.html"
-  },
-  {
-    "id": "fullflat-finance",
-    "company": "FullFlat LLC",
-    "companyLocation": "United Arab Emirates",
-    "role": "Systems Architect & COO",
-    "period": "Apr 2025 – Apr 2026",
-    "title": "Financial Operations & P&L System",
-    "tagline": "30+ budget line items with fully automated P&L, Cash Flow, and Plan vs. Fact reporting",
-    "summary": "Manages all financial operations across the company. Revenue is captured automatically; expenses flow through a structured payment request and approval process. Every transaction is classified against a budget hierarchy, enabling fully automated P&L, Cash Flow, and Plan vs. Fact reporting across 6 parent categories and 30+ line items.",
-    "challenge": "FullFlat had no unified financial system — expenses were scattered across multiple spreadsheets, no approval workflow, manual P&L compilation, and no per-order profitability visibility.",
-    "solution": "I built a financial operations system on Airtable with automated revenue capture from Stripe/Paymob webhooks, expense approval workflow, structured budget classification, and fully automated P&L with per-order cost allocation.",
-    "results": [
-      "Fully automated P&L with 30+ budget line items — no manual spreadsheets",
-      "Real-time financial visibility: revenue, expenses, margins tracked end-to-end",
-      "Every expense goes through approval workflow before payment — full cost control",
-      "Per-order cost allocation enables profitability analysis at order level",
-      "Plan vs. Fact analysis supports financial planning and performance monitoring"
-    ],
-    "tools": [
-      "Airtable",
-      "Stripe",
-      "Paymob",
-      "n8n",
-      "Airpower"
-    ],
-    "images": [],
-    "directLink": "fullflat-finance.html"
   }
 ]
