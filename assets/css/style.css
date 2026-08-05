@@ -1881,17 +1881,18 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 768px) {
-  .project-nav-row {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px 0;
+  .project-nav-section {
+    padding: 24px var(--page-padding);
   }
-  .project-nav-row .project-nav-link:first-child { order: 1; }
-  .project-nav-row .project-nav-link:last-child { order: 2; }
-  .project-nav-row .project-nav-cta-view {
-    order: 3;
-    flex-basis: 100%;
-    text-align: center;
+  .project-nav-row {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .project-nav-cta-view {
+    flex: 1;
+    font-size: 15px;
+    white-space: nowrap;
   }
   .project-nav-cta { padding: 0; }
   .project-nav-cta-title { font-size: 32px; }
