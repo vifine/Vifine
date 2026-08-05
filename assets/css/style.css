@@ -1545,8 +1545,6 @@ img { max-width: 100%; display: block; }
   .skills-grid { grid-template-columns: 1fr 1fr; }
 
   .navbar-menu { display: none; }
-  .hero-buttons { flex-direction: column; width: 100%; }
-  .hero-buttons .btn { width: 100%; justify-content: center; }
 
   /* Project list rows: stack right block below left on mobile */
   .project-row {
@@ -1571,6 +1569,11 @@ img { max-width: 100%; display: block; }
   /* No hover on touch — show the elongated arrow state by default */
   .row-arrow-default { opacity: 0; }
   .row-arrow-hover { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .hero-buttons { flex-direction: column; width: 100%; }
+  .hero-buttons .btn { width: 100%; justify-content: center; }
 }
 
 /* ============================================
