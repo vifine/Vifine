@@ -86,7 +86,7 @@
       "text": "The operator also has the option to add custom products that fall outside the catalog, dropping in reference images directly. This covers the occasional off-catalog sale made at a client's request, so the visualization stays accurate even when an order includes something FullFlat doesn't normally carry."
     },
     {
-      "type": "heading",
+      "type": "subheading",
       "text": "Inside the Moodboard Editor"
     },
     {
