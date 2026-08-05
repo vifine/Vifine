@@ -861,6 +861,18 @@ img { max-width: 100%; display: block; }
   color: var(--text-secondary);
 }
 
+.exp-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.exp-location svg { flex-shrink: 0; color: var(--text-secondary); }
+
 .exp-content {
   display: flex;
   flex-direction: column;
