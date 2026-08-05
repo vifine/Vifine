@@ -1,10 +1,10 @@
 {
   "slug": "fullflat-ai-agents",
-  "breadcrumb": "AI Agents for E-commerce Operations",
-  "title": "AI Agents for E-commerce Operations",
+  "breadcrumb": "AI Agents for Taxonomy &amp; OMS Support",
+  "title": "AI Agents for Taxonomy &amp; OMS Support",
   "pitch": "Three AI agents on Airtable: Claude Sonnet handles 92% accurate product taxonomy and AI-generated social proof, GPT Image powers order visualizations with material swatches",
   "seo": {
-    "title": "AI Agents for E-commerce Operations — Airtable + Claude Case Study | Victoria Fine",
+    "title": "AI Agents for Taxonomy & OMS Support — Airtable + Claude Case Study | Victoria Fine",
     "description": "AI agents built natively in Airtable: Claude Sonnet powers automated product taxonomy classification at 92% accuracy with Telegram alerts and AI-generated customer reviews; GPT Image generates order visualizations with material swatches.",
     "keywords": "Airtable automation, Claude API, GPT Image, AI agents, product taxonomy, UGC generation, review automation, Airtable workflows, AI classification",
     "ogTitle": "AI Product Classification & Review Generation — Airtable Case Study",
