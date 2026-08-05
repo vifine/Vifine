@@ -62,6 +62,22 @@ function renderEachBlocks(template, data) {
   });
 }
 
+// Render {{#if path}} ... {{/if}} blocks — hides the block entirely when
+// the referenced value is falsy, an empty array, or an empty string.
+function renderIfBlocks(template, data) {
+  const ifRe = /{{#if ([\w.]+)}}\n?([\s\S]*?){{\/if}}\n?/g;
+
+  return template.replace(ifRe, (match, keyPath, inner) => {
+    const val = getByPath(data, keyPath);
+    const isEmpty =
+      val === undefined ||
+      val === null ||
+      val === '' ||
+      (Array.isArray(val) && val.length === 0);
+    return isEmpty ? '' : inner;
+  });
+}
+
 // Replace remaining {{dot.path}} placeholders from root data.
 function renderFields(template, data) {
   return template.replace(/{{([\w.]+)}}/g, (match, keyPath) => {
@@ -71,7 +87,8 @@ function renderFields(template, data) {
 }
 
 function render(template, data) {
-  let out = renderEachBlocks(template, data);
+  let out = renderIfBlocks(template, data);
+  out = renderEachBlocks(out, data);
   out = renderFields(out, data);
   return out;
 }

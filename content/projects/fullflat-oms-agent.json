@@ -100,29 +100,16 @@
       "text": "The agent runs as an Airtable automation inside the Order Management System, triggered on demand by a button click. No external infrastructure, no servers to manage—just Airtable's native automation coupled with GPT Image API calls. The visualizer sends its output straight to the client, closing the loop between order confirmation and delivery with a clear visual preview."
     }
   ],
-  "resultsIntro": "The visualizer agent turned an invisible gap in the order process into a clear customer-facing touchpoint:",
-  "resultsBullets": [
-    {
-      "bullet": "Order visualizations sent directly to clients",
-      "detail": "Customers see their full order laid out together in their selected materials and finishes before delivery—reducing pre-delivery uncertainty and post-purchase surprises."
-    },
-    {
-      "bullet": "Works for single products and full orders",
-      "detail": "The same agent handles a single catalog item preview or a complete multi-piece order, without separate tooling."
-    },
-    {
-      "bullet": "Real material swatches, not generic renders",
-      "detail": "Pulls from the same material library linked to each product variation, so what the customer sees matches what they'll receive."
-    },
-    {
-      "bullet": "Selective inclusion via star toggle",
-      "detail": "Operators control exactly which order line items appear in the visualization—useful when only part of an order (e.g. the Basic package) should be rendered."
-    },
-    {
-      "bullet": "Supports off-catalog custom items",
-      "detail": "Operators can drop in reference images for client-requested products outside the standard catalog, keeping visualizations accurate for one-off sales."
-    }
-  ],
+  "results": {
+    "metrics": [],
+    "bullets": [
+      "Order visualizations sent directly to clients—reducing pre-delivery uncertainty around material and color combinations",
+      "Works for single products and full orders using the same agent, without separate tooling",
+      "Real material swatches pulled from the same library linked to each product variation—not generic renders",
+      "Selective inclusion via star toggle lets operators control exactly which order line items appear in the render",
+      "Supports off-catalog custom items via operator-uploaded reference images for client-requested one-off sales"
+    ]
+  },
   "images": [],
   "directLink": "fullflat-oms-agent.html",
   "nav": {

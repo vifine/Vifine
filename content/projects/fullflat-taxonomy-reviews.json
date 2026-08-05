@@ -70,37 +70,27 @@
       "text": "Both agents run as Airtable automations, triggered by record changes in their respective tables. No external infrastructure, no servers to manage—just Airtable's native automation coupled with Claude Sonnet API calls. The product classifier sends alerts to a dedicated Telegram channel that the team monitors during business hours. The review generator publishes directly to the storefront via a pre-configured webhook, making reviews live within minutes of delivery confirmation."
     }
   ],
-  "resultsIntro": "The dual-agent system eliminated manual bottlenecks and converted dormant data into business value:",
-  "resultsBullets": [
-    {
-      "bullet": "92% accuracy on product taxonomy classification",
-      "detail": "Eliminates manual review for 92% of new products; catches errors on the 8% that need human check. Saves hours per week on data entry and quality control."
-    },
-    {
-      "bullet": "Real-time Telegram alerts for new products",
-      "detail": "QA team can review and approve (or flag) new classifications within minutes, not days. Prevents misclassified products from going live."
-    },
-    {
-      "bullet": "Product metadata auto-populated in PIM",
-      "detail": "SEO titles, descriptions, and taxonomy feed directly into the product database. No manual copy-pasting or re-entry."
-    },
-    {
-      "bullet": "Delivery photos converted to social proof within hours",
-      "detail": "UGS that previously sat unused now appears as reviews on the storefront. Zero manual moderation of photos or text."
-    },
-    {
-      "bullet": "Synthetic reviews ensure social proof availability",
-      "detail": "When CSAT data is missing, Claude generates a plausible review. Storefront always has fresh social proof, even on slow days."
-    },
-    {
-      "bullet": "Random avatar generation removes friction",
-      "detail": "No need to hire or license stock photos. Each review appears as a distinct person, increasing authenticity perception."
-    },
-    {
-      "bullet": "Automatic photo-to-product matching",
-      "detail": "Reviews are linked to the correct product without manual mapping. Customers see context-relevant social proof on product pages."
-    }
-  ],
+  "results": {
+    "metrics": [
+      {
+        "value": "92%",
+        "label": "Taxonomy accuracy"
+      },
+      {
+        "value": "Minutes",
+        "label": "Feed to QA alert"
+      }
+    ],
+    "bullets": [
+      "92% accuracy on product taxonomy classification—eliminates manual review for most products and catches ambiguous edge cases for human check",
+      "Real-time Telegram alerts enable QA team to approve or flag products within minutes instead of days",
+      "Product metadata (SEO titles, descriptions, taxonomy) auto-populated in PIM per company standard—zero manual entry",
+      "Delivery photos converted to social proof within hours of shipment—no manual UGC moderation or photo sourcing",
+      "Synthetic reviews ensure social proof availability even when CSAT data is missing—storefront always has fresh reviews",
+      "Random avatar generation removes friction and licensing costs—each review appears as a distinct person",
+      "Automatic photo-to-product matching ensures context-relevant social proof on product pages—no manual mapping"
+    ]
+  },
   "images": [],
   "directLink": "fullflat-taxonomy-reviews.html",
   "nav": {
