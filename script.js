@@ -321,14 +321,14 @@ function filterProjects() {
                 filterIconMain.style.opacity = '1';
                 filterIconMain.style.transform = 'rotate(0deg)';
                 filterIconClose.style.opacity = '0';
-                filterIconClose.style.transform = 'rotate(-90deg)';
+                filterIconClose.style.transform = 'rotate(90deg)';
             }
         } else if (selectedTools.size === 1) {
             filterLabel.textContent = Array.from(selectedTools)[0];
             // Показываем крестик, скрываем фильтр
             if (filterIconMain && filterIconClose) {
                 filterIconMain.style.opacity = '0';
-                filterIconMain.style.transform = 'rotate(90deg)';
+                filterIconMain.style.transform = 'rotate(-90deg)';
                 filterIconClose.style.opacity = '1';
                 filterIconClose.style.transform = 'rotate(0deg)';
             }
@@ -337,7 +337,7 @@ function filterProjects() {
             // Показываем крестик, скрываем фильтр
             if (filterIconMain && filterIconClose) {
                 filterIconMain.style.opacity = '0';
-                filterIconMain.style.transform = 'rotate(90deg)';
+                filterIconMain.style.transform = 'rotate(-90deg)';
                 filterIconClose.style.opacity = '1';
                 filterIconClose.style.transform = 'rotate(0deg)';
             }

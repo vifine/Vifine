@@ -2786,6 +2786,27 @@ body.menu-open .wa-widget {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+.filter-icon-container {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-icon-main {
+  position: absolute;
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.filter-icon-close {
+  position: absolute;
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
 .projects-filter-dropdown {
   position: absolute;
   top: 100%;
