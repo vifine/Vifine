@@ -30,7 +30,7 @@
   ],
   "techTags": [
     "Airtable",
-    "GPT Image",
+    "OpenAI",
     "AI Image Generation"
   ],
   "overview": "An AI agent built into FullFlat's Order Management System on Airtable, automating the creation of client-facing visuals. Every order gets a visualization pulling real material swatches from the catalog, so customers see exactly what they're getting before it ships.",

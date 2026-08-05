@@ -100,7 +100,7 @@
     },
     "tools": [
       "Airtable",
-      "Claude Sonnet",
+      "Anthropic",
       "n8n",
       "Telegram API"
     ],
@@ -190,7 +190,7 @@
     ],
     "tools": [
       "Airtable",
-      "GPT Image",
+      "OpenAI",
       "AI Image Generation"
     ],
     "images": [],
