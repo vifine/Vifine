@@ -51,7 +51,7 @@
     },
     {
       "type": "text",
-      "text": "Products enter PIM through two paths. Own furniture is created directly in the system — product, variants, materials, and 3D-rendered visuals. Each variant's SKU is generated through an automated, AI-assisted process built on a Material/Color/Size template, with a built-in uniqueness check that catches collisions before a SKU is saved — keeping codes consistent across thousands of variant combinations with zero manual entry. Accessories are imported from supplier feeds with automated sync of catalog data, pricing, stock levels, and images. The feed interface tracks sync status and update logs for every product, ensuring data consistency between supplier systems and PIM."
+      "text": "Products enter PIM through two paths. Own furniture is created directly in the system — product, variants, materials, and 3D-rendered visuals. Each variant's SKU is generated through an automated, AI-assisted process built on a Material/Color/Size template, with a built-in uniqueness check that catches collisions before a SKU is saved — keeping codes consistent across thousands of variant combinations with zero manual entry. Accessories are imported from supplier feeds with n8n-automated sync of catalog data, pricing, stock levels, and images. The feed interface tracks sync status and update logs for every product, ensuring data consistency between supplier systems and PIM."
     },
     {
       "type": "image",

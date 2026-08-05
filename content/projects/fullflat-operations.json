@@ -38,7 +38,7 @@
     "Paymob Webhook",
     "Bitrix24"
   ],
-  "overview": "The central hub of the platform, managing the full order lifecycle — from customer inquiry to delivery confirmation and post-delivery claims. All teams work within a single Airtable interface with role-specific views: sales managers handle orders and quoting, the fulfillment team manages procurement and supplier coordination, delivery supervisors confirm shipments from mobile, and management monitors performance through built-in reports.",
+  "overview": "The central hub of the platform, managing the full order lifecycle — from customer inquiry to delivery confirmation and post-delivery claims. All teams work within a single Airtable interface with role-specific views: sales managers handle orders and quoting, the fulfillment team manages procurement and supplier coordination, delivery supervisors confirm shipments from mobile, and management monitors performance through built-in reports. n8n orchestrates the automations connecting this hub to Shopify, Bitrix24, WhatsApp Business API, and the payment processors.",
   "challenge": "Orders were managed manually across spreadsheets and disconnected tools, with no centralized visibility into pipeline, margins, or delivery status. Supplier coordination and fulfillment planning required manual effort at every step, and there was no structured way to confirm deliveries or collect customer feedback.",
   "solutionIntro": "The system covers five core processes: Order Intake &amp; Sales Pipeline, Fulfillment &amp; Procurement, Delivery &amp; On-site Supervision, Claims Management, and Reporting &amp; Plan vs. Fact.",
   "solutionBlocks": [

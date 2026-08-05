@@ -36,7 +36,7 @@
   ],
   "overview": "Manages all financial operations across the company. Revenue is captured automatically; expenses flow through a structured payment request and approval process. Every transaction is classified against a budget hierarchy, enabling fully automated P&amp;L, Cash Flow, and Plan vs. Fact reporting.",
   "challenge": "Financial tracking was disconnected from operations — no real-time visibility into P&amp;L, cash flow, or transaction history. Expenses were tracked manually with no structured approval process, and profitability could not be calculated at the order level.",
-  "solutionIntro": "The system is built on a structured budget classification with 6 parent categories and 30+ line items: Revenue, COGS, Direct Selling Expenses, Indirect Selling Expenses, OPEX, and Financial Expenses. Every transaction is tagged with a budget category and a finance period. The P&amp;L is fully automated — plan and fact amounts are calculated per category per period, with no manual aggregation.",
+  "solutionIntro": "Built in Airtable with n8n handling the automation layer, the system runs on a structured budget classification with 6 parent categories and 30+ line items: Revenue, COGS, Direct Selling Expenses, Indirect Selling Expenses, OPEX, and Financial Expenses. Every transaction is tagged with a budget category and a finance period. The P&amp;L is fully automated — plan and fact amounts are calculated per category per period, with no manual aggregation.",
   "solutionBlocks": [
     {
       "type": "image",
@@ -50,7 +50,7 @@
     },
     {
       "type": "text",
-      "text": "Customer payments from Stripe and Paymob are captured automatically via webhooks and classified as Revenue. Claims and refunds are tracked separately under Sales Refunds. This eliminates any manual entry for incoming transactions — the moment a payment is processed, it appears in the financial system with full classification."
+      "text": "Customer payments from Stripe and Paymob are captured automatically via n8n-orchestrated webhooks and classified as Revenue. Claims and refunds are tracked separately under Sales Refunds. This eliminates any manual entry for incoming transactions — the moment a payment is processed, it appears in the financial system with full classification."
     },
     {
       "type": "image",

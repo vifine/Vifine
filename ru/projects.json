@@ -101,6 +101,7 @@
     "tools": [
       "Airtable",
       "Claude Sonnet",
+      "n8n",
       "Telegram API"
     ],
     "images": [],

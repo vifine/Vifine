@@ -31,6 +31,7 @@
   "techTags": [
     "Airtable",
     "Claude Sonnet",
+    "n8n",
     "Telegram API"
   ],
   "overview": "Two AI agents built natively in Airtable, automating the flow of new products and delivery photos into polished, PIM-standard content. New products from supplier feeds are classified into the company taxonomy and prepped for publication automatically. Delivery photos become customer reviews without manual moderation.",
@@ -49,6 +50,10 @@
       "type": "image",
       "src": "assets/img/projects/fullflat-taxonomy-reviews/01-product-classifier-n8n-flow.png",
       "alt": "n8n automation flow: CSV feed download, parsing, Airtable lookup, Anthropic product breakdown, Photoroom image generation, Airtable update, and Telegram notification"
+    },
+    {
+      "type": "text",
+      "text": "The pipeline runs as an n8n workflow: it downloads the supplier's CSV feed, parses it, looks up the matching product and variation records in Airtable, sends the product to Claude for classification, and writes the result back to Airtable before firing the Telegram alert."
     },
     {
       "type": "text",

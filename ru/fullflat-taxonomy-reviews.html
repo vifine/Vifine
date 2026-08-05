@@ -270,6 +270,7 @@
       <div class="project-tech-tags">
         <span class="project-tech-tag">Airtable</span>
         <span class="project-tech-tag">Claude Sonnet</span>
+        <span class="project-tech-tag">n8n</span>
         <span class="project-tech-tag">Telegram API</span>
       </div>
     </div>
@@ -300,6 +301,7 @@
       <h3 class="project-section-title" style="font-size:28px;">Agent 1: Product Classifier</h3>
       <p class="project-section-text" style="max-width:none;">Triggered whenever a new product appears in the supplier feed table, the agent receives the product data (name, description, price, attributes) and sends it to Claude Sonnet via a pre-configured Airtable prompt. The prompt is hardcoded with FullFlat's taxonomy rules and formatting standards. Claude classifies the product and returns: class, category, subcategory, model, series, options (color, material, size, and similar variation attributes), cost price, base price, SEO title, and SEO description—all pre-formatted to company spec and ready for the PIM. On success, the agent sends a real-time Telegram notification with the product name and a direct link to the Airtable record for instant QA review.</p>
       <img src="../assets/img/projects/fullflat-taxonomy-reviews/01-product-classifier-n8n-flow.png" alt="n8n automation flow: CSV feed download, parsing, Airtable lookup, Anthropic product breakdown, Photoroom image generation, Airtable update, and Telegram notification" class="project-img" style="">
+      <p class="project-section-text" style="max-width:none;">The pipeline runs as an n8n workflow: it downloads the supplier's CSV feed, parses it, looks up the matching product and variation records in Airtable, sends the product to Claude for classification, and writes the result back to Airtable before firing the Telegram alert.</p>
       <p class="project-section-text" style="max-width:none;">The agent achieves 92% accuracy on taxonomy placement, meaning most products are classified correctly on first pass. The remaining 8% catches edge cases or ambiguous products that need human review—a huge improvement over having to manually check every single new product.</p>
       <h3 class="project-section-title" style="font-size:28px;">Agent 2: Review Generator</h3>
       <p class="project-section-text" style="max-width:none;">Triggered when delivery photos are uploaded to the Airtable by the logistics partner's integration, the agent analyzes each photo using Claude's vision capabilities. It checks whether CSAT data exists for that order. If yes, it pulls the customer review and rating from the CSAT record. If no CSAT exists, it asks Claude to generate a plausible review based on the product and photo context—ensuring the storefront never lacks social proof even when real feedback isn't available.</p>
