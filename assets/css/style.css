@@ -1516,7 +1516,7 @@ img { max-width: 100%; display: block; }
   .resume-banner { padding: 60px 24px; }
   .footer { padding: 40px 24px; }
 
-  h1, .hero h1, .cv-hero h1 { font-size: 36px; line-height: 44px; }
+  h1, .hero h1, .cv-hero h1, .project-detail-hero h1 { font-size: 36px; line-height: 44px; }
   .expertise-header h2, .section-header h2 { font-size: 36px; line-height: 44px; }
   .about-content h2 { font-size: 40px; line-height: 48px; }
 
@@ -1897,6 +1897,9 @@ img { max-width: 100%; display: block; }
     flex-wrap: nowrap;
     justify-content: space-between;
     gap: 12px;
+  }
+  .project-nav-link-text {
+    display: none;
   }
   .project-nav-cta-view {
     flex: 1;
