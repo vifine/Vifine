@@ -46,6 +46,11 @@
       "text": "Triggered whenever a new product appears in the supplier feed table, the agent receives the product data (name, description, price, attributes) and sends it to Claude Sonnet via a pre-configured Airtable prompt. The prompt is hardcoded with FullFlat's taxonomy rules and formatting standards. Claude classifies the product and returns: product class, category, subcategory, model, series, options, SEO title, and SEO description—all pre-formatted to company spec and ready for the PIM. On success, the agent sends a real-time Telegram notification with the product name and a direct link to the Airtable record for instant QA review."
     },
     {
+      "type": "image",
+      "src": "assets/img/projects/fullflat-taxonomy-reviews/01-product-classifier-n8n-flow.png",
+      "alt": "n8n automation flow: CSV feed download, parsing, Airtable lookup, Anthropic product breakdown, Photoroom image generation, Airtable update, and Telegram notification"
+    },
+    {
       "type": "text",
       "text": "The agent achieves 92% accuracy on taxonomy placement, meaning most products are classified correctly on first pass. The remaining 8% catches edge cases or ambiguous products that need human review—a huge improvement over having to manually check every single new product."
     },
