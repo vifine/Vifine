@@ -56,6 +56,15 @@
       "text": "The pipeline runs as an n8n workflow: it downloads the supplier's CSV feed, parses it, looks up the matching product and variation records in Airtable, sends the product to Claude for classification, and writes the result back to Airtable before firing the Telegram alert."
     },
     {
+      "type": "image",
+      "src": "assets/img/projects/fullflat-taxonomy-reviews/05-pim-product-record-sync.png",
+      "alt": "PIM product record showing synced status, Claude-generated SEO description, and the automation log tracking each sync step (supplier prices, variants, images, product update)"
+    },
+    {
+      "type": "text",
+      "text": "The resulting PIM record shows the full trail: supplier prices, variants, and images synced in sequence, followed by the product update with Claude-generated type and SEO description — each step logged and timestamped so any failed sync is easy to trace back."
+    },
+    {
       "type": "text",
       "text": "The agent achieves 92% accuracy on taxonomy placement, meaning most products are classified correctly on first pass. The remaining 8% catches edge cases or ambiguous products that need human review—a huge improvement over having to manually check every single new product."
     },
