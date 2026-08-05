@@ -2,7 +2,7 @@
   "slug": "fullflat-ai-agents",
   "breadcrumb": "AI Product Classification &amp; UGC Review Generation",
   "title": "AI Product Classification &amp; UGC Review Generation",
-  "pitch": "Two Claude-powered agents on Airtable: 92% accurate product taxonomy automation and AI-generated social proof from delivery photos",
+  "pitch": "Three Claude-powered agents on Airtable: 92% accurate product taxonomy automation, AI-generated social proof from delivery photos, and order visualizations with material swatches",
   "seo": {
     "title": "AI Product Classification & Review Generation — Airtable + Claude Case Study | Victoria Fine",
     "description": "Dual Claude Sonnet agents built natively in Airtable: automated product taxonomy classification at 92% accuracy with Telegram alerts, plus AI-generated customer reviews from delivery photos and CSAT data.",
@@ -34,9 +34,9 @@
     "Telegram API",
     "AI Image Generation"
   ],
-  "overview": "Two AI agents built natively in Airtable using Claude Sonnet. The first automatically classifies products from 12-hourly supplier feeds into a company-standard 7-level taxonomy at 92% accuracy, with real-time Telegram QA alerts. The second transforms delivery photos (UGC) into social proof by analyzing them, pulling real CSAT reviews when available, generating synthetic reviews when not, creating random avatars, and matching photos to products in the catalog.",
-  "challenge": "FullFlat sources furniture from multiple contract manufacturers, receiving updated product feeds every 12 hours. Manual classification into the company's 7-level taxonomy (class, category, subcategory, model, series, options, metadata) was the bottleneck—every product needed human review before publication. Separately, the storefront lacked social proof: only customer purchases generated reviews, and hundreds of delivery photos from the logistics partner sat untapped. Manually moderating and matching UGS photos to products was time-consuming and error-prone.",
-  "solutionIntro": "Built two AI agents as Airtable automations, both powered by Claude Sonnet. The first runs on new supplier products and auto-classifies them into company standards; the second transforms delivery photos into social proof without manual review.",
+  "overview": "Three AI agents built natively in Airtable using Claude Sonnet. The first automatically classifies products from 12-hourly supplier feeds into a company-standard 7-level taxonomy at 92% accuracy, with real-time Telegram QA alerts. The second transforms delivery photos (UGC) into social proof by analyzing them, pulling real CSAT reviews when available, generating synthetic reviews when not, creating random avatars, and matching photos to products in the catalog. The third generates furniture layout visualizations with material swatches—for individual catalog products and for full customer orders—pulling from a material library linked to each product variation, and sending the result straight to the client.",
+  "challenge": "FullFlat sources furniture from multiple contract manufacturers, receiving updated product feeds every 12 hours. Manual classification into the company's 7-level taxonomy (class, category, subcategory, model, series, options, metadata) was the bottleneck—every product needed human review before publication. Separately, the storefront lacked social proof: only customer purchases generated reviews, and hundreds of delivery photos from the logistics partner sat untapped. Manually moderating and matching UGS photos to products was time-consuming and error-prone. On top of that, customers ordering multiple pieces had no way to see how their selections would look together—color and material combinations across a sofa, bed, side tables, and accent pieces were impossible to preview before delivery, creating uncertainty and occasional post-purchase dissatisfaction.",
+  "solutionIntro": "Built three AI agents as Airtable automations, all powered by Claude Sonnet. The first runs on new supplier products and auto-classifies them into company standards; the second transforms delivery photos into social proof without manual review; the third generates furniture visualizations on demand, either for a single catalog item or an entire client order.",
   "solutionBlocks": [
     {
       "type": "heading",
@@ -64,11 +64,28 @@
     },
     {
       "type": "heading",
+      "text": "Agent 3: Order &amp; Product Visualizer"
+    },
+    {
+      "type": "text",
+      "text": "This agent generates furniture layout visualizations pulling swatches from a material library linked to each product variation—shown above as an example: sofa, bed, side tables, lamp, and nightstands laid out together with their available finish options. It works two ways: on a single catalog product, to show a customer the material and color options for that item, or on a full customer order, combining every piece the customer bought into one coherent visualization with their exact selected finishes."
+    },
+    {
+      "type": "text",
+      "text": "When triggered on an order, the agent pulls each ordered item's variation record, retrieves the linked materials from the shared material library, and composes a layout image showing the full order together—rather than customers imagining how five separately-photographed pieces might look side by side in their chosen colors. The finished visualization is sent directly to the client via email or WhatsApp, giving them a clear preview of their order before it ships."
+    },
+    {
+      "type": "image",
+      "src": "assets/img/projects/fullflat-ai-agents/03-order-visualization-example.png",
+      "alt": "Example order visualization showing sofa, bed, lamp, side tables, and nightstands with linked material swatches"
+    },
+    {
+      "type": "heading",
       "text": "Integration &amp; Workflow"
     },
     {
       "type": "text",
-      "text": "Both agents run as Airtable automations, triggered by record changes in their respective tables. No external infrastructure, no servers to manage—just Airtable's native automation coupled with Claude Sonnet API calls. The product classifier sends alerts to a dedicated Telegram channel that the team monitors during business hours. The review generator publishes directly to the storefront via a pre-configured webhook, making reviews live within minutes of delivery confirmation."
+      "text": "All three agents run as Airtable automations, triggered by record changes in their respective tables. No external infrastructure, no servers to manage—just Airtable's native automation coupled with Claude Sonnet API calls. The product classifier sends alerts to a dedicated Telegram channel that the team monitors during business hours. The review generator publishes directly to the storefront via a pre-configured webhook, making reviews live within minutes of delivery confirmation. The visualizer sends its output straight to the client, closing the loop between order confirmation and delivery with a clear visual preview."
     }
   ],
   "resultsIntro": "The dual-agent system eliminated manual bottlenecks and converted dormant data into business value:",
@@ -100,6 +117,10 @@
     {
       "bullet": "Automatic photo-to-product matching",
       "detail": "Reviews are linked to the correct product without manual mapping. Customers see context-relevant social proof on product pages."
+    },
+    {
+      "bullet": "Order visualizations sent directly to clients",
+      "detail": "Customers see their full order laid out together in their selected materials and finishes before delivery—reducing pre-delivery uncertainty and post-purchase surprises."
     }
   ],
   "images": [],
