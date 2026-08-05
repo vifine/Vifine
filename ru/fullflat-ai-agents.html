@@ -14,8 +14,8 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
   <meta name="theme-color" content="#1A1A1A">
   <!-- SEO: Primary -->
-  <meta name="description" content="Dual Claude Sonnet agents built natively in Airtable: automated product taxonomy classification at 92% accuracy with Telegram alerts, plus AI-generated customer reviews from delivery photos and CSAT data.">
-  <meta name="keywords" content="Airtable automation, Claude API, AI agents, product taxonomy, UGC generation, review automation, Airtable workflows, AI classification">
+  <meta name="description" content="AI agents built natively in Airtable: Claude Sonnet powers automated product taxonomy classification at 92% accuracy with Telegram alerts and AI-generated customer reviews; GPT Image generates order visualizations with material swatches.">
+  <meta name="keywords" content="Airtable automation, Claude API, GPT Image, AI agents, product taxonomy, UGC generation, review automation, Airtable workflows, AI classification">
   <meta name="author" content="Victoria Fine">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://vifine.tech/ru/fullflat-ai-agents.html">
@@ -26,7 +26,7 @@
   <!-- SEO: Open Graph -->
   <meta property="og:type" content="article">
   <meta property="og:title" content="AI Product Classification & Review Generation — Airtable Case Study">
-  <meta property="og:description" content="Two Claude Sonnet agents tackle product taxonomy and social proof: 92% accurate classification with real-time alerts, plus synthetic reviews from delivery photos.">
+  <meta property="og:description" content="Claude Sonnet agents tackle product taxonomy and social proof: 92% accurate classification with real-time alerts, plus synthetic reviews from delivery photos and GPT Image-generated order visualizations.">
   <meta property="og:url" content="https://vifine.tech/fullflat-ai-agents.html">
   <meta property="og:image" content="https://vifine.tech/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -37,7 +37,7 @@
   <!-- SEO: Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AI Product Classification & Review Generation — Airtable Case Study">
-  <meta name="twitter:description" content="Two Claude Sonnet agents tackle product taxonomy and social proof: 92% accurate classification with real-time alerts, plus synthetic reviews from delivery photos.">
+  <meta name="twitter:description" content="Claude Sonnet agents tackle product taxonomy and social proof: 92% accurate classification with real-time alerts, plus synthetic reviews from delivery photos and GPT Image-generated order visualizations.">
   <meta name="twitter:image" content="https://vifine.tech/assets/img/og-image.png">
 
   <!-- Performance: Preconnect -->
@@ -50,9 +50,9 @@
   "@type": "CreativeWork",
   "name": "AI Product Classification &amp; UGC Review Generation",
   "url": "https://vifine.tech/fullflat-ai-agents.html",
-  "description": "Two Claude Sonnet agents tackle product taxonomy and social proof: 92% accurate classification with real-time alerts, plus synthetic reviews from delivery photos.",
+  "description": "Claude Sonnet agents tackle product taxonomy and social proof: 92% accurate classification with real-time alerts, plus synthetic reviews from delivery photos and GPT Image-generated order visualizations.",
   "author": {"@id": "https://vifine.tech/#person"},
-  "keywords": "Airtable automation, Claude API, AI agents, product taxonomy, UGC generation, review automation, Airtable workflows, AI classification",
+  "keywords": "Airtable automation, Claude API, GPT Image, AI agents, product taxonomy, UGC generation, review automation, Airtable workflows, AI classification",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -247,7 +247,7 @@
         <span>AI Product Classification &amp; UGC Review Generation</span>
       </div>
       <h1>AI Product Classification &amp; UGC Review Generation</h1>
-      <p class="project-pitch">Three Claude-powered agents on Airtable: 92% accurate product taxonomy automation, AI-generated social proof from delivery photos, and order visualizations with material swatches</p>
+      <p class="project-pitch">Three AI agents on Airtable: Claude Sonnet handles 92% accurate product taxonomy and AI-generated social proof, GPT Image powers order visualizations with material swatches</p>
       <div class="project-meta">
         <div class="project-meta-item">
           <p class="project-meta-label">Role</p>
@@ -284,7 +284,7 @@
     </div>
     <div class="project-block">
       <h2>Overview</h2>
-      <p>Three AI agents built natively in Airtable using Claude Sonnet. The first automatically classifies products from 12-hourly supplier feeds into a company-standard 7-level taxonomy at 92% accuracy, with real-time Telegram QA alerts. The second transforms delivery photos (UGC) into social proof by analyzing them, pulling real CSAT reviews when available, generating synthetic reviews when not, creating random avatars, and matching photos to products in the catalog. The third generates furniture layout visualizations with material swatches—for individual catalog products and for full customer orders—pulling from a material library linked to each product variation, and sending the result straight to the client.</p>
+      <p>Three AI agents built natively in Airtable. The first two run on Claude Sonnet: one automatically classifies products from 12-hourly supplier feeds into a company-standard 7-level taxonomy at 92% accuracy, with real-time Telegram QA alerts; the other transforms delivery photos (UGC) into social proof by analyzing them, pulling real CSAT reviews when available, generating synthetic reviews when not, creating random avatars, and matching photos to products in the catalog. The third runs on GPT Image and generates furniture layout visualizations with material swatches—for individual catalog products and for full customer orders—pulling from a material library linked to each product variation, and sending the result straight to the client.</p>
     </div>
   </div>
 
@@ -297,7 +297,7 @@
   <div class="project-section">
     <div class="project-detail-inner">
       <h2 class="project-section-title">Solution</h2>
-      <p class="project-section-text" style="max-width:none;">Built three AI agents as Airtable automations, all powered by Claude Sonnet. The first runs on new supplier products and auto-classifies them into company standards; the second transforms delivery photos into social proof without manual review; the third generates furniture visualizations on demand, either for a single catalog item or an entire client order.</p>
+      <p class="project-section-text" style="max-width:none;">Built three AI agents as Airtable automations. The first two run on Claude Sonnet: one auto-classifies new supplier products into company standards, the other transforms delivery photos into social proof without manual review. The third runs on GPT Image and generates furniture visualizations on demand, either for a single catalog item or an entire client order.</p>
       <h3 class="project-section-title" style="font-size:28px;">Agent 1: Product Classifier</h3>
       <p class="project-section-text" style="max-width:none;">Triggered whenever a new product appears in the supplier feed table, the agent receives the product data (name, description, price, attributes) and sends it to Claude Sonnet via a pre-configured Airtable prompt. The prompt is hardcoded with FullFlat's taxonomy rules and formatting standards. Claude classifies the product and returns: product class, category, subcategory, model, series, options, SEO title, and SEO description—all pre-formatted to company spec and ready for the PIM. On success, the agent sends a real-time Telegram notification with the product name and a direct link to the Airtable record for instant QA review.</p>
       <p class="project-section-text" style="max-width:none;">The agent achieves 92% accuracy on taxonomy placement, meaning most products are classified correctly on first pass. The remaining 8% catches edge cases or ambiguous products that need human review—a huge improvement over having to manually check every single new product.</p>
@@ -320,7 +320,7 @@
       <p class="project-section-text" style="max-width:none;">Underneath, the "Create Moodboards" automation runs on a button click: it takes the selected product images as input, sends them to an image generation model (GPT Image, low fidelity, landscape 1536x1024) with a prompt instructing it to compose a designer moodboard collage using the input images as-is without modification, then writes the result back to the record's Mood Boards attachment field via a follow-up script step.</p>
       <img src="../assets/img/projects/fullflat-ai-agents/07-moodboard-automation-airtable.png" alt="Airtable automation: button click triggers Generate Image action, then a script writes the output back to the Mood Boards field" class="project-img" style="">
       <h3 class="project-section-title" style="font-size:28px;">Integration &amp; Workflow</h3>
-      <p class="project-section-text" style="max-width:none;">All three agents run as Airtable automations, triggered by record changes in their respective tables. No external infrastructure, no servers to manage—just Airtable's native automation coupled with Claude Sonnet API calls. The product classifier sends alerts to a dedicated Telegram channel that the team monitors during business hours. The review generator publishes directly to the storefront via a pre-configured webhook, making reviews live within minutes of delivery confirmation. The visualizer sends its output straight to the client, closing the loop between order confirmation and delivery with a clear visual preview.</p>
+      <p class="project-section-text" style="max-width:none;">All three agents run as Airtable automations, triggered by record changes in their respective tables. No external infrastructure, no servers to manage—just Airtable's native automation coupled with API calls to Claude Sonnet for classification and review generation, and GPT Image for the visualizer. The product classifier sends alerts to a dedicated Telegram channel that the team monitors during business hours. The review generator publishes directly to the storefront via a pre-configured webhook, making reviews live within minutes of delivery confirmation. The visualizer sends its output straight to the client, closing the loop between order confirmation and delivery with a clear visual preview.</p>
     </div>
   </div>
 
