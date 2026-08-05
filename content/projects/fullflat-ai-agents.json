@@ -1,0 +1,36 @@
+{
+  "slug": "fullflat-ai-agents",
+  "breadcrumb": "AI Product Classification & UGC Review Generation",
+  "id": "fullflat-ai-agents",
+  "company": "FullFlat LLC",
+  "companyLocation": "United Arab Emirates",
+  "role": "Systems Architect & AI Integration Lead",
+  "period": "2026",
+  "title": "AI Product Classification & UGC Review Generation",
+  "tagline": "Dual AI agents on Airtable: automated product taxonomy with 92% accuracy, plus AI-generated social proof from delivery photos",
+  "pitch": "Two Claude-powered agents running natively in Airtable. Automate product taxonomy classification at 92% accuracy with real-time Telegram alerts, and transform delivery photos into social proof via CSAT data or AI-generated reviews.",
+  "summary": "Two Claude-powered agents running natively in Airtable. The first automatically classifies new supplier products into FullFlat's taxonomy (class, category, subcategory, model, series, options) and generates SEO titles/descriptions at 92% accuracy. The second transforms delivery service photos into customer reviews—pulling real CSAT feedback when available, generating synthetic reviews when not, creating random avatar images, and matching reviews to products via image analysis.",
+  "challenge": "FullFlat sources from multiple suppliers receiving product feeds every 12 hours. Manual classification into the company's 7-level taxonomy was a bottleneck: each product required human review for correctness. Separately, the storefront lacked social proof—only purchases from the business generated testimonials, and UGC from delivery photos sat unused.",
+  "solution": "Built two AI agents as Airtable automations:\n\n**Agent 1: Product Classifier**\nTriggered on new supplier feed items, the agent receives the product data and runs Claude Sonnet through a pre-configured Airtable prompt. It outputs: product class, category, subcategory, model, series, options, SEO title, and SEO description—all formatted to company standards. On completion, sends a real-time Telegram notification with the product name and link for review. Achieves 92% accuracy on taxonomy placement.\n\n**Agent 2: Review Generator**\nTriggers when delivery photos are uploaded by the logistics partner (UGS). The agent analyzes the photo, checks if CSAT data exists for that order, and either pulls the customer review from the CSAT record if available or generates a synthetic review using Claude if no CSAT exists. Then generates a random avatar image via the built-in agent field and uses image analysis to match the photo to a product in the catalog. Posts the review to the storefront.",
+  "results": [
+    "92% accuracy on product taxonomy classification—eliminating manual review for most products and catching errors on the 8%",
+    "Real-time Telegram alerts for new products enable instant QA review before storefront publication",
+    "Product metadata (SEO titles, descriptions, taxonomy) auto-populated in PIM per company standard",
+    "Delivery photos converted to social proof within hours of shipment confirmation—no manual UGC moderation needed",
+    "Synthetic reviews generated when CSAT unavailable—ensuring storefront never lacks social proof",
+    "Random avatar generation ensures review authenticity perception without external image dependencies"
+  ],
+  "tools": [
+    "Airtable",
+    "Claude Sonnet",
+    "Telegram API",
+    "AI Image Generation"
+  ],
+  "seo": {
+    "title": "AI Product Classification & Review Generation — Airtable Automation Case Study | Victoria Fine",
+    "description": "Dual Claude agents on Airtable: 92% accurate product taxonomy classification with Telegram alerts, plus AI-generated social proof from delivery photos and CSAT data.",
+    "og_image": ""
+  },
+  "images": [],
+  "directLink": "fullflat-ai-agents.html"
+}

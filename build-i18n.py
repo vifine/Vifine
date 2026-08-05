@@ -27,6 +27,7 @@ PAGES = [
     "artline-email-automation.html",
     "contact.html",
     "cv.html",
+    "fullflat-ai-agents.html",
     "fullflat-finance.html",
     "fullflat-operations.html",
     "fullflat-pim.html",
