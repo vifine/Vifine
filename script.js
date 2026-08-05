@@ -296,6 +296,7 @@ function filterProjects() {
     const noResults = document.getElementById('projectsNoResults');
     const searchInput = document.getElementById('projectsSearch');
     const filterLabel = document.getElementById('filterLabel');
+    const filterToggle = document.getElementById('filterToggle');
     const filterIconMain = document.querySelector('.filter-icon-main');
     const filterIconClose = document.querySelector('.filter-icon-close');
     if (!grid) return;
@@ -311,6 +312,11 @@ function filterProjects() {
 
     const filterAll = document.getElementById('filterAll');
     const isFilterAll = filterAll && filterAll.checked;
+
+    // Кнопка выглядит "активной" (тёмной), только когда реально выбран инструмент
+    if (filterToggle) {
+        filterToggle.classList.toggle('has-selection', !isFilterAll && selectedTools.size > 0);
+    }
 
     // Обновляем label фильтра и иконки
     if (filterLabel) {

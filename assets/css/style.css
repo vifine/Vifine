@@ -2790,9 +2790,9 @@ body.menu-open .wa-widget {
   align-items: center;
   gap: 12px;
   padding: 14px 18px;
-  border: 2px solid var(--text-primary);
+  border: 2px solid #E0E0E0;
   border-radius: 8px;
-  background: var(--bg-dark);
+  background: #fff;
   font-family: var(--font-sans);
   font-size: 15px;
   font-weight: 600;
@@ -2800,7 +2800,7 @@ body.menu-open .wa-widget {
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 @media (min-width: 769px) {
@@ -2811,14 +2811,23 @@ body.menu-open .wa-widget {
 }
 
 .projects-filter-toggle:hover {
-  background: #ECECEC;
+  border-color: var(--text-primary);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.projects-filter-toggle.is-open {
-  background: var(--bg-dark);
+.projects-filter-toggle.is-open,
+.projects-filter-toggle.has-selection {
+  background: var(--text-primary);
   border-color: var(--text-primary);
+  color: #fff;
+}
+
+.projects-filter-toggle.is-open .filter-icon-main,
+.projects-filter-toggle.is-open .filter-icon-close,
+.projects-filter-toggle.has-selection .filter-icon-main,
+.projects-filter-toggle.has-selection .filter-icon-close {
+  color: #fff;
 }
 
 .filter-toggle-icon {
