@@ -119,23 +119,6 @@ PAGES = {
     (">View Resume<", ">Резюме<"),
 ],
 
-"contact.html": [
-    ("<h1>Get in Touch</h1>", "<h1>Связаться</h1>"),
-    ("<p class=\"contact-subtitle\">Have a project in mind or want to discuss a role? I'd love to hear from you.</p>",
-     "<p class=\"contact-subtitle\">Есть проект на примете или хотите обсудить сотрудничество? Буду рада вас услышать.</p>"),
-    ('<h2 style="font-size:24px; margin-bottom:24px;">Contact channels</h2>',
-     '<h2 style="font-size:24px; margin-bottom:24px;">Каналы связи</h2>'),
-    ('<span class="contact-link-label">Upwork Profile</span>',
-     '<span class="contact-link-label">Профиль на Upwork</span>'),
-    ('<h2 style="font-size:24px; margin-bottom:24px;">Send a message</h2>',
-     '<h2 style="font-size:24px; margin-bottom:24px;">Написать сообщение</h2>'),
-    ('color:#666;">Name</label>', 'color:#666;">Имя</label>'),
-    ('placeholder="Your name"', 'placeholder="Ваше имя"'),
-    ('color:#666;">Email</label>', 'color:#666;">Email</label>'),
-    ('color:#666;">Message</label>', 'color:#666;">Сообщение</label>'),
-    ('placeholder="Tell me about your project or role..."', 'placeholder="Расскажите о проекте или роли..."'),
-    ('>Send Message<', '>Отправить<'),
-],
 
 "cv.html": [
     # Hero
@@ -385,7 +368,6 @@ def translate_projects_json():
 def main():
     page_paths = {
         "index.html": RU / "index.html",
-        "contact.html": RU / "contact" / "index.html",
         "cv.html": RU / "cv" / "index.html",
     }
 
@@ -412,7 +394,6 @@ def main():
         rel = html_file.relative_to(RU)
         already_done = {
             "index.html",
-            "contact/index.html",
             "cv/index.html",
         }
         if str(rel) in already_done:

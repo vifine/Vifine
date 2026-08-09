@@ -31,10 +31,7 @@ SITE_URL = "https://vifine.tech"
 
 # Top-level pages that live at /{slug}/ (i.e. {slug}/index.html).
 TOP_LEVEL_SLUGS = [
-    "contact",
     "cv",
-    "project-detail",
-    "project",
     "projects",
 ]
 
