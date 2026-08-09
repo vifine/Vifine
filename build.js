@@ -148,6 +148,36 @@ function build() {
     fs.writeFileSync(outPath, html, 'utf8');
     console.log('Built:', `projects/${data.slug}/index.html`);
   });
+
+  // ---- Russian case studies (translated content, same template) ----
+  const RU_CONTENT_DIR = path.join(ROOT, 'content', 'projects-ru');
+  if (fs.existsSync(RU_CONTENT_DIR)) {
+    const ruFiles = fs.readdirSync(RU_CONTENT_DIR).filter((f) => f.endsWith('.json'));
+    ruFiles.forEach((file) => {
+      const fullPath = path.join(RU_CONTENT_DIR, file);
+      let data;
+      try {
+        data = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+      } catch (e) {
+        console.error('Failed to parse', file, e.message);
+        return;
+      }
+      if (!data.slug) {
+        console.error('Missing "slug" field in', file, '— skipping.');
+        return;
+      }
+      const plainTitle = (data.title || '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+      const waMessage = `Здравствуйте, Виктория, я видел ваш проект ${plainTitle} и хочу обсудить похожую задачу`;
+      data.whatsappCtaHref = `https://wa.me/972538791843?text=${encodeURIComponent(waMessage)}`;
+
+      const html = render(template, data);
+      const outDir = path.join(ROOT, 'ru', 'projects', data.slug);
+      if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+      const outPath = path.join(outDir, 'index.html');
+      fs.writeFileSync(outPath, html, 'utf8');
+      console.log('Built:', `ru/projects/${data.slug}/index.html (RU)`);
+    });
+  }
 }
 
 build();

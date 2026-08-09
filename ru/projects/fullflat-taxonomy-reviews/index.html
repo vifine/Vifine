@@ -258,7 +258,7 @@
           <p class="project-meta-value">2026</p>
         </div>
       </div>
-      <p class="project-tech-label">Core Tech</p>
+      <p class="project-tech-label">Технологии</p>
       <div class="project-tech-tags">
         <span class="project-tech-tag">Airtable</span>
         <span class="project-tech-tag">Anthropic</span>
@@ -271,11 +271,11 @@
   <!-- ===== CHALLENGE & OVERVIEW ===== -->
   <div class="project-challenge-overview">
     <div class="project-block">
-      <h2>The Challenge</h2>
+      <h2>Задача</h2>
       <p>New products and delivery photos each needed several manual steps before they were publication-ready. Products from 12-hourly supplier feeds required manual classification into the company's 7-level taxonomy before they could go live. Delivery photos from the logistics partner sat unused instead of becoming reviews, since moderating and matching them to products by hand was slow.</p>
     </div>
     <div class="project-block">
-      <h2>Overview</h2>
+      <h2>Обзор</h2>
       <p>Two AI agents built natively in Airtable, automating the flow of new products and delivery photos into polished, PIM-standard content. New products from supplier feeds are classified into the company taxonomy and prepped for publication automatically. Delivery photos become customer reviews without manual moderation.</p>
     </div>
   </div>
@@ -288,7 +288,7 @@
   <!-- ===== SOLUTION ===== -->
   <div class="project-section">
     <div class="project-detail-inner">
-      <h2 class="project-section-title">Solution</h2>
+      <h2 class="project-section-title">Решение</h2>
       <p class="project-section-text" style="max-width:none;">Built two AI agents as Airtable automations, both running on Claude Sonnet. One auto-classifies new supplier products into company standards; the other transforms delivery photos into social proof without manual review.</p>
       <h3 class="project-section-title" style="font-size:28px;">Agent 1: Product Classifier</h3>
       <p class="project-section-text" style="max-width:none;">Triggered whenever a new product appears in the supplier feed table, the agent receives the product data (name, description, price, attributes) and sends it to Claude Sonnet via a pre-configured Airtable prompt. The prompt is hardcoded with FullFlat's taxonomy rules and formatting standards. Claude classifies the product and returns: class, category, subcategory, model, series, options (color, material, size, and similar variation attributes), cost price, base price, SEO title, and SEO description—all pre-formatted to company spec and ready for the PIM. On success, the agent sends a real-time Telegram notification with the product name and a direct link to the Airtable record for instant QA review.</p>
@@ -315,7 +315,7 @@
   <!-- ===== RESULTS ===== -->
   <div class="project-results">
     <div class="project-results-inner">
-      <h2 class="project-results-title">Impact</h2>
+      <h2 class="project-results-title">Результат</h2>
       <ul class="project-results-bullets">
         <li>92% accuracy on product taxonomy classification—eliminates manual review for most products and catches ambiguous edge cases for human check</li>
         <li>Real-time Telegram alerts enable QA team to approve or flag products within minutes instead of days</li>
