@@ -5,16 +5,22 @@ build-i18n.py (which only copies structure/paths, not text).
 
 Run in this exact order, every time any of these scripts changes:
 
-    rm -rf ru && python3 build-i18n.py && node build.js && python3 translate-ru.py
+    rm -rf ru && node build.js && python3 build-i18n.py && python3 translate-ru.py
 
-Why this order: build-i18n.py first scaffolds the /ru/ mirror for every page
-(including an English copy of each project case study, as a placeholder).
-build.js then regenerates the English project pages fresh AND, for any slug
-that has a translated file in content/projects-ru/, overwrites its ru/
-mirror with the real Russian case study (same template, translated content).
+Why this order: build.js runs first and writes fresh English case-study
+pages to projects/{slug}/, AND (for any slug with a translated file in
+content/projects-ru/) writes the true Russian case study directly to
+ru/projects/{slug}/. Neither of these has hreflang tags or the EN/RU
+toggle yet — the template doesn't include them; they're injected next.
+build-i18n.py then processes every page: for the English side, it adds
+hreflang/canonical/toggle in place. For the Russian side, if build.js
+already produced a real translation at that destination, build-i18n.py
+uses THAT as the base (just adding hreflang/canonical/toggle/nav-link
+fixes on top) instead of overwriting it with an English copy; only slugs
+without a translation yet fall back to the English-copy placeholder.
 translate-ru.py runs last and applies chrome-level Russian text (nav,
-footer, buttons) to every ru/ page — including case studies that don't have
-a full translation yet, so at minimum the navigation reads in Russian.
+footer, buttons) to every ru/ page — including case studies that don't
+have a full translation yet, so at minimum the navigation reads in Russian.
 
 Translations are plain (source_substring -> russian_substring) pairs per
 file. Keep pairs specific enough to be unambiguous; order matters when one
@@ -298,8 +304,17 @@ def fix_project_links(html: str) -> str:
     """Rewrite any href="/projects/{slug}/" (English case-study link) to
     href="/ru/projects/{slug}/" — catches things like the CV page's
     'Related Projects' pills, which reference specific case studies by
-    slug and aren't covered by the generic nav-chrome dictionary above."""
-    return re.sub(r'href="/projects/([a-z0-9-]+)/"', r'href="/ru/projects/\1/"', html)
+    slug and aren't covered by the generic nav-chrome dictionary above.
+
+    Excludes the EN/RU language toggle link specifically: that one is
+    supposed to point FROM a Russian project page BACK to the English
+    version, so /projects/{slug}/ is the correct (intentional) href there
+    and must not be rewritten."""
+    return re.sub(
+        r'href="/projects/([a-z0-9-]+)/"(?![^>]*class="lang-label)',
+        r'href="/ru/projects/\1/"',
+        html,
+    )
 
 
 PROJECT_CARD_TRANSLATIONS = {

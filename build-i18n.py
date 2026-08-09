@@ -163,7 +163,18 @@ def build():
         src_path.write_text(en_html, encoding="utf-8")
 
         # ---- Build the RU mirror ----
-        ru_html = original
+        # If build.js already rendered a real Russian translation for this
+        # slug (content/projects-ru/{slug}.json exists), that file is
+        # already sitting at the destination — use IT as the base instead
+        # of overwriting it with a copy of the English page. Only untranslated
+        # slugs fall back to the English-copy placeholder.
+        dest = ru_dest_path(slug)
+        if dest.exists() and slug in PROJECT_SLUGS:
+            ru_base = dest.read_text(encoding="utf-8")
+        else:
+            ru_base = original
+
+        ru_html = ru_base
         ru_html = ru_html.replace('<html lang="en">', '<html lang="ru">', 1)
         ru_html = add_hreflang(ru_html, slug)
         ru_html = re.sub(
@@ -172,10 +183,9 @@ def build():
             ru_html,
             count=1,
         )
-        ru_html = insert_lang_toggle(ru_html, "ru", en_url(slug).replace(SITE_URL, ""))
         ru_html = fix_ru_nav_links(ru_html)
+        ru_html = insert_lang_toggle(ru_html, "ru", en_url(slug).replace(SITE_URL, ""))
 
-        dest = ru_dest_path(slug)
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(ru_html, encoding="utf-8")
         print(f"  built: {slug}  ->  ru/{slug}")
