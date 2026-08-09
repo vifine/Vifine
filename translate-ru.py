@@ -116,6 +116,157 @@ PAGES = {
     ('>Send Message<', '>Отправить<'),
 ],
 
+"cv.html": [
+    # Hero
+    ('<p class="cv-subtitle">Systems Architect &amp; Integrator | E-commerce &amp; AI Automation<br>Based in Israel. Available remotely.</p>',
+     '<p class="cv-subtitle">Архитектор и интегратор систем | E-commerce и AI-автоматизация<br>Живу в Израиле. Доступна для удалённой работы.</p>'),
+
+    # Professional Summary
+    ("<h2>Professional Summary</h2>", "<h2>Профессиональное резюме</h2>"),
+    ('<p class="summary-text">Systems architect who has run the business the systems serve. 9+ years leading commercial and operational functions at retail and e-commerce companies — marketing, sales, procurement, fulfillment, warehouse, and finance, with full P&amp;L ownership and teams of 50+ — now applied to designing the data architecture, automations, and AI agents that run those functions day to day. The systems get built around what actually moves revenue and cuts operating cost, because the architecture decisions are made with full ownership of the business outcome, not just the technical build.</p>',
+     '<p class="summary-text">Архитектор систем, которая сама управляла бизнесом, для которого эти системы строит. 9+ лет руковожу коммерческими и операционными функциями в ритейле и e-commerce — маркетинг, продажи, закупки, фулфилмент, склад и финансы, с полной ответственностью за P&amp;L и командами 50+ человек — и теперь применяю этот опыт для проектирования архитектуры данных, автоматизации и AI-агентов, которые управляют этими функциями каждый день. Системы строятся вокруг того, что реально влияет на выручку и снижает издержки, потому что архитектурные решения принимаются с полным пониманием бизнес-результата, а не только технической реализации.</p>'),
+
+    ("<h2>Work Experience</h2>", "<h2>Опыт работы</h2>"),
+    (">Learn more <span", ">Подробнее <span"),
+    ('<p class="exp-related-label">Related Projects</p>', '<p class="exp-related-label">Похожие проекты</p>'),
+    (">View full case study", ">Смотреть полный кейс"),
+
+    # ARTLINE
+    ('<p class="exp-dates">Apr 2026 — Present</p>', '<p class="exp-dates">Апр 2026 — по настоящее время</p>'),
+    ('<span>Slovakia</span>', '<span>Словакия</span>'),
+    ('<p class="exp-role">E-commerce Director</p>', '<p class="exp-role">Директор по электронной коммерции</p>'),
+    ('<p class="exp-desc">Launched a new Shopify storefront for the European market from scratch — 7 languages, multi-currency — in 1.5 months. Built a B2B wholesale portal and automated key e-commerce processes.</p>',
+     '<p class="exp-desc">Запустила новый магазин на Shopify для европейского рынка с нуля — 7 языков, мультивалютность — за 1,5 месяца. Построила B2B-портал для оптовых продаж и автоматизировала ключевые процессы e-commerce.</p>'),
+    ('<li>Shopify store launched in 1.5 months from scratch — 7 languages, multi-currency, full product catalog.</li>',
+     '<li>Магазин на Shopify запущен за 1,5 месяца с нуля — 7 языков, мультивалютность, полный каталог товаров.</li>'),
+    ('<li>B2B wholesale portal with customer accounts, individual pricing, and automated order flow.</li>',
+     '<li>B2B-портал с личными кабинетами клиентов, индивидуальным ценообразованием и автоматизированной обработкой заказов.</li>'),
+    ('<li>Unified PIM catalog and digital asset library for centralised content management.</li>',
+     '<li>Единый PIM-каталог и библиотека медиафайлов для централизованного управления контентом.</li>'),
+    ('<li>Full automation stack: Shopify + Airtable + Bitrix24 + Klaviyo + n8n + WhatsApp Business API.</li>',
+     '<li>Полный стек автоматизации: Shopify + Airtable + Bitrix24 + Klaviyo + n8n + WhatsApp Business API.</li>'),
+    ('class="exp-pill">Shopify EU Launch<', 'class="exp-pill">Запуск Shopify в ЕС<'),
+    ('class="exp-pill">B2B Wholesale Portal<', 'class="exp-pill">B2B-портал<'),
+    ('class="exp-pill">Email Automation &amp; CRM<', 'class="exp-pill">Автоматизация email и CRM<'),
+
+    # FULLFLAT
+    ('<p class="exp-dates">Apr 2025 — Apr 2026</p>', '<p class="exp-dates">Апр 2025 — апр 2026</p>'),
+    ('<span>United Arab Emirates</span>', '<span>ОАЭ</span>'),
+    ('<p class="exp-role">Chief Operating Officer (COO)</p>', '<p class="exp-role">Операционный директор (COO)</p>'),
+    ('<p class="exp-desc">Designed and deployed a unified operations platform for a furniture retail chain, replacing disconnected tools with a single system. Integrated Shopify, Airtable, finance, logistics, and supplier workflows.</p>',
+     '<p class="exp-desc">Спроектировала и внедрила единую операционную платформу для сети мебельных магазинов, заменив разрозненные инструменты одной системой. Интегрировала Shopify, Airtable, финансы, логистику и работу с поставщиками.</p>'),
+    ('<li>Full control over 10,000+ SKUs with automated channel sync across all sales platforms.</li>',
+     '<li>Полный контроль над 10 000+ SKU с автоматической синхронизацией каналов на всех торговых платформах.</li>'),
+    ('<li>Real-time P&amp;L, Cash Flow, and plan vs. actual visibility for the entire business.</li>',
+     '<li>P&amp;L, Cash Flow и план-факт в реальном времени для всего бизнеса.</li>'),
+    ('<li>Automated order processing, supplier coordination, and fulfillment workflows.</li>',
+     '<li>Автоматизировала обработку заказов, координацию поставщиков и процессы фулфилмента.</li>'),
+    ('<li>Scalable operational foundation used daily by all departments.</li>',
+     '<li>Масштабируемая операционная база, которой ежедневно пользуются все отделы.</li>'),
+    ('class="exp-pill">Unified Operations Platform<', 'class="exp-pill">Единая операционная платформа<'),
+    ('class="exp-pill">Financial Operations &amp; P&amp;L<', 'class="exp-pill">Финансовые операции и P&amp;L<'),
+    ('class="exp-pill">PIM System<', 'class="exp-pill">PIM-система<'),
+    ('class="exp-pill">AI Agents: Taxonomy &amp; Reviews<', 'class="exp-pill">AI-агенты: таксономия и отзывы<'),
+    ('class="exp-pill">AI Order Visualizer<', 'class="exp-pill">AI-визуализатор заказов<'),
+
+    # EMEX
+    ('<p class="exp-dates">Sep 2023 — Dec 2024</p>', '<p class="exp-dates">Сен 2023 — дек 2024</p>'),
+    ('<p class="exp-role">Director of Commercial Business</p>', '<p class="exp-role">Директор коммерческого направления</p>'),
+    ('<p class="exp-desc">Built a new marketplace business unit for automotive parts from the ground up — team, supply chain, and first sales. Managed international supply chains across Southeast Asia, Europe, and the USA.</p>',
+     '<p class="exp-desc">Построила новое бизнес-направление маркетплейса автозапчастей с нуля — команда, цепочка поставок, первые продажи. Управляла международными цепочками поставок в Юго-Восточной Азии, Европе и США.</p>'),
+    ('<li>Built a supplier database of 300+ companies; established direct relationships with 80+ personally.</li>',
+     '<li>Сформировала базу из 300+ поставщиков; лично выстроила прямые отношения с 80+ из них.</li>'),
+    ('<li>Team established contact with 1,500 B2B leads across Europe, the Middle East, and Africa.</li>',
+     '<li>Команда установила контакт с 1500 B2B-лидами в Европе, на Ближнем Востоке и в Африке.</li>'),
+    ('<li>Implemented BI analytics for data-driven procurement and sales decisions.</li>',
+     '<li>Внедрила BI-аналитику для решений по закупкам и продажам на основе данных.</li>'),
+    ('<li>Automated CRM and SRM workflows with WhatsApp Business API and LiveAgent integration.</li>',
+     '<li>Автоматизировала процессы CRM и SRM с интеграцией WhatsApp Business API и LiveAgent.</li>'),
+
+    # TOP SPORTS
+    ('<p class="exp-dates">Feb 2017 — Sep 2023</p>', '<p class="exp-dates">Фев 2017 — сен 2023</p>'),
+    ('<span>Russia</span>', '<span>Россия</span>'),
+    ('<p class="exp-role">Commercial Director (CCO)</p>', '<p class="exp-role">Коммерческий директор (CCO)</p>'),
+    ('<p class="exp-desc">Led the commercial and product organization of a distributor and wholesale company (sales, procurement, logistics, marketing, development/automation, warehouse) across 3 departments, 50+ people. Launched 2 private label brands and grew marketplace revenue from 0 to 24% of total.</p>',
+     '<p class="exp-desc">Руководила коммерческим и продуктовым блоком дистрибьюторской и оптовой компании (продажи, закупки, логистика, маркетинг, разработка/автоматизация, склад) — 3 отдела, 50+ человек в подчинении. Запустила 2 собственные торговые марки и вырастила долю маркетплейсов с 0 до 24% выручки.</p>'),
+    ('<li>Increased company profitability 3.5x in two years by launching the online sales channel.</li>',
+     '<li>Увеличила прибыльность компании в 3,5 раза за два года благодаря запуску онлайн-канала продаж.</li>'),
+    ('<li>Launched private label brands Sledex and Skipper (24,000+ SKUs, China &amp; Taiwan) — by 2023 ~50% of revenue at 45%+ margin.</li>',
+     '<li>Запустила собственные бренды Sledex и Skipper (24 000+ SKU, Китай и Тайвань) — к 2023 году ~50% выручки с маржой 45%+.</li>'),
+    ('<li>Grew marketplace channel (Wildberries, Ozon, Amazon) from 0 to 24% of total revenue.</li>',
+     '<li>Вырастила канал маркетплейсов (Wildberries, Ozon, Amazon) с 0 до 24% от общей выручки.</li>'),
+    ('<li>Implemented CRM, BI analytics (Qlik Sense), and WMS across the entire company.</li>',
+     '<li>Внедрила CRM, BI-аналитику (Qlik Sense) и WMS во всей компании.</li>'),
+
+    # Indoor Environment Expert
+    ('<p class="exp-dates">Jan 2025 — Apr 2025</p>', '<p class="exp-dates">Янв 2025 — апр 2025</p>'),
+    ('<span>Germany</span>', '<span>Германия</span>'),
+    ('<p class="exp-role">Head of Ecommerce &amp; Digital</p>', '<p class="exp-role">Руководитель направления Ecommerce &amp; Digital</p>'),
+    ('<p class="exp-desc">Owned the digital infrastructure for a European e-commerce operation: integrating the storefront, marketplaces, and a multilingual PIM into one data management system.</p>',
+     '<p class="exp-desc">Отвечала за цифровую инфраструктуру европейского e-commerce-направления: объединила интернет-магазин, маркетплейсы и многоязычный PIM в единую систему управления данными.</p>'),
+    ('<li>Managed a multilingual product catalog in Pimcore across 4 languages, ensuring data quality and consistency across every sales channel (Shopify, Amazon, eBay, eMAG, Kaufland, OTTO).</li>',
+     '<li>Вела многоязычный каталог товаров в Pimcore на 4 языках, обеспечивая качество и согласованность данных на всех каналах продаж (Shopify, Amazon, eBay, eMAG, Kaufland, OTTO).</li>'),
+    ('<li>Led the rollout of end-to-end analytics on Qlik Sense to monitor sales, marketing performance, and channel effectiveness.</li>',
+     '<li>Внедрила сквозную аналитику на Qlik Sense для контроля продаж, маркетинга и эффективности каналов.</li>'),
+    ('<li>Owned the full e-commerce cycle, including integrating the storefront with external services and databases.</li>',
+     '<li>Отвечала за весь цикл e-commerce, включая интеграцию магазина с внешними сервисами и базами данных.</li>'),
+
+    # Sverkai
+    ('<p class="exp-dates">Feb 2016 — Feb 2017</p>', '<p class="exp-dates">Фев 2016 — фев 2017</p>'),
+    ('<p class="exp-role">Marketing Director</p>', '<p class="exp-role">Директор по маркетингу</p>'),
+    ('<p class="exp-desc">Led marketing and content production for a jewelry retail chain (16 direct reports, 21 B2B branches across Russia and the CIS); restructured product data and rebuilt the online store end to end.</p>',
+     '<p class="exp-desc">Руководила маркетингом и производством контента для сети ювелирного ритейла (16 человек в подчинении, 21 B2B-филиал по России и СНГ); реструктурировала товарные данные и полностью пересобрала интернет-магазин.</p>'),
+    ('<li>Restructured and re-categorized the product matrix, built a new nomenclature reference and rich content (photo, video, SEO copy) — taxonomy and catalog structuring.</li>',
+     '<li>Реструктурировала товарную матрицу, создала новый номенклатурный справочник и rich-контент (фото, видео, SEO-тексты) — таксономия и структура каталога.</li>'),
+    ('<li>Led a full rebrand of the sverkai.ru storefront: customer behavior research, CJM, catalog business logic, and management of product and dev teams.</li>',
+     '<li>Провела полный ребрендинг магазина sverkai.ru: исследование поведения покупателей, CJM, бизнес-логику каталога, руководила продуктовой и dev-командами.</li>'),
+    ('<li>Launched the TEOSA private-label brand on Wildberries (brand management in Russia, design in Italy, manufacturing in China).</li>',
+     '<li>Запустила собственный бренд TEOSA на Wildberries (управление брендом в России, дизайн в Италии, производство в Китае).</li>'),
+
+    # Megastroy
+    ('<p class="exp-dates">Jul 2015 — Dec 2015</p>', '<p class="exp-dates">Июл 2015 — дек 2015</p>'),
+    ('<p class="exp-role">Deputy CEO, Marketing</p>', '<p class="exp-role">Заместитель генерального директора по маркетингу</p>'),
+    ('<p class="exp-desc">Owned marketing for a DIY hypermarket chain and coordinated the launch of an online channel as an integration project inside a large offline company.</p>',
+     '<p class="exp-desc">Отвечала за маркетинг сети DIY-гипермаркетов и координировала запуск онлайн-канала как интеграционный проект внутри крупной офлайн-компании.</p>'),
+    ('<li>Coordinated the from-scratch launch of Megastroy.com, including integrating online sales into the operations of a large federal offline retailer.</li>',
+     '<li>Координировала запуск Megastroy.com с нуля, включая интеграцию онлайн-продаж в работу крупного федерального офлайн-ритейлера.</li>'),
+    ('<li>Developed the financial model for the loyalty program and owned software selection and integration.</li>',
+     '<li>Разработала финансовую модель программы лояльности, отвечала за выбор и внедрение ПО.</li>'),
+
+    # Skills
+    ("<h2>Core Skills &amp; Tools</h2>", "<h2>Ключевые навыки и инструменты</h2>"),
+    ('Practical execution platforms coupled with business intelligence models.',
+     'Практические инструменты внедрения в сочетании с моделями бизнес-аналитики.'),
+    ('<p class="skill-card-title">Operational &amp; Databases</p>', '<p class="skill-card-title">Операционка и базы данных</p>'),
+    ('<p class="skill-card-title">Workflow &amp; Integration</p>', '<p class="skill-card-title">Процессы и интеграции</p>'),
+    ('<p class="skill-card-title">E-Commerce &amp; Frontend</p>', '<p class="skill-card-title">E-commerce и фронтенд</p>'),
+    ('<p class="skill-card-title">Operations &amp; Business</p>', '<p class="skill-card-title">Операции и бизнес</p>'),
+
+    # AI Platforms
+    ("<h2>AI Platforms</h2>", "<h2>AI-платформы</h2>"),
+    ('<p class="ai-subtitle">Tools I use daily to build automations and AI-powered agent workflows.</p>',
+     '<p class="ai-subtitle">Инструменты, которые использую каждый день для автоматизации и AI-агентов.</p>'),
+
+    # Education
+    ("<h2>Education</h2>", "<h2>Образование</h2>"),
+    ('<p class="edu-degree">Master\'s Degree — Sociology</p>', '<p class="edu-degree">Магистратура — Социология</p>'),
+    ('<p class="edu-institution">Samara State University</p>', '<p class="edu-institution">Самарский государственный университет</p>'),
+    ('<p class="edu-details">Focus on social systems, organisational behaviour, and research methodology.</p>',
+     '<p class="edu-details">Специализация: социальные системы, организационное поведение, методология исследований.</p>'),
+    ('<p class="edu-degree">Teaching English as a Second or Foreign Language</p>', '<p class="edu-degree">Преподавание английского как иностранного</p>'),
+    ('<p class="edu-institution">Samara State Pedagogical College</p>', '<p class="edu-institution">Самарский государственный педагогический колледж</p>'),
+    ('<h2 style="margin-top:40px;">Certifications</h2>', '<h2 style="margin-top:40px;">Сертификаты</h2>'),
+
+    # Languages
+    ("<h2>Languages</h2>", "<h2>Языки</h2>"),
+    ('<span class="lang-name">Russian</span>', '<span class="lang-name">Русский</span>'),
+    ('<span class="lang-level">Native</span>', '<span class="lang-level">Родной</span>'),
+    ('<span class="lang-name">English</span>', '<span class="lang-name">Английский</span>'),
+    ('<span class="lang-level">C1 — Advanced</span>', '<span class="lang-level">C1 — продвинутый</span>'),
+    ('<span class="lang-name">Hebrew</span>', '<span class="lang-name">Иврит</span>'),
+    ('<span class="lang-level">B1 — Intermediate</span>', '<span class="lang-level">B1 — средний</span>'),
+],
+
 }
 
 
@@ -189,13 +340,17 @@ def translate_projects_json():
 
 
 def main():
+    page_paths = {
+        "index.html": RU / "index.html",
+        "contact.html": RU / "contact" / "index.html",
+        "cv.html": RU / "cv" / "index.html",
+    }
+
     for rel_page, pairs in PAGES.items():
-        if rel_page == "index.html":
-            path = RU / "index.html"
-        elif rel_page in ("contact.html",):
-            path = RU / rel_page.replace(".html", "") / "index.html"
-        else:
-            path = RU / rel_page
+        path = page_paths.get(rel_page)
+        if path is None:
+            print(f"no path mapping for {rel_page}, skipping")
+            continue
 
         if not path.exists():
             print(f"skip (not found): {path}")
@@ -214,6 +369,7 @@ def main():
         already_done = {
             "index.html",
             "contact/index.html",
+            "cv/index.html",
         }
         if str(rel) in already_done:
             continue
