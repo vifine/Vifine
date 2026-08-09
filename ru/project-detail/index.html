@@ -125,7 +125,10 @@
           desktopDropdown.classList.add('is-open');
           desktopDropdown.setAttribute('aria-hidden', 'false');
           burger.classList.add('is-active');
-          shiftLangToggle(true);
+          // Defer the layout read (getBoundingClientRect in shiftLangToggle)
+          // to the next frame so it doesn't force a synchronous reflow right
+          // after the class-add style write above.
+          requestAnimationFrame(function() { shiftLangToggle(true); });
           try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch(e) {}
         }
 

@@ -4,7 +4,10 @@
    Exact values from Figma API analysis
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+/* Google Fonts are loaded via <link> in <head>, not @import here —
+   @import inside CSS is render-blocking and forces a sequential fetch
+   chain (HTML -> CSS -> @import discovery -> fonts CSS -> font files)
+   instead of letting the browser fetch style.css and the fonts in parallel. */
 
 /* ---- CSS Variables (from Figma Design System) ---- */
 :root {

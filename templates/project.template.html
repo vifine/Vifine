@@ -40,6 +40,8 @@
   <!-- Performance: Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"></noscript>
 
   <script type="application/ld+json">
 {
@@ -171,7 +173,10 @@
           desktopDropdown.classList.add('is-open');
           desktopDropdown.setAttribute('aria-hidden', 'false');
           burger.classList.add('is-active');
-          shiftLangToggle(true);
+          // Defer the layout read (getBoundingClientRect in shiftLangToggle)
+          // to the next frame so it doesn't force a synchronous reflow right
+          // after the class-add style write above.
+          requestAnimationFrame(function() { shiftLangToggle(true); });
           try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch(e) {}
         }
 
