@@ -164,7 +164,7 @@
 
         function shiftLangToggle(open) {
           var langToggle = document.querySelector('.lang-toggle');
-          if (!langToggle) return;
+          if (!langToggle || getComputedStyle(langToggle).display === 'none') return;
           if (open) {
             var dropRect = desktopDropdown.getBoundingClientRect();
             var toggleRect = langToggle.getBoundingClientRect();

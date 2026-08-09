@@ -1,10 +1,18 @@
 // ============================================
+// Определение локали (для строк, которые script.js рендерит сам)
+// ============================================
+const IS_RU = location.pathname.startsWith('/ru/');
+const UI_STRINGS = IS_RU
+    ? { viewProject: 'Смотреть проект', discussProject: 'Обсудить похожий проект' }
+    : { viewProject: 'View project', discussProject: 'Discuss a Similar Project' };
+
+// ============================================
 // Загрузка данных проектов из JSON "базы данных"
 // ============================================
 
 async function loadProjects() {
     try {
-        const response = await fetch('/projects.json');
+        const response = await fetch(IS_RU ? '/ru/projects.json' : '/projects.json');
         if (!response.ok) throw new Error('Failed to load projects');
         return await response.json();
     } catch (error) {
@@ -47,7 +55,7 @@ function renderPortfolioGrid(projects) {
                 </div>
                 <div class="project-row-right">
                     <span class="project-row-right-inner">
-                        View project
+                        ${UI_STRINGS.viewProject}
                         <span class="row-arrow-wrap">
                             <img src="/assets/img/icons/row-arrow-default.svg?v=2" alt="" class="row-arrow row-arrow-default">
                             <img src="/assets/img/icons/row-arrow-hover.svg?v=2" alt="" class="row-arrow row-arrow-hover">
@@ -161,7 +169,7 @@ function renderProjectDetail(projects) {
         </div>
 
         <div class="project-detail-cta">
-            <a href="https://wa.me/972538791843?text=Hi%20Victoria%2C%20I%20saw%20your%20${encodeURIComponent(project.company)}%20project%20and%20want%20to%20discuss%20a%20similar%20challenge" class="btn btn-primary">Discuss a Similar Project</a>
+            <a href="https://wa.me/972538791843?text=${IS_RU ? encodeURIComponent(`Здравствуйте, Виктория, я видел ваш проект ${project.company} и хочу обсудить похожую задачу`) : encodeURIComponent(`Hi Victoria, I saw your ${project.company} project and want to discuss a similar challenge`)}" class="btn btn-primary">${UI_STRINGS.discussProject}</a>
         </div>
     `;
 }

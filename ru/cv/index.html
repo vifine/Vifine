@@ -86,9 +86,9 @@
     <div class="container">
       <a href="/" class="navbar-logo">Victoria Fine</a>
       <ul class="navbar-menu">
-        <li><a href="/" class="">Home</a></li>
-        <li><a href="/projects/" class="">Projects</a></li>
-        <li><a href="/cv/" class="active">CV</a></li>
+        <li><a href="/" class="">Главная</a></li>
+        <li><a href="/projects/" class="">Проекты</a></li>
+        <li><a href="/cv/" class="active">Резюме</a></li>
       </ul>
       <div class="lang-toggle lang-toggle--ru"><span class="lang-toggle-thumb"></span><a href="/cv/" class="lang-label lang-label-en">En</a><span class="lang-label lang-label-ru">Ru</span></div>
       <button class="navbar-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" style="background:none;border:none;outline:none;box-shadow:none;padding:0;-webkit-appearance:none;appearance:none;">
@@ -97,9 +97,9 @@
       
       <!-- Desktop Dropdown -->
       <div class="desktop-dropdown" id="desktopDropdown" aria-hidden="true">
-        <a href="/" class="desktop-dropdown-link ">Home</a>
-        <a href="/projects/" class="desktop-dropdown-link ">Projects</a>
-        <a href="/cv/" class="desktop-dropdown-link active">CV</a>
+        <a href="/" class="desktop-dropdown-link ">Главная</a>
+        <a href="/projects/" class="desktop-dropdown-link ">Проекты</a>
+        <a href="/cv/" class="desktop-dropdown-link active">Резюме</a>
       </div>
       <!-- /Desktop Dropdown -->
     </div>
@@ -115,9 +115,9 @@
       </button>
     </div>
     <nav class="mobile-menu-nav">
-      <a href="/" class="mobile-menu-link">Home</a>
-      <a href="/projects/" class="mobile-menu-link">Projects</a>
-      <a href="/cv/" class="mobile-menu-link active">CV</a>
+      <a href="/" class="mobile-menu-link">Главная</a>
+      <a href="/projects/" class="mobile-menu-link">Проекты</a>
+      <a href="/cv/" class="mobile-menu-link active">Резюме</a>
     </nav>
     <div class="mobile-menu-divider"></div>
     <div class="mobile-menu-social">
@@ -164,7 +164,7 @@
 
         function shiftLangToggle(open) {
           var langToggle = document.querySelector('.lang-toggle');
-          if (!langToggle) return;
+          if (!langToggle || getComputedStyle(langToggle).display === 'none') return;
           if (open) {
             var dropRect = desktopDropdown.getBoundingClientRect();
             var toggleRect = langToggle.getBoundingClientRect();
@@ -240,7 +240,7 @@
       <div>
         <h1>Victoria Fine</h1>
         <p class="cv-subtitle">Systems Architect &amp; Integrator | E-commerce &amp; AI Automation<br>Based in Israel. Available remotely.</p>
-        <a href="/assets/victoria-fine-cv.pdf" class="btn btn-primary" download style="margin-top:24px; display:inline-block;">Download CV</a>
+        <a href="/assets/victoria-fine-cv.pdf" class="btn btn-primary" download style="margin-top:24px; display:inline-block;">Скачать резюме</a>
       </div>
       <img src="/assets/img/profile-photo.png" alt="Victoria Fine" class="cv-photo">
     </div>
@@ -613,13 +613,13 @@
           <img src="/assets/img/icons/upwork.svg" alt="Upwork" width="40" height="40">
         </a>
       </div>
-      <p class="footer-credit">© 2026 Victoria Fine. All rights reserved.</p>
+      <p class="footer-credit">© 2026 Виктория Файн. Все права защищены.</p>
     </div>
   </footer>
 
 
   <!-- WhatsApp Widget -->
-  <a href="https://wa.me/972538791843?text=Hi%20Victoria!%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+  <a href="https://wa.me/972538791843?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D1%8F!%20%D0%AF%20%D0%B7%D0%B0%D1%88%D0%B5%D0%BB%20%D0%BD%D0%B0%20%D0%B2%D0%B0%D1%88%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B8%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%20%D0%B1%D1%8B%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82."
      class="wa-widget"
      target="_blank"
      rel="noopener noreferrer"

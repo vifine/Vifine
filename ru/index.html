@@ -97,9 +97,9 @@
     <div class="container">
       <a href="/" class="navbar-logo">Victoria Fine</a>
       <ul class="navbar-menu">
-        <li><a href="/" class="active">Home</a></li>
-        <li><a href="/projects/" class="">Projects</a></li>
-        <li><a href="/cv/" class="">CV</a></li>
+        <li><a href="/" class="active">Главная</a></li>
+        <li><a href="/projects/" class="">Проекты</a></li>
+        <li><a href="/cv/" class="">Резюме</a></li>
       </ul>
       <div class="lang-toggle lang-toggle--ru"><span class="lang-toggle-thumb"></span><a href="/" class="lang-label lang-label-en">En</a><span class="lang-label lang-label-ru">Ru</span></div>
       <!-- Burger button (mobile only) -->
@@ -109,9 +109,9 @@
       
       <!-- Desktop Dropdown -->
       <div class="desktop-dropdown" id="desktopDropdown" aria-hidden="true">
-        <a href="/" class="desktop-dropdown-link active">Home</a>
-        <a href="/projects/" class="desktop-dropdown-link ">Projects</a>
-        <a href="/cv/" class="desktop-dropdown-link ">CV</a>
+        <a href="/" class="desktop-dropdown-link active">Главная</a>
+        <a href="/projects/" class="desktop-dropdown-link ">Проекты</a>
+        <a href="/cv/" class="desktop-dropdown-link ">Резюме</a>
       </div>
       <!-- /Desktop Dropdown -->
     </div>
@@ -127,9 +127,9 @@
       </button>
     </div>
     <nav class="mobile-menu-nav">
-      <a href="/" class="mobile-menu-link active">Home</a>
-      <a href="/projects/" class="mobile-menu-link">Projects</a>
-      <a href="/cv/" class="mobile-menu-link">CV</a>
+      <a href="/" class="mobile-menu-link active">Главная</a>
+      <a href="/projects/" class="mobile-menu-link">Проекты</a>
+      <a href="/cv/" class="mobile-menu-link">Резюме</a>
     </nav>
     <div class="mobile-menu-divider"></div>
     <div class="mobile-menu-social">
@@ -176,7 +176,7 @@
 
         function shiftLangToggle(open) {
           var langToggle = document.querySelector('.lang-toggle');
-          if (!langToggle) return;
+          if (!langToggle || getComputedStyle(langToggle).display === 'none') return;
           if (open) {
             var dropRect = desktopDropdown.getBoundingClientRect();
             var toggleRect = langToggle.getBoundingClientRect();
@@ -249,14 +249,14 @@
   <!-- ===== HERO SECTION ===== -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Systems Architect & Builder<br>for E-commerce Operations</h1>
-      <p class="hero-subtitle">System design, storefront deployment, and operational integration.</p>
+      <h1>Архитектор и интегратор систем<br>для e-commerce</h1>
+      <p class="hero-subtitle">Проектирование систем, запуск интернет-магазинов и интеграция операционных процессов.</p>
       <div class="hero-actions">
         <div class="hero-buttons">
-          <a href="/contact/" class="btn btn-primary">Book a Discovery Call</a>
-          <a href="/projects/" class="btn btn-secondary">View My Projects</a>
+          <a href="/contact/" class="btn btn-primary">Запланировать звонок</a>
+          <a href="/projects/" class="btn btn-secondary">Смотреть проекты</a>
         </div>
-        <p class="hero-lang-note">Available in English and Russian</p>
+        <p class="hero-lang-note">Работаю на английском и русском языках</p>
       </div>
     </div>
   </section>
@@ -265,17 +265,17 @@
   <section class="about-section">
     <div class="about-inner">
       <div class="about-content">
-        <h2>Hey!</h2>
+        <h2>Привет!</h2>
         <div class="about-body">
-          <p>Hey, I'm Victoria — 15+ years in e-commerce and business automation. Based in Israel, I work in English and Russian.</p>
-          <p>I started in digital marketing and worked my way up to running sales, marketing, supply, fulfillment, warehouse, and finance — the whole operational side of a business, not just one piece of it.</p>
-          <p>That's usually what gets missed when someone hires a Shopify developer. The store launches fine, but three months later the inventory doesn't match across channels, orders are still tracked in a spreadsheet, and nobody fully trusts the numbers. Nobody thought to plan for that at the start.</p>
-          <p>I build for that from the beginning — the systems and automation that keep the business running once the store is live, not just the store itself.</p>
-          <p>Happy to help with anything that speeds up your e-commerce.</p>
+          <p>Привет, я Виктория — больше 15 лет в e-commerce и автоматизации бизнеса. Живу в Израиле, работаю на английском и русском.</p>
+          <p>Начинала с цифрового маркетинга и прошла путь до управления продажами, маркетингом, закупками, фулфилментом, складом и финансами — всей операционной частью бизнеса, а не отдельным её куском.</p>
+          <p>Именно это чаще всего упускают, когда нанимают разработчика на Shopify. Магазин запускается нормально, но через три месяца остатки не сходятся между каналами, заказы всё ещё ведутся в таблице, а цифрам никто до конца не доверяет. Об этом просто не подумали на старте.</p>
+          <p>Я закладываю это с самого начала — системы и автоматизацию, которые держат бизнес на ходу после запуска магазина, а не только сам магазин.</p>
+          <p>Буду рада помочь с тем, что ускорит ваш e-commerce.</p>
         </div>
       </div>
       <div class="about-illustration">
-        <img src="/assets/img/illustration-chaos-to-order.png" alt="From chaos to structured systems">
+        <img src="/assets/img/illustration-chaos-to-order.png" alt="От хаоса к структурированным системам">
       </div>
     </div>
   </section>
@@ -284,8 +284,8 @@
   <section class="expertise-section">
     <div class="expertise-inner">
       <div class="expertise-header">
-        <h2>Core Expertise</h2>
-        <p class="section-subtitle">Transforming fragmented workflows into intentional, scalable systems — from data foundations to storefront architecture and automation.</p>
+        <h2>Основная экспертиза</h2>
+        <p class="section-subtitle">Превращаю разрозненные процессы в продуманные, масштабируемые системы — от основ данных до архитектуры магазина и автоматизации.</p>
       </div>
       <div class="expertise-divider"></div>
       <div class="expertise-cards">
@@ -296,13 +296,13 @@
               <img src="/assets/img/icons/icon-operations.svg" alt="Operational Systems icon">
             </div>
             <div class="card-title-block">
-              <h3>Operational Systems</h3>
-              <p class="card-subtitle-text">From spreadsheets to a single source of truth.</p>
+              <h3>Операционные системы</h3>
+              <p class="card-subtitle-text">От таблиц к единому источнику данных.</p>
             </div>
           </div>
-          <p class="card-description">Design and deployment of custom databases and ERP/PIM solutions. Moving businesses from fragmented spreadsheets into a single source of truth for inventory, order management, and unit economics.</p>
+          <p class="card-description">Проектирование и внедрение баз данных и ERP/PIM-решений под задачу. Перевожу бизнес с разрозненных таблиц на единый источник данных для склада, заказов и юнит-экономики.</p>
           <div class="card-tools">
-            <p class="card-tools-label">Tools</p>
+            <p class="card-tools-label">Инструменты</p>
             <p class="card-tools-list">Airtable • Baserow • Supabase</p>
           </div>
         </div>
@@ -313,13 +313,13 @@
               <img src="/assets/img/icons/icon-automation.svg" alt="Workflow Automation icon">
             </div>
             <div class="card-title-block">
-              <h3>Workflow Automation</h3>
-              <p class="card-subtitle-text">Make your software stack communicate.</p>
+              <h3>Автоматизация процессов</h3>
+              <p class="card-subtitle-text">Чтобы все инструменты общались между собой.</p>
             </div>
           </div>
-          <p class="card-description">Eliminating manual data entry by connecting storefronts, warehouses, CRM, and payment gateways. I build seamless integrations that reduce errors and free up time for strategy.</p>
+          <p class="card-description">Убираю ручной ввод данных, связывая магазин, склад, CRM и платёжные системы. Строю интеграции, которые снижают количество ошибок и освобождают время для стратегии.</p>
           <div class="card-tools">
-            <p class="card-tools-label">Tools</p>
+            <p class="card-tools-label">Инструменты</p>
             <p class="card-tools-list">n8n • Custom APIs • Make</p>
           </div>
         </div>
@@ -330,13 +330,13 @@
               <img src="/assets/img/icons/icon-storefront.svg" alt="Storefront Architecture icon">
             </div>
             <div class="card-title-block">
-              <h3>Storefront Architecture</h3>
-              <p class="card-subtitle-text">Scalable e-commerce foundations.</p>
+              <h3>Архитектура интернет-магазина</h3>
+              <p class="card-subtitle-text">Масштабируемая основа для e-commerce.</p>
             </div>
           </div>
-          <p class="card-description">End-to-end development of scalable e-commerce platforms. From UI/UX prototyping to fully functional architectures, including B2B wholesale portals and multi-currency setups.</p>
+          <p class="card-description">Полный цикл разработки масштабируемых e-commerce платформ. От UI/UX-прототипов до полностью рабочей архитектуры, включая B2B-порталы и мультивалютные настройки.</p>
           <div class="card-tools">
-            <p class="card-tools-label">Tools</p>
+            <p class="card-tools-label">Инструменты</p>
             <p class="card-tools-list">Shopify • Wix • Figma</p>
           </div>
         </div>
@@ -349,14 +349,14 @@
   <section class="projects-section">
     <div class="projects-inner">
       <div class="section-header">
-        <h2>My Projects</h2>
-        <p class="section-subtitle">A selection of recent projects I've worked on.</p>
+        <h2>Мои проекты</h2>
+        <p class="section-subtitle">Подборка последних проектов, над которыми я работала.</p>
       </div>
       <div class="projects-list" id="portfolio-grid" data-limit="4">
         <!-- Projects will be loaded here by script.js -->
       </div>
       <div class="projects-cta">
-        <a href="/projects/" class="btn btn-primary">View All Projects</a>
+        <a href="/projects/" class="btn btn-primary">Все проекты</a>
       </div>
     </div>
   </section>
@@ -364,11 +364,11 @@
   <!-- ===== RESUME BANNER ===== -->
   <section class="resume-banner">
     <div class="resume-banner-inner">
-      <h2>Want to learn more about my experience?</h2>
-      <p>Check out my resume page or download a copy for a full overview of my skills and past roles.</p>
+      <h2>Хотите узнать больше о моём опыте?</h2>
+      <p>Загляните на страницу резюме или скачайте копию — там полный обзор навыков и опыта работы.</p>
       <div class="resume-banner-cta">
-        <a href="/cv/" class="btn btn-outline-dark" style="color:#fff;border-color:rgba(255,255,255,0.35);">View Resume</a>
-        <a href="/assets/victoria-fine-cv.pdf" class="btn btn-white-filled" download>Download CV</a>
+        <a href="/cv/" class="btn btn-outline-dark" style="color:#fff;border-color:rgba(255,255,255,0.35);">Резюме</a>
+        <a href="/assets/victoria-fine-cv.pdf" class="btn btn-white-filled" download>Скачать резюме</a>
       </div>
     </div>
   </section>
@@ -390,13 +390,13 @@
           <img src="/assets/img/icons/upwork.svg" alt="Upwork" width="40" height="40">
         </a>
       </div>
-      <p class="footer-credit">© 2026 Victoria Fine. All rights reserved.</p>
+      <p class="footer-credit">© 2026 Виктория Файн. Все права защищены.</p>
     </div>
   </footer>
 
 
   <!-- WhatsApp Widget -->
-  <a href="https://wa.me/972538791843?text=Hi%20Victoria!%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+  <a href="https://wa.me/972538791843?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D1%8F!%20%D0%AF%20%D0%B7%D0%B0%D1%88%D0%B5%D0%BB%20%D0%BD%D0%B0%20%D0%B2%D0%B0%D1%88%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B8%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%20%D0%B1%D1%8B%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82."
      class="wa-widget"
      target="_blank"
      rel="noopener noreferrer"
