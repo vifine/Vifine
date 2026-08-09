@@ -145,15 +145,15 @@
     ]
   },
   "nav": {
-    "prevHref": "/fullflat-operations/",
+    "prevHref": "/projects/fullflat-operations/",
     "prevLabel": "Previous Project",
-    "nextHref": "/fullflat-taxonomy-reviews/",
+    "nextHref": "/projects/fullflat-taxonomy-reviews/",
     "nextLabel": "Next Project",
-    "ctaHref": "/fullflat-taxonomy-reviews/",
+    "ctaHref": "/projects/fullflat-taxonomy-reviews/",
     "ctaLabel": "Next Project",
     "ctaTitle": "AI Agents for Taxonomy &amp; Product Reviews",
     "ctaDesc": "Automated the handling of new products and delivery photos to produce polished, PIM-standard content — taxonomy classification and customer reviews — without manual work at each step",
     "viewAllHref": "/projects/"
   },
-  "directLink": "/fullflat-pim/"
+  "directLink": "/projects/fullflat-pim/"
 }

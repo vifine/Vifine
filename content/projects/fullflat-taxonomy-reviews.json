@@ -122,13 +122,13 @@
     ]
   },
   "images": [],
-  "directLink": "/fullflat-taxonomy-reviews/",
+  "directLink": "/projects/fullflat-taxonomy-reviews/",
   "nav": {
-    "prevHref": "/fullflat-pim/",
+    "prevHref": "/projects/fullflat-pim/",
     "prevLabel": "Previous Project",
-    "nextHref": "/fullflat-oms-agent/",
+    "nextHref": "/projects/fullflat-oms-agent/",
     "nextLabel": "Next Project",
-    "ctaHref": "/fullflat-oms-agent/",
+    "ctaHref": "/projects/fullflat-oms-agent/",
     "ctaLabel": "Next Project",
     "ctaTitle": "AI Agent for Order Management System",
     "ctaDesc": "Automated the creation of client-facing order visualizations — pulling real material swatches from the catalog to show customers exactly what they bought before delivery",

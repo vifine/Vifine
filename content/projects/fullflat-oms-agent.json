@@ -111,13 +111,13 @@
     ]
   },
   "images": [],
-  "directLink": "/fullflat-oms-agent/",
+  "directLink": "/projects/fullflat-oms-agent/",
   "nav": {
-    "prevHref": "/fullflat-taxonomy-reviews/",
+    "prevHref": "/projects/fullflat-taxonomy-reviews/",
     "prevLabel": "Previous Project",
-    "nextHref": "/fullflat-finance/",
+    "nextHref": "/projects/fullflat-finance/",
     "nextLabel": "Next Project",
-    "ctaHref": "/fullflat-finance/",
+    "ctaHref": "/projects/fullflat-finance/",
     "ctaLabel": "Next Project",
     "ctaTitle": "Financial Operations &amp; P&amp;L System",
     "ctaDesc": "Fully automated financial operations — real-time P&amp;L, Cash Flow, and per-order profitability tracking",

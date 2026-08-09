@@ -126,15 +126,15 @@
     ]
   },
   "nav": {
-    "prevHref": "/artline-craft-storefront/",
+    "prevHref": "/projects/artline-craft-storefront/",
     "prevLabel": "Previous Project",
-    "nextHref": "/artline-email-automation/",
+    "nextHref": "/projects/artline-email-automation/",
     "nextLabel": "Next Project",
-    "ctaHref": "/artline-email-automation/",
+    "ctaHref": "/projects/artline-email-automation/",
     "ctaLabel": "Next Project",
     "ctaTitle": "Email Marketing Migration &amp; Automation",
     "ctaDesc": "Migrated Artline's email marketing from Shopify's native email to Klaviyo, rebuilding automation flows for a more effective, purpose-built platform",
     "viewAllHref": "/projects/"
   },
-  "directLink": "/artline-b2b-portal/"
+  "directLink": "/projects/artline-b2b-portal/"
 }

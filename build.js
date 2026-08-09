@@ -142,11 +142,11 @@ function build() {
     data.whatsappCtaHref = `https://wa.me/972538791843?text=${encodeURIComponent(waMessage)}`;
 
     const html = render(template, data);
-    const outDir = path.join(ROOT, data.slug);
+    const outDir = path.join(ROOT, 'projects', data.slug);
     if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
     const outPath = path.join(outDir, 'index.html');
     fs.writeFileSync(outPath, html, 'utf8');
-    console.log('Built:', `${data.slug}/index.html`);
+    console.log('Built:', `projects/${data.slug}/index.html`);
   });
 }
 

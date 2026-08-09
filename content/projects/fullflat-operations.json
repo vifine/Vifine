@@ -175,15 +175,15 @@
     ]
   },
   "nav": {
-    "prevHref": "/artline-email-automation/",
+    "prevHref": "/projects/artline-email-automation/",
     "prevLabel": "Previous Project",
-    "nextHref": "/fullflat-pim/",
+    "nextHref": "/projects/fullflat-pim/",
     "nextLabel": "Next Project",
-    "ctaHref": "/fullflat-pim/",
+    "ctaHref": "/projects/fullflat-pim/",
     "ctaLabel": "Next Project",
     "ctaTitle": "Product Information Management System",
     "ctaDesc": "Single source of truth for 10,000+ SKUs — bilingual content, multi-supplier pricing, and AI-generated imagery for a contract-manufactured furniture catalog",
     "viewAllHref": "/projects/"
   },
-  "directLink": "/fullflat-operations/"
+  "directLink": "/projects/fullflat-operations/"
 }

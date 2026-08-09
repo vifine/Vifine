@@ -116,15 +116,15 @@
     ]
   },
   "nav": {
-    "prevHref": "/fullflat-oms-agent/",
+    "prevHref": "/projects/fullflat-oms-agent/",
     "prevLabel": "Previous Project",
-    "nextHref": "/artline-craft-storefront/",
+    "nextHref": "/projects/artline-craft-storefront/",
     "nextLabel": "Next Project",
-    "ctaHref": "/artline-craft-storefront/",
+    "ctaHref": "/projects/artline-craft-storefront/",
     "ctaLabel": "Next Project",
     "ctaTitle": "Arts & Crafts Storefront Rebuild",
     "ctaDesc": "Rebuilt a patchwork multi-agency Shopify store into a self-maintainable arts & crafts storefront with proper catalog architecture",
     "viewAllHref": "/projects/"
   },
-  "directLink": "/fullflat-finance/"
+  "directLink": "/projects/fullflat-finance/"
 }

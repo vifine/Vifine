@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{seo.title}}</title>
+  <title>FullFlat PIM — Product Information Management System | Victoria Fine</title>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -14,17 +14,20 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
   <meta name="theme-color" content="#1A1A1A">
   <!-- SEO: Primary -->
-  <meta name="description" content="{{seo.description}}">
-  <meta name="keywords" content="{{seo.keywords}}">
+  <meta name="description" content="PIM system for 10,000+ SKUs built on Airtable. Bilingual content, multi-supplier cost structure, AI-generated imagery, and multi-channel Shopify publishing. Case study by Victoria Fine.">
+  <meta name="keywords" content="PIM system, Airtable PIM, Shopify product management, supplier feed automation, AI content generation, e-commerce catalog, bilingual e-commerce, multi-supplier pricing">
   <meta name="author" content="Victoria Fine">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://vifine.tech/projects/{{slug}}/">
+  <link rel="canonical" href="https://vifine.tech/projects/fullflat-pim/">
+  <link rel="alternate" hreflang="en" href="https://vifine.tech/projects/fullflat-pim/">
+  <link rel="alternate" hreflang="ru" href="https://vifine.tech/ru/projects/fullflat-pim/">
+  <link rel="alternate" hreflang="x-default" href="https://vifine.tech/projects/fullflat-pim/">
 
   <!-- SEO: Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="{{seo.ogTitle}}">
-  <meta property="og:description" content="{{seo.ogDescription}}">
-  <meta property="og:url" content="https://vifine.tech/projects/{{slug}}/">
+  <meta property="og:title" content="FullFlat PIM — Product Information Management System">
+  <meta property="og:description" content="Single source of truth for 10,000+ SKUs. Bilingual content, multi-supplier pricing, and AI-generated imagery.">
+  <meta property="og:url" content="https://vifine.tech/projects/fullflat-pim/">
   <meta property="og:image" content="https://vifine.tech/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -33,8 +36,8 @@
 
   <!-- SEO: Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{seo.ogTitle}}">
-  <meta name="twitter:description" content="{{seo.ogDescription}}">
+  <meta name="twitter:title" content="FullFlat PIM — Product Information Management System">
+  <meta name="twitter:description" content="Single source of truth for 10,000+ SKUs. Bilingual content, multi-supplier pricing, and AI-generated imagery.">
   <meta name="twitter:image" content="https://vifine.tech/assets/img/og-image.png">
 
   <!-- Performance: Preconnect -->
@@ -47,17 +50,17 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "{{title}}",
-  "url": "https://vifine.tech/projects/{{slug}}/",
-  "description": "{{seo.ogDescription}}",
+  "name": "Product Information Management System",
+  "url": "https://vifine.tech/projects/fullflat-pim/",
+  "description": "Single source of truth for 10,000+ SKUs. Bilingual content, multi-supplier pricing, and AI-generated imagery.",
   "author": {"@id": "https://vifine.tech/#person"},
-  "keywords": "{{seo.keywords}}",
+  "keywords": "PIM system, Airtable PIM, Shopify product management, supplier feed automation, AI content generation, e-commerce catalog, bilingual e-commerce, multi-supplier pricing",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vifine.tech/"},
       {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://vifine.tech/projects/"},
-      {"@type": "ListItem", "position": 3, "name": "{{title}}", "item": "https://vifine.tech/projects/{{slug}}/"}
+      {"@type": "ListItem", "position": 3, "name": "Product Information Management System", "item": "https://vifine.tech/projects/fullflat-pim/"}
     ]
   }
 }
@@ -83,6 +86,7 @@
         <li><a href="/projects/" class="active">Projects</a></li>
         <li><a href="/cv/" class="">CV</a></li>
       </ul>
+      <div class="lang-toggle"><span class="lang-toggle-thumb"></span><span class="lang-label lang-label-en">En</span><a href="/ru/projects/fullflat-pim/" class="lang-label lang-label-ru">Ru</a></div>
       <button class="navbar-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" style="background:none;border:none;outline:none;box-shadow:none;padding:0;-webkit-appearance:none;appearance:none;">
         <img src="/assets/img/icons/burger-doodle.svg" alt="Menu" width="53" height="53" class="burger-icon-img">
         <img src="/assets/img/icons/cross.svg" alt="Close" width="24" height="24" class="cross-icon-img">
@@ -232,23 +236,35 @@
       <div class="breadcrumb">
         <a href="/projects/">Projects</a>
         <span>/</span>
-        <span>{{breadcrumb}}</span>
+        <span>Product Information Management System</span>
       </div>
-      <h1>{{title}}</h1>
-      <p class="project-pitch">{{pitch}}</p>
+      <h1>Product Information Management System</h1>
+      <p class="project-pitch">Single source of truth for 10,000+ SKUs — bilingual content, multi-supplier pricing, and AI-generated imagery for a contract-manufactured furniture catalog</p>
       <div class="project-meta">
-{{#each meta}}
         <div class="project-meta-item">
-          <p class="project-meta-label">{{label}}</p>
-          <p class="project-meta-value">{{value}}</p>
+          <p class="project-meta-label">Role</p>
+          <p class="project-meta-value">Architect</p>
         </div>
-{{/each}}
+        <div class="project-meta-item">
+          <p class="project-meta-label">Company</p>
+          <p class="project-meta-value">FullFlat LLC</p>
+        </div>
+        <div class="project-meta-item">
+          <p class="project-meta-label">Location</p>
+          <p class="project-meta-value">UAE</p>
+        </div>
+        <div class="project-meta-item">
+          <p class="project-meta-label">Year</p>
+          <p class="project-meta-value">2025</p>
+        </div>
       </div>
       <p class="project-tech-label">Core Tech</p>
       <div class="project-tech-tags">
-{{#each techTags}}
-        <span class="project-tech-tag">{{this}}</span>
-{{/each}}
+        <span class="project-tech-tag">Airtable</span>
+        <span class="project-tech-tag">Shopify API</span>
+        <span class="project-tech-tag">n8n</span>
+        <span class="project-tech-tag">Airpower</span>
+        <span class="project-tech-tag">AI Image Generation</span>
       </div>
     </div>
   </div>
@@ -257,114 +273,89 @@
   <div class="project-challenge-overview">
     <div class="project-block">
       <h2>The Challenge</h2>
-      <p>{{challenge}}</p>
+      <p>The client had no structured way to manage site content — product data lived disconnected from a Google Drive full of unlinked images, with no system tying visuals to SKUs. The storefront ran in two languages (Arabic and English), with no workflow to manage translations. Because products were sourced from multiple contract manufacturers, Shopify's single-cost-per-product model couldn't support real unit economics — the same product could carry a different cost depending on which manufacturer fulfilled it, and Shopify had no way to represent that.</p>
     </div>
     <div class="project-block">
       <h2>Overview</h2>
-      <p>{{overview}}</p>
+      <p>Single source of truth for all product data across the business, for a furniture brand sourcing from multiple contract manufacturers and selling through a bilingual (English/Arabic) storefront. Manages the full product lifecycle — from initial creation to Shopify publication. The system serves three key roles: content manager (product data, translations, and visuals), procurement (multi-supplier pricing), and SEO specialist. AI-generated interior imagery replaces costly 3D rendering for lifestyle content.</p>
     </div>
   </div>
 
   <!-- ===== DISCUSS CTA (mid-page) ===== -->
   <div class="project-discuss-cta">
-    <a href="{{whatsappCtaHref}}" target="_blank" rel="noopener" class="btn btn-primary">Discuss a Similar Project</a>
+    <a href="https://wa.me/972538791843?text=Hi%20Victoria%2C%20I%20saw%20your%20Product%20Information%20Management%20System%20project%20and%20want%20to%20discuss%20a%20similar%20challenge" target="_blank" rel="noopener" class="btn btn-primary">Discuss a Similar Project</a>
   </div>
 
   <!-- ===== SOLUTION ===== -->
   <div class="project-section">
     <div class="project-detail-inner">
       <h2 class="project-section-title">Solution</h2>
-      <p class="project-section-text" style="max-width:none;">{{solutionIntro}}</p>
-{{#each solutionBlocks}}
-{{#if_heading}}
-      <h3 class="project-section-title" style="font-size:28px;">{{text}}</h3>
-{{/if_heading}}
-{{#if_subheading}}
-      <h4 class="project-section-title" style="font-size:20px;">{{text}}</h4>
-{{/if_subheading}}
-{{#if_text}}
-      <p class="project-section-text" style="max-width:none;">{{text}}</p>
-{{/if_text}}
-{{#if_image}}
-      <img src="{{src}}" alt="{{alt}}" class="project-img" style="{{style}}">
-{{/if_image}}
-{{#if_side}}
-      <div class="project-side-block">
-        <p class="project-section-text project-side-text" style="max-width:none;">{{text}}</p>
-        <img src="{{src}}" alt="{{alt}}" class="project-img project-side-img">
-      </div>
-{{/if_side}}
-{{#if_row2}}
-      <div class="project-row2-block">
-        <img src="{{src}}" alt="{{alt}}" class="project-img">
-        <img src="{{src2}}" alt="{{alt2}}" class="project-img">
-      </div>
-{{/if_row2}}
-{{#if_row4}}
-      <div class="project-row4-block">
-        <img src="{{src}}" alt="{{alt}}" class="project-img">
-        <img src="{{src2}}" alt="{{alt2}}" class="project-img">
-        <img src="{{src3}}" alt="{{alt3}}" class="project-img">
-        <img src="{{src4}}" alt="{{alt4}}" class="project-img">
-      </div>
-{{/if_row4}}
-{{#if_richsplit}}
-      <div class="project-split-block">
-        <div class="project-split-left">
-          <p class="project-section-text" style="max-width:none;">{{text}}</p>
-          <div class="project-split-images-row">
-            <img src="{{img1}}" alt="{{alt1}}" class="project-img">
-            <img src="{{img2}}" alt="{{alt2}}" class="project-img">
-          </div>
-          <p class="project-section-text" style="max-width:none;">{{text2}}</p>
-          <img src="{{img3}}" alt="{{alt3}}" class="project-img">
-        </div>
-        <img src="{{src}}" alt="{{alt}}" class="project-img project-split-right">
-      </div>
-{{/if_richsplit}}
-{{/each}}
+      <p class="project-section-text" style="max-width:none;">The system manages the full product lifecycle across two entry paths, a multi-supplier cost structure, bilingual content, and multi-channel publishing to Shopify and beyond.</p>
+      <img src="/assets/img/projects/fullflat-pim/00-full-flow-diagram.png" alt="FullFlat PIM full product lifecycle — from creation to publishing" class="project-img" style="margin: 24px 0 40px;">
+      <h3 class="project-section-title" style="font-size:28px;">Product Entry &amp; Supplier Feeds</h3>
+      <p class="project-section-text" style="max-width:none;">Products enter PIM through two paths. Own furniture is created directly in the system — product, variants, materials, and 3D-rendered visuals. Each variant's SKU is generated through an automated, AI-assisted process built on a Material/Color/Size template, with a built-in uniqueness check that catches collisions before a SKU is saved — keeping codes consistent across thousands of variant combinations with zero manual entry. Accessories are imported from supplier feeds with n8n-automated sync of catalog data, pricing, stock levels, and images. The feed interface tracks sync status and update logs for every product, ensuring data consistency between supplier systems and PIM.</p>
+      <img src="/assets/img/projects/fullflat/15_image_15.png" alt="Supplier feed sync interface" class="project-img" style="margin-bottom:16px;">
+      <img src="/assets/img/projects/fullflat/16_image_16.png" alt="Product enrichment view" class="project-img" style="margin-bottom:40px;">
+      <h3 class="project-section-title" style="font-size:28px;">Multi-Supplier Cost Structure</h3>
+      <p class="project-section-text" style="max-width:none;">Since products are sourced from different contract manufacturers at different prices, cost couldn't live on the product record alone. A dedicated linked Product × Supplier pricing table ties cost to the specific product-supplier pair, giving accurate unit economics regardless of which manufacturer fulfills a given order — something Shopify's native single-cost-field model can't represent.</p>
+      <img src="/assets/img/projects/fullflat-pim/01-supplier-pricing-table.png" alt="Multi-supplier pricing table per variant with procurement cost and margin" class="project-img" style="margin-bottom:40px;">
+      <h3 class="project-section-title" style="font-size:28px;">Bilingual Content &amp; AI-Generated Imagery</h3>
+      <p class="project-section-text" style="max-width:none;">Every product carries full English and Arabic content side by side, with Arabic translations managed directly by the content manager in Airtable. For lifestyle imagery, rendering each product into realistic interior scenes was costly with traditional 3D rendering — instead, product renders are run through a third-party AI interior-generation service against a fixed set of template scenes, producing lifestyle imagery at a fraction of the cost and time.</p>
+      <h3 class="project-section-title" style="font-size:28px;">Enrichment, SEO &amp; Publishing</h3>
+      <p class="project-section-text" style="max-width:none;">Each product goes through a structured enrichment process: taxonomy mapping, product attributes and metafields, SEO titles and descriptions. The SEO specialist works in a dedicated view across 1,000+ products, tracking readiness status for each item.</p>
+      <p class="project-section-text" style="max-width:none;">Ready products are published to Shopify with full control over publishing channels — Online Store, Meta, Google &amp; YouTube, Pinterest. Each product carries its taxonomy-driven collections, tags, metafields, and media. Sync status is tracked per product with two methods: Airpower for bulk updates and Shopify API for individual products with variants and bundles.</p>
+      <img src="/assets/img/projects/fullflat/17_image_17.png" alt="SEO enrichment workflow" class="project-img" style="margin-bottom:16px;">
+      <img src="/assets/img/projects/fullflat/18_image_18.png" alt="Shopify publishing control" class="project-img" style="margin-bottom:16px;">
+      <img src="/assets/img/projects/fullflat/19_image_19.png" alt="Multi-channel publishing status" class="project-img" style="">
     </div>
   </div>
 
   <!-- ===== RESULTS ===== -->
-{{#if results.bullets}}
   <div class="project-results">
     <div class="project-results-inner">
       <h2 class="project-results-title">Impact</h2>
-{{#if results.metrics}}
       <div class="project-results-metrics">
-{{#each results.metrics}}
         <div class="project-results-metric">
-          <p class="project-results-metric-value">{{value}}</p>
-          <p class="project-results-metric-label">{{label}}</p>
+          <p class="project-results-metric-value">10,000+</p>
+          <p class="project-results-metric-label">SKUs structured</p>
         </div>
-{{/each}}
+        <div class="project-results-metric">
+          <p class="project-results-metric-value">1,000+</p>
+          <p class="project-results-metric-label">Products in SEO workflow</p>
+        </div>
+        <div class="project-results-metric">
+          <p class="project-results-metric-value">6</p>
+          <p class="project-results-metric-label">Publishing channels</p>
+        </div>
       </div>
-{{/if}}
       <ul class="project-results-bullets">
-{{#each results.bullets}}
-        <li>{{this}}</li>
-{{/each}}
+        <li>10,000+ SKUs structured in a single system with consistent taxonomy, pricing, and media</li>
+        <li>Bilingual catalog (English/Arabic) managed from a single source of truth</li>
+        <li>Multi-supplier cost structure enables accurate unit economics despite variable manufacturer pricing</li>
+        <li>Supplier feed automation eliminates manual data entry for the accessories catalog</li>
+        <li>AI-generated interior scenes replace costly 3D rendering for lifestyle imagery</li>
+        <li>AI-assisted SKU generation with automated uniqueness checks eliminates manual entry errors across thousands of variant combinations</li>
+        <li>SEO managed at scale across 1,000+ products with a structured workflow</li>
+        <li>Multi-channel publishing (Shopify, Meta, Google, Pinterest) from one interface</li>
       </ul>
     </div>
   </div>
-{{/if}}
 
   <!-- ===== DISCUSS CTA ===== -->
   <div class="project-discuss-cta">
-    <a href="{{whatsappCtaHref}}" target="_blank" rel="noopener" class="btn btn-primary">Discuss a Similar Project</a>
+    <a href="https://wa.me/972538791843?text=Hi%20Victoria%2C%20I%20saw%20your%20Product%20Information%20Management%20System%20project%20and%20want%20to%20discuss%20a%20similar%20challenge" target="_blank" rel="noopener" class="btn btn-primary">Discuss a Similar Project</a>
   </div>
 
   <!-- ===== PROJECT NAV ===== -->
   <div class="project-nav-section">
     <div class="project-nav-row">
-      <a href="{{nav.prevHref}}" class="project-nav-link">
+      <a href="/projects/fullflat-operations/" class="project-nav-link">
         <img src="/assets/img/icons/row-arrow-hover.svg" alt="" class="project-nav-arrow project-nav-arrow--prev">
-        <span class="project-nav-link-text">{{nav.prevLabel}}</span>
+        <span class="project-nav-link-text">Previous Project</span>
       </a>
-      <a href="{{nav.viewAllHref}}" class="project-nav-cta-view">View All Projects</a>
-      <a href="{{nav.nextHref}}" class="project-nav-link">
-        <span class="project-nav-link-text">{{nav.nextLabel}}</span>
+      <a href="/projects/" class="project-nav-cta-view">View All Projects</a>
+      <a href="/projects/fullflat-taxonomy-reviews/" class="project-nav-link">
+        <span class="project-nav-link-text">Next Project</span>
         <img src="/assets/img/icons/row-arrow-hover.svg" alt="" class="project-nav-arrow">
       </a>
     </div>

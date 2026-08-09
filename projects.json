@@ -12,7 +12,7 @@
       "Airpower",
       "n8n"
     ],
-    "directLink": "/artline-craft-storefront/",
+    "directLink": "/projects/artline-craft-storefront/",
     "company": "ARTLINE GROUP EU S.R.L.",
     "role": "Architect, UI/UX Designer & Shopify Developer",
     "summary": "Rebuilt a patchwork multi-agency Shopify store into a self-maintainable storefront with proper catalog architecture"
@@ -43,7 +43,7 @@
       "WhatsApp Business API"
     ],
     "images": [],
-    "directLink": "/fullflat-operations/"
+    "directLink": "/projects/fullflat-operations/"
   },
   {
     "id": "fullflat-finance",
@@ -71,7 +71,7 @@
       "Airpower"
     ],
     "images": [],
-    "directLink": "/fullflat-finance/"
+    "directLink": "/projects/fullflat-finance/"
   },
   {
     "id": "fullflat-taxonomy-reviews",
@@ -105,7 +105,7 @@
       "Telegram API"
     ],
     "images": [],
-    "directLink": "/fullflat-taxonomy-reviews/"
+    "directLink": "/projects/fullflat-taxonomy-reviews/"
   },
   {
     "id": "artline-b2b-portal",
@@ -122,7 +122,7 @@
       "n8n",
       "VIES API"
     ],
-    "directLink": "/artline-b2b-portal/"
+    "directLink": "/projects/artline-b2b-portal/"
   },
   {
     "id": "artline-email-automation",
@@ -139,7 +139,7 @@
       "Shopify",
       "n8n"
     ],
-    "directLink": "/artline-email-automation/"
+    "directLink": "/projects/artline-email-automation/"
   },
   {
     "id": "fullflat-pim",
@@ -168,7 +168,7 @@
       "n8n"
     ],
     "images": [],
-    "directLink": "/fullflat-pim/"
+    "directLink": "/projects/fullflat-pim/"
   },
   {
     "id": "fullflat-oms-agent",
@@ -194,6 +194,6 @@
       "AI Image Generation"
     ],
     "images": [],
-    "directLink": "/fullflat-oms-agent/"
+    "directLink": "/projects/fullflat-oms-agent/"
   }
 ]

@@ -194,15 +194,15 @@
     ]
   },
   "nav": {
-    "prevHref": "/fullflat-finance/",
+    "prevHref": "/projects/fullflat-finance/",
     "prevLabel": "Previous Project",
-    "nextHref": "/artline-b2b-portal/",
+    "nextHref": "/projects/artline-b2b-portal/",
     "nextLabel": "Next Project",
-    "ctaHref": "/artline-b2b-portal/",
+    "ctaHref": "/projects/artline-b2b-portal/",
     "ctaLabel": "Next Project",
     "ctaTitle": "B2B Wholesale Portal",
     "ctaDesc": "Built a self-serve B2B portal on Shopify's brand-new native B2B platform for European business buyers: VAT-exempt tiered pricing, VIES-verified registration, and automated multi-language invoicing",
     "viewAllHref": "/projects/"
   },
-  "directLink": "/artline-craft-storefront/"
+  "directLink": "/projects/artline-craft-storefront/"
 }

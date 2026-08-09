@@ -29,23 +29,33 @@ ROOT = Path(__file__).parent
 RU_DIR = ROOT / "ru"
 SITE_URL = "https://vifine.tech"
 
-# Slugs for every page that lives at /{slug}/ (i.e. {slug}/index.html).
-# "index" and "404" are handled separately since they stay flat at the root.
-SLUGS = [
+# Top-level pages that live at /{slug}/ (i.e. {slug}/index.html).
+TOP_LEVEL_SLUGS = [
+    "contact",
+    "cv",
+    "project-detail",
+    "project",
+    "projects",
+]
+
+# Case-study pages that live nested under /projects/{slug}/.
+PROJECT_SLUGS = [
     "artline-b2b-portal",
     "artline-craft-storefront",
     "artline-email-automation",
-    "contact",
-    "cv",
     "fullflat-finance",
     "fullflat-oms-agent",
     "fullflat-operations",
     "fullflat-pim",
     "fullflat-taxonomy-reviews",
-    "project-detail",
-    "project",
-    "projects",
 ]
+
+
+def rel_path(slug: str) -> str:
+    """Path fragment for a slug, e.g. 'cv' -> 'cv', 'fullflat-pim' -> 'projects/fullflat-pim'."""
+    if slug in PROJECT_SLUGS:
+        return f"projects/{slug}"
+    return slug
 
 
 def en_url(slug: str) -> str:
@@ -53,7 +63,7 @@ def en_url(slug: str) -> str:
         return f"{SITE_URL}/"
     if slug == "404":
         return f"{SITE_URL}/404.html"
-    return f"{SITE_URL}/{slug}/"
+    return f"{SITE_URL}/{rel_path(slug)}/"
 
 
 def ru_url(slug: str) -> str:
@@ -61,7 +71,7 @@ def ru_url(slug: str) -> str:
         return f"{SITE_URL}/ru/"
     if slug == "404":
         return f"{SITE_URL}/ru/404.html"
-    return f"{SITE_URL}/ru/{slug}/"
+    return f"{SITE_URL}/ru/{rel_path(slug)}/"
 
 
 def add_hreflang(html: str, slug: str) -> str:
@@ -110,19 +120,19 @@ def insert_lang_toggle(html: str, active: str, other_href: str) -> str:
 def source_path(slug: str) -> Path:
     if slug in ("index", "404"):
         return ROOT / f"{slug}.html"
-    return ROOT / slug / "index.html"
+    return ROOT / rel_path(slug) / "index.html"
 
 
 def ru_dest_path(slug: str) -> Path:
     if slug in ("index", "404"):
         return RU_DIR / f"{slug}.html"
-    return RU_DIR / slug / "index.html"
+    return RU_DIR / rel_path(slug) / "index.html"
 
 
 def build():
     RU_DIR.mkdir(exist_ok=True)
 
-    all_slugs = ["index", "404"] + SLUGS
+    all_slugs = ["index", "404"] + TOP_LEVEL_SLUGS + PROJECT_SLUGS
 
     for slug in all_slugs:
         src_path = source_path(slug)
