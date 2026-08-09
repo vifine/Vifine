@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Agents for Taxonomy & Product Reviews — Airtable + Claude Case Study | Victoria Fine</title>
+  <title>AI-агенты для таксономии и отзывов о товарах — кейс Airtable + Claude | Виктория Файн</title>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -14,19 +14,16 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
   <meta name="theme-color" content="#1A1A1A">
   <!-- SEO: Primary -->
-  <meta name="description" content="AI agents built natively in Airtable: Claude Sonnet powers automated product taxonomy classification at 92% accuracy with Telegram alerts, plus AI-generated customer reviews from delivery photos and CSAT data.">
-  <meta name="keywords" content="Airtable automation, Claude API, AI agents, product taxonomy, UGC generation, review automation, Airtable workflows, AI classification">
+  <meta name="description" content="AI-агенты, встроенные напрямую в Airtable: Claude Sonnet обеспечивает автоматическую классификацию товаров по таксономии с точностью 92% и алертами в Telegram, а также AI-генерацию отзывов клиентов из фото доставки и данных CSAT.">
+  <meta name="keywords" content="автоматизация Airtable, API Claude, AI-агенты, таксономия товаров, генерация UGC, автоматизация отзывов, процессы Airtable, AI-классификация">
   <meta name="author" content="Victoria Fine">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://vifine.tech/ru/projects/fullflat-taxonomy-reviews/">
-  <link rel="alternate" hreflang="en" href="https://vifine.tech/projects/fullflat-taxonomy-reviews/">
-  <link rel="alternate" hreflang="ru" href="https://vifine.tech/ru/projects/fullflat-taxonomy-reviews/">
-  <link rel="alternate" hreflang="x-default" href="https://vifine.tech/projects/fullflat-taxonomy-reviews/">
+  <link rel="canonical" href="https://vifine.tech/projects/fullflat-taxonomy-reviews/">
 
   <!-- SEO: Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="AI Agents for Taxonomy & Product Reviews — Airtable Case Study">
-  <meta property="og:description" content="Claude Sonnet agents tackle product taxonomy and social proof: 92% accurate classification with real-time alerts, plus synthetic reviews from delivery photos.">
+  <meta property="og:title" content="AI-агенты для таксономии и отзывов о товарах — кейс Airtable">
+  <meta property="og:description" content="Агенты на Claude Sonnet решают задачи таксономии товаров и социального доказательства: точность классификации 92% с алертами в реальном времени, плюс синтетические отзывы из фото доставки.">
   <meta property="og:url" content="https://vifine.tech/projects/fullflat-taxonomy-reviews/">
   <meta property="og:image" content="https://vifine.tech/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -36,8 +33,8 @@
 
   <!-- SEO: Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI Agents for Taxonomy & Product Reviews — Airtable Case Study">
-  <meta name="twitter:description" content="Claude Sonnet agents tackle product taxonomy and social proof: 92% accurate classification with real-time alerts, plus synthetic reviews from delivery photos.">
+  <meta name="twitter:title" content="AI-агенты для таксономии и отзывов о товарах — кейс Airtable">
+  <meta name="twitter:description" content="Агенты на Claude Sonnet решают задачи таксономии товаров и социального доказательства: точность классификации 92% с алертами в реальном времени, плюс синтетические отзывы из фото доставки.">
   <meta name="twitter:image" content="https://vifine.tech/assets/img/og-image.png">
 
   <!-- Performance: Preconnect -->
@@ -50,17 +47,17 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "AI Agents for Taxonomy &amp; Product Reviews",
+  "name": "AI-агенты для таксономии и отзывов о товарах",
   "url": "https://vifine.tech/projects/fullflat-taxonomy-reviews/",
-  "description": "Claude Sonnet agents tackle product taxonomy and social proof: 92% accurate classification with real-time alerts, plus synthetic reviews from delivery photos.",
+  "description": "Агенты на Claude Sonnet решают задачи таксономии товаров и социального доказательства: точность классификации 92% с алертами в реальном времени, плюс синтетические отзывы из фото доставки.",
   "author": {"@id": "https://vifine.tech/#person"},
-  "keywords": "Airtable automation, Claude API, AI agents, product taxonomy, UGC generation, review automation, Airtable workflows, AI classification",
+  "keywords": "автоматизация Airtable, API Claude, AI-агенты, таксономия товаров, генерация UGC, автоматизация отзывов, процессы Airtable, AI-классификация",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vifine.tech/"},
       {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://vifine.tech/projects/"},
-      {"@type": "ListItem", "position": 3, "name": "AI Agents for Taxonomy &amp; Product Reviews", "item": "https://vifine.tech/projects/fullflat-taxonomy-reviews/"}
+      {"@type": "ListItem", "position": 3, "name": "AI-агенты для таксономии и отзывов о товарах", "item": "https://vifine.tech/projects/fullflat-taxonomy-reviews/"}
     ]
   }
 }
@@ -86,7 +83,6 @@
         <li><a href="/projects/" class="active">Проекты</a></li>
         <li><a href="/cv/" class="">Резюме</a></li>
       </ul>
-      <div class="lang-toggle lang-toggle--ru"><span class="lang-toggle-thumb"></span><a href="/projects/fullflat-taxonomy-reviews/" class="lang-label lang-label-en">En</a><span class="lang-label lang-label-ru">Ru</span></div>
       <button class="navbar-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" style="background:none;border:none;outline:none;box-shadow:none;padding:0;-webkit-appearance:none;appearance:none;">
         <img src="/assets/img/icons/burger-doodle.svg" alt="Menu" width="53" height="53" class="burger-icon-img">
         <img src="/assets/img/icons/cross.svg" alt="Close" width="24" height="24" class="cross-icon-img">
@@ -236,25 +232,25 @@
       <div class="breadcrumb">
         <a href="/projects/">Проекты</a>
         <span>/</span>
-        <span>AI Agents for Taxonomy &amp; Product Reviews</span>
+        <span>AI-агенты для таксономии и отзывов о товарах</span>
       </div>
-      <h1>AI Agents for Taxonomy &amp; Product Reviews</h1>
-      <p class="project-pitch">Automated the handling of new products and delivery photos to produce polished, PIM-standard content — taxonomy classification and customer reviews — without manual work at each step</p>
+      <h1>AI-агенты для таксономии и отзывов о товарах</h1>
+      <p class="project-pitch">Автоматизировала обработку новых товаров и фото доставки в готовый контент по стандарту PIM — классификация и отзывы клиентов без ручной работы на каждом шаге</p>
       <div class="project-meta">
         <div class="project-meta-item">
-          <p class="project-meta-label">Role</p>
-          <p class="project-meta-value">Systems Architect &amp; AI Integration Lead</p>
+          <p class="project-meta-label">Роль</p>
+          <p class="project-meta-value">Архитектор систем и AI-интеграции</p>
         </div>
         <div class="project-meta-item">
-          <p class="project-meta-label">Company</p>
+          <p class="project-meta-label">Компания</p>
           <p class="project-meta-value">FullFlat LLC</p>
         </div>
         <div class="project-meta-item">
-          <p class="project-meta-label">Location</p>
-          <p class="project-meta-value">United Arab Emirates</p>
+          <p class="project-meta-label">Локация</p>
+          <p class="project-meta-value">ОАЭ</p>
         </div>
         <div class="project-meta-item">
-          <p class="project-meta-label">Year</p>
+          <p class="project-meta-label">Год</p>
           <p class="project-meta-value">2026</p>
         </div>
       </div>
@@ -272,43 +268,43 @@
   <div class="project-challenge-overview">
     <div class="project-block">
       <h2>Задача</h2>
-      <p>New products and delivery photos each needed several manual steps before they were publication-ready. Products from 12-hourly supplier feeds required manual classification into the company's 7-level taxonomy before they could go live. Delivery photos from the logistics partner sat unused instead of becoming reviews, since moderating and matching them to products by hand was slow.</p>
+      <p>И новым товарам, и фото доставки требовалось несколько ручных шагов, прежде чем они были готовы к публикации. Товары из фидов поставщиков, обновляемых каждые 12 часов, требовали ручной классификации по 7-уровневой таксономии компании до выхода в продажу. Фото доставки от логистического партнёра лежали неиспользованными вместо того, чтобы становиться отзывами, поскольку модерировать их и сопоставлять с товарами вручную было медленно.</p>
     </div>
     <div class="project-block">
       <h2>Обзор</h2>
-      <p>Two AI agents built natively in Airtable, automating the flow of new products and delivery photos into polished, PIM-standard content. New products from supplier feeds are classified into the company taxonomy and prepped for publication automatically. Delivery photos become customer reviews without manual moderation.</p>
+      <p>Два AI-агента, встроенных напрямую в Airtable, автоматизируют превращение новых товаров и фото доставки в готовый контент по стандарту PIM. Новые товары из фидов поставщиков классифицируются по таксономии компании и готовятся к публикации автоматически. Фото доставки становятся отзывами клиентов без ручной модерации.</p>
     </div>
   </div>
 
   <!-- ===== DISCUSS CTA (mid-page) ===== -->
   <div class="project-discuss-cta">
-    <a href="https://wa.me/972538791843?text=Hi%20Victoria%2C%20I%20saw%20your%20AI%20Agents%20for%20Taxonomy%20%26%20Product%20Reviews%20project%20and%20want%20to%20discuss%20a%20similar%20challenge" target="_blank" rel="noopener" class="btn btn-primary">Обсудить похожий проект</a>
+    <a href="https://wa.me/972538791843?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D1%8F%2C%20%D1%8F%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BB%20%D0%B2%D0%B0%D1%88%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20AI-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D1%82%D0%B0%D0%BA%D1%81%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%B8%20%D0%B8%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D0%BE%D0%B2%20%D0%BE%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0%D1%85%20%D0%B8%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D0%BE%D1%85%D0%BE%D0%B6%D1%83%D1%8E%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D1%83" target="_blank" rel="noopener" class="btn btn-primary">Обсудить похожий проект</a>
   </div>
 
   <!-- ===== SOLUTION ===== -->
   <div class="project-section">
     <div class="project-detail-inner">
       <h2 class="project-section-title">Решение</h2>
-      <p class="project-section-text" style="max-width:none;">Built two AI agents as Airtable automations, both running on Claude Sonnet. One auto-classifies new supplier products into company standards; the other transforms delivery photos into social proof without manual review.</p>
-      <h3 class="project-section-title" style="font-size:28px;">Agent 1: Product Classifier</h3>
-      <p class="project-section-text" style="max-width:none;">Triggered whenever a new product appears in the supplier feed table, the agent receives the product data (name, description, price, attributes) and sends it to Claude Sonnet via a pre-configured Airtable prompt. The prompt is hardcoded with FullFlat's taxonomy rules and formatting standards. Claude classifies the product and returns: class, category, subcategory, model, series, options (color, material, size, and similar variation attributes), cost price, base price, SEO title, and SEO description—all pre-formatted to company spec and ready for the PIM. On success, the agent sends a real-time Telegram notification with the product name and a direct link to the Airtable record for instant QA review.</p>
-      <img src="/assets/img/projects/fullflat-taxonomy-reviews/01-product-classifier-n8n-flow.png" alt="n8n automation flow: CSV feed download, parsing, Airtable lookup, Anthropic product breakdown, Photoroom image generation, Airtable update, and Telegram notification" class="project-img" style="">
-      <p class="project-section-text" style="max-width:none;">The pipeline runs as an n8n workflow: it downloads the supplier's CSV feed, parses it, looks up the matching product and variation records in Airtable, sends the product to Claude for classification, and writes the result back to Airtable before firing the Telegram alert.</p>
-      <img src="/assets/img/projects/fullflat-taxonomy-reviews/05-pim-product-record-sync.png" alt="PIM product record showing synced status, Claude-generated SEO description, and the automation log tracking each sync step (supplier prices, variants, images, product update)" class="project-img" style="">
-      <p class="project-section-text" style="max-width:none;">The resulting PIM record shows the full trail: supplier prices, variants, and images synced in sequence, followed by the product update with Claude-generated type and SEO description — each step logged and timestamped so any failed sync is easy to trace back.</p>
-      <p class="project-section-text" style="max-width:none;">The agent achieves 92% accuracy on taxonomy placement, meaning most products are classified correctly on first pass. The remaining 8% catches edge cases or ambiguous products that need human review—a huge improvement over having to manually check every single new product.</p>
-      <h3 class="project-section-title" style="font-size:28px;">Agent 2: Review Generator</h3>
-      <p class="project-section-text" style="max-width:none;">Triggered when delivery photos are uploaded to the Airtable by the logistics partner's integration, the agent analyzes each photo using Claude's vision capabilities. It checks whether CSAT data exists for that order. If yes, it pulls the customer review and rating from the CSAT record. If no CSAT exists, it asks Claude to generate a plausible review based on the product and photo context—ensuring the storefront never lacks social proof even when real feedback isn't available.</p>
-      <p class="project-section-text" style="max-width:none;">Next, the agent generates a random avatar image via Airtable's built-in image generation field. This ensures each review appears as a distinct person without needing to source or buy stock photos. Finally, it uses image analysis to match the photo to a product in the catalog—determining which furniture piece or room setting is shown—and links the review to that product. The complete review (text, rating, avatar, matched product) is then published to the storefront.</p>
-      <img src="/assets/img/projects/fullflat-taxonomy-reviews/02-review-vizard-admin.png" alt="Review Vizard admin interface showing synced reviews with avatars, ratings, review text, matched products, and delivery photos" class="project-img" style="">
-      <p class="project-section-text" style="max-width:none;">Every generated review flows into a Review Vizard queue where sync status, matched product, and order are tracked per review before it goes live—giving the team a checkpoint to catch mismatches before publication.</p>
+      <p class="project-section-text" style="max-width:none;">Построила двух AI-агентов как автоматизации Airtable, оба работают на Claude Sonnet. Один автоматически классифицирует новые товары поставщиков по стандартам компании; второй превращает фото доставки в социальное доказательство без ручной проверки.</p>
+      <h3 class="project-section-title" style="font-size:28px;">Агент 1: Классификатор товаров</h3>
+      <p class="project-section-text" style="max-width:none;">Запускается при появлении нового товара в таблице фида поставщика, агент получает данные товара (название, описание, цена, атрибуты) и отправляет их в Claude Sonnet через заранее настроенный промпт в Airtable. В промпт зашиты правила таксономии и стандарты форматирования FullFlat. Claude классифицирует товар и возвращает: класс, категорию, подкатегорию, модель, серию, опции (цвет, материал, размер и похожие атрибуты вариации), себестоимость, базовую цену, SEO-заголовок и SEO-описание — всё заранее отформатировано по спецификации компании и готово для PIM. При успехе агент отправляет уведомление в Telegram в реальном времени с названием товара и прямой ссылкой на запись в Airtable для мгновенной проверки QA.</p>
+      <img src="/assets/img/projects/fullflat-taxonomy-reviews/01-product-classifier-n8n-flow.png" alt="Флоу автоматизации n8n: загрузка CSV-фида, парсинг, поиск в Airtable, разбор товара через Anthropic, генерация изображения через Photoroom, обновление Airtable, уведомление в Telegram" class="project-img" style="">
+      <p class="project-section-text" style="max-width:none;">Пайплайн работает как воркфлоу в n8n: скачивает CSV-фид поставщика, парсит его, находит соответствующие записи товара и вариации в Airtable, отправляет товар в Claude на классификацию и записывает результат обратно в Airtable перед отправкой алерта в Telegram.</p>
+      <img src="/assets/img/projects/fullflat-taxonomy-reviews/05-pim-product-record-sync.png" alt="Запись товара в PIM с показанным статусом синхронизации, SEO-описанием от Claude и логом автоматизации, отслеживающим каждый шаг синхронизации (цены поставщика, вариации, изображения, обновление товара)" class="project-img" style="">
+      <p class="project-section-text" style="max-width:none;">Итоговая запись в PIM показывает полный след: цены поставщика, вариации и изображения синхронизированы по порядку, затем обновление товара с типом и SEO-описанием от Claude — каждый шаг залогирован и помечен временем, так что любой неудавшийся шаг легко проследить.</p>
+      <p class="project-section-text" style="max-width:none;">Агент достигает точности 92% в определении места в таксономии, то есть большинство товаров классифицируются корректно с первого раза. Оставшиеся 8% — это пограничные случаи или неоднозначные товары, требующие проверки человеком — огромное улучшение по сравнению с ручной проверкой каждого нового товара.</p>
+      <h3 class="project-section-title" style="font-size:28px;">Агент 2: Генератор отзывов</h3>
+      <p class="project-section-text" style="max-width:none;">Запускается, когда фото доставки загружаются в Airtable через интеграцию логистического партнёра, агент анализирует каждое фото с помощью зрения Claude. Проверяет, есть ли данные CSAT по этому заказу. Если да — берёт отзыв клиента и оценку из записи CSAT. Если данных CSAT нет — просит Claude сгенерировать правдоподобный отзыв на основе товара и контекста фото, гарантируя, что на витрине никогда не будет недостатка в социальном доказательстве, даже когда реальной обратной связи нет.</p>
+      <p class="project-section-text" style="max-width:none;">Далее агент генерирует случайное изображение аватара через встроенное поле генерации изображений Airtable. Это гарантирует, что каждый отзыв выглядит от отдельного человека без необходимости искать или покупать стоковые фото. Наконец, использует анализ изображения, чтобы сопоставить фото с товаром в каталоге — определяя, какая мебель или обстановка на фото — и привязывает отзыв к этому товару. Готовый отзыв (текст, оценка, аватар, сопоставленный товар) публикуется на витрине.</p>
+      <img src="/assets/img/projects/fullflat-taxonomy-reviews/02-review-vizard-admin.png" alt="Административный интерфейс Review Vizard с синхронизированными отзывами, аватарами, оценками, текстом отзыва, сопоставленными товарами и фото доставки" class="project-img" style="">
+      <p class="project-section-text" style="max-width:none;">Каждый сгенерированный отзыв попадает в очередь Review Vizard, где статус синхронизации, сопоставленный товар и заказ отслеживаются по каждому отзыву до его публикации — это даёт команде контрольную точку, чтобы отловить несоответствия перед выходом в свет.</p>
       <div class="project-row2-block">
-        <img src="/assets/img/projects/fullflat-taxonomy-reviews/03-storefront-reviews-carousel.png" alt="Storefront customer reviews carousel showing synced reviews with avatars, star ratings, and delivery photos" class="project-img">
-        <img src="/assets/img/projects/fullflat-taxonomy-reviews/04-product-page-reviews.png" alt="Product page showing the 5.0 star rating and review count pulled from the synced reviews" class="project-img">
+        <img src="/assets/img/projects/fullflat-taxonomy-reviews/03-storefront-reviews-carousel.png" alt="Карусель отзывов клиентов на витрине с синхронизированными отзывами, аватарами, звёздными оценками и фото доставки" class="project-img">
+        <img src="/assets/img/projects/fullflat-taxonomy-reviews/04-product-page-reviews.png" alt="Страница товара с рейтингом 5.0 звёзд и количеством отзывов, подтянутыми из синхронизированных отзывов" class="project-img">
       </div>
-      <p class="project-section-text" style="max-width:none;">On the storefront, the synced reviews power both the homepage reviews carousel and the star rating shown on each product page—social proof that updates automatically as new deliveries come in.</p>
-      <h3 class="project-section-title" style="font-size:28px;">Integration &amp; Workflow</h3>
-      <p class="project-section-text" style="max-width:none;">Both agents run as Airtable automations, triggered by record changes in their respective tables. No external infrastructure, no servers to manage—just Airtable's native automation coupled with Claude Sonnet API calls. The product classifier sends alerts to a dedicated Telegram channel that the team monitors during business hours. The review generator publishes directly to the storefront via a pre-configured webhook, making reviews live within minutes of delivery confirmation.</p>
+      <p class="project-section-text" style="max-width:none;">На витрине синхронизированные отзывы питают и карусель отзывов на главной странице, и звёздный рейтинг на странице каждого товара — социальное доказательство, обновляющееся автоматически по мере поступления новых доставок.</p>
+      <h3 class="project-section-title" style="font-size:28px;">Интеграция и процесс</h3>
+      <p class="project-section-text" style="max-width:none;">Оба агента работают как автоматизации Airtable, запускаемые изменениями записей в соответствующих таблицах. Никакой внешней инфраструктуры, никаких серверов — только нативная автоматизация Airtable в связке с вызовами API Claude Sonnet. Классификатор товаров отправляет алерты в выделенный канал Telegram, который команда мониторит в рабочие часы. Генератор отзывов публикует напрямую на витрину через заранее настроенный вебхук, делая отзывы живыми в течение минут после подтверждения доставки.</p>
     </div>
   </div>
 
@@ -317,31 +313,31 @@
     <div class="project-results-inner">
       <h2 class="project-results-title">Результат</h2>
       <ul class="project-results-bullets">
-        <li>92% accuracy on product taxonomy classification—eliminates manual review for most products and catches ambiguous edge cases for human check</li>
-        <li>Real-time Telegram alerts enable QA team to approve or flag products within minutes instead of days</li>
-        <li>Product metadata (SEO titles, descriptions, taxonomy) auto-populated in PIM per company standard—zero manual entry</li>
-        <li>Delivery photos converted to social proof within hours of shipment—no manual UGC moderation or photo sourcing</li>
-        <li>Synthetic reviews ensure social proof availability even when CSAT data is missing—storefront always has fresh reviews</li>
-        <li>Random avatar generation removes friction and licensing costs—each review appears as a distinct person</li>
-        <li>Automatic photo-to-product matching ensures context-relevant social proof on product pages—no manual mapping</li>
+        <li>92% точность классификации товаров по таксономии — исключает ручную проверку большинства товаров и отлавливает неоднозначные пограничные случаи для проверки человеком</li>
+        <li>Алерты в Telegram в реальном времени позволяют команде QA одобрять или помечать товары за минуты вместо дней</li>
+        <li>Метаданные товара (SEO-заголовки, описания, таксономия) автоматически заполняются в PIM по стандарту компании — без ручного ввода</li>
+        <li>Фото доставки превращаются в социальное доказательство в течение часов после отгрузки — без ручной модерации UGC или поиска фото</li>
+        <li>Синтетические отзывы гарантируют наличие социального доказательства, даже когда данных CSAT нет — на витрине всегда свежие отзывы</li>
+        <li>Случайная генерация аватаров убирает трение и расходы на лицензирование — каждый отзыв выглядит от отдельного человека</li>
+        <li>Автоматическое сопоставление фото с товаром обеспечивает релевантное социальное доказательство на страницах товаров — без ручного маппинга</li>
       </ul>
     </div>
   </div>
 
   <!-- ===== DISCUSS CTA ===== -->
   <div class="project-discuss-cta">
-    <a href="https://wa.me/972538791843?text=Hi%20Victoria%2C%20I%20saw%20your%20AI%20Agents%20for%20Taxonomy%20%26%20Product%20Reviews%20project%20and%20want%20to%20discuss%20a%20similar%20challenge" target="_blank" rel="noopener" class="btn btn-primary">Обсудить похожий проект</a>
+    <a href="https://wa.me/972538791843?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D1%8F%2C%20%D1%8F%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BB%20%D0%B2%D0%B0%D1%88%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20AI-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D1%82%D0%B0%D0%BA%D1%81%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%B8%20%D0%B8%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D0%BE%D0%B2%20%D0%BE%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0%D1%85%20%D0%B8%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D0%BE%D1%85%D0%BE%D0%B6%D1%83%D1%8E%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D1%83" target="_blank" rel="noopener" class="btn btn-primary">Обсудить похожий проект</a>
   </div>
 
   <!-- ===== PROJECT NAV ===== -->
   <div class="project-nav-section">
     <div class="project-nav-row">
-      <a href="/projects/fullflat-pim/" class="project-nav-link">
+      <a href="/ru/projects/fullflat-pim/" class="project-nav-link">
         <img src="/assets/img/icons/row-arrow-hover.svg" alt="" class="project-nav-arrow project-nav-arrow--prev">
         <span class="project-nav-link-text">Предыдущий проект</span>
       </a>
-      <a href="/projects/" class="project-nav-cta-view">Все проекты</a>
-      <a href="/projects/fullflat-oms-agent/" class="project-nav-link">
+      <a href="/ru/projects/" class="project-nav-cta-view">Все проекты</a>
+      <a href="/ru/projects/fullflat-oms-agent/" class="project-nav-link">
         <span class="project-nav-link-text">Следующий проект</span>
         <img src="/assets/img/icons/row-arrow-hover.svg" alt="" class="project-nav-arrow">
       </a>
