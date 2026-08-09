@@ -170,7 +170,16 @@ function build() {
       const waMessage = `Здравствуйте, Виктория, я видел ваш проект ${plainTitle} и хочу обсудить похожую задачу`;
       data.whatsappCtaHref = `https://wa.me/972538791843?text=${encodeURIComponent(waMessage)}`;
 
-      const html = render(template, data);
+      let html = render(template, data);
+      // The template has three hardcoded internal nav links (logo -> "/",
+      // CV -> "/cv/", Projects -> "/projects/") that are correct for English
+      // pages but need the /ru/ prefix here. Everything else (directLink,
+      // nav.prevHref/nextHref/ctaHref, image src) is already locale-correct
+      // because it comes from the translated JSON itself.
+      html = html
+        .split('href="/"').join('href="/ru/"')
+        .split('href="/cv/"').join('href="/ru/cv/"')
+        .split('href="/projects/"').join('href="/ru/projects/"');
       const outDir = path.join(ROOT, 'ru', 'projects', data.slug);
       if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
       const outPath = path.join(outDir, 'index.html');

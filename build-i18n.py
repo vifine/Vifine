@@ -129,6 +129,20 @@ def ru_dest_path(slug: str) -> Path:
     return RU_DIR / rel_path(slug) / "index.html"
 
 
+def fix_ru_nav_links(html: str) -> str:
+    """Rewrite the site's hardcoded internal nav links (logo/Home, Projects,
+    CV, Contact) so they point at the /ru/ mirror instead of the English
+    root. These are plain HTML in every page (not template variables), so
+    a straight string swap on the exact quoted attribute is safe — it can't
+    accidentally touch href="/ru/projects/{slug}/" or href="/assets/..."
+    since those don't match the short exact strings below."""
+    html = html.replace('href="/"', 'href="/ru/"')
+    html = html.replace('href="/cv/"', 'href="/ru/cv/"')
+    html = html.replace('href="/projects/"', 'href="/ru/projects/"')
+    html = html.replace('href="/contact/"', 'href="/ru/contact/"')
+    return html
+
+
 def build():
     RU_DIR.mkdir(exist_ok=True)
 
@@ -159,6 +173,7 @@ def build():
             count=1,
         )
         ru_html = insert_lang_toggle(ru_html, "ru", en_url(slug).replace(SITE_URL, ""))
+        ru_html = fix_ru_nav_links(ru_html)
 
         dest = ru_dest_path(slug)
         dest.parent.mkdir(parents=True, exist_ok=True)

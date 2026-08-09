@@ -21,6 +21,7 @@ file. Keep pairs specific enough to be unambiguous; order matters when one
 pair's target text could be a substring of another's source.
 """
 
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -293,6 +294,14 @@ def apply_translations(html: str, pairs) -> str:
     return html
 
 
+def fix_project_links(html: str) -> str:
+    """Rewrite any href="/projects/{slug}/" (English case-study link) to
+    href="/ru/projects/{slug}/" — catches things like the CV page's
+    'Related Projects' pills, which reference specific case studies by
+    slug and aren't covered by the generic nav-chrome dictionary above."""
+    return re.sub(r'href="/projects/([a-z0-9-]+)/"', r'href="/ru/projects/\1/"', html)
+
+
 PROJECT_CARD_TRANSLATIONS = {
     "artline-craft-storefront": {
         "title": "Пересборка магазина для бренда handmade-товаров",
@@ -373,6 +382,7 @@ def main():
         html = path.read_text(encoding="utf-8")
         html = apply_translations(html, COMMON)
         html = apply_translations(html, pairs)
+        html = fix_project_links(html)
         path.write_text(html, encoding="utf-8")
         print(f"translated: {path.relative_to(ROOT)}")
 
@@ -389,6 +399,7 @@ def main():
             continue
         html = html_file.read_text(encoding="utf-8")
         html = apply_translations(html, COMMON)
+        html = fix_project_links(html)
         html_file.write_text(html, encoding="utf-8")
         print(f"chrome-only translated: {html_file.relative_to(ROOT)}")
 
@@ -396,6 +407,7 @@ def main():
     if ru_404.exists():
         html = ru_404.read_text(encoding="utf-8")
         html = apply_translations(html, COMMON)
+        html = fix_project_links(html)
         ru_404.write_text(html, encoding="utf-8")
         print("chrome-only translated: ru/404.html")
 
