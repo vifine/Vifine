@@ -373,8 +373,13 @@ def translate_projects_json():
             p["title"] = t["title"]
             p["tagline"] = t["tagline"]
             p["companyLocation"] = t["companyLocation"]
+        # directLink is copied verbatim from the English projects.json
+        # (e.g. "/projects/{id}/") — every card on the RU site must point
+        # into the /ru/ mirror instead, regardless of translation status.
+        if p.get("directLink", "").startswith("/projects/"):
+            p["directLink"] = "/ru" + p["directLink"]
     pj.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
-    print("translated: ru/projects.json (card previews)")
+    print("translated: ru/projects.json (card previews + directLink)")
 
 
 def main():
