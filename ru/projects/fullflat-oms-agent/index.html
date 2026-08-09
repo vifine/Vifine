@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Agent for Order Management System — Airtable + GPT Image Case Study | Victoria Fine</title>
+  <title>AI-агент для системы управления заказами — кейс Airtable + GPT Image | Виктория Файн</title>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -14,19 +14,16 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
   <meta name="theme-color" content="#1A1A1A">
   <!-- SEO: Primary -->
-  <meta name="description" content="An AI agent built natively in Airtable's Order Management System: generates furniture layout visualizations with material swatches pulled from a linked material library, for individual products and full customer orders, sent directly to clients.">
-  <meta name="keywords" content="Airtable automation, Order Management System, GPT Image, AI agents, furniture visualization, material swatches, Airtable workflows">
+  <meta name="description" content="AI-агент, встроенный напрямую в систему управления заказами на Airtable: генерирует визуализации раскладки мебели с образцами материалов из привязанной библиотеки — для отдельных товаров и полных заказов клиентов — отправляется напрямую клиентам.">
+  <meta name="keywords" content="автоматизация Airtable, система управления заказами, GPT Image, AI-агенты, визуализация мебели, образцы материалов, процессы Airtable">
   <meta name="author" content="Victoria Fine">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://vifine.tech/ru/projects/fullflat-oms-agent/">
-  <link rel="alternate" hreflang="en" href="https://vifine.tech/projects/fullflat-oms-agent/">
-  <link rel="alternate" hreflang="ru" href="https://vifine.tech/ru/projects/fullflat-oms-agent/">
-  <link rel="alternate" hreflang="x-default" href="https://vifine.tech/projects/fullflat-oms-agent/">
+  <link rel="canonical" href="https://vifine.tech/projects/fullflat-oms-agent/">
 
   <!-- SEO: Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="AI Agent for Order Management System — Airtable Case Study">
-  <meta property="og:description" content="An AI agent generates furniture layout visualizations with real material swatches for individual products and full customer orders, sent directly to clients via email or WhatsApp.">
+  <meta property="og:title" content="AI-агент для системы управления заказами — кейс Airtable">
+  <meta property="og:description" content="AI-агент генерирует визуализации раскладки мебели с реальными образцами материалов для отдельных товаров и полных заказов клиентов, отправляется напрямую по email или WhatsApp.">
   <meta property="og:url" content="https://vifine.tech/projects/fullflat-oms-agent/">
   <meta property="og:image" content="https://vifine.tech/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -36,8 +33,8 @@
 
   <!-- SEO: Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI Agent for Order Management System — Airtable Case Study">
-  <meta name="twitter:description" content="An AI agent generates furniture layout visualizations with real material swatches for individual products and full customer orders, sent directly to clients via email or WhatsApp.">
+  <meta name="twitter:title" content="AI-агент для системы управления заказами — кейс Airtable">
+  <meta name="twitter:description" content="AI-агент генерирует визуализации раскладки мебели с реальными образцами материалов для отдельных товаров и полных заказов клиентов, отправляется напрямую по email или WhatsApp.">
   <meta name="twitter:image" content="https://vifine.tech/assets/img/og-image.png">
 
   <!-- Performance: Preconnect -->
@@ -50,17 +47,17 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "AI Agent for Order Management System",
+  "name": "AI-агент для системы управления заказами",
   "url": "https://vifine.tech/projects/fullflat-oms-agent/",
-  "description": "An AI agent generates furniture layout visualizations with real material swatches for individual products and full customer orders, sent directly to clients via email or WhatsApp.",
+  "description": "AI-агент генерирует визуализации раскладки мебели с реальными образцами материалов для отдельных товаров и полных заказов клиентов, отправляется напрямую по email или WhatsApp.",
   "author": {"@id": "https://vifine.tech/#person"},
-  "keywords": "Airtable automation, Order Management System, GPT Image, AI agents, furniture visualization, material swatches, Airtable workflows",
+  "keywords": "автоматизация Airtable, система управления заказами, GPT Image, AI-агенты, визуализация мебели, образцы материалов, процессы Airtable",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vifine.tech/"},
       {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://vifine.tech/projects/"},
-      {"@type": "ListItem", "position": 3, "name": "AI Agent for Order Management System", "item": "https://vifine.tech/projects/fullflat-oms-agent/"}
+      {"@type": "ListItem", "position": 3, "name": "AI-агент для системы управления заказами", "item": "https://vifine.tech/projects/fullflat-oms-agent/"}
     ]
   }
 }
@@ -86,7 +83,6 @@
         <li><a href="/projects/" class="active">Проекты</a></li>
         <li><a href="/cv/" class="">Резюме</a></li>
       </ul>
-      <div class="lang-toggle lang-toggle--ru"><span class="lang-toggle-thumb"></span><a href="/projects/fullflat-oms-agent/" class="lang-label lang-label-en">En</a><span class="lang-label lang-label-ru">Ru</span></div>
       <button class="navbar-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" style="background:none;border:none;outline:none;box-shadow:none;padding:0;-webkit-appearance:none;appearance:none;">
         <img src="/assets/img/icons/burger-doodle.svg" alt="Menu" width="53" height="53" class="burger-icon-img">
         <img src="/assets/img/icons/cross.svg" alt="Close" width="24" height="24" class="cross-icon-img">
@@ -236,25 +232,25 @@
       <div class="breadcrumb">
         <a href="/projects/">Проекты</a>
         <span>/</span>
-        <span>AI Agent for Order Management System</span>
+        <span>AI-агент для системы управления заказами</span>
       </div>
-      <h1>AI Agent for Order Management System</h1>
-      <p class="project-pitch">Automated the creation of client-facing order visualizations — pulling real material swatches from the catalog to show customers exactly what they bought before delivery</p>
+      <h1>AI-агент для системы управления заказами</h1>
+      <p class="project-pitch">Автоматизировала создание визуализаций заказа для клиента — с реальными образцами материалов из каталога, чтобы показать точно то, что клиент купил, ещё до доставки</p>
       <div class="project-meta">
         <div class="project-meta-item">
-          <p class="project-meta-label">Role</p>
-          <p class="project-meta-value">Systems Architect &amp; AI Integration Lead</p>
+          <p class="project-meta-label">Роль</p>
+          <p class="project-meta-value">Архитектор систем и AI-интеграции</p>
         </div>
         <div class="project-meta-item">
-          <p class="project-meta-label">Company</p>
+          <p class="project-meta-label">Компания</p>
           <p class="project-meta-value">FullFlat LLC</p>
         </div>
         <div class="project-meta-item">
-          <p class="project-meta-label">Location</p>
-          <p class="project-meta-value">United Arab Emirates</p>
+          <p class="project-meta-label">Локация</p>
+          <p class="project-meta-value">ОАЭ</p>
         </div>
         <div class="project-meta-item">
-          <p class="project-meta-label">Year</p>
+          <p class="project-meta-label">Год</p>
           <p class="project-meta-value">2026</p>
         </div>
       </div>
@@ -271,41 +267,41 @@
   <div class="project-challenge-overview">
     <div class="project-block">
       <h2>Задача</h2>
-      <p>Customers ordering multiple pieces had no way to preview how their color and material selections would look together before delivery. Color and material combinations across a sofa, bed, side tables, and accent pieces were impossible to visualize ahead of time, creating uncertainty and occasional post-purchase dissatisfaction.</p>
+      <p>У клиентов, заказывающих несколько предметов, не было способа увидеть заранее, как их выбор цветов и материалов будет смотреться вместе, до доставки. Комбинации цветов и материалов дивана, кровати, прикроватных столиков и декоративных предметов невозможно было представить заранее, что создавало неопределённость и иногда недовольство после покупки.</p>
     </div>
     <div class="project-block">
       <h2>Обзор</h2>
-      <p>An AI agent built into FullFlat's Order Management System on Airtable, automating the creation of client-facing visuals. Every order gets a visualization pulling real material swatches from the catalog, so customers see exactly what they're getting before it ships.</p>
+      <p>AI-агент, встроенный в систему управления заказами FullFlat на Airtable, автоматизирует создание визуалов для клиента. Каждый заказ получает визуализацию с реальными образцами материалов из каталога, чтобы клиент видел точно то, что получит, ещё до отгрузки.</p>
     </div>
   </div>
 
   <!-- ===== DISCUSS CTA (mid-page) ===== -->
   <div class="project-discuss-cta">
-    <a href="https://wa.me/972538791843?text=Hi%20Victoria%2C%20I%20saw%20your%20AI%20Agent%20for%20Order%20Management%20System%20project%20and%20want%20to%20discuss%20a%20similar%20challenge" target="_blank" rel="noopener" class="btn btn-primary">Обсудить похожий проект</a>
+    <a href="https://wa.me/972538791843?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D1%8F%2C%20%D1%8F%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BB%20%D0%B2%D0%B0%D1%88%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20AI-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%20%D0%B4%D0%BB%D1%8F%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B%20%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D0%BC%D0%B8%20%D0%B8%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D0%BE%D1%85%D0%BE%D0%B6%D1%83%D1%8E%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D1%83" target="_blank" rel="noopener" class="btn btn-primary">Обсудить похожий проект</a>
   </div>
 
   <!-- ===== SOLUTION ===== -->
   <div class="project-section">
     <div class="project-detail-inner">
       <h2 class="project-section-title">Решение</h2>
-      <p class="project-section-text" style="max-width:none;">Built an AI agent as an Airtable automation running on GPT Image, generating furniture visualizations on demand—either for a single catalog item or an entire client order.</p>
-      <h3 class="project-section-title" style="font-size:28px;">Order &amp; Product Visualizer</h3>
-      <p class="project-section-text" style="max-width:none;">This agent generates furniture layout visualizations pulling swatches from a material library linked to each product variation—shown above as an example: sofa, bed, side tables, lamp, and nightstands laid out together with their available finish options. It works two ways: on a single catalog product, to show a customer the material and color options for that item, or on a full customer order, combining every piece the customer bought into one coherent visualization with their exact selected finishes.</p>
-      <p class="project-section-text" style="max-width:none;">When triggered on an order, the agent pulls each ordered item's variation record, retrieves the linked materials from the shared material library, and composes a layout image showing the full order together—rather than customers imagining how five separately-photographed pieces might look side by side in their chosen colors. The finished visualization is sent directly to the client via email or WhatsApp, giving them a clear preview of their order before it ships.</p>
+      <p class="project-section-text" style="max-width:none;">Построила AI-агента как автоматизацию Airtable на базе GPT Image, генерирующую визуализации мебели по запросу — либо для отдельного товара из каталога, либо для целого заказа клиента.</p>
+      <h3 class="project-section-title" style="font-size:28px;">Визуализатор заказа и товара</h3>
+      <p class="project-section-text" style="max-width:none;">Этот агент генерирует визуализации раскладки мебели, беря образцы из библиотеки материалов, привязанной к каждой вариации товара — на примере выше: диван, кровать, прикроватные столики, лампа и тумбочки в одной раскладке с доступными вариантами отделки. Работает двумя способами: по отдельному товару из каталога, чтобы показать клиенту варианты материала и цвета для этой позиции, или по полному заказу клиента, объединяя все купленные позиции в одну согласованную визуализацию с точно выбранной отделкой.</p>
+      <p class="project-section-text" style="max-width:none;">При запуске по заказу агент берёт запись вариации каждой позиции заказа, извлекает связанные материалы из общей библиотеки материалов и собирает изображение раскладки, показывающее весь заказ вместе — вместо того, чтобы клиент представлял, как пять отдельно сфотографированных предметов будут смотреться рядом в выбранных цветах. Готовая визуализация отправляется клиенту напрямую по email или WhatsApp, давая ему чёткое превью заказа до отгрузки.</p>
       <div class="project-row2-block">
-        <img src="/assets/img/projects/fullflat-ai-agents/03-order-visualization-example.png" alt="Order visualization: sofa, armchair, coffee table, dining chair, dining table, and TV console with linked material swatches" class="project-img">
-        <img src="/assets/img/projects/fullflat-ai-agents/04-order-visualization-example-2.png" alt="Order visualization: sofa, bed, nightstand, rug, lighting, wall art, and console with material swatches" class="project-img">
+        <img src="/assets/img/projects/fullflat-ai-agents/03-order-visualization-example.png" alt="Визуализация заказа: диван, кресло, кофейный столик, стул, обеденный стол и ТВ-тумба с привязанными образцами материалов" class="project-img">
+        <img src="/assets/img/projects/fullflat-ai-agents/04-order-visualization-example-2.png" alt="Визуализация заказа: диван, кровать, тумбочка, ковёр, освещение, настенное искусство и консоль с образцами материалов" class="project-img">
       </div>
-      <p class="project-section-text" style="max-width:none;">The operator also has the option to add custom products that fall outside the catalog, dropping in reference images directly. This covers the occasional off-catalog sale made at a client's request, so the visualization stays accurate even when an order includes something FullFlat doesn't normally carry.</p>
-      <h4 class="project-section-title" style="font-size:20px;">Inside the Moodboard Editor</h4>
-      <p class="project-section-text" style="max-width:none;">In practice, the operator works from the Order Line Items view and marks which products should go into the visualization using a star toggle in the "Add to Moodboard" column—useful for orders where only some line items (say, the Basic package) should appear in the render, while Add-ons or Undefined items are left out.</p>
-      <img src="/assets/img/projects/fullflat-ai-agents/05-moodboard-order-line-items.png" alt="Order Line Items table with star toggles marking which products to include in the moodboard" class="project-img" style="">
-      <p class="project-section-text" style="max-width:none;">Clicking into the order's Moodboard Editor shows the selected product images pulled automatically from each item's catalog record, alongside the generated Mood Board output and its matched material swatches once the agent has run.</p>
-      <img src="/assets/img/projects/fullflat-ai-agents/06-moodboard-editor-interface.png" alt="Moodboard Editor showing selected product images and the generated mood board with material swatches" class="project-img" style="">
-      <p class="project-section-text" style="max-width:none;">Underneath, the "Create Moodboards" automation runs on a button click: it takes the selected product images as input, sends them to an image generation model (GPT Image, low fidelity, landscape 1536x1024) with a prompt instructing it to compose a designer moodboard collage using the input images as-is without modification, then writes the result back to the record's Mood Boards attachment field via a follow-up script step.</p>
-      <img src="/assets/img/projects/fullflat-ai-agents/07-moodboard-automation-airtable.png" alt="Airtable automation: button click triggers Generate Image action, then a script writes the output back to the Mood Boards field" class="project-img" style="">
-      <h3 class="project-section-title" style="font-size:28px;">Integration &amp; Workflow</h3>
-      <p class="project-section-text" style="max-width:none;">The agent runs as an Airtable automation inside the Order Management System, triggered on demand by a button click. No external infrastructure, no servers to manage—just Airtable's native automation coupled with GPT Image API calls. The visualizer sends its output straight to the client, closing the loop between order confirmation and delivery with a clear visual preview.</p>
+      <p class="project-section-text" style="max-width:none;">У оператора также есть возможность добавлять кастомные товары, не входящие в каталог, вставляя референсные изображения напрямую. Это покрывает редкие продажи товаров вне каталога по запросу клиента, так что визуализация остаётся точной, даже если заказ включает то, что FullFlat обычно не продаёт.</p>
+      <h4 class="project-section-title" style="font-size:20px;">Внутри редактора мудборда</h4>
+      <p class="project-section-text" style="max-width:none;">На практике оператор работает из представления позиций заказа и отмечает, какие товары должны попасть в визуализацию, переключателем-звёздочкой в колонке «Добавить в мудборд» — это полезно для заказов, где в рендер должны попасть только некоторые позиции (например, базовый пакет), а допы или неопределённые позиции остаются за кадром.</p>
+      <img src="/assets/img/projects/fullflat-ai-agents/05-moodboard-order-line-items.png" alt="Таблица позиций заказа с переключателями-звёздочками, отмечающими, какие товары включить в мудборд" class="project-img" style="">
+      <p class="project-section-text" style="max-width:none;">При переходе в редактор мудборда заказа показываются изображения выбранных товаров, автоматически подтянутые из карточки каждой позиции в каталоге, вместе со сгенерированным мудбордом и подобранными образцами материалов после того, как агент отработал.</p>
+      <img src="/assets/img/projects/fullflat-ai-agents/06-moodboard-editor-interface.png" alt="Редактор мудборда показывает изображения выбранных товаров и сгенерированный мудборд с образцами материалов" class="project-img" style="">
+      <p class="project-section-text" style="max-width:none;">Под капотом автоматизация «Create Moodboards» запускается по клику на кнопку: берёт изображения выбранных товаров как вход, отправляет их в модель генерации изображений (GPT Image, низкая точность, альбомная ориентация 1536×1024) с промптом, инструктирующим собрать дизайнерский коллаж-мудборд, используя входные изображения как есть без изменений, затем записывает результат обратно в поле вложений Mood Boards записи через следующий шаг скрипта.</p>
+      <img src="/assets/img/projects/fullflat-ai-agents/07-moodboard-automation-airtable.png" alt="Автоматизация Airtable: клик по кнопке запускает действие Generate Image, затем скрипт записывает результат в поле Mood Boards" class="project-img" style="">
+      <h3 class="project-section-title" style="font-size:28px;">Интеграция и процесс</h3>
+      <p class="project-section-text" style="max-width:none;">Агент работает как автоматизация Airtable внутри системы управления заказами, запускается по запросу кликом по кнопке. Никакой внешней инфраструктуры, никаких серверов — только нативная автоматизация Airtable в связке с вызовами API GPT Image. Визуализатор отправляет результат напрямую клиенту, замыкая цикл между подтверждением заказа и доставкой чётким визуальным превью.</p>
     </div>
   </div>
 
@@ -314,29 +310,29 @@
     <div class="project-results-inner">
       <h2 class="project-results-title">Результат</h2>
       <ul class="project-results-bullets">
-        <li>Order visualizations sent directly to clients—reducing pre-delivery uncertainty around material and color combinations</li>
-        <li>Works for single products and full orders using the same agent, without separate tooling</li>
-        <li>Real material swatches pulled from the same library linked to each product variation—not generic renders</li>
-        <li>Selective inclusion via star toggle lets operators control exactly which order line items appear in the render</li>
-        <li>Supports off-catalog custom items via operator-uploaded reference images for client-requested one-off sales</li>
+        <li>Визуализации заказа отправляются клиентам напрямую — снижая неопределённость перед доставкой по комбинациям материалов и цветов</li>
+        <li>Работает и для отдельных товаров, и для полных заказов одним и тем же агентом, без отдельного инструментария</li>
+        <li>Реальные образцы материалов из той же библиотеки, что привязана к каждой вариации товара — не общие рендеры</li>
+        <li>Выборочное включение через переключатель-звёздочку даёт оператору контроль над тем, какие позиции заказа попадают в рендер</li>
+        <li>Поддерживает кастомные товары вне каталога через референсные изображения, загруженные оператором, для разовых продаж по запросу клиента</li>
       </ul>
     </div>
   </div>
 
   <!-- ===== DISCUSS CTA ===== -->
   <div class="project-discuss-cta">
-    <a href="https://wa.me/972538791843?text=Hi%20Victoria%2C%20I%20saw%20your%20AI%20Agent%20for%20Order%20Management%20System%20project%20and%20want%20to%20discuss%20a%20similar%20challenge" target="_blank" rel="noopener" class="btn btn-primary">Обсудить похожий проект</a>
+    <a href="https://wa.me/972538791843?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D1%8F%2C%20%D1%8F%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BB%20%D0%B2%D0%B0%D1%88%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20AI-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%20%D0%B4%D0%BB%D1%8F%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B%20%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D0%BC%D0%B8%20%D0%B8%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D0%BE%D1%85%D0%BE%D0%B6%D1%83%D1%8E%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D1%83" target="_blank" rel="noopener" class="btn btn-primary">Обсудить похожий проект</a>
   </div>
 
   <!-- ===== PROJECT NAV ===== -->
   <div class="project-nav-section">
     <div class="project-nav-row">
-      <a href="/projects/fullflat-taxonomy-reviews/" class="project-nav-link">
+      <a href="/ru/projects/fullflat-taxonomy-reviews/" class="project-nav-link">
         <img src="/assets/img/icons/row-arrow-hover.svg" alt="" class="project-nav-arrow project-nav-arrow--prev">
         <span class="project-nav-link-text">Предыдущий проект</span>
       </a>
-      <a href="/projects/" class="project-nav-cta-view">Все проекты</a>
-      <a href="/projects/fullflat-finance/" class="project-nav-link">
+      <a href="/ru/projects/" class="project-nav-cta-view">Все проекты</a>
+      <a href="/ru/projects/fullflat-finance/" class="project-nav-link">
         <span class="project-nav-link-text">Следующий проект</span>
         <img src="/assets/img/icons/row-arrow-hover.svg" alt="" class="project-nav-arrow">
       </a>
