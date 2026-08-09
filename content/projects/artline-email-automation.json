@@ -48,7 +48,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-email-automation/00-full-klaviyo-flow-map.png",
+      "src": "/assets/img/projects/artline-email-automation/00-full-klaviyo-flow-map.png",
       "alt": "Full connected Klaviyo automation map linking welcome, cart recovery, reorder, and review flows"
     },
     {
@@ -57,7 +57,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-email-automation/04-flows-list.png",
+      "src": "/assets/img/projects/artline-email-automation/04-flows-list.png",
       "alt": "Seven live Klaviyo flows: welcome, abandoned cart, abandoned checkout, browse abandonment, post-purchase, and review"
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-email-automation/01-welcome-flash-review.png",
+      "src": "/assets/img/projects/artline-email-automation/01-welcome-flash-review.png",
       "alt": "Welcome series, flash deal, and review request emails"
     },
     {
@@ -83,7 +83,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-email-automation/02-abandoned-cart-flow.png",
+      "src": "/assets/img/projects/artline-email-automation/02-abandoned-cart-flow.png",
       "alt": "Four-step abandoned cart recovery email sequence"
     },
     {
@@ -96,7 +96,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-email-automation/03-repeat-purchase-flow.png",
+      "src": "/assets/img/projects/artline-email-automation/03-repeat-purchase-flow.png",
       "alt": "Tiered repeat purchase flow with 10/15/20% offers and expiry reminder"
     },
     {
@@ -109,18 +109,18 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-email-automation/09-flow-performance-summary.png",
+      "src": "/assets/img/projects/artline-email-automation/09-flow-performance-summary.png",
       "alt": "30-day revenue and conversion performance across all live flows"
     },
     {
       "type": "row4",
-      "src": "assets/img/projects/artline-email-automation/05-welcome-flow-metrics.png",
+      "src": "/assets/img/projects/artline-email-automation/05-welcome-flow-metrics.png",
       "alt": "Welcome flow logic and performance",
-      "src2": "assets/img/projects/artline-email-automation/06-review-flow-metrics.png",
+      "src2": "/assets/img/projects/artline-email-automation/06-review-flow-metrics.png",
       "alt2": "Review request flow logic and performance",
-      "src3": "assets/img/projects/artline-email-automation/07-cart-flow-logic.png",
+      "src3": "/assets/img/projects/artline-email-automation/07-cart-flow-logic.png",
       "alt3": "Abandoned cart flow branching logic",
-      "src4": "assets/img/projects/artline-email-automation/08-checkout-flow-logic.png",
+      "src4": "/assets/img/projects/artline-email-automation/08-checkout-flow-logic.png",
       "alt4": "Abandoned checkout flow branching logic"
     }
   ],
@@ -152,14 +152,15 @@
     ]
   },
   "nav": {
-    "prevHref": "artline-b2b-portal.html",
+    "prevHref": "/artline-b2b-portal/",
     "prevLabel": "Previous Project",
-    "nextHref": "fullflat-operations.html",
+    "nextHref": "/fullflat-operations/",
     "nextLabel": "Next Project",
-    "ctaHref": "fullflat-operations.html",
+    "ctaHref": "/fullflat-operations/",
     "ctaLabel": "Next Project",
     "ctaTitle": "Order Management System for Online Furniture Store",
     "ctaDesc": "End-to-end order lifecycle platform — from customer inquiry to delivery confirmation, replacing spreadsheets with one integrated system",
-    "viewAllHref": "projects.html"
-  }
+    "viewAllHref": "/projects/"
+  },
+  "directLink": "/artline-email-automation/"
 }

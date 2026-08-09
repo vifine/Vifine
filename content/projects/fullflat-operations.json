@@ -44,7 +44,7 @@
   "solutionBlocks": [
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-operations/01-intro.png",
+      "src": "/assets/img/projects/fullflat-operations/01-intro.png",
       "alt": "FullFlat Operations five core processes",
       "style": "margin: 24px 0 40px;"
     },
@@ -58,19 +58,19 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-operations/02-order-intake-a.png",
+      "src": "/assets/img/projects/fullflat-operations/02-order-intake-a.png",
       "alt": "Order detail with margin calculation",
       "style": "margin-bottom:16px;"
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-operations/03-order-intake-b.png",
+      "src": "/assets/img/projects/fullflat-operations/03-order-intake-b.png",
       "alt": "Moodboard editor",
       "style": "margin-bottom:16px;"
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-operations/04-order-intake-c.png",
+      "src": "/assets/img/projects/fullflat-operations/04-order-intake-c.png",
       "alt": "Proforma invoice generation",
       "style": "margin-bottom:40px;"
     },
@@ -84,13 +84,13 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-operations/05-fulfillment-a.png",
+      "src": "/assets/img/projects/fullflat-operations/05-fulfillment-a.png",
       "alt": "Fulfillment order tracking",
       "style": "margin-bottom:16px;"
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-operations/06-fulfillment-b.png",
+      "src": "/assets/img/projects/fullflat-operations/06-fulfillment-b.png",
       "alt": "Fulfillment calendar",
       "style": "margin-bottom:40px;"
     },
@@ -104,13 +104,13 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-operations/07-delivery-a.png",
+      "src": "/assets/img/projects/fullflat-operations/07-delivery-a.png",
       "alt": "Delivery task mobile view",
       "style": "margin-bottom:16px;"
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-operations/08-delivery-b.png",
+      "src": "/assets/img/projects/fullflat-operations/08-delivery-b.png",
       "alt": "Delivery confirmation with photo report",
       "style": "margin-bottom:40px;"
     },
@@ -124,13 +124,13 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-operations/09-claims-a.png",
+      "src": "/assets/img/projects/fullflat-operations/09-claims-a.png",
       "alt": "Claims management interface",
       "style": "margin-bottom:16px;"
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-operations/10-claims-b.png",
+      "src": "/assets/img/projects/fullflat-operations/10-claims-b.png",
       "alt": "Claim calculation detail",
       "style": "margin-bottom:40px;"
     },
@@ -144,7 +144,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-operations/11-reporting.png",
+      "src": "/assets/img/projects/fullflat-operations/11-reporting.png",
       "alt": "Plan vs Fact reporting dashboard",
       "style": ""
     }
@@ -175,14 +175,15 @@
     ]
   },
   "nav": {
-    "prevHref": "artline-email-automation.html",
+    "prevHref": "/artline-email-automation/",
     "prevLabel": "Previous Project",
-    "nextHref": "fullflat-pim.html",
+    "nextHref": "/fullflat-pim/",
     "nextLabel": "Next Project",
-    "ctaHref": "fullflat-pim.html",
+    "ctaHref": "/fullflat-pim/",
     "ctaLabel": "Next Project",
     "ctaTitle": "Product Information Management System",
     "ctaDesc": "Single source of truth for 10,000+ SKUs — bilingual content, multi-supplier pricing, and AI-generated imagery for a contract-manufactured furniture catalog",
-    "viewAllHref": "projects.html"
-  }
+    "viewAllHref": "/projects/"
+  },
+  "directLink": "/fullflat-operations/"
 }

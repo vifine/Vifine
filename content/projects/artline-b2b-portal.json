@@ -48,16 +48,16 @@
     },
     {
       "type": "row2",
-      "src": "assets/img/projects/artline-b2b-portal/01a-vat-verified.jpg",
+      "src": "/assets/img/projects/artline-b2b-portal/01a-vat-verified.jpg",
       "alt": "VAT verified with company name, VAT number, and country confirmed",
-      "src2": "assets/img/projects/artline-b2b-portal/01b-contact-details.jpg",
+      "src2": "/assets/img/projects/artline-b2b-portal/01b-contact-details.jpg",
       "alt2": "Contact details step with pre-filled verified company"
     },
     {
       "type": "row2",
-      "src": "assets/img/projects/artline-b2b-portal/01c-thanks.jpg",
+      "src": "/assets/img/projects/artline-b2b-portal/01c-thanks.jpg",
       "alt": "Registration confirmation with login prompt",
-      "src2": "assets/img/projects/artline-b2b-portal/01d-duplicate-detected.jpg",
+      "src2": "/assets/img/projects/artline-b2b-portal/01d-duplicate-detected.jpg",
       "alt2": "Duplicate account detected with login and WhatsApp support options"
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-b2b-portal/02-b2b-funnel-flow.png",
+      "src": "/assets/img/projects/artline-b2b-portal/02-b2b-funnel-flow.png",
       "alt": "n8n workflow creating and updating B2B funnel deals with step-by-step logging",
       "style": ""
     },
@@ -80,7 +80,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-b2b-portal/02b-bitrix-deal-created.png",
+      "src": "/assets/img/projects/artline-b2b-portal/02b-bitrix-deal-created.png",
       "alt": "Bitrix24 CRM deal auto-created with company, contact, and VAT details from registration",
       "style": "margin-top:24px;margin-bottom:40px;"
     },
@@ -94,7 +94,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-b2b-portal/03-markets-tiers.png",
+      "src": "/assets/img/projects/artline-b2b-portal/03-markets-tiers.png",
       "alt": "Shopify Markets structure with B2B wholesale discount tiers by currency and company location",
       "style": ""
     },
@@ -108,9 +108,9 @@
     },
     {
       "type": "row2",
-      "src": "assets/img/projects/artline-b2b-portal/04-b2b-product-page.png",
+      "src": "/assets/img/projects/artline-b2b-portal/04-b2b-product-page.png",
       "alt": "B2B product page with VAT-exclusive tiered pricing and per-kg breakdown",
-      "src2": "assets/img/projects/artline-b2b-portal/04b-b2c-product-page.png",
+      "src2": "/assets/img/projects/artline-b2b-portal/04b-b2c-product-page.png",
       "alt2": "Standard B2C product page for comparison"
     }
   ],
@@ -126,14 +126,15 @@
     ]
   },
   "nav": {
-    "prevHref": "artline-craft-storefront.html",
+    "prevHref": "/artline-craft-storefront/",
     "prevLabel": "Previous Project",
-    "nextHref": "artline-email-automation.html",
+    "nextHref": "/artline-email-automation/",
     "nextLabel": "Next Project",
-    "ctaHref": "artline-email-automation.html",
+    "ctaHref": "/artline-email-automation/",
     "ctaLabel": "Next Project",
     "ctaTitle": "Email Marketing Migration &amp; Automation",
     "ctaDesc": "Migrated Artline's email marketing from Shopify's native email to Klaviyo, rebuilding automation flows for a more effective, purpose-built platform",
-    "viewAllHref": "projects.html"
-  }
+    "viewAllHref": "/projects/"
+  },
+  "directLink": "/artline-b2b-portal/"
 }

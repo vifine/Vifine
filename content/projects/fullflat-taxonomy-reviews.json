@@ -48,7 +48,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-taxonomy-reviews/01-product-classifier-n8n-flow.png",
+      "src": "/assets/img/projects/fullflat-taxonomy-reviews/01-product-classifier-n8n-flow.png",
       "alt": "n8n automation flow: CSV feed download, parsing, Airtable lookup, Anthropic product breakdown, Photoroom image generation, Airtable update, and Telegram notification"
     },
     {
@@ -57,7 +57,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-taxonomy-reviews/05-pim-product-record-sync.png",
+      "src": "/assets/img/projects/fullflat-taxonomy-reviews/05-pim-product-record-sync.png",
       "alt": "PIM product record showing synced status, Claude-generated SEO description, and the automation log tracking each sync step (supplier prices, variants, images, product update)"
     },
     {
@@ -82,7 +82,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-taxonomy-reviews/02-review-vizard-admin.png",
+      "src": "/assets/img/projects/fullflat-taxonomy-reviews/02-review-vizard-admin.png",
       "alt": "Review Vizard admin interface showing synced reviews with avatars, ratings, review text, matched products, and delivery photos"
     },
     {
@@ -91,9 +91,9 @@
     },
     {
       "type": "row2",
-      "src": "assets/img/projects/fullflat-taxonomy-reviews/03-storefront-reviews-carousel.png",
+      "src": "/assets/img/projects/fullflat-taxonomy-reviews/03-storefront-reviews-carousel.png",
       "alt": "Storefront customer reviews carousel showing synced reviews with avatars, star ratings, and delivery photos",
-      "src2": "assets/img/projects/fullflat-taxonomy-reviews/04-product-page-reviews.png",
+      "src2": "/assets/img/projects/fullflat-taxonomy-reviews/04-product-page-reviews.png",
       "alt2": "Product page showing the 5.0 star rating and review count pulled from the synced reviews"
     },
     {
@@ -122,16 +122,16 @@
     ]
   },
   "images": [],
-  "directLink": "fullflat-taxonomy-reviews.html",
+  "directLink": "/fullflat-taxonomy-reviews/",
   "nav": {
-    "prevHref": "fullflat-pim.html",
+    "prevHref": "/fullflat-pim/",
     "prevLabel": "Previous Project",
-    "nextHref": "fullflat-oms-agent.html",
+    "nextHref": "/fullflat-oms-agent/",
     "nextLabel": "Next Project",
-    "ctaHref": "fullflat-oms-agent.html",
+    "ctaHref": "/fullflat-oms-agent/",
     "ctaLabel": "Next Project",
     "ctaTitle": "AI Agent for Order Management System",
     "ctaDesc": "Automated the creation of client-facing order visualizations — pulling real material swatches from the catalog to show customers exactly what they bought before delivery",
-    "viewAllHref": "projects.html"
+    "viewAllHref": "/projects/"
   }
 }

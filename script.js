@@ -4,7 +4,7 @@
 
 async function loadProjects() {
     try {
-        const response = await fetch('projects.json');
+        const response = await fetch('/projects.json');
         if (!response.ok) throw new Error('Failed to load projects');
         return await response.json();
     } catch (error) {
@@ -30,7 +30,7 @@ function renderPortfolioGrid(projects) {
     if (isProjectsList) {
         // Формат project-row для projects.html
         grid.innerHTML = displayProjects.map(project => {
-            const href = project.directLink ? project.directLink : `project.html?id=${project.id}`;
+            const href = project.directLink ? project.directLink : `/project/?id=${project.id}`;
             const toolsHtml = project.tools && project.tools.length
                 ? `<div class="project-row-tools">${project.tools.map(tool => `<span class="tech-tag">${tool}</span>`).join('')}</div>`
                 : '';
@@ -49,8 +49,8 @@ function renderPortfolioGrid(projects) {
                     <span class="project-row-right-inner">
                         View project
                         <span class="row-arrow-wrap">
-                            <img src="assets/img/icons/row-arrow-default.svg?v=2" alt="" class="row-arrow row-arrow-default">
-                            <img src="assets/img/icons/row-arrow-hover.svg?v=2" alt="" class="row-arrow row-arrow-hover">
+                            <img src="/assets/img/icons/row-arrow-default.svg?v=2" alt="" class="row-arrow row-arrow-default">
+                            <img src="/assets/img/icons/row-arrow-hover.svg?v=2" alt="" class="row-arrow row-arrow-hover">
                         </span>
                     </span>
                 </div>
@@ -59,7 +59,7 @@ function renderPortfolioGrid(projects) {
     } else {
         // Формат portfolio-card для index.html
         grid.innerHTML = displayProjects.map(project => {
-            const href = project.directLink ? project.directLink : `project.html?id=${project.id}`;
+            const href = project.directLink ? project.directLink : `/project/?id=${project.id}`;
             return `
             <a href="${href}" class="portfolio-card">
                 <div class="portfolio-card-meta">
@@ -94,7 +94,7 @@ function renderProjectDetail(projects) {
             <div class="project-not-found">
                 <h2>Project not found</h2>
                 <p>Sorry, we couldn't find that project.</p>
-                <a href="projects.html" class="btn btn-primary">Back to Projects</a>
+                <a href="/projects/" class="btn btn-primary">Back to Projects</a>
             </div>
         `;
         return;
@@ -113,7 +113,7 @@ function renderProjectDetail(projects) {
         : '';
 
     container.innerHTML = `
-        <a href="projects.html" class="back-link">← Back to Projects</a>
+        <a href="/projects/" class="back-link">← Back to Projects</a>
 
         <div class="project-detail-header">
             <div class="project-meta">
@@ -177,7 +177,7 @@ function renderResumeProjectLinks(projects) {
         const projectId = link.getAttribute('data-project-id');
         const project = projects.find(p => p.id === projectId);
         if (project) {
-            link.href = `project.html?id=${project.id}`;
+            link.href = `/project/?id=${project.id}`;
             link.style.display = 'inline-block';
         } else {
             link.style.display = 'none';

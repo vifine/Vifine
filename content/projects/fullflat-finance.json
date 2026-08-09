@@ -40,7 +40,7 @@
   "solutionBlocks": [
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat/21_image_21.png",
+      "src": "/assets/img/projects/fullflat/21_image_21.png",
       "alt": "FullFlat Finance — Budget Classification",
       "style": "margin: 24px 0 40px;"
     },
@@ -54,7 +54,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat/20_image_20.png",
+      "src": "/assets/img/projects/fullflat/20_image_20.png",
       "alt": "Revenue capture via webhooks",
       "style": "margin-bottom:40px;"
     },
@@ -72,13 +72,13 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat/22_image_22.png",
+      "src": "/assets/img/projects/fullflat/22_image_22.png",
       "alt": "Payment requests and approval",
       "style": "margin-bottom:16px;"
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat/23_image_23.png",
+      "src": "/assets/img/projects/fullflat/23_image_23.png",
       "alt": "Budget allocation per order",
       "style": "margin-bottom:40px;"
     },
@@ -116,14 +116,15 @@
     ]
   },
   "nav": {
-    "prevHref": "fullflat-oms-agent.html",
+    "prevHref": "/fullflat-oms-agent/",
     "prevLabel": "Previous Project",
-    "nextHref": "artline-craft-storefront.html",
+    "nextHref": "/artline-craft-storefront/",
     "nextLabel": "Next Project",
-    "ctaHref": "artline-craft-storefront.html",
+    "ctaHref": "/artline-craft-storefront/",
     "ctaLabel": "Next Project",
     "ctaTitle": "Arts & Crafts Storefront Rebuild",
     "ctaDesc": "Rebuilt a patchwork multi-agency Shopify store into a self-maintainable arts & crafts storefront with proper catalog architecture",
-    "viewAllHref": "projects.html"
-  }
+    "viewAllHref": "/projects/"
+  },
+  "directLink": "/fullflat-finance/"
 }

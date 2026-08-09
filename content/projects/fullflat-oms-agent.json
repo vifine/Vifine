@@ -51,9 +51,9 @@
     },
     {
       "type": "row2",
-      "src": "assets/img/projects/fullflat-ai-agents/03-order-visualization-example.png",
+      "src": "/assets/img/projects/fullflat-ai-agents/03-order-visualization-example.png",
       "alt": "Order visualization: sofa, armchair, coffee table, dining chair, dining table, and TV console with linked material swatches",
-      "src2": "assets/img/projects/fullflat-ai-agents/04-order-visualization-example-2.png",
+      "src2": "/assets/img/projects/fullflat-ai-agents/04-order-visualization-example-2.png",
       "alt2": "Order visualization: sofa, bed, nightstand, rug, lighting, wall art, and console with material swatches"
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-ai-agents/05-moodboard-order-line-items.png",
+      "src": "/assets/img/projects/fullflat-ai-agents/05-moodboard-order-line-items.png",
       "alt": "Order Line Items table with star toggles marking which products to include in the moodboard"
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-ai-agents/06-moodboard-editor-interface.png",
+      "src": "/assets/img/projects/fullflat-ai-agents/06-moodboard-editor-interface.png",
       "alt": "Moodboard Editor showing selected product images and the generated mood board with material swatches"
     },
     {
@@ -88,7 +88,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-ai-agents/07-moodboard-automation-airtable.png",
+      "src": "/assets/img/projects/fullflat-ai-agents/07-moodboard-automation-airtable.png",
       "alt": "Airtable automation: button click triggers Generate Image action, then a script writes the output back to the Mood Boards field"
     },
     {
@@ -111,16 +111,16 @@
     ]
   },
   "images": [],
-  "directLink": "fullflat-oms-agent.html",
+  "directLink": "/fullflat-oms-agent/",
   "nav": {
-    "prevHref": "fullflat-taxonomy-reviews.html",
+    "prevHref": "/fullflat-taxonomy-reviews/",
     "prevLabel": "Previous Project",
-    "nextHref": "fullflat-finance.html",
+    "nextHref": "/fullflat-finance/",
     "nextLabel": "Next Project",
-    "ctaHref": "fullflat-finance.html",
+    "ctaHref": "/fullflat-finance/",
     "ctaLabel": "Next Project",
     "ctaTitle": "Financial Operations &amp; P&amp;L System",
     "ctaDesc": "Fully automated financial operations — real-time P&amp;L, Cash Flow, and per-order profitability tracking",
-    "viewAllHref": "projects.html"
+    "viewAllHref": "/projects/"
   }
 }

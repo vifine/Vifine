@@ -41,7 +41,7 @@
   "solutionBlocks": [
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-pim/00-full-flow-diagram.png",
+      "src": "/assets/img/projects/fullflat-pim/00-full-flow-diagram.png",
       "alt": "FullFlat PIM full product lifecycle — from creation to publishing",
       "style": "margin: 24px 0 40px;"
     },
@@ -55,13 +55,13 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat/15_image_15.png",
+      "src": "/assets/img/projects/fullflat/15_image_15.png",
       "alt": "Supplier feed sync interface",
       "style": "margin-bottom:16px;"
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat/16_image_16.png",
+      "src": "/assets/img/projects/fullflat/16_image_16.png",
       "alt": "Product enrichment view",
       "style": "margin-bottom:40px;"
     },
@@ -75,7 +75,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat-pim/01-supplier-pricing-table.png",
+      "src": "/assets/img/projects/fullflat-pim/01-supplier-pricing-table.png",
       "alt": "Multi-supplier pricing table per variant with procurement cost and margin",
       "style": "margin-bottom:40px;"
     },
@@ -101,19 +101,19 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat/17_image_17.png",
+      "src": "/assets/img/projects/fullflat/17_image_17.png",
       "alt": "SEO enrichment workflow",
       "style": "margin-bottom:16px;"
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat/18_image_18.png",
+      "src": "/assets/img/projects/fullflat/18_image_18.png",
       "alt": "Shopify publishing control",
       "style": "margin-bottom:16px;"
     },
     {
       "type": "image",
-      "src": "assets/img/projects/fullflat/19_image_19.png",
+      "src": "/assets/img/projects/fullflat/19_image_19.png",
       "alt": "Multi-channel publishing status",
       "style": ""
     }
@@ -145,14 +145,15 @@
     ]
   },
   "nav": {
-    "prevHref": "fullflat-operations.html",
+    "prevHref": "/fullflat-operations/",
     "prevLabel": "Previous Project",
-    "nextHref": "fullflat-taxonomy-reviews.html",
+    "nextHref": "/fullflat-taxonomy-reviews/",
     "nextLabel": "Next Project",
-    "ctaHref": "fullflat-taxonomy-reviews.html",
+    "ctaHref": "/fullflat-taxonomy-reviews/",
     "ctaLabel": "Next Project",
     "ctaTitle": "AI Agents for Taxonomy &amp; Product Reviews",
     "ctaDesc": "Automated the handling of new products and delivery photos to produce polished, PIM-standard content — taxonomy classification and customer reviews — without manual work at each step",
-    "viewAllHref": "projects.html"
-  }
+    "viewAllHref": "/projects/"
+  },
+  "directLink": "/fullflat-pim/"
 }

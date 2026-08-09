@@ -2,10 +2,19 @@
 """
 i18n scaffolding script.
 
-Creates a /ru/ mirror of every top-level HTML page, fixes relative asset
-paths for the extra folder depth, adds hreflang alternate tags between the
-English and Russian versions, and inserts an EN/RU language switcher link
-into the navbar, desktop dropdown, and mobile menu of every page.
+Creates a /ru/ mirror of every top-level page, adds hreflang alternate tags
+between the English and Russian versions, and inserts an EN/RU language
+switcher link into the navbar, desktop dropdown, and mobile menu of every
+page.
+
+Pages live at clean, extensionless URLs: /cv/, /projects/, /fullflat-pim/,
+etc. (physically stored as {slug}/index.html). The homepage (index.html) and
+404.html are the only two files that stay flat at the root, since that's
+what GitHub Pages requires.
+
+All internal resource references (assets, script.js, projects.json) and
+generated links (hreflang, canonical, lang toggle) use root-absolute paths,
+so no relative-depth math is needed regardless of how deep a page lives.
 
 Run once to scaffold the architecture. Re-run any time a new top-level page
 is added. Text content itself is NOT translated by this script — Russian
@@ -20,38 +29,50 @@ ROOT = Path(__file__).parent
 RU_DIR = ROOT / "ru"
 SITE_URL = "https://vifine.tech"
 
-PAGES = [
-    "404.html",
-    "artline-b2b-portal.html",
-    "artline-craft-storefront.html",
-    "artline-email-automation.html",
-    "contact.html",
-    "cv.html",
-    "fullflat-finance.html",
-    "fullflat-oms-agent.html",
-    "fullflat-operations.html",
-    "fullflat-pim.html",
-    "fullflat-taxonomy-reviews.html",
-    "index.html",
-    "project-detail.html",
-    "project.html",
-    "projects.html",
+# Slugs for every page that lives at /{slug}/ (i.e. {slug}/index.html).
+# "index" and "404" are handled separately since they stay flat at the root.
+SLUGS = [
+    "artline-b2b-portal",
+    "artline-craft-storefront",
+    "artline-email-automation",
+    "contact",
+    "cv",
+    "fullflat-finance",
+    "fullflat-oms-agent",
+    "fullflat-operations",
+    "fullflat-pim",
+    "fullflat-taxonomy-reviews",
+    "project-detail",
+    "project",
+    "projects",
 ]
 
 
-def add_hreflang(html: str, page: str, is_ru: bool) -> str:
+def en_url(slug: str) -> str:
+    if slug == "index":
+        return f"{SITE_URL}/"
+    if slug == "404":
+        return f"{SITE_URL}/404.html"
+    return f"{SITE_URL}/{slug}/"
+
+
+def ru_url(slug: str) -> str:
+    if slug == "index":
+        return f"{SITE_URL}/ru/"
+    if slug == "404":
+        return f"{SITE_URL}/ru/404.html"
+    return f"{SITE_URL}/ru/{slug}/"
+
+
+def add_hreflang(html: str, slug: str) -> str:
     """Insert hreflang alternate tags + x-default right after <link rel="canonical">."""
-    # Idempotency: remove any hreflang tags from a previous run first.
     html = re.sub(r'\n\s*<link rel="alternate" hreflang="[^"]*"[^>]*>', "", html)
 
-    en_url = f"{SITE_URL}/{page}" if page != "index.html" else f"{SITE_URL}/"
-    ru_url = f"{SITE_URL}/ru/{page}"
     tags = (
-        f'\n  <link rel="alternate" hreflang="en" href="{en_url}">'
-        f'\n  <link rel="alternate" hreflang="ru" href="{ru_url}">'
-        f'\n  <link rel="alternate" hreflang="x-default" href="{en_url}">'
+        f'\n  <link rel="alternate" hreflang="en" href="{en_url(slug)}">'
+        f'\n  <link rel="alternate" hreflang="ru" href="{ru_url(slug)}">'
+        f'\n  <link rel="alternate" hreflang="x-default" href="{en_url(slug)}">'
     )
-    # Insert after the canonical link line
     return re.sub(
         r'(<link rel="canonical"[^>]*>)',
         r"\1" + tags.replace("\\", "\\\\"),
@@ -60,18 +81,9 @@ def add_hreflang(html: str, page: str, is_ru: bool) -> str:
     )
 
 
-def fix_ru_paths(html: str) -> str:
-    """Prefix relative asset/script/data paths with ../ for the /ru/ subfolder."""
-    html = re.sub(r'(src|href)="assets/', r'\1="../assets/', html)
-    html = re.sub(r'src="script\.js"', 'src="../script.js"', html)
-    html = re.sub(r"fetch\('projects\.json'\)", "fetch('../projects.json')", html)
-    return html
-
-
 def insert_lang_toggle(html: str, active: str, other_href: str) -> str:
     """Insert a persistent sliding pill toggle in the header, right before the burger
     button — always visible, outside the dropdown/mobile menu, matching Figma."""
-    # Idempotency: strip any toggle already inserted by a previous run first.
     html = re.sub(r'\s*<div class="lang-toggle[^"]*">.*?</div>\s*', "\n      ", html, flags=re.DOTALL)
 
     modifier = " lang-toggle--ru" if active == "ru" else ""
@@ -95,44 +107,54 @@ def insert_lang_toggle(html: str, active: str, other_href: str) -> str:
     )
 
 
+def source_path(slug: str) -> Path:
+    if slug in ("index", "404"):
+        return ROOT / f"{slug}.html"
+    return ROOT / slug / "index.html"
+
+
+def ru_dest_path(slug: str) -> Path:
+    if slug in ("index", "404"):
+        return RU_DIR / f"{slug}.html"
+    return RU_DIR / slug / "index.html"
+
+
 def build():
     RU_DIR.mkdir(exist_ok=True)
 
-    for page in PAGES:
-        src_path = ROOT / page
+    all_slugs = ["index", "404"] + SLUGS
+
+    for slug in all_slugs:
+        src_path = source_path(slug)
         if not src_path.exists():
-            print(f"  skip (not found): {page}")
+            print(f"  skip (not found): {slug}")
             continue
 
         original = src_path.read_text(encoding="utf-8")
 
         # ---- Update the EN (root) file in place ----
         en_html = original
-        en_html = add_hreflang(en_html, page, is_ru=False)
-        ru_target = "ru/" if page == "index.html" else f"ru/{page}"
-        en_html = insert_lang_toggle(en_html, "en", ru_target)
+        en_html = add_hreflang(en_html, slug)
+        en_html = insert_lang_toggle(en_html, "en", ru_url(slug).replace(SITE_URL, ""))
         src_path.write_text(en_html, encoding="utf-8")
 
         # ---- Build the RU mirror ----
         ru_html = original
-        ru_html = fix_ru_paths(ru_html)
         ru_html = ru_html.replace('<html lang="en">', '<html lang="ru">', 1)
-        ru_html = add_hreflang(ru_html, page, is_ru=True)
-        # canonical must point to the ru URL
-        ru_canonical = f"{SITE_URL}/ru/{page}"
+        ru_html = add_hreflang(ru_html, slug)
         ru_html = re.sub(
             r'<link rel="canonical" href="[^"]*">',
-            f'<link rel="canonical" href="{ru_canonical}">',
+            f'<link rel="canonical" href="{ru_url(slug)}">',
             ru_html,
             count=1,
         )
-        en_target = "../" if page == "index.html" else f"../{page}"
-        ru_html = insert_lang_toggle(ru_html, "ru", en_target)
+        ru_html = insert_lang_toggle(ru_html, "ru", en_url(slug).replace(SITE_URL, ""))
 
-        (RU_DIR / page).write_text(ru_html, encoding="utf-8")
-        print(f"  built: {page}  ->  ru/{page}")
+        dest = ru_dest_path(slug)
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(ru_html, encoding="utf-8")
+        print(f"  built: {slug}  ->  ru/{slug}")
 
-    # Duplicate projects.json into /ru/ so script.js's relative fetch works there too
     pj = ROOT / "projects.json"
     if pj.exists():
         shutil.copy(pj, RU_DIR / "projects.json")

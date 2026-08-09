@@ -49,7 +49,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-craft-storefront/01-design-system.jpg",
+      "src": "/assets/img/projects/artline-craft-storefront/01-design-system.jpg",
       "alt": "Design system: colors, typography, spacing, radius, and shadows",
       "style": ""
     },
@@ -63,13 +63,13 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-craft-storefront/02-airtable-variants.png",
+      "src": "/assets/img/projects/artline-craft-storefront/02-airtable-variants.png",
       "alt": "Airtable PIM with restructured products and variants",
       "style": ""
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-craft-storefront/09-catalog-filters.png",
+      "src": "/assets/img/projects/artline-craft-storefront/09-catalog-filters.png",
       "alt": "Filterable product catalog by category, type, price, viscosity, volume, and color",
       "style": ""
     },
@@ -83,7 +83,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-craft-storefront/08-resin-calculator.png",
+      "src": "/assets/img/projects/artline-craft-storefront/08-resin-calculator.png",
       "alt": "Resin volume calculator with shape, dimensions, project type, and recommended product",
       "style": ""
     },
@@ -97,7 +97,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-craft-storefront/03-product-card-types.jpg",
+      "src": "/assets/img/projects/artline-craft-storefront/03-product-card-types.jpg",
       "alt": "Product card templates: pill selectors, color swatches, and image variants with add-to-cart from catalog",
       "style": ""
     },
@@ -115,7 +115,7 @@
       "text2": "Each rich-content block, like a slideshow product card, is a single metaobject entry with its own title, heading, description, and desktop/mobile banner images. That entry is then referenced by every product that uses it, so updating one field updates it everywhere it's linked instead of requiring an edit per product. The References panel on each entry shows exactly which products are pulling from it, making it easy to see the reach of a single piece of content before changing it.",
       "img3": "assets/img/projects/artline-craft-storefront/07-theme-editor-settings.png",
       "alt3": "Theme editor settings for the product media section",
-      "src": "assets/img/projects/artline-craft-storefront/04-rich-content-pdp.jpg",
+      "src": "/assets/img/projects/artline-craft-storefront/04-rich-content-pdp.jpg",
       "alt": "Product page with modular rich content: applications, how to use, specifications, and cross-sell pairings"
     },
     {
@@ -128,9 +128,9 @@
     },
     {
       "type": "row2",
-      "src": "assets/img/projects/artline-craft-storefront/10-popup-signup.png",
+      "src": "/assets/img/projects/artline-craft-storefront/10-popup-signup.png",
       "alt": "Newsletter signup popup step one",
-      "src2": "assets/img/projects/artline-craft-storefront/11-popup-thanks.png",
+      "src2": "/assets/img/projects/artline-craft-storefront/11-popup-thanks.png",
       "alt2": "Newsletter signup popup step two with discount code"
     },
     {
@@ -139,7 +139,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-craft-storefront/12-popup-editor-settings.jpg",
+      "src": "/assets/img/projects/artline-craft-storefront/12-popup-editor-settings.jpg",
       "alt": "Theme editor settings for the newsletter popup and discount code",
       "style": ""
     },
@@ -153,7 +153,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-craft-storefront/13-whatsapp-widget.jpg",
+      "src": "/assets/img/projects/artline-craft-storefront/13-whatsapp-widget.jpg",
       "alt": "Custom two-step WhatsApp chat widget",
       "style": "max-width:480px;margin:0 auto 40px;display:block;"
     },
@@ -163,7 +163,7 @@
     },
     {
       "type": "image",
-      "src": "assets/img/projects/artline-craft-storefront/14-n8n-crm-flow.png",
+      "src": "/assets/img/projects/artline-craft-storefront/14-n8n-crm-flow.png",
       "alt": "n8n workflow syncing WhatsApp leads between Shopify and Bitrix24 CRM",
       "style": ""
     }
@@ -194,14 +194,15 @@
     ]
   },
   "nav": {
-    "prevHref": "fullflat-finance.html",
+    "prevHref": "/fullflat-finance/",
     "prevLabel": "Previous Project",
-    "nextHref": "artline-b2b-portal.html",
+    "nextHref": "/artline-b2b-portal/",
     "nextLabel": "Next Project",
-    "ctaHref": "artline-b2b-portal.html",
+    "ctaHref": "/artline-b2b-portal/",
     "ctaLabel": "Next Project",
     "ctaTitle": "B2B Wholesale Portal",
     "ctaDesc": "Built a self-serve B2B portal on Shopify's brand-new native B2B platform for European business buyers: VAT-exempt tiered pricing, VIES-verified registration, and automated multi-language invoicing",
-    "viewAllHref": "projects.html"
-  }
+    "viewAllHref": "/projects/"
+  },
+  "directLink": "/artline-craft-storefront/"
 }
