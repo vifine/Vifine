@@ -2408,11 +2408,8 @@ body.menu-open .wa-widget {
 
 /* Language toggle — persistent, outside dropdown menus */
 .lang-toggle {
-  /* Hidden by default (English pages) — only the Russian version shows a
-     way back to English via .lang-toggle--ru below. English visitors never
-     see a language switcher at all. */
-  display: none;
   position: relative;
+  display: flex;
   align-items: center;
   background: #1A1A1A;
   border-radius: 14px;
