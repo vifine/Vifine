@@ -72,10 +72,30 @@
     .ctrl{right:14px;bottom:12px;gap:6px}.ctrl button{padding:10px 12px;font-size:11px}
   }
 
+
+  .nav{position:fixed;right:48px;top:34px;display:flex;gap:28px;z-index:20}
+  .nav a{font:500 12px/1 Inter,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:8px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+  .nav a:hover{color:var(--teal)}
+  .nav a.on{color:var(--teal);border-bottom-color:var(--teal)}
+  .burger{display:none}
+  body.clean .nav,body.clean .burger{display:none!important}
+  @media (max-width:900px),(max-height:560px){
+    .burger{display:flex;position:fixed;top:10px;right:10px;z-index:21;width:44px;height:44px;border:0;background:rgba(255,255,255,.85);border-radius:50%;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0;cursor:pointer;box-shadow:0 4px 14px rgba(11,60,68,.12)}
+    .burger i{display:block;width:18px;height:2px;background:var(--teal);transition:transform .25s,opacity .25s}
+    body.menu .burger i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    body.menu .burger i:nth-child(2){opacity:0}
+    body.menu .burger i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav{top:62px;right:10px;flex-direction:column;gap:0;background:#fff;border:1px solid var(--line);box-shadow:0 12px 30px rgba(11,60,68,.14);padding:6px 0;min-width:210px;transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+    body.menu .nav{transform:none;opacity:1;pointer-events:auto}
+    .nav a{padding:14px 18px;border-bottom:0;border-left:3px solid transparent;font-size:12px}
+    .nav a.on{border-left-color:var(--teal)}
+  }
 </style>
 </head>
 <body>
 <div id="app"></div>
+<button class="burger" id="burger" aria-label="Меню моделей"><i></i><i></i><i></i></button><nav class="nav" id="nav"><a href="https://vifine.tech/tensegrity/v4/" class="on" aria-current="page">Тенсегрити</a><a href="https://vifine.tech/tensegrity/spiral/">Двойная спираль</a></nav><script>(function(){var b=document.getElementById('burger'),n=document.getElementById('nav');b.addEventListener('click',function(e){e.stopPropagation();document.body.classList.toggle('menu');});document.addEventListener('pointerdown',function(e){if(n.contains(e.target)||b.contains(e.target))return;document.body.classList.remove('menu');},true);n.querySelectorAll('a.on').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();document.body.classList.remove('menu');});});})();</script>
+
 <div class="left">
 <div class="brand">
   <div class="author">БУСЫГИНА Т.А.</div>
