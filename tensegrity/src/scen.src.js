@@ -1467,6 +1467,41 @@ window.addEventListener("keydown", (e) => {
 });
 var uSheet = document.getElementById("sheet");
 uSheet && uSheet.addEventListener("click", () => document.body.classList.toggle("map"));
+// мобильная панель: закрыть тапом вне панели или свайпом вниз
+var uPanel = document.getElementById("needs"),
+  uMapOpen = () => document.body.classList.contains("map"),
+  uClose = () => (document.body.classList.remove("map"), (uPanel.style.transform = ""));
+var uTap = null;
+document.addEventListener("pointerdown", (e) => {
+  uTap = uMapOpen() && !uPanel.contains(e.target) && !(uSheet && uSheet.contains(e.target)) ? { x: e.clientX, y: e.clientY } : null;
+}, true);
+document.addEventListener("pointerup", (e) => {
+  uTap && Math.hypot(e.clientX - uTap.x, e.clientY - uTap.y) < 10 && uClose();
+  uTap = null;
+}, true);
+var uSw = null;
+uPanel.addEventListener("touchstart", (e) => {
+  let t = e.touches[0];
+  uSw = e.touches.length === 1 && e.target.tagName !== "INPUT" ? { y: t.clientY, x: t.clientX, top: uPanel.scrollTop, dy: 0, on: !1 } : null;
+}, { passive: !0 });
+uPanel.addEventListener("touchmove", (e) => {
+  if (!uSw || !uMapOpen()) return;
+  let t = e.touches[0], dy = t.clientY - uSw.y, dx = t.clientX - uSw.x;
+  if (!uSw.on) {
+    if (uSw.top > 0 || uPanel.scrollTop > 0 || dy < 8 || Math.abs(dx) > dy) return;
+    uSw.on = !0;
+    uPanel.classList.add("drag");
+  }
+  e.preventDefault();
+  uSw.dy = Math.max(0, dy);
+  uPanel.style.transform = "translateY(" + uSw.dy + "px)";
+}, { passive: !1 });
+uPanel.addEventListener("touchend", () => {
+  if (!uSw) return;
+  uPanel.classList.remove("drag");
+  uSw.on && uSw.dy > 70 ? uClose() : (uPanel.style.transform = "");
+  uSw = null;
+});
 
 // показ: норма → один → два → дефицит → истощение → восстановление
 var TL = [[0, "ok"], [5, "load"], [12, "two"], [19, "deficit"], [28, "burnout"], [35, "ok"]],
