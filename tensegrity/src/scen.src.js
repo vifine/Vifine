@@ -244,7 +244,7 @@ function gh(i) {
     if ((Ue && pos[Ue.node].lerp(Ue.target, 0.3), ra < 1))
       for (let s = 0; s < 12; s++) (kd.copy(mh[s]).lerp(homes[Yt][s], ra), pos[s].lerp(kd, 0.05));
     else if (homes[Yt] && rn > 0) for (let s = 0; s < 12; s++) pos[s].lerp(homes[Yt][s], Dx * rn);
-    di >= 1 && U.squeeze && U.squeeze();
+    di >= 1 && U.squeeze && (U.despin(), U.squeeze());
     let n = Yt === 0 ? Ji : _s;
     for (let s = 0; s < 2; s++)
       (RING.forEach(([r, a]) => {
@@ -1528,6 +1528,40 @@ function uStatus() {
   uChainUpdate();
 }
 
+
+// ---------- гашение вращения целиком ----------
+// Несимметричные силы раскручивают каркас; убираем из скоростей узлов вращение тела
+// как целого (момент импульса), деформации остаются. Вращение мышью идёт отдельно.
+var uI = new THREE.Matrix3(), uL = new THREE.Vector3(), uW = new THREE.Vector3(), uC = new THREE.Vector3(),
+  uR = new THREE.Vector3(), uV = new THREE.Vector3(), uX = new THREE.Vector3();
+var DESPIN = qi.has("despin") ? +qi.get("despin") : 1;
+U.despin = function () {
+  if (!DESPIN) return;
+  // гасим только там, где каркас не притягивается к своей форме (иначе спорим с притяжением)
+  // и не трогаем перещёлкивание: там поворот — часть перехода в другое состояние
+  if ($n || U.flipT > 0) return;
+  let k = (Ue ? 0.08 : Math.max(0, 1 - rn)) * DESPIN;
+  uC.set(0, 0, 0);
+  pos.forEach((p) => uC.add(p));
+  uC.multiplyScalar(1 / 12);
+  uL.set(0, 0, 0);
+  let xx = 0, yy = 0, zz = 0, xy = 0, xz = 0, yz = 0;
+  for (let n = 0; n < 12; n++) {
+    uR.subVectors(pos[n], uC);
+    uV.subVectors(pos[n], we[n]);
+    uL.add(uX.crossVectors(uR, uV));
+    xx += uR.x * uR.x; yy += uR.y * uR.y; zz += uR.z * uR.z;
+    xy += uR.x * uR.y; xz += uR.x * uR.z; yz += uR.y * uR.z;
+  }
+  uI.set(yy + zz, -xy, -xz, -xy, xx + zz, -yz, -xz, -yz, xx + yy);
+  if (Math.abs(uI.determinant()) < 1e-9) return;
+  uW.copy(uL).applyMatrix3(uI.invert()).multiplyScalar(k);
+  for (let n = 0; n < 12; n++) {
+    uR.subVectors(pos[n], uC);
+    we[n].add(uX.crossVectors(uW, uR)); // v -= ω×r  ⇔  prev += ω×r
+  }
+};
+
 // ---------- внешняя нагрузка: осевое сжатие каркаса ----------
 var uA = new THREE.Vector3(), uB2 = new THREE.Vector3(), uDir = new THREE.Vector3();
 U.squeeze = function () {
@@ -1540,42 +1574,52 @@ U.squeeze = function () {
 // ---------- силы ----------
 var uLen = new THREE.Vector3();
 function uRest(c) { return REST[c.t] * Qn * (c.t === "diag" ? yl : 1); }
-function uForces() {
-  let sum = 0, n = 0, taut = 0, mx = 0;
-  CAB.forEach((c) => {
-    let act = c.t !== "diag" || c.s === Yt, cut = cutSet.has(nr(c.a, c.b));
-    c.act = act && !cut;
-    if (!c.act) { c.F = 0; return; }
+// измерение: силы в активных тросах и попарные расстояния узлов в текущем состоянии
+function uMeasure() {
+  let F = [], D = [], sum = 0, n = 0, taut = 0;
+  CAB.forEach((c, i) => {
+    let act = (c.t !== "diag" || c.s === Yt) && !cutSet.has(nr(c.a, c.b));
+    c.act = act;
+    if (!act) { F[i] = 0; return; }
     let l = pos[c.a].distanceTo(pos[c.b]), r = uRest(c), x = Math.max(0, l - r) / r;
-    c.F = U.k(c.a, c.b) * x;
-    c.x = x;
-    sum += c.F; n++;
+    F[i] = U.k(c.a, c.b) * x;
+    sum += F[i]; n++;
     x > 2e-4 && taut++;
   });
-  U.tautN = taut;
-  // эталон берётся в норме после сборки
-  let norm = Math.abs(U.cl - 5) < 0.3 && U.cb >= 8.5 && U.cc.every((v, i) => eff(i) >= 8.5) && !ti && !cutSet.size && di >= 1;
-  if (norm || !U.F0) {
-    CAB.forEach((c) => { c.act && (c.F0 = c.F0 ? c.F0 + (c.F - c.F0) * 0.05 : c.F); });
-    U.F0 = U.F0 ? U.F0 + (sum / Math.max(1, n) - U.F0) * 0.05 : sum / Math.max(1, n);
-  }
-  // деформация формы: макс. относительное изменение расстояний между узлами
-  let dev = 0, q = 0;
-  for (let a = 0; a < 12; a++)
-    for (let b = a + 1; b < 12; b++, q++) {
-      let d = pos[a].distanceTo(pos[b]);
-      (norm || !U.D0[q]) && (U.D0[q] = U.D0[q] ? U.D0[q] + (d - U.D0[q]) * 0.05 : d);
-      dev = Math.max(dev, Math.abs(d - U.D0[q]) / U.D0[q]);
-    }
+  for (let a = 0; a < 12; a++) for (let b = a + 1; b < 12; b++) D.push(pos[a].distanceTo(pos[b]));
+  return { F, D, taut, mean: sum / Math.max(1, n) };
+}
+// эталон нормы для каждого из двух устойчивых состояний: считается один раз в фоне,
+// на отдельном прогоне физики с нормальными параметрами (нагрузка 5, все ресурсы 9)
+U.R = [null, null];
+function uCalib(state) {
+  let save = {
+    pos: pos.map((p) => p.clone()), we: we.map((p) => p.clone()),
+    Yt, rn, Un, mi, Qn, yl, $n, Ue, kc: U.kc.slice(), Ls: U.Ls.slice(), P: U.P,
+  };
+  U.kc.fill(1); U.Ls.fill(1); U.P = 0.5 * (+qi.get("P") || 0.02);
+  Yt = state; rn = 0.12; Un = !1; mi = 0; Qn = 1; yl = 1; $n = null; Ue = null;
+  homes[state].forEach((h, i) => { pos[i].copy(h); we[i].copy(h); });
+  for (let s = 0; s < 900; s++) gh(0);
+  U.R[state] = uMeasure();
+  save.pos.forEach((p, i) => pos[i].copy(p)); save.we.forEach((p, i) => we[i].copy(p));
+  Yt = save.Yt; rn = save.rn; Un = save.Un; mi = save.mi; Qn = save.Qn; yl = save.yl; $n = save.$n; Ue = save.Ue;
+  U.kc = save.kc; U.Ls = save.Ls; U.P = save.P;
+}
+function uForces() {
+  if (!U.R[0]) (uCalib(0), uCalib(1));
+  let m = uMeasure(), R = U.R[Yt], mx = 0, dev = 0;
+  U.tautN = m.taut;
+  for (let q = 0; q < m.D.length; q++) dev = Math.max(dev, Math.abs(m.D[q] - R.D[q]) / R.D[q]);
   U.dev += (dev - U.dev) * 0.15;
-  CAB.forEach((c) => {
-    c.f = c.act && c.F0 ? c.F / c.F0 : 0;
+  CAB.forEach((c, i) => {
+    c.F = m.F[i];
+    c.f = c.act && R.F[i] ? m.F[i] / R.F[i] : 0;
     c.act && (mx = Math.max(mx, c.f));
   });
   U.maxF += (Math.max(1, mx) - U.maxF) * 0.15;
-  // запас устойчивости: доля тросов под натяжением × уровень предварительного натяжения
   // запас устойчивости: насколько форма далека от предела деформации и сколько тросов держат
-  let tf = THREE.MathUtils.clamp((taut - 16) / 12, 0, 1);
+  let tf = THREE.MathUtils.clamp((m.taut - 16) / 12, 0, 1);
   U.margin = THREE.MathUtils.clamp(1 - U.dev / DEV_MAX, 0, 1) * tf;
 }
 
@@ -1602,8 +1646,15 @@ U.step = function (dt) {
     U.Ls[j] = 1 - 0.03 * d;
     worst = Math.max(worst, d);
   }
-  U.pull = qi.has("pull") ? +qi.get("pull") : 0.12;
-  U.P = (U.cl / 10) * (+qi.get("P") || 0.02);
+  // перещёлкивание: на время перехода и 3 с после него каркас фиксируется в новом состоянии
+  // после перехода (и после восстановления) каркас 3 с держится в своём состоянии, затем за 1,5 с отпускается
+  Yt !== U.lastYt && ((U.lastYt = Yt), (U.flipT = 4.5));
+  U.flipT = Math.max(0, (U.flipT || 0) - dt);
+  let base = qi.has("pull") ? +qi.get("pull") : 0.12;
+  U.pull = $n ? 1 : base + (1 - base) * Math.min(1, U.flipT / 1.5);
+  // нагрузка снимается на время перещёлкивания (иначе сжатие не даёт призме перейти во второе состояние)
+  U.lw = THREE.MathUtils.clamp((U.lw ?? 1) + ($n ? -dt * 4 : dt / 1.5), 0, 1);
+  U.P = U.lw * (U.cl / 10) * (+qi.get("P") || 0.02);
   U.Qt = 1 + 0.075 * balDef * balDef;
   if (di >= 1) uForces();
   // усталость: перегрузка истощает узел; восстановление идёт из баланса потребностей
@@ -1611,7 +1662,7 @@ U.step = function (dt) {
   for (let j = 0; j < NC; j++) {
     let o = 0;
     CAB.forEach((c) => { c.act && (c.a % 6 === j || c.b % 6 === j) && (o = Math.max(o, c.f)); });
-    let wear = Math.max(0, o - 1.15) * 0.06,
+    let wear = $n || U.flipT > 0 ? 0 : Math.max(0, o - 1.15) * 0.06,
       heal = 0.3 * Math.pow(Math.max(0, U.cb - 2) / 7, 2);
     let dh = (heal * (1 - U.h[j]) - wear) * dt;
     U.h[j] = Math.min(1, Math.max(0.25, U.h[j] + dh));
@@ -1619,13 +1670,15 @@ U.step = function (dt) {
   }
   U.cascade += (casc - U.cascade) * 0.1;
   // потеря жёсткости: мало тросов под натяжением → механизм складывается
-  if (!U.needUnst && di >= 1 && U.margin < M_CRIT) {
+  let flipping = $n || U.flipT > 0;
+  flipping && (U.margin = Math.max(U.margin, 0.5));
+  if (!U.needUnst && di >= 1 && !flipping && U.margin < M_CRIT) {
     ((U.needUnst = !0), (Un = !1), (rn = 0));
     ar([35, 40, 25, 40, 90]);
   } else if (U.needUnst) {
     // восстановление: ресурсы и баланс должны вернуться выше, чем порог падения
     let ok = U.cb >= 6 && U.cc.every((v, i) => eff(i) >= 5);
-    ok && ((U.needUnst = !1), (U.margin = M_BACK), U.cutUnst || ((Un = !cutSet.size), ca && (ca.className = "status")), ar([10, 40, 10]));
+    ok && ((U.needUnst = !1), (U.margin = M_BACK), (U.flipT = 4.5), U.cutUnst || ((Un = !cutSet.size), ca && (ca.className = "status")), ar([10, 40, 10]));
   }
   ti = U.cutUnst || U.needUnst;
   // стержни: тускнеют с ресурсом
@@ -1669,13 +1722,16 @@ Object.defineProperty(window, "__qn", { get: () => Qn });
 window.__ff = function (n) {
   for (let s = 0; s < n; s++) {
     U.step(1 / 60);
+    $n && Yt !== $n.target && (yl = Math.min(1.42, yl + 0.012));
     gh(s / 60);
+    $n && Yt === $n.target && fa * rr[Yt] > rf * 1.6 && ($n = null);
     mi += ((ti ? 1 : 0) - mi) * (ti ? 0.05 : 0.03);
     di >= 1 && (Qn += ((ti ? 1.14 : U.Qt) - Qn) * 0.03);
-    cutSet.size || U.needUnst ? (rn = 0) : (rn = Math.min(U.pull, rn + 0.01));
+    cutSet.size || U.needUnst ? (rn = 0) : !$n && (rn = Math.min(U.pull, rn + 0.01));
   }
 };
 window.__sc = (id) => uApply(id);
+window.__pos = pos;
 
 ve.debug.checkShaderErrors = qi.has("debug");
 ve.domElement.style.opacity = "0";

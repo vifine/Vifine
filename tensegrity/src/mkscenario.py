@@ -22,7 +22,7 @@ rep("ia.copy(ha), Nn.dot(ia) < 0 && ia.negate());", "ia.copy(ha), t !== \"up\" &
 rep("window.__v4started = !0", "window.__v4started = !0")
 rep("ve.debug.checkShaderErrors = qi.has(\"debug\");", "var UNST_SLACK = +qi.get(\"slack\") || 1.14;\n"+core+"\nve.debug.checkShaderErrors = qi.has(\"debug\");")
 # физика: жёсткость тросов от ресурса компонентов, распор стержней
-rep("let n = Yt === 0 ? Ji : _s;", "di >= 1 && U.squeeze && U.squeeze();\n    let n = Yt === 0 ? Ji : _s;")
+rep("let n = Yt === 0 ? Ji : _s;", "di >= 1 && U.squeeze && (U.despin(), U.squeeze());\n    let n = Yt === 0 ? Ji : _s;")
 rep("ta(r, a, REST.ring * Qn, th, !0)", "ta(r, a, REST.ring * Qn, th * U.k(r, a), !0)")
 rep("ta(r, a, REST.star * Qn, th, !0)", "ta(r, a, REST.star * Qn, th * U.k(r, a), !0)")
 rep("ta(r, a, REST.diag * yl * Qn, th, !0)", "ta(r, a, REST.diag * yl * Qn, th * U.k(r, a), !0)")
