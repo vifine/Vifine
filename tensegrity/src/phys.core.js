@@ -257,21 +257,24 @@ U.R = [null, null];
 function uCalib(state) {
   let save = {
     pos: pos.map((p) => p.clone()), we: we.map((p) => p.clone()),
-    Yt, rn, Un, mi, Qn, yl, $n, Ue, kc: U.kc.slice(), Ls: U.Ls.slice(), P: U.P,
+    Yt, rn, Un, mi, Qn, yl, $n, Ue, ra, kc: U.kc.slice(), Ls: U.Ls.slice(), P: U.P,
   };
+  let t0 = performance.now();
   U.kc.fill(1); U.Ls.fill(1); U.P = 0.5 * (+qi.get("P") || 0.02);
-  Yt = state; rn = 0.12; Un = !1; mi = 0; Qn = 1; yl = 1; $n = null; Ue = null;
+  Yt = state; rn = 0.12; Un = !1; mi = 0; Qn = 1; yl = 1; $n = null; Ue = null; ra = 1;
   homes[state].forEach((h, i) => { pos[i].copy(h); we[i].copy(h); });
   for (let s = 0; s < 900; s++) gh(0);
   U.R[state] = uMeasure();
   save.pos.forEach((p, i) => pos[i].copy(p)); save.we.forEach((p, i) => we[i].copy(p));
-  Yt = save.Yt; rn = save.rn; Un = save.Un; mi = save.mi; Qn = save.Qn; yl = save.yl; $n = save.$n; Ue = save.Ue;
+  Yt = save.Yt; rn = save.rn; Un = save.Un; mi = save.mi; Qn = save.Qn; yl = save.yl; $n = save.$n; Ue = save.Ue; ra = save.ra;
+  U.calibMs = (U.calibMs || 0) + performance.now() - t0;
   U.kc = save.kc; U.Ls = save.Ls; U.P = save.P;
 }
 function uForces() {
-  if (!U.R[0]) (uCalib(0), uCalib(1));
   let m = uMeasure(), R = U.R[Yt], mx = 0, dev = 0;
   U.tautN = m.taut;
+  // пока каркас усаживается (после сборки и перещёлкивания) — показания заморожены
+  if ($n || U.flipT > 0) return;
   for (let q = 0; q < m.D.length; q++) dev = Math.max(dev, Math.abs(m.D[q] - R.D[q]) / R.D[q]);
   U.dev += (dev - U.dev) * 0.15;
   CAB.forEach((c, i) => {
@@ -288,6 +291,8 @@ function uForces() {
 // ---------- шаг ----------
 U.step = function (dt) {
   dt = Math.min(dt, 0.05);
+  // эталон нормы — один раз, в самом начале (до видимой анимации), чтобы не дёргать кадр потом
+  U.R[0] || (uCalib(0), uCalib(1));
   if (uT >= 0) {
     uT += dt;
     let cur = TL[0];
@@ -311,11 +316,13 @@ U.step = function (dt) {
   // перещёлкивание: на время перехода и 3 с после него каркас фиксируется в новом состоянии
   // после перехода (и после восстановления) каркас 3 с держится в своём состоянии, затем за 1,5 с отпускается
   Yt !== U.lastYt && ((U.lastYt = Yt), (U.flipT = 4.5));
+  // после сборки каркас тоже мягко отпускается к физике, без рывка
+  di >= 1 && !U.built && ((U.built = !0), (U.flipT = 4.5));
   U.flipT = Math.max(0, (U.flipT || 0) - dt);
   let base = qi.has("pull") ? +qi.get("pull") : 0.12;
   U.pull = $n ? 1 : base + (1 - base) * Math.min(1, U.flipT / 1.5);
   // нагрузка снимается на время перещёлкивания (иначе сжатие не даёт призме перейти во второе состояние)
-  U.lw = THREE.MathUtils.clamp((U.lw ?? 1) + ($n ? -dt * 4 : dt / 1.5), 0, 1);
+  U.lw = THREE.MathUtils.clamp((U.lw ?? 0) + ($n ? -dt * 4 : di >= 1 ? dt / 1.5 : -1), 0, 1);
   U.P = U.lw * (U.cl / 10) * (+qi.get("P") || 0.02);
   U.Qt = 1 + 0.075 * balDef * balDef;
   if (di >= 1) uForces();
@@ -333,7 +340,6 @@ U.step = function (dt) {
   U.cascade += (casc - U.cascade) * 0.1;
   // потеря жёсткости: мало тросов под натяжением → механизм складывается
   let flipping = $n || U.flipT > 0;
-  flipping && (U.margin = Math.max(U.margin, 0.5));
   if (!U.needUnst && di >= 1 && !flipping && U.margin < M_CRIT) {
     ((U.needUnst = !0), (Un = !1), (rn = 0));
     ar([35, 40, 25, 40, 90]);
