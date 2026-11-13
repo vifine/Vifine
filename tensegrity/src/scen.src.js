@@ -1333,8 +1333,8 @@ function Pf(i) {
         hh &&
           ((hh = !1),
           setTimeout(() => {
-            pi = "up";
-          }, 700)))),
+            U.startTurn();
+          }, STAR_HOLD)))),
       fl = Math.min(fl + t, (+qi.get("cap") || 4) / 60);
     fl >= 1 / 60;
   )
@@ -1661,11 +1661,42 @@ function uForces() {
   U.margin = THREE.MathUtils.clamp(1 - U.dev / DEV_MAX, 0, 1) * tf;
 }
 
+
+// ---------- старт: плавный переход из «звезды» к равновесию ----------
+// звезда держится STAR_HOLD, затем поворот с мягким разгоном и торможением за TURN_DUR,
+// затем готовая фигура стоит FINAL_HOLD, и только потом начинается автовращение
+var STAR_HOLD = 1500, TURN_DUR = 3.6, FINAL_HOLD = 10;
+U.turn = null;
+U.startTurn = function () {
+  if (pi || er || sn) return;
+  ir();
+  let up = fy.clone();
+  Nn.dot(up) < 0 && up.negate();
+  let ang = Nn.angleTo(up);
+  if (ang < 0.01) return void (pi = "up");
+  U.turn = { t: 0, ax: new THREE.Vector3().crossVectors(Nn, up).normalize(), ang, done: 0 };
+  gi();
+};
+U.turnStep = function (dt) {
+  let T = U.turn;
+  if (!T) return;
+  // пользователь взялся за фигуру или нажал «Звезда» — отдаём управление ему
+  if (er || sn || Ue || Wi.lengthSq() > 1e-9) return void (U.turn = null);
+  T.t += dt;
+  let p = Math.min(1, T.t / TURN_DUR), e = 0.5 - 0.5 * Math.cos(Math.PI * p);
+  rotateModel(T.ax.clone().multiplyScalar((e - T.done) * T.ang));
+  T.done = e;
+  // держим таймер простоя, чтобы автовращение не началось посреди поворота
+  xf = performance.now() + (p >= 1 ? (FINAL_HOLD - 7) * 1e3 : 0);
+  p >= 1 && ((U.turn = null), (pi = "up"));
+};
+
 // ---------- шаг ----------
 U.step = function (dt) {
   dt = Math.min(dt, 0.05);
   // эталон нормы — один раз, в самом начале (до видимой анимации), чтобы не дёргать кадр потом
   U.R[0] || (uCalib(0), uCalib(1));
+  U.turnStep(dt);
   if (uT >= 0) {
     uT += dt;
     let cur = TL[0];

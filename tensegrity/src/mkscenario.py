@@ -28,6 +28,11 @@ rep("ta(r, a, REST.star * Qn, th, !0)", "ta(r, a, REST.star * Qn, th * U.k(r, a)
 rep("ta(r, a, REST.diag * yl * Qn, th, !0)", "ta(r, a, REST.diag * yl * Qn, th * U.k(r, a), !0)")
 rep("STRUTS.forEach(([r, a]) => ta(r, a, L, 1, !1))", "STRUTS.forEach(([r, a], q) => ta(r, a, L * U.Ls[q], 1, !1))", 2)
 src=src.replace('var dh = [', 'var U = { k: () => 1, Ls: [1, 1, 1, 1, 1, 1], Qt: 1, pull: 1, step() {}, render() {} };\nvar dh = [', 1)
+rep('''setTimeout(() => {
+            pi = "up";
+          }, 700)''', '''setTimeout(() => {
+            U.startTurn();
+          }, STAR_HOLD)''')
 open('scen.src.js','w',encoding='utf-8').write(src)
 
 # ---------- HTML ----------
