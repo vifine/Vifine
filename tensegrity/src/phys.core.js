@@ -273,16 +273,19 @@ function uCalib(state) {
 function uForces() {
   let m = uMeasure(), R = U.R[Yt], mx = 0, dev = 0;
   U.tautN = m.taut;
-  // пока каркас усаживается (после сборки и перещёлкивания) — показания заморожены
-  if ($n || U.flipT > 0) return;
+  // пока каркас усаживается (после сборки, перещёлкивания, восстановления) — показания заморожены;
+  // на выходе берём текущие значения сразу, без сглаживания со старыми
+  if ($n || U.flipT > 0) return void (U.frozen = !0);
+  let snap = U.frozen;
+  U.frozen = !1;
   for (let q = 0; q < m.D.length; q++) dev = Math.max(dev, Math.abs(m.D[q] - R.D[q]) / R.D[q]);
-  U.dev += (dev - U.dev) * 0.15;
+  U.dev = snap ? dev : U.dev + (dev - U.dev) * 0.15;
   CAB.forEach((c, i) => {
     c.F = m.F[i];
     c.f = c.act && R.F[i] ? m.F[i] / R.F[i] : 0;
     c.act && (mx = Math.max(mx, c.f));
   });
-  U.maxF += (Math.max(1, mx) - U.maxF) * 0.15;
+  U.maxF = snap ? Math.max(1, mx) : U.maxF + (Math.max(1, mx) - U.maxF) * 0.15;
   // запас устойчивости: насколько форма далека от предела деформации и сколько тросов держат
   let tf = THREE.MathUtils.clamp((m.taut - 16) / 12, 0, 1);
   U.margin = THREE.MathUtils.clamp(1 - U.dev / DEV_MAX, 0, 1) * tf;
@@ -317,6 +320,35 @@ U.turnStep = function (dt) {
   xf = performance.now() + (p >= 1 ? (FINAL_HOLD - 7) * 1e3 : 0);
   p >= 1 && ((U.turn = null), (pi = "up"));
 };
+
+
+// ---------- «Восстановить»: тросы, норма, усталость — и каркас плавно поднимается ----------
+var uRestoreBtn = document.getElementById("restore");
+U.restore = function () {
+  uStop();
+  cutSet.size && restoreAll();
+  uApply("ok", !0);
+  U.h.fill(1);
+  U.cc = U.comp.slice();
+  U.cb = U.bal;
+  U.cl = U.load;
+  U.needUnst = !1;
+  U.cutUnst = !1;
+  ti = !1;
+  Un = !cutSet.size;
+  U.margin = 1;
+  U.dev = 0;
+  U.maxF = 1;
+  U.flipT = 4.5;
+  ca && (ca.className = "status");
+  gi();
+  ar([10, 40, 10]);
+};
+uRestoreBtn && uRestoreBtn.addEventListener("click", () => U.restore());
+window.addEventListener("keydown", (e) => {
+  if (e.target && e.target.tagName === "INPUT") return;
+  (e.key === "r" || e.key === "R" || e.key === "к" || e.key === "К") && U.restore();
+});
 
 // ---------- шаг ----------
 U.step = function (dt) {
@@ -380,6 +412,7 @@ U.step = function (dt) {
     ok && ((U.needUnst = !1), (U.margin = M_BACK), (U.flipT = 4.5), U.cutUnst || ((Un = !cutSet.size), ca && (ca.className = "status")), ar([10, 40, 10]));
   }
   ti = U.cutUnst || U.needUnst;
+  uRestoreBtn && uRestoreBtn.classList.toggle("show", ti || cutSet.size > 0);
   // стержни: тускнеют с ресурсом
   yh.forEach((m, i) => {
     let w = Math.min(1, eff(i) / 9), hot = U.hot === i;

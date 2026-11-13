@@ -96,7 +96,7 @@
     .row input[type=range]{height:11px}
     .status{bottom:70px}
     body.map .status{display:none}
-    #restore.show{display:none}
+    #restore.show ~ #flip{display:none}
     #needlbl{display:none}
   }
   @media (max-height:560px) and (orientation:landscape){
