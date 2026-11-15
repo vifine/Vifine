@@ -71,10 +71,10 @@ COMMON = [
 PAGES = {
 
 "index.html": [
-    ("<h1>Operations Executive Building the Digital and AI Backbone of Business</h1>",
-     "<h1>Операционный директор, который строит цифровой и AI-фундамент бизнеса</h1>"),
-    ('<p class="hero-subtitle">Digital transformation and AI implementation — from strategy to systems that run the business.</p>',
-     '<p class="hero-subtitle">Цифровая трансформация и внедрение AI — от стратегии до систем, на которых работает бизнес.</p>'),
+    ("<h1>Building the Digital and AI Backbone of Business</h1>",
+     "<h1>Строю цифровой и AI-фундамент бизнеса</h1>"),
+    ('<p class="hero-subtitle">From strategy to systems that run the business.</p>',
+     '<p class="hero-subtitle">От стратегии до систем, на которых работает бизнес.</p>'),
     ("Hi%20Victoria%2C%20I%27d%20like%20to%20talk.",
      "%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D1%8F!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D1%83."),
     (">Let's talk<", ">Давайте поговорим<"),
@@ -93,8 +93,8 @@ PAGES = {
     (">scattered tools, spreadsheets, chats</text>", ">разрозненные инструменты, таблицы, чаты</text>"),
     (">one connected system, with AI built in</text>", ">единая система с AI внутри</text>"),
     ("<h2>Victoria Fine</h2>", "<h2>Виктория Файн</h2>"),
-    ("<p>I've run sales, supply, fulfillment and finance inside e-commerce businesses across the USA, Europe, the Middle East and the CIS — and now design the systems and AI agents that run those functions day to day. Based in Israel; I work in English and Russian.</p>",
-     "<p>Руководила продажами, закупками, фулфилментом и финансами в e-commerce бизнесах в США, Европе, на Ближнем Востоке и в СНГ — а теперь проектирую системы и AI-агентов, которые ведут эти функции изо дня в день. Живу в Израиле, работаю на английском и русском.</p>"),
+    ("<p>I'm an operations executive. I've run sales, supply, fulfillment and finance inside e-commerce businesses across the USA, Europe, the Middle East and the CIS — and now design the systems and AI agents that run those functions day to day. Based in Israel; I work in English and Russian.</p>",
+     "<p>Я — операционный директор. Руководила продажами, закупками, фулфилментом и финансами в e-commerce бизнесах в США, Европе, на Ближнем Востоке и в СНГ — а теперь проектирую системы и AI-агентов, которые ведут эти функции изо дня в день. Живу в Израиле, работаю на английском и русском.</p>"),
     ('<span class="about-stat-label">years in operations and e-commerce</span>',
      '<span class="about-stat-label">лет в операционном управлении и e-commerce</span>'),
     ('<span class="about-stat-label">company profitability in two years at TOP SPORTS</span>',
