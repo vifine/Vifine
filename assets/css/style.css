@@ -198,11 +198,33 @@ img { max-width: 100%; display: block; }
    Lang note: DM Sans 600 14/20 #666
    ============================================ */
 .hero {
-  padding: 100px var(--page-padding) 80px;
+  position: relative;
+  overflow: hidden;
+  padding: 120px var(--page-padding) 110px;
   text-align: center;
 }
 
+/* animated background (hero-animation.js) + soft white veil so the text stays readable */
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse 58% 62% at 50% 50%, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.8) 55%, rgba(255,255,255,0) 100%);
+}
+
 .hero-content {
+  position: relative;
+  z-index: 2;
   max-width: 938px;
   margin: 0 auto;
   display: flex;
@@ -214,10 +236,11 @@ img { max-width: 100%; display: block; }
 .hero h1 {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 56px;
-  line-height: 67px;
+  font-size: 48px;
+  line-height: 58px;
   color: var(--text-primary);
   text-align: center;
+  text-wrap: balance;
 }
 
 .hero-subtitle {
@@ -2986,4 +3009,64 @@ body.menu-open .wa-widget {
     width: 100%;
     min-width: unset;
   }
+}
+
+
+/* ============================================
+   ABOUT CARD (replaces the long "Hey!" block)
+   ============================================ */
+.about-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 48px;
+  background: var(--bg-dark);
+  border-radius: 16px;
+}
+.about-photo { flex-shrink: 0; }
+.about-photo img {
+  display: block;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.about-card-body h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 12px;
+}
+.about-card-body p {
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--text-primary);
+}
+.about-stats {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin-top: 28px;
+}
+.about-stats li { display: flex; flex-direction: column; gap: 4px; max-width: 170px; }
+.about-stat-value {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+}
+.about-stat-label { font-size: 13px; line-height: 18px; color: var(--text-secondary); }
+
+@media (max-width: 1024px) {
+  .about-card { padding: 36px; gap: 32px; }
+}
+@media (max-width: 768px) {
+  .hero { padding: 80px 24px 72px; }
+  .about-card { flex-direction: column; text-align: center; padding: 32px 24px; }
+  .about-photo img { width: 140px; height: 140px; }
+  .about-stats { flex-direction: column; align-items: center; gap: 20px; }
+  .about-stats li { max-width: none; align-items: center; }
 }
