@@ -71,6 +71,8 @@ COMMON = [
 PAGES = {
 
 "index.html": [
+    ('<p class="hero-caption" aria-hidden="true">From chaos to digital transformation</p>',
+     '<p class="hero-caption" aria-hidden="true">От хаоса к цифровой трансформации</p>'),
     ("<h1>Building the Digital and AI Backbone of Business</h1>",
      "<h1>Строю цифровой и AI-фундамент бизнеса</h1>"),
     ('<p class="hero-subtitle">From strategy to systems that run the business.</p>',
