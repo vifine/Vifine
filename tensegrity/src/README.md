@@ -6,6 +6,7 @@
 - `mkunity.py` — собирает `unity.src.js` (v4 + правки + unity.core.js) и `unity.shell.html` (шапка и шрифты берутся из опубликованной v4; путь `../live/v4.html` в скрипте заменить на `../v4/index.html`, вкладку «Единая модель» в меню при этом не дублировать).
 - `phys.core.js`, `scen.css`, `scen.body.html` — страница «Сценарии» (/tensegrity/scenario/): физическая модель на основе v4. Тросы — пружины (закон Гука), форма — равновесие сил; ресурс компонента = жёсткость тросов у его стержня, баланс потребностей = предварительное натяжение, профессиональная нагрузка = осевое сжатие. Видны перераспределение нагрузки (цвет троса), усталость узлов, запас устойчивости (деформация формы относительно нормы, предел 15%).
 - `mkscenario.py` — собирает `scen.src.js` и `scen.shell.html` из v4: `python3 mkscenario.py && node build.mjs scen.src.js scen.shell.html ../scenario/index.html`. Отладка: `?still`, `?P=` (сила нагрузки), `?dev=` (предел деформации), `window.__ff(n)` — прогнать n шагов физики.
+- `merkaba.core.js`, `merkaba.css`, `merkaba.body.html`, `mkmerkaba.py` — страница «Меркаба» (/tensegrity/merkaba/): единая модель без пирамиды Бусыгина, три формы спирали (`?v=dna|vortex|sphere`, клавиши D/W/S). Сборка: `python3 mkmerkaba.py && node build.mjs merkaba.src.js merkaba.shell.html ../merkaba/index.html` (вкладка «Меркаба» берётся из меню v4).
 - `build.mjs` — бандлит исходник esbuild-ом и вставляет в HTML: `node build.mjs unity.src.js unity.shell.html unity.html`.
 
 Зависимости: `npm i three@0.187.0 esbuild`.
