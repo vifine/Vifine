@@ -69,9 +69,3 @@
     .panel .ttl{display:block}
     #needlbl{display:none}
   }
-  .modes{margin:0 0 4px}
-  .modes>span{display:block;font:500 11px/1 Oswald,"Arial Narrow",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-  .modes .presets{margin:0 0 6px}
-  #vdesc{margin:0 0 8px;min-height:44px;font:400 11.5px/1.4 Inter,Arial,sans-serif;color:var(--ink)}
-  .modes{padding-bottom:10px;margin-bottom:12px;border-bottom:1px solid var(--line)}
-  @media (max-height:800px){#vdesc{min-height:0}}

@@ -1,6 +1,6 @@
 import re,sys
 src=open('v4.src.js',encoding='utf-8').read()
-core=open('merkaba.core.js',encoding='utf-8').read()
+core=open('dna.core.js',encoding='utf-8').read()
 def rep(a,b,count=1):
     global src
     assert src.count(a)==count, (a, src.count(a))
@@ -21,22 +21,22 @@ rep("    (wA.material.opacity = gl),\n    (wB.material.opacity = _l));\n}", "   
 rep("ia.copy(ha), Nn.dot(ia) < 0 && ia.negate());", "ia.copy(ha), t !== \"up\" && Nn.dot(ia) < 0 && ia.negate());")
 rep("window.__v4started = !0", "window.__v4started = !0")
 rep("ve.debug.checkShaderErrors = qi.has(\"debug\");", "var UNST_SLACK = +qi.get(\"slack\") || 1.14;\n"+core+"\nve.debug.checkShaderErrors = qi.has(\"debug\");")
-open('merkaba.src.js','w',encoding='utf-8').write(src)
+open('dna.src.js','w',encoding='utf-8').write(src)
 
 # ---------- HTML ----------
 h=open('../v4/index.html',encoding='utf-8').read()
 a=h.index('<script type="module">'); head=h[:a]; tail=h[h.index('</script>',a):]
-head=re.sub(r'<title>.*?</title>','<title>Меркаба: спираль в звезде · Бусыгина Т.А.</title>',head,count=1)
-css=open('merkaba.css',encoding='utf-8').read()
+head=re.sub(r'<title>.*?</title>','<title>Тенсегрити с ДНК · Бусыгина Т.А.</title>',head,count=1)
+css=open('dna.css',encoding='utf-8').read()
 i=head.rindex('</style>'); head=head[:i]+css+head[i:]
 b0=head.index('<button class="burger"'); 
-body=open('merkaba.body.html',encoding='utf-8').read()
+body=open('dna.body.html',encoding='utf-8').read()
 nav_end=head.index('</script>',b0)+len('</script>')
 nav=head[b0:nav_end].replace('<a href="https://vifine.tech/tensegrity/v4/" class="on" aria-current="page">Тенсегрити</a>','<a href="https://vifine.tech/tensegrity/v4/">Тенсегрити</a>')
-MK='<a href="https://vifine.tech/tensegrity/merkaba/">Меркаба</a>'
-assert MK in nav, 'сначала добавьте вкладку Меркаба в меню v4'
-nav=nav.replace(MK,'<a href="https://vifine.tech/tensegrity/merkaba/" class="on" aria-current="page">Меркаба</a>')
+MK='<a href="https://vifine.tech/tensegrity/dna/">Тенсегрити с ДНК</a>'
+assert MK in nav, 'сначала добавьте вкладку «Тенсегрити с ДНК» в меню v4'
+nav=nav.replace(MK,'<a href="https://vifine.tech/tensegrity/dna/" class="on" aria-current="page">Тенсегрити с ДНК</a>')
 assert nav.count('aria-current')==1
 head=head[:b0]+nav+'\n'+body+'\n'
-open('merkaba.shell.html','w',encoding='utf-8').write(head+'<script type="module"></script>'+tail[len('</script>'):])
+open('dna.shell.html','w',encoding='utf-8').write(head+'<script type="module"></script>'+tail[len('</script>'):])
 print('ok',len(src))

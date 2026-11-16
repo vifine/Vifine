@@ -1372,10 +1372,9 @@ function Pf(i) {
 var UNST_SLACK = +qi.get("slack") || 1.14;
 
 // =====================================================================
-// МЕРКАБА: двойная спираль потребностей в звёздчатой тенсегрити, без пирамиды.
-// Три варианта формы спирали: «ДНК» (нити со сдвигом 180° и 8 перемычками-уровнями
-// через ось), «Встречная» (нити закручены навстречу, пересечения внизу, в центре и
-// вверху), «Сфера» (нити огибают каркас по описанной сфере от полюса до полюса).
+// ТЕНСЕГРИТИ С ДНК: двойная спираль потребностей в звёздчатой тенсегрити, без пирамиды.
+// Правозакрученная «ДНК»: нити необходимости и достаточности со сдвигом 180°,
+// 8 перемычек — уровни Карты ресурсов, каждая проходит через ось здоровья.
 // Равновесие «необходимость / достаточность» по 8 уровням (Карта ресурсов)
 // управляет натяжением тросов каркаса; обрыв связи гасит ось здоровья.
 // =====================================================================
@@ -1408,7 +1407,6 @@ var U = {
   hover: -1,
   sel: -1,
   needUnst: !1,
-  mode: ["dna", "vortex", "sphere"].includes(qi.get("v")) ? qi.get("v") : "dna",
   cutUnst: !1,
   nec: PRESETS.balance.nec.slice(),
   suf: PRESETS.balance.suf.slice(),
@@ -1429,11 +1427,6 @@ Kn.forEach((n) => uCt.add(homes[0][n]));
 var H0 = uCt.multiplyScalar(1 / 6).distanceTo(uCb.multiplyScalar(1 / 6)),
   HH = H0 / 2,
   uCm = uCt.clone().add(uCb).multiplyScalar(0.5),
-  uAx = uCt.clone().sub(uCb).normalize(),
-  R_RAD = Math.max(...homes[0].map((p) => {
-    let d = p.clone().sub(uCm);
-    return d.addScaledVector(uAx, -d.dot(uAx)).length();
-  })),
   PYR_A = 0.42,
   PYR_VB = -0.96,
   PYR_VA = 1.38,
@@ -1540,27 +1533,18 @@ function uAxisOff(t) {
   return uOff.set(b * 0.11, 0, b * 0.035);
 }
 // i = 0 — «необходимость», i = 1 — «достаточность»: радиус нити на уровне задаёт его значение
-var MODE = {
-  dna: { v0: -0.9, v1: 0.9, turns: 2.5, r: 0.26 },
-  vortex: { v0: -0.92, v1: 0.92, turns: 1.5, r: 0.3 },
-  sphere: { v0: -1, v1: 1, turns: 1.5, r: 1 },
-};
+var DNA = { v0: -0.9, v1: 0.9, turns: 2.5, r: 0.26 };
+// правая спираль: при подъёме вдоль оси (+y) нити поворачиваются против часовой стрелки, если смотреть сверху
 function uStrand(i, t, time, out) {
-  let M = MODE[U.mode],
-    n = uProf(U.cn, t),
+  let n = uProf(U.cn, t),
     s = uProf(U.cs, t),
     v = i === 0 ? n : s,
     gap = Math.abs(s - n) / 10,
     w = gap * 0.02 * Math.sin(t * Math.PI * 9 + time * 2.2 + i * 1.7),
     c = uAxisOff(t),
-    A = 2 * Math.PI * M.turns * t,
-    a = U.mode === "dna" ? A + i * Math.PI : i === 0 ? A + Math.PI / 2 : -A - Math.PI / 2,
-    r,
-    y;
-  if (U.mode === "sphere") {
-    let th = Math.PI * t;
-    ((r = R_RAD * 1.08 * Math.sin(th) * (0.8 + (0.2 * v) / BASE) + w), (y = -1.12 * HH * Math.cos(th) * U.hs));
-  } else ((r = M.r * (0.55 + (0.45 * v) / BASE) + w), (y = (M.v0 + (M.v1 - M.v0) * t) * HH * U.hs));
+    a = -2 * Math.PI * DNA.turns * t + i * Math.PI,
+    r = DNA.r * (0.55 + (0.45 * v) / BASE) + w,
+    y = (DNA.v0 + (DNA.v1 - DNA.v0) * t) * HH * U.hs;
   return out.set(c.x + r * Math.cos(a), y, c.z + r * Math.sin(a));
 }
 class StrandCurve extends THREE.Curve {
@@ -1674,26 +1658,11 @@ function uPreset(id) {
 NEEDS.forEach((n, k) => uSync(k));
 uPresetMark("balance");
 document.querySelectorAll("[data-preset]").forEach((b) => b.addEventListener("click", () => uPreset(b.dataset.preset)));
-var VDESC = {
-  dna: "Нити необходимости и достаточности сдвинуты на 180°; восемь перемычек — уровни Карты ресурсов, каждая проходит через ось здоровья. Чем сильнее перекос на уровне, тем темнее перемычка.",
-  vortex: "Нити закручены навстречу друг другу вдоль оси здоровья и пересекаются трижды: внизу, в центре звезды и вверху.",
-  sphere: "Нити огибают каркас по описанной сфере: сходятся на полюсах и пересекаются на экваторе, в центральной плоскости звезды.",
-};
-function uMode(m) {
-  MODE[m] &&
-    ((U.mode = m),
-    document.querySelectorAll("[data-mode]").forEach((b) => b.classList.toggle("on", b.dataset.mode === m)),
-    (document.getElementById("vdesc").textContent = VDESC[m]),
-    gi());
-}
-document.querySelectorAll("[data-mode]").forEach((b) => b.addEventListener("click", () => uMode(b.dataset.mode)));
-uMode(U.mode);
 var uSheet = document.getElementById("sheet");
 uSheet && uSheet.addEventListener("click", () => document.body.classList.toggle("map"));
 window.addEventListener("keydown", (e) => {
   if (e.target && e.target.tagName === "INPUT") return;
   let k = e.key.toLowerCase();
-  ((k === "d" || k === "в") && uMode("dna"), (k === "w" || k === "ц") && uMode("vortex"), (k === "s" || k === "ы") && uMode("sphere"));
   (k === "0" && uPreset("balance"), k === "1" && uPreset("skew"), k === "2" && uPreset("burnout"));
 });
 
@@ -1807,7 +1776,7 @@ U.render = function (time, dt) {
     hsT = THREE.MathUtils.clamp(h / H0, 0.04, 1.5);
   ((U.hs += (hsT - U.hs) * Math.min(1, dt * 14)), (U.fade += ((ti ? 0.12 : 1) - U.fade) * Math.min(1, dt * 2.5)));
   let live = U.s > 0.02,
-    sig = U.mode + U.cn.map((v) => v.toFixed(2)).join() + U.cs.map((v) => v.toFixed(2)).join() + U.hs.toFixed(2);
+    sig = U.cn.map((v) => v.toFixed(2)).join() + U.cs.map((v) => v.toFixed(2)).join() + U.hs.toFixed(2);
   ((sig !== uSig || (live && time - uLastBuild > 0.045)) && (uRebuild(time), (uSig = sig), (uLastBuild = time)),
     uStrands.forEach((m) => m.geometry.setDrawRange(0, Math.floor(g * SP_SEG) * SP_RAD * 6)),
     0);
@@ -1826,7 +1795,7 @@ U.render = function (time, dt) {
     let f = THREE.MathUtils.clamp((g - LEVEL_T[k]) * 8, 0, 1),
       gap = Math.min(1, Math.abs(U.cs[k] - U.cn[k]) / 6),
       R = uRungs[k];
-    if (U.mode === "dna") {
+    {
       (uStrand(0, LEVEL_T[k], time, uP), uStrand(1, LEVEL_T[k], time, uP2));
       let L = uP.distanceTo(uP2);
       (b.position.copy(uAxisOff(LEVEL_T[k])).setY(uP.y),
@@ -1835,7 +1804,7 @@ U.render = function (time, dt) {
         R.scale.set(1, Math.max(0.001, L * f), 1),
         R.material.color.setRGB(THREE.MathUtils.lerp(0.8, 0.05, gap), THREE.MathUtils.lerp(0.84, 0.09, gap), THREE.MathUtils.lerp(0.86, 0.11, gap)),
         (R.visible = f > 0.01));
-    } else (uStrand(k % 2, LEVEL_T[k], time, b.position), (R.visible = !1));
+    }
     (b.scale.setScalar(f * (k === hot ? 1.3 : 1) * (1 + 0.1 * gap * Math.sin(time * 5 + k))),
       b.material.color.setRGB(
         THREE.MathUtils.lerp(k === hot ? 0.69 : 0.37, 0.05, gap),
