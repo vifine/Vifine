@@ -58,7 +58,7 @@ var H0 = uCt.multiplyScalar(1 / 6).distanceTo(uCb.multiplyScalar(1 / 6)),
   PYR_A = 0.42,
   PYR_VB = -0.96,
   PYR_VA = 1.38,
-  SP_V0 = -0.9,
+  SP_V0 = -0.8,
   SP_V1 = 0.9,
   SP_R = 0.3,
   SP_TURNS = 4.25,
@@ -161,8 +161,11 @@ function uAxisOff(t) {
   return uOff.set(b * 0.11, 0, b * 0.035);
 }
 // i = 0 — «необходимость», i = 1 — «достаточность»: радиус нити на уровне задаёт его значение
-var DNA = { v0: -0.9, v1: 0.9, turns: 2.5, r: 0.26 };
-// правая спираль: при подъёме вдоль оси (+y) нити поворачиваются против часовой стрелки, если смотреть сверху
+// параметры спирали Бусыгина (как на «Единой модели»): 4,25 витка, радиус у основания 0,3
+var DNA = { v0: SP_V0, v1: SP_V1, turns: 4.25, r: 0.3 },
+  PHI = (1 + Math.sqrt(5)) / 2;
+// правая спираль: при подъёме вдоль оси (+y) нити поворачиваются против часовой стрелки, если смотреть сверху.
+// конус по золотому сечению: каждый следующий виток в φ раз уже предыдущего (радиус ∝ φ^−виток)
 function uStrand(i, t, time, out) {
   let n = uProf(U.cn, t),
     s = uProf(U.cs, t),
@@ -171,7 +174,7 @@ function uStrand(i, t, time, out) {
     w = gap * 0.02 * Math.sin(t * Math.PI * 9 + time * 2.2 + i * 1.7),
     c = uAxisOff(t),
     a = -2 * Math.PI * DNA.turns * t + i * Math.PI,
-    r = DNA.r * (0.55 + (0.45 * v) / BASE) + w,
+    r = DNA.r * Math.pow(PHI, -DNA.turns * t) * (0.55 + (0.45 * v) / BASE) + w * (1 - 0.6 * t),
     y = (DNA.v0 + (DNA.v1 - DNA.v0) * t) * HH * U.hs;
   return out.set(c.x + r * Math.cos(a), y, c.z + r * Math.sin(a));
 }
@@ -426,7 +429,8 @@ U.render = function (time, dt) {
     {
       (uStrand(0, LEVEL_T[k], time, uP), uStrand(1, LEVEL_T[k], time, uP2));
       let L = uP.distanceTo(uP2);
-      (b.position.copy(uAxisOff(LEVEL_T[k])).setY(uP.y),
+      // шар уровня — на нити, как в спирали Бусыгина (через уровень на необходимости и достаточности)
+      (b.position.copy(k % 2 ? uP2 : uP),
         R.position.addVectors(uP, uP2).multiplyScalar(0.5),
         R.quaternion.setFromUnitVectors(uUp, uP2.sub(uP).normalize()),
         R.scale.set(1, Math.max(0.001, L * f), 1),
